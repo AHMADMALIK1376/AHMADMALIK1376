@@ -1,76 +1,59 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=auto&height=200&section=header&text=Ahmad%20Malik&fontSize=70&animation=fadeIn&fontAlignY=35" />
-
-  ### ⚡ Full-Stack Architect & AI Automation Specialist
-  `Python` • `React` • `TypeScript` • `LLM Engineering`
   
-  ---
+<!-- ANIMATED HEADER WITH GRADIENT WAVE -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:30363d&height=200&section=header&text=Ahmad%20Malik&fontSize=50&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Engineer%20%7C%20Cloud%20Architect&descAlignY=55&descSize=16&descColor=8b949e"/>
+
+<!-- ANIMATED TYPING TEXT -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=false&repeat=true&width=700&height=45&lines=Building+AI-Powered+Solutions+%F0%9F%A4%96;Full-Stack+Development+Expert+%F0%9F%9A%80;Turning+Complex+Problems+into+Simple+Solutions+%F0%9F%92%A1" alt="Typing SVG" />
+
+<br/>
+
+<!-- PROFILE METRICS -->
+<p>
+  <img src="https://komarev.com/ghpvc/?username=AHMADMALIK1376&label=Profile%20Views&style=flat-square&color=58a6ff" alt="Profile Views"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/followers/AHMADMALIK1376?label=Followers&style=flat-square&color=238636" alt="followers"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/stars/AHMADMALIK1376?label=Stars%20Earned&style=flat-square&color=e3b341" alt="stars"/>
+</p>
+
 </div>
 
-## 🧬 Project Spotlight: App Identifier AI
-> **A production-grade UI detection engine** combining rule-based heuristics with Claude 3.5 Sonnet vision analysis.
+<!-- ANIMATED LINE -->
+<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
 
-<details open>
-<summary><b>🛠️ System Architecture & Logic</b></summary>
-<br />
-
+<!-- PROFESSIONAL INTRODUCTION -->
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=py,fastapi,react,tailwind,postman" />
+
+## 👋 About Me
+
 </div>
 
-#### The 9-Detector Voting Engine
-| Detector | Weight | Core Logic |
-| :--- | :--- | :--- |
-| **AriaDetector** | `100` | Explicit ARIA roles & Accessibility intent |
-| **EventDetector** | `50` | JS listener detection (onclick/onsubmit) |
-| **Trifecta** | `98.5%` | Max confidence via Tag + ARIA + Event match |
+<table>
+<tr>
+<td width="55%" valign="top">
 
-#### 🔄 The Intelligence Loop
-1. **Extraction:** Playwright scrolls 8 passes to trigger lazy-loading (960k+ characters parsed).
-2. **Vision:** Screenshot is encoded to Base64 and sent to **Claude 3.5 Sonnet**.
-3. **Matching:** Fuzzy label similarity (40%) + IoU Overlap (25%) + Type compatibility.
-</details>
+```typescript
+class FullStackDeveloper {
+  name = "Ahmad Malik";
+  title = "Full-Stack Developer & AI Engineer";
+  location = "Pakistan";
 
----
+  expertise = {
+    languages: ["Python", "TypeScript", "JavaScript", "Java", "C++"],
+    frontend: ["React", "Tailwind CSS", "HTML5", "CSS3"],
+    backend: ["Node.js", "FastAPI", "Python"],
+    databases: ["Firebase", "MongoDB", "SQL", "Oracle"],
+    cloud: ["Google Cloud", "Docker", "AWS"],
+    tools: ["Playwright", "BS4", "n8n", "Git"]
+  };
 
-## 🪳 Project Spotlight: Bugistan
-> **Gamifying the Debugging Experience.** A VS Code extension that turns your compiler errors into physical bugs you must squish!
+  specialties = [
+    "AI/LLM Integration",
+    "Full-Stack Web Applications", 
+    "Browser Automation",
+    "Chrome Extensions"
+  ];
 
-<div align="center">
-  <img src="https://img.shields.io/badge/VS_Code_Extension-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-</div>
-
-#### 🎮 Game Mechanics
-* **🔴 Errors:** Large, fast-moving Beetles/Fire Ants.
-* **🟡 Warnings:** Small, flying Ladybugs/Dragonflies.
-* **🩴 Slipper Cursor:** Custom HTML5 Canvas rendering for the "Desi Squish" experience.
-* **Data Flow:** `Diagnostics API` → `Webview postMessage` → `Canvas 60FPS Render`.
-
----
-
-## 📊 Technical Vitals
-
-<table border="0">
-  <tr>
-    <td width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=AHMADMALIK1376&show_icons=true&theme=tokyonight&hide_border=true" width="100%" />
-    </td>
-    <td width="50%">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AHMADMALIK1376&layout=compact&theme=tokyonight&hide_border=true" width="100%" />
-    </td>
-  </tr>
-</table>
-
----
-
-## 🛠️ The Toolkit
-
-```json
-{
-  "backend": ["FastAPI", "Uvicorn", "Playwright", "BS4"],
-  "frontend": ["React 19", "Vite", "Tailwind CSS", "Canvas API"],
-  "low_level": ["8086 Assembly", "MASM", "Irvine32"],
-  "automation": ["n8n", "Claude API", "Gemini Pro"],
-  "environment": ["WSL 2", "Ubuntu", "Git"]
+  currentlyBuilding = "AI-Powered Development Tools & Automation Systems";
 }
