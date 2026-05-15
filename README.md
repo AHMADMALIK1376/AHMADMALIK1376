@@ -28,7 +28,7 @@
 <tr>
 <td width="55%" valign="top">
 
-```typescript
+
 class FullStackDeveloper {
   name = "Ahmad Malik";
   title = "Full-Stack Developer & AI Engineer";
