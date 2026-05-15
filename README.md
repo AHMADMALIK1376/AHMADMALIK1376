@@ -15,7 +15,7 @@
 <br />
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=py,fastapi,react,tailwind,playwright,postman" />
+  <img src="https://skillicons.dev/icons?i=py,fastapi,react,tailwind,postman" />
 </div>
 
 #### The 9-Detector Voting Engine
