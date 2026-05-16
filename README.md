@@ -50,33 +50,41 @@
 
 <table width="100%">
 <tr>
-<td width="50%" valign="top">
-<div align="center">
+<td width="55%" valign="top">
 
-<br/>
+```typescript
+class FullStackArchitect {
+  name = "Ahmad Malik";
+  title = "Full-Stack Developer & AI Engineer";
+  location = "Pakistan";
 
-| | |
-|:--|:--|
-| 🧬 **Agent** | Ahmad Malik |
-| 🎯 **Class** | Full-Stack + AI Engineer |
-| 🌍 **Base** | Pakistan 🇵🇰 |
-| 🟢 **Status** | Online & Deploying |
-| 🎯 **Mission** | Build things that think |
-| 🐍 **Primary Lang** | Python / TypeScript |
-| 🧠 **AI Stack** | LLM + Vision + RAG |
-| ☁️ **Infra** | GCP / AWS / Docker |
-| 🤖 **Automation** | n8n + Playwright |
-| 📡 **Signal** | ahmadmalik1376@gmail.com |
+  expertise = {
+    languages: ["Python", "TypeScript", "JavaScript", "Java", "C++"],
+    backend: ["Node.js", "FastAPI", "Python", "Playwright"],
+    frontend: ["React", "Tailwind CSS", "Vite", "HTML5/CSS3"],
+    databases: ["MongoDB", "Firebase", "SQL", "Oracle"],
+    cloud: ["Google Cloud", "AWS", "Docker"],
+    tools: ["Git", "WSL 2", "n8n", "BeautifulSoup4"]
+  };
 
-</div>
+  specialties = [
+    "AI/LLM Integration",
+    "Full-Stack Web Applications", 
+    "Browser Automation",
+    "VS Code Extensions"
+  ];
+
+  currentlyBuilding = "AI-Powered Development Tools & Automation Systems";
+}
+```
 </td>
 <td width="50%" valign="top">
 <div align="center">
 
 <br/>
 
-<!-- PROCESS CHART -->
-<img width="100%" src="https://quickchart.io/chart?c=%7B%22type%22%3A%22horizontalBar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22%5BPID+001%5D+AI+Detection+Engine%22%2C%22%5BPID+002%5D+Browser+Automation%22%2C%22%5BPID+003%5D+VS+Code+Extension%22%2C%22%5BPID+004%5D+Cloud+SaaS+Platform%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Progress+%25%22%2C%22data%22%3A%5B87%2C100%2C65%2C55%5D%2C%22backgroundColor%22%3A%5B%2200d4ff%22%2C%22a78bfa%22%2C%22ffd700%22%2C%22ff6b6b%22%5D%7D%5D%7D%2C%22options%22%3A%7B%22scales%22%3A%7B%22xAxes%22%3A%5B%7B%22ticks%22%3A%7B%22min%22%3A0%2C%22max%22%3A100%2C%22fontColor%22%3A%22%23aaa%22%7D%2C%22gridLines%22%3A%7B%22color%22%3A%22rgba(255%2C255%2C255%2C0.05)%22%7D%7D%5D%2C%22yAxes%22%3A%5B%7B%22ticks%22%3A%7B%22fontColor%22%3A%22%23ffffff%22%2C%22fontSize%22%3A11%7D%2C%22gridLines%22%3A%7B%22display%22%3Afalse%7D%7D%5D%7D%2C%22plugins%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%7D%2C%22layout%22%3A%7B%22padding%22%3A10%7D%7D%2C%22backgroundColor%22%3A%220d1117%22%7D&w=500&h=220&bkg=0d1117&f=monospace"/>
+<!-- PROJECT DONUT CHART -->
+<img width="100%" src="assets/project-donut.svg"/>
 
 </div>
 </td>
