@@ -24,7 +24,7 @@
 
 ---
 
-<br/>
+
 
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--                  ANIMATED INTRO                           -->
@@ -32,14 +32,14 @@
 
 <div align="center">
 
-<img src="assets/Cat typing (1).gif" width="220" />
+<img src="assets/cat.gif" width="190" />
 
 <img width="600" src="assets/scan-text.svg"/>
 
 
 </div>
 
-<br/>
+
 
 ---
 
