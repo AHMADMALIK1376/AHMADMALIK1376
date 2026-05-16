@@ -1,0 +1,99 @@
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" width="500" height="350">
+<defs>
+  <style>
+    .seg { fill: none; stroke-width: 38; stroke-linecap: round;
+           animation: spinIn 1.6s cubic-bezier(.22,.61,.36,1) both; }
+    @keyframes spinIn {
+      from { stroke-dashoffset: 628; opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .seg1 { stroke: #00d4ff; animation-delay: 0.0s; filter: drop-shadow(0 0 10px #00d4ff88); }
+    .seg2 { stroke: #a78bfa; animation-delay: 0.2s; filter: drop-shadow(0 0 10px #a78bfa88); }
+    .seg3 { stroke: #ffd700; animation-delay: 0.4s; filter: drop-shadow(0 0 10px #ffd70088); }
+    .seg4 { stroke: #ff6b6b; animation-delay: 0.6s; filter: drop-shadow(0 0 10px #ff6b6b88); }
+    .pulse { animation: pulse 2.5s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.5;} }
+    .fade { animation: fadeIn 2s ease both; }
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+  </style>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<!-- Background -->
+<rect width="500" height="350" fill="#0d1117" rx="12"/>
+
+<!-- Title -->
+<text x="250" y="25" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="13" letter-spacing="4">◈ PROJECT DISTRIBUTION ◈</text>
+
+<!-- Donut Chart: cx=180, cy=180, r=95, circumference=597 -->
+<!-- Total = 87+100+65+55 = 307 -->
+<!-- AI Detection: 87/307 = 28.3% → 169px -->
+<!-- Browser Auto: 100/307 = 32.6% → 195px -->
+<!-- VS Code Ext:  65/307 = 21.2% → 127px -->
+<!-- Cloud SaaS:   55/307 = 17.9% → 107px -->
+
+<!-- AI Detection Engine — 28.3% — Start at top (-90°) -->
+<circle class="seg seg1" cx="180" cy="180" r="95"
+  stroke-dasharray="167 430"
+  transform="rotate(-90 180 180)"/>
+
+<!-- Browser Automation — 32.6% — Start after AI (167px = 100.6°) -->
+<circle class="seg seg2" cx="180" cy="180" r="95"
+  stroke-dasharray="193 404"
+  transform="rotate(10.6 180 180)"/>
+
+<!-- VS Code Extension — 21.2% — Start after Browser (167+193=360px = 217°) -->
+<circle class="seg seg3" cx="180" cy="180" r="95"
+  stroke-dasharray="125 472"
+  transform="rotate(127 180 180)"/>
+
+<!-- Cloud SaaS Platform — 17.9% — Start after VS Code (167+193+125=485px = 292.4°) -->
+<circle class="seg seg4" cx="180" cy="180" r="95"
+  stroke-dasharray="105 492"
+  transform="rotate(202.4 180 180)"/>
+
+<!-- Center overlay (donut hole) -->
+<circle cx="180" cy="180" r="68" fill="#0d1117"/>
+
+<!-- Center text -->
+<text x="180" y="172" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold" class="pulse">PROJECTS</text>
+<text x="180" y="190" text-anchor="middle" fill="#4b5563" font-family="monospace" font-size="9">4 ACTIVE PIDs</text>
+
+<!-- Legend — right side -->
+<g class="fade">
+  <!-- AI Detection -->
+  <circle cx="310" cy="80"  r="7" fill="#00d4ff" filter="url(#glow)"/>
+  <text x="325" y="84"  fill="#e5e7eb" font-family="monospace" font-size="10">AI Detection Engine</text>
+  <text x="475" y="84"  text-anchor="end" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">28%</text>
+  <rect x="310" y="90" width="165" height="3" fill="#1f2937" rx="1"/>
+  <rect x="310" y="90" width="47"  height="3" fill="#00d4ff" rx="1"/>
+
+  <!-- Browser Automation -->
+  <circle cx="310" cy="120" r="7" fill="#a78bfa" filter="url(#glow)"/>
+  <text x="325" y="124" fill="#e5e7eb" font-family="monospace" font-size="10">Browser Automation</text>
+  <text x="475" y="124" text-anchor="end" fill="#a78bfa" font-family="monospace" font-size="10" font-weight="bold">33%</text>
+  <rect x="310" y="130" width="165" height="3" fill="#1f2937" rx="1"/>
+  <rect x="310" y="130" width="54"  height="3" fill="#a78bfa" rx="1"/>
+
+  <!-- VS Code Extension -->
+  <circle cx="310" cy="160" r="7" fill="#ffd700" filter="url(#glow)"/>
+  <text x="325" y="164" fill="#e5e7eb" font-family="monospace" font-size="10">VS Code Extension</text>
+  <text x="475" y="164" text-anchor="end" fill="#ffd700" font-family="monospace" font-size="10" font-weight="bold">21%</text>
+  <rect x="310" y="170" width="165" height="3" fill="#1f2937" rx="1"/>
+  <rect x="310" y="170" width="35"  height="3" fill="#ffd700" rx="1"/>
+
+  <!-- Cloud SaaS -->
+  <circle cx="310" cy="200" r="7" fill="#ff6b6b" filter="url(#glow)"/>
+  <text x="325" y="204" fill="#e5e7eb" font-family="monospace" font-size="10">Cloud SaaS Platform</text>
+  <text x="475" y="204" text-anchor="end" fill="#ff6b6b" font-family="monospace" font-size="10" font-weight="bold">18%</text>
+  <rect x="310" y="210" width="165" height="3" fill="#1f2937" rx="1"/>
+  <rect x="310" y="210" width="30"  height="3" fill="#ff6b6b" rx="1"/>
+</g>
+
+<!-- Bottom label -->
+<text x="180" y="330" text-anchor="middle" fill="#374151" font-family="monospace" font-size="8">auto-updated · github.com/AHMADMALIK1376</text>
+
+</svg>
