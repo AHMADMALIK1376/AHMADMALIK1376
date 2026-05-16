@@ -48,9 +48,9 @@
 <!--              IDENTITY + PROCESS MONITOR                   -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
-<table width="80%">
+<table width="100%">
 <tr>
-<td width="48%" valign="top">
+<td width="50%" valign="top">
 
 ```typescript
 class FullStackArchitect {
@@ -77,20 +77,7 @@ class FullStackArchitect {
   currentlyBuilding = "AI-Powered Development Tools & Automation Systems";
 }
 ```
-</td>
-<td width="52%" valign="top">
-<div align="center">
-
-<br/>
-
-<!-- PROJECT DONUT CHART -->
-<img width="100%" src="assets/project-donut.svg"/>
-
-</div>
-</td>
-</tr>
-</table>
-
+</td> <td width="50%" valign="middle"><div align="center"><img width="95%" src="assets/project-donut.svg"/></div></td> </tr> </table>
 <br/>
 
 ---
@@ -105,7 +92,8 @@ class FullStackArchitect {
 
 ## ◈ SKILL PROFICIENCY MATRIX ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00D4FF&center=true&vCenter=true&width=560&height=22&lines=▸+SCANNING+SKILL+DATABASE...+ALL+MODULES+LOADED+✓"/>
+<sub>▸ SCANNING SKILL DATABASE... ALL MODULES LOADED ✓</sub>
+
 
 <br/>
 
