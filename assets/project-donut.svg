@@ -1,99 +1,204 @@
-<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" width="500" height="350">
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" width="560" height="420">
 <defs>
   <style>
-    .seg { fill: none; stroke-width: 38; stroke-linecap: round;
-           animation: spinIn 1.6s cubic-bezier(.22,.61,.36,1) both; }
-    @keyframes spinIn {
-      from { stroke-dashoffset: 628; opacity: 0; }
-      to   { opacity: 1; }
+    @keyframes rise {
+      from { transform: scaleY(0); opacity: 0; }
+      to   { transform: scaleY(1); opacity: 1; }
     }
-    .seg1 { stroke: #00d4ff; animation-delay: 0.0s; filter: drop-shadow(0 0 10px #00d4ff88); }
-    .seg2 { stroke: #a78bfa; animation-delay: 0.2s; filter: drop-shadow(0 0 10px #a78bfa88); }
-    .seg3 { stroke: #ffd700; animation-delay: 0.4s; filter: drop-shadow(0 0 10px #ffd70088); }
-    .seg4 { stroke: #ff6b6b; animation-delay: 0.6s; filter: drop-shadow(0 0 10px #ff6b6b88); }
-    .pulse { animation: pulse 2.5s ease-in-out infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.5;} }
-    .fade { animation: fadeIn 2s ease both; }
-    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+    @keyframes glowPulse {
+      0%,100% { opacity: 0.6; }
+      50%     { opacity: 1; }
+    }
+    @keyframes rotateSlow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes scanLine {
+      0%   { transform: translateY(-420px); opacity: 0; }
+      50%  { opacity: 0.15; }
+      100% { transform: translateY(420px); opacity: 0; }
+    }
+    .bar-group { animation: rise 1.5s cubic-bezier(.22,.61,.36,1) both; transform-origin: bottom center; }
+    .bar1 { animation-delay: 0.0s; }
+    .bar2 { animation-delay: 0.2s; }
+    .bar3 { animation-delay: 0.4s; }
+    .bar4 { animation-delay: 0.6s; }
+    .glow-ring { animation: glowPulse 3s ease-in-out infinite; }
+    .core-rotate { animation: rotateSlow 20s linear infinite; transform-origin: 280px 210px; }
+    .scan { animation: scanLine 4s linear infinite; }
+    .blink { animation: glowPulse 1.5s ease-in-out infinite; }
   </style>
-  <filter id="glow">
-    <feGaussianBlur stdDeviation="3" result="blur"/>
-    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
+  
+  <!-- Gradients -->
+  <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#00d4ff"/>
+    <stop offset="100%" stop-color="#0066aa"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#a78bfa"/>
+    <stop offset="100%" stop-color="#5b21b6"/>
+  </linearGradient>
+  <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffd700"/>
+    <stop offset="100%" stop-color="#b8860b"/>
+  </linearGradient>
+  <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ff6b6b"/>
+    <stop offset="100%" stop-color="#991b1b"/>
+  </linearGradient>
+  
+  <!-- Glow Filters -->
+  <filter id="glow1"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="glow2"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="glow3"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
 
 <!-- Background -->
-<rect width="500" height="350" fill="#0d1117" rx="12"/>
+<rect width="560" height="420" fill="#0d1117" rx="16"/>
 
-<!-- Title -->
-<text x="250" y="25" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="13" letter-spacing="4">◈ PROJECT DISTRIBUTION ◈</text>
-
-<!-- Donut Chart: cx=180, cy=180, r=95, circumference=597 -->
-<!-- Total = 87+100+65+55 = 307 -->
-<!-- AI Detection: 87/307 = 28.3% → 169px -->
-<!-- Browser Auto: 100/307 = 32.6% → 195px -->
-<!-- VS Code Ext:  65/307 = 21.2% → 127px -->
-<!-- Cloud SaaS:   55/307 = 17.9% → 107px -->
-
-<!-- AI Detection Engine — 28.3% — Start at top (-90°) -->
-<circle class="seg seg1" cx="180" cy="180" r="95"
-  stroke-dasharray="167 430"
-  transform="rotate(-90 180 180)"/>
-
-<!-- Browser Automation — 32.6% — Start after AI (167px = 100.6°) -->
-<circle class="seg seg2" cx="180" cy="180" r="95"
-  stroke-dasharray="193 404"
-  transform="rotate(10.6 180 180)"/>
-
-<!-- VS Code Extension — 21.2% — Start after Browser (167+193=360px = 217°) -->
-<circle class="seg seg3" cx="180" cy="180" r="95"
-  stroke-dasharray="125 472"
-  transform="rotate(127 180 180)"/>
-
-<!-- Cloud SaaS Platform — 17.9% — Start after VS Code (167+193+125=485px = 292.4°) -->
-<circle class="seg seg4" cx="180" cy="180" r="95"
-  stroke-dasharray="105 492"
-  transform="rotate(202.4 180 180)"/>
-
-<!-- Center overlay (donut hole) -->
-<circle cx="180" cy="180" r="68" fill="#0d1117"/>
-
-<!-- Center text -->
-<text x="180" y="172" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold" class="pulse">PROJECTS</text>
-<text x="180" y="190" text-anchor="middle" fill="#4b5563" font-family="monospace" font-size="9">4 ACTIVE PIDs</text>
-
-<!-- Legend — right side -->
-<g class="fade">
-  <!-- AI Detection -->
-  <circle cx="310" cy="80"  r="7" fill="#00d4ff" filter="url(#glow)"/>
-  <text x="325" y="84"  fill="#e5e7eb" font-family="monospace" font-size="10">AI Detection Engine</text>
-  <text x="475" y="84"  text-anchor="end" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">28%</text>
-  <rect x="310" y="90" width="165" height="3" fill="#1f2937" rx="1"/>
-  <rect x="310" y="90" width="47"  height="3" fill="#00d4ff" rx="1"/>
-
-  <!-- Browser Automation -->
-  <circle cx="310" cy="120" r="7" fill="#a78bfa" filter="url(#glow)"/>
-  <text x="325" y="124" fill="#e5e7eb" font-family="monospace" font-size="10">Browser Automation</text>
-  <text x="475" y="124" text-anchor="end" fill="#a78bfa" font-family="monospace" font-size="10" font-weight="bold">33%</text>
-  <rect x="310" y="130" width="165" height="3" fill="#1f2937" rx="1"/>
-  <rect x="310" y="130" width="54"  height="3" fill="#a78bfa" rx="1"/>
-
-  <!-- VS Code Extension -->
-  <circle cx="310" cy="160" r="7" fill="#ffd700" filter="url(#glow)"/>
-  <text x="325" y="164" fill="#e5e7eb" font-family="monospace" font-size="10">VS Code Extension</text>
-  <text x="475" y="164" text-anchor="end" fill="#ffd700" font-family="monospace" font-size="10" font-weight="bold">21%</text>
-  <rect x="310" y="170" width="165" height="3" fill="#1f2937" rx="1"/>
-  <rect x="310" y="170" width="35"  height="3" fill="#ffd700" rx="1"/>
-
-  <!-- Cloud SaaS -->
-  <circle cx="310" cy="200" r="7" fill="#ff6b6b" filter="url(#glow)"/>
-  <text x="325" y="204" fill="#e5e7eb" font-family="monospace" font-size="10">Cloud SaaS Platform</text>
-  <text x="475" y="204" text-anchor="end" fill="#ff6b6b" font-family="monospace" font-size="10" font-weight="bold">18%</text>
-  <rect x="310" y="210" width="165" height="3" fill="#1f2937" rx="1"/>
-  <rect x="310" y="210" width="30"  height="3" fill="#ff6b6b" rx="1"/>
+<!-- Subtle Grid -->
+<g opacity="0.05">
+  <line x1="0" y1="70" x2="560" y2="70" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="0" y1="140" x2="560" y2="140" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="0" y1="210" x2="560" y2="210" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="0" y1="280" x2="560" y2="280" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="0" y1="350" x2="560" y2="350" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="140" y1="0" x2="140" y2="420" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="280" y1="0" x2="280" y2="420" stroke="#00d4ff" stroke-width="0.5"/>
+  <line x1="420" y1="0" x2="420" y2="420" stroke="#00d4ff" stroke-width="0.5"/>
 </g>
 
-<!-- Bottom label -->
-<text x="180" y="330" text-anchor="middle" fill="#374151" font-family="monospace" font-size="8">auto-updated · github.com/AHMADMALIK1376</text>
+<!-- Title -->
+<text x="280" y="28" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="14" letter-spacing="5" filter="url(#glow1)">◈ PROJECT REACTOR CORE ◈</text>
+<text x="280" y="45" text-anchor="middle" fill="#4b5563" font-family="monospace" font-size="8" letter-spacing="3">━━ ACTIVE PROCESSES ━━</text>
+
+<!-- Outer Ring (decorative) -->
+<g class="glow-ring" opacity="0.3">
+  <circle cx="195" cy="220" r="155" fill="none" stroke="#00d4ff" stroke-width="0.5" stroke-dasharray="4,8"/>
+  <circle cx="195" cy="220" r="160" fill="none" stroke="#a78bfa" stroke-width="0.3" stroke-dasharray="2,12"/>
+  <circle cx="195" cy="220" r="145" fill="none" stroke="#ffd700" stroke-width="0.3" stroke-dasharray="1,15"/>
+</g>
+
+<!-- Reactor Ring Animation -->
+<g class="core-rotate" opacity="0.08">
+  <circle cx="195" cy="220" r="150" fill="none" stroke="#00d4ff" stroke-width="1" stroke-dasharray="20,40"/>
+</g>
+
+<!-- ============================================ -->
+<!-- RADIAL BARS — Isometric Style                -->
+<!-- ============================================ -->
+
+<!-- BAR 1: AI Detection Engine — 87% — Cyan — Bottom-Left -->
+<g class="bar-group bar1" transform="translate(195,220)">
+  <g transform="rotate(-90)">
+    <rect x="-18" y="-160" width="36" height="139" rx="6" fill="url(#g1)" filter="url(#glow1)" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Bar Top Cap -->
+    <rect x="-22" y="-165" width="44" height="10" rx="4" fill="#00d4ff" filter="url(#glow2)"/>
+    <!-- Percentage Badge -->
+    <rect x="-22" y="-178" width="44" height="16" rx="8" fill="#00d4ff" opacity="0.9"/>
+    <text x="0" y="-167" text-anchor="middle" fill="#0d1117" font-family="monospace" font-size="9" font-weight="bold">87%</text>
+  </g>
+</g>
+
+<!-- BAR 2: Browser Automation — 100% — Purple — Bottom-Right -->
+<g class="bar-group bar2" transform="translate(195,220)">
+  <g transform="rotate(0)">
+    <rect x="-18" y="-160" width="36" height="160" rx="6" fill="url(#g2)" filter="url(#glow1)" opacity="0.9">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-22" y="-165" width="44" height="10" rx="4" fill="#a78bfa" filter="url(#glow2)"/>
+    <rect x="-22" y="-178" width="44" height="16" rx="8" fill="#a78bfa" opacity="0.9"/>
+    <text x="0" y="-167" text-anchor="middle" fill="#0d1117" font-family="monospace" font-size="9" font-weight="bold">100%</text>
+  </g>
+</g>
+
+<!-- BAR 3: VS Code Extension — 65% — Gold — Top-Right -->
+<g class="bar-group bar3" transform="translate(195,220)">
+  <g transform="rotate(90)">
+    <rect x="-18" y="-160" width="36" height="104" rx="6" fill="url(#g3)" filter="url(#glow1)" opacity="0.9">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-22" y="-165" width="44" height="10" rx="4" fill="#ffd700" filter="url(#glow2)"/>
+    <rect x="-22" y="-178" width="44" height="16" rx="8" fill="#ffd700" opacity="0.9"/>
+    <text x="0" y="-167" text-anchor="middle" fill="#0d1117" font-family="monospace" font-size="9" font-weight="bold">65%</text>
+  </g>
+</g>
+
+<!-- BAR 4: Cloud SaaS — 55% — Red — Top-Left -->
+<g class="bar-group bar4" transform="translate(195,220)">
+  <g transform="rotate(180)">
+    <rect x="-18" y="-160" width="36" height="88" rx="6" fill="url(#g4)" filter="url(#glow1)" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-22" y="-165" width="44" height="10" rx="4" fill="#ff6b6b" filter="url(#glow2)"/>
+    <rect x="-22" y="-178" width="44" height="16" rx="8" fill="#ff6b6b" opacity="0.9"/>
+    <text x="0" y="-167" text-anchor="middle" fill="#0d1117" font-family="monospace" font-size="9" font-weight="bold">55%</text>
+  </g>
+</g>
+
+<!-- Center Core -->
+<circle cx="195" cy="220" r="45" fill="#0d1117" stroke="#00d4ff" stroke-width="1.5" filter="url(#glow2)"/>
+<circle cx="195" cy="220" r="35" fill="none" stroke="#a78bfa" stroke-width="0.5" stroke-dasharray="4,4" class="core-rotate"/>
+<circle cx="195" cy="220" r="15" fill="#00d4ff" opacity="0.15" filter="url(#glow3)" class="blink"/>
+
+<!-- Core Text -->
+<text x="195" y="214" text-anchor="middle" fill="#00d4ff" font-family="monospace" font-size="13" font-weight="bold" filter="url(#glow1)">PID</text>
+<text x="195" y="228" text-anchor="middle" fill="#4b5563" font-family="monospace" font-size="9">CORE</text>
+
+<!-- ============================================ -->
+<!-- LEGEND — Right Side                          -->
+<!-- ============================================ -->
+
+<g>
+  <!-- Legend Box -->
+  <rect x="360" y="65" width="175" height="280" rx="10" fill="#0d1117" stroke="#1f2937" stroke-width="1"/>
+  <text x="447" y="88" text-anchor="middle" fill="#6b7280" font-family="monospace" font-size="9" letter-spacing="3">MODULE STATUS</text>
+  <line x1="375" y1="95" x2="520" y2="95" stroke="#1f2937" stroke-width="0.5"/>
+
+  <!-- PID 001 -->
+  <rect x="375" y="108" width="8" height="8" rx="2" fill="#00d4ff" filter="url(#glow1)"/>
+  <text x="390" y="116" fill="#00d4ff" font-family="monospace" font-size="10" font-weight="bold">PID 001</text>
+  <text x="530" y="116" text-anchor="end" fill="#00d4ff" font-family="monospace" font-size="10">87%</text>
+  <text x="390" y="130" fill="#6b7280" font-family="monospace" font-size="8">AI Detection Engine</text>
+  <rect x="375" y="136" width="155" height="3" rx="1" fill="#1f2937"/>
+  <rect x="375" y="136" width="135" height="3" rx="1" fill="#00d4ff"/>
+
+  <!-- PID 002 -->
+  <rect x="375" y="155" width="8" height="8" rx="2" fill="#a78bfa" filter="url(#glow1)"/>
+  <text x="390" y="163" fill="#a78bfa" font-family="monospace" font-size="10" font-weight="bold">PID 002</text>
+  <text x="530" y="163" text-anchor="end" fill="#a78bfa" font-family="monospace" font-size="10">100%</text>
+  <text x="390" y="177" fill="#6b7280" font-family="monospace" font-size="8">Browser Automation</text>
+  <rect x="375" y="183" width="155" height="3" rx="1" fill="#1f2937"/>
+  <rect x="375" y="183" width="155" height="3" rx="1" fill="#a78bfa"/>
+
+  <!-- PID 003 -->
+  <rect x="375" y="202" width="8" height="8" rx="2" fill="#ffd700" filter="url(#glow1)"/>
+  <text x="390" y="210" fill="#ffd700" font-family="monospace" font-size="10" font-weight="bold">PID 003</text>
+  <text x="530" y="210" text-anchor="end" fill="#ffd700" font-family="monospace" font-size="10">65%</text>
+  <text x="390" y="224" fill="#6b7280" font-family="monospace" font-size="8">VS Code Extension</text>
+  <rect x="375" y="230" width="155" height="3" rx="1" fill="#1f2937"/>
+  <rect x="375" y="230" width="101" height="3" rx="1" fill="#ffd700"/>
+
+  <!-- PID 004 -->
+  <rect x="375" y="249" width="8" height="8" rx="2" fill="#ff6b6b" filter="url(#glow1)"/>
+  <text x="390" y="257" fill="#ff6b6b" font-family="monospace" font-size="10" font-weight="bold">PID 004</text>
+  <text x="530" y="257" text-anchor="end" fill="#ff6b6b" font-family="monospace" font-size="10">55%</text>
+  <text x="390" y="271" fill="#6b7280" font-family="monospace" font-size="8">Cloud SaaS Platform</text>
+  <rect x="375" y="277" width="155" height="3" rx="1" fill="#1f2937"/>
+  <rect x="375" y="277" width="85" height="3" rx="1" fill="#ff6b6b"/>
+
+  <!-- Status Footer -->
+  <line x1="375" y1="300" x2="520" y2="300" stroke="#1f2937" stroke-width="0.5"/>
+  <circle cx="385" cy="315" r="4" fill="#00ff88" filter="url(#glow2)"/>
+  <text x="395" y="319" fill="#00ff88" font-family="monospace" font-size="9">ALL SYSTEMS NOMINAL</text>
+</g>
+
+<!-- Scanning Line Effect -->
+<rect x="0" y="-420" width="560" height="2" fill="#00d4ff" opacity="0.1" class="scan"/>
+
+<!-- Bottom Label -->
+<text x="195" y="405" text-anchor="middle" fill="#374151" font-family="monospace" font-size="7">github.com/AHMADMALIK1376 · AUTO-SYNC DAILY</text>
 
 </svg>
