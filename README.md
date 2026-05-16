@@ -54,7 +54,7 @@
 <td width="50%" valign="top">
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=3000&pause=1500&color=00FF88&center=true&vCenter=true&width=340&height=22&lines=◈+IDENTITY+MATRIX+—+VERIFIED+✓"/>
+
 
 <br/>
 
@@ -77,7 +77,7 @@
 <td width="50%" valign="top">
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=3000&pause=1500&color=ffd700&center=true&vCenter=true&width=340&height=22&lines=◈+ACTIVE+PROCESSES+—+4+RUNNING"/>
+
 
 <br/>
 
