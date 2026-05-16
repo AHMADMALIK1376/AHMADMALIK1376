@@ -336,8 +336,7 @@ class FullStackArchitect {
       <br/><br/>
       <sub>Hybrid rule-based heuristics with ensemble model architecture</sub>
       <br/><br/>
-      ![](https://img.shields.io/badge/●%20DEPLOYED-00d4ff?style=flat-square&labelColor=0d1117&color=00d4ff)
-      &nbsp;<sub>MODULE_01</sub>
+     <sub>MODULE_01</sub>
       <br/><br/>
     </td>
     <td align="center" width="31%">
@@ -350,8 +349,7 @@ class FullStackArchitect {
       <br/><br/>
       <sub>Cloud-native architecture with real-time data pipelines</sub>
       <br/><br/>
-      ![](https://img.shields.io/badge/●%20DEPLOYED-00d4ff?style=flat-square&labelColor=0d1117&color=00d4ff)
-      &nbsp;<sub>MODULE_02</sub>
+     <sub>MODULE_02</sub>
       <br/><br/>
     </td>
     <td align="center" width="31%">
@@ -364,8 +362,7 @@ class FullStackArchitect {
       <br/><br/>
       <sub>Custom rendering engine with real-time code intelligence</sub>
       <br/><br/>
-      ![](https://img.shields.io/badge/◐%20IN%20DEV-ffd700?style=flat-square&labelColor=0d1117&color=ffd700)
-      &nbsp;<sub>MODULE_03</sub>
+      <sub>MODULE_03</sub>
       <br/><br/>
     </td>
   </tr>
@@ -381,8 +378,7 @@ class FullStackArchitect {
       <br/><br/>
       <sub>Lazy-load handling with intelligent data extraction</sub>
       <br/><br/>
-      ![](https://img.shields.io/badge/●%20DEPLOYED-a78bfa?style=flat-square&labelColor=0d1117&color=a78bfa)
-      &nbsp;<sub>MODULE_04</sub>
+   <sub>MODULE_04</sub>
       <br/><br/>
     </td>
     <td align="center" width="31%">
@@ -395,8 +391,7 @@ class FullStackArchitect {
       <br/><br/>
       <sub>Multi-database architecture with live cross-sync pipelines</sub>
       <br/><br/>
-      ![](https://img.shields.io/badge/●%20DEPLOYED-a78bfa?style=flat-square&labelColor=0d1117&color=a78bfa)
-      &nbsp;<sub>MODULE_05</sub>
+     <sub>MODULE_05</sub>
       <br/><br/>
     </td>
     <td align="center" width="31%">
@@ -409,8 +404,7 @@ class FullStackArchitect {
       <br/><br/>
       <sub>Containerized solutions with fully automated workflows</sub>
       <br/><br/>
-      ![](https://img.shields.io/badge/●%20DEPLOYED-ff6b6b?style=flat-square&labelColor=0d1117&color=ff6b6b)
-      &nbsp;<sub>MODULE_06</sub>
+     <sub>MODULE_06</sub>
       <br/><br/>
     </td>
   </tr>
