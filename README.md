@@ -7,7 +7,6 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,20:0a001a,50:001a33,80:0a001a,100:000000&height=300&section=header&text=AHMAD%20MALIK&fontSize=80&fontColor=00d4ff&animation=fadeIn&fontAlignY=40&desc=◈%20FULL-STACK%20ENGINEER%20◈%20AI%20ARCHITECT%20◈%20CLOUD%20CRAFTSMAN%20◈&descAlignY=62&descSize=14&descColor=aaffee&stroke=00d4ff&strokeWidth=3"/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=20&duration=2000&pause=600&color=00D4FF&center=true&vCenter=true&repeat=true&width=800&height=45&lines=SYSTEM+BOOT...+OK+%E2%96%88;LOADING+AI+MODULES...+%5B%23%23%23%23%23%23%23%23%23%23%5D+100%25;INITIALIZING+NEURAL+STACK...+READY;CONNECTING+TO+CLOUD+GRID...+ONLINE;WELCOME+TO+AHMAD%27S+TERMINAL+%F0%9F%9F%A2"/>
-
 <br/>
 
 ![](https://img.shields.io/badge/STATUS-ONLINE%20%26%20BUILDING-00d4ff?style=flat-square&labelColor=0d1117)
@@ -171,55 +170,69 @@ class FullStackArchitect {
 
 ## ◈ TECH ARSENAL ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=FFD700&center=true&vCenter=true&width=500&height=22&lines=▸+LOADING+TECH+STACK...+ALL+SYSTEMS+ARMED"/>
-
-<br/>
-
-**`// Languages & Core`**
-<br/>
-
-[![Python](https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=00d4ff)](https://python.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-0d1117?style=for-the-badge&logo=typescript&logoColor=a78bfa)](https://typescriptlang.org)
-[![JavaScript](https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=ffd700)](https://javascript.com)
-[![Java](https://img.shields.io/badge/Java-0d1117?style=for-the-badge&logo=openjdk&logoColor=ff6b6b)](https://java.com)
-[![C++](https://img.shields.io/badge/C++-0d1117?style=for-the-badge&logo=cplusplus&logoColor=aaaaaa)](https://cplusplus.com)
-[![HTML](https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=ff9500)](https://html.com)
-[![CSS](https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=61dafb)](https://css.com)
-
-<br/><br/>
-
-**`// Frameworks & Runtime`**
-<br/>
-
-[![Node.js](https://img.shields.io/badge/Node.js-0d1117?style=for-the-badge&logo=nodedotjs&logoColor=00ff88)](https://nodejs.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0d1117?style=for-the-badge&logo=fastapi&logoColor=00ffcc)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-0d1117?style=for-the-badge&logo=react&logoColor=61dafb)](https://react.dev)
-[![Tailwind](https://img.shields.io/badge/Tailwind-0d1117?style=for-the-badge&logo=tailwindcss&logoColor=a78bfa)](https://tailwindcss.com)
-[![Vite](https://img.shields.io/badge/Vite-0d1117?style=for-the-badge&logo=vite&logoColor=ffd700)](https://vitejs.dev)
-[![Express](https://img.shields.io/badge/Express-0d1117?style=for-the-badge&logo=express&logoColor=ffffff)](https://expressjs.com)
-
-<br/><br/>
-
-**`// Databases`**
-<br/>
-
-[![MongoDB](https://img.shields.io/badge/MongoDB-0d1117?style=for-the-badge&logo=mongodb&logoColor=00ff88)](https://mongodb.com)
-[![Firebase](https://img.shields.io/badge/Firebase-0d1117?style=for-the-badge&logo=firebase&logoColor=ffd700)](https://firebase.google.com)
-[![MySQL](https://img.shields.io/badge/MySQL-0d1117?style=for-the-badge&logo=mysql&logoColor=61dafb)](https://mysql.com)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=a78bfa)](https://postgresql.org)
-
-<br/><br/>
-
-**`// Cloud & DevOps`**
-<br/>
-
-[![GCP](https://img.shields.io/badge/Google%20Cloud-0d1117?style=for-the-badge&logo=googlecloud&logoColor=ff6b6b)](https://cloud.google.com)
-[![AWS](https://img.shields.io/badge/AWS-0d1117?style=for-the-badge&logo=amazonaws&logoColor=ffd700)](https://aws.amazon.com)
-[![Docker](https://img.shields.io/badge/Docker-0d1117?style=for-the-badge&logo=docker&logoColor=60a5fa)](https://docker.com)
-[![Git](https://img.shields.io/badge/Git-0d1117?style=for-the-badge&logo=git&logoColor=ff9500)](https://git-scm.com)
-[![Linux](https://img.shields.io/badge/Linux-0d1117?style=for-the-badge&logo=linux&logoColor=ffffff)](https://linux.org)
-
 </div>
+
+<details open>
+<summary align="center"><b>Languages & Core</b></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,typescript,javascript,java,cpp,html,css&theme=dark&perline=7" />
+</p>
+</details>
+
+<br/>
+
+<details>
+<summary align="center"><b>Backend & APIs</b></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nodejs,fastapi,express,py&theme=dark&perline=4" />
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/BeautifulSoup-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Uvicorn-FF6F00?style=for-the-badge&logo=python&logoColor=white" />
+</p>
+</details>
+
+<br/>
+
+<details>
+<summary align="center"><b>Frontend & UI</b></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,tailwind,vite,html,css&theme=dark&perline=5" />
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Canvas_API-FF6F00?style=for-the-badge&logo=html5&logoColor=white" />
+</p>
+</details>
+
+<br/>
+
+<details>
+<summary align="center"><b>Databases</b></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=mongodb,firebase,mysql,postgresql&theme=dark&perline=4" />
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
+</p>
+</details>
+
+<br/>
+
+<details>
+<summary align="center"><b>Cloud & DevOps</b></summary>
+<br/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=gcp,aws,docker,git,linux&theme=dark&perline=5" />
+  <br/><br/>
+  <img src="https://img.shields.io/badge/WSL_2-0078D4?style=for-the-badge&logo=windows&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/n8n-2396F3?style=for-the-badge&logo=n8n&logoColor=white" />
+</p>
+</details>
 
 <br/>
 
@@ -263,7 +276,7 @@ class FullStackArchitect {
 
 ## ◈ DEPLOYMENT HISTORY ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FFCC&center=true&vCenter=true&width=500&height=22&lines=▸+READING+COMMIT+LOGS...+GRAPH+RENDERING+🌐"/>
+
 
 <br/>
 
