@@ -101,8 +101,8 @@
 
 <br/>
 
-<!-- Each bar is a different neon color, animated fill on page load -->
-<img width="100%" src="assets/histogram.svg"/>
+<!-- FIXED: Removed "assets/" folder reference - file is in root -->
+<img width="100%" src="./skill-histogram.svg"/>
 
 <br/>
 
@@ -132,8 +132,31 @@
 
 <br/>
 
-<!-- Animated donut — segments draw in sequentially with colored glow -->
-<img width="100%" src="assets/donut.svg"/>
+<!-- FIXED: Removed "assets/" folder reference - file is in root -->
+<img width="100%" src="./lang-donut.svg"/>
+
+</div>
+
+<br/>
+
+---
+
+<br/>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--          30-DAY ACTIVITY BARS (SVG)                       -->
+<!-- ══════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+## ◈ 30-DAY COMMIT ACTIVITY ◈
+
+<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FF88&center=true&vCenter=true&width=560&height=22&lines=▸+READING+COMMIT+LOGS...+GRAPH+RENDERING+📊"/>
+
+<br/>
+
+<!-- FIXED: Removed "assets/" folder reference - file is in root -->
+<img width="100%" src="./activity-bars.svg"/>
 
 </div>
 
