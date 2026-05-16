@@ -32,9 +32,11 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=42&duration=650&pause=120&color=00D4FF&center=true&vCenter=true&repeat=true&width=120&height=70&lines=🤖;👾;🛸;⚡;🧠;👽;🤖"/>
+<img width="200" src="assets/icon-rotate.svg"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=2800&pause=1000&color=00D4FF&center=true&vCenter=true&repeat=true&width=580&height=22&lines=▸+UNIT+DETECTED+IN+SECTOR+PK-1376...+SCANNING;▸+IDENTITY+VERIFIED+—+AHMAD+MALIK+IS+ONLINE;▸+DIRECTIVE%3A+BUILD+THINGS+THAT+THINK+🧠"/>
+
+<img width="600" src="assets/scan-text.svg"/>
+
 
 </div>
 
