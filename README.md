@@ -48,7 +48,7 @@
 <!--              IDENTITY + PROCESS MONITOR                   -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
-<table width="100%">
+<table width="80%">
 <tr>
 <td width="48%" valign="top">
 
