@@ -1,0 +1,78 @@
+# ══════════════════════════════════════════════════════════════
+#  AHMAD MALIK — Self-Evolving README Workflow
+#  Runs automatically every day at 00:30 UTC.
+#  Also triggers on every push to main, and can be run manually.
+# ══════════════════════════════════════════════════════════════
+
+name: 🤖 Auto-Evolve README
+
+on:
+  schedule:
+    # Every day at 00:30 UTC
+    - cron: "30 0 * * *"
+
+  # Re-run whenever you push to main (so a fresh commit triggers an update)
+  push:
+    branches:
+      - main
+
+  # Allow manual trigger from the Actions tab in GitHub
+  workflow_dispatch:
+
+# Only allow one run at a time (prevents race conditions on rapid pushes)
+concurrency:
+  group: readme-update
+  cancel-in-progress: true
+
+jobs:
+  evolve:
+    name: Fetch Stats & Update README
+    runs-on: ubuntu-latest
+
+    # Give the action write access to push the updated README
+    permissions:
+      contents: write
+
+    steps:
+      # ── 1. Check out the repo ──────────────────────────────────
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so git log / streak calculations work
+          fetch-depth: 0
+
+      # ── 2. Set up Python ──────────────────────────────────────
+      - name: 🐍 Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      # ── 3. Install dependencies ───────────────────────────────
+      - name: 📦 Install dependencies
+        run: pip install requests
+
+      # ── 4. Run the evolution engine ───────────────────────────
+      - name: 🤖 Run README evolution engine
+        env:
+          # GitHub automatically provides this token — no extra setup needed
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python update_readme.py
+
+      # ── 5. Commit & push if anything changed ──────────────────
+      - name: 📤 Commit & push updated README
+        run: |
+          git config --global user.name  "README-Bot 🤖"
+          git config --global user.email "readme-bot@users.noreply.github.com"
+
+          git add README.md
+
+          # Only commit if there are actual changes
+          if git diff --staged --quiet; then
+            echo "✅ No changes detected — README is already up to date."
+          else
+            TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M UTC')
+            git commit -m "🤖 Auto-sync README · ${TIMESTAMP}"
+            git push
+            echo "✅ README pushed successfully!"
+          fi
