@@ -32,8 +32,7 @@
 
 <div align="center">
 
-<img width="200" src="assets/icon-rotate.svg"/>
-
+<img src="assets/Cat typing (1).gif" width="220" />
 
 <img width="600" src="assets/scan-text.svg"/>
 
