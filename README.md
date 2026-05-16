@@ -75,7 +75,7 @@
 
 <br/>
 
-<!-- PROCESS CHART — auto-updated daily by GitHub Actions -->
+<!-- PROCESS CHART -->
 <img width="100%" src="https://quickchart.io/chart?c=%7B%22type%22%3A%22horizontalBar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22%5BPID+001%5D+AI+Detection+Engine%22%2C%22%5BPID+002%5D+Browser+Automation%22%2C%22%5BPID+003%5D+VS+Code+Extension%22%2C%22%5BPID+004%5D+Cloud+SaaS+Platform%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Progress+%25%22%2C%22data%22%3A%5B87%2C100%2C65%2C55%5D%2C%22backgroundColor%22%3A%5B%2200d4ff%22%2C%22a78bfa%22%2C%22ffd700%22%2C%22ff6b6b%22%5D%7D%5D%7D%2C%22options%22%3A%7B%22scales%22%3A%7B%22xAxes%22%3A%5B%7B%22ticks%22%3A%7B%22min%22%3A0%2C%22max%22%3A100%2C%22fontColor%22%3A%22%23aaa%22%7D%2C%22gridLines%22%3A%7B%22color%22%3A%22rgba(255%2C255%2C255%2C0.05)%22%7D%7D%5D%2C%22yAxes%22%3A%5B%7B%22ticks%22%3A%7B%22fontColor%22%3A%22%23ffffff%22%2C%22fontSize%22%3A11%7D%2C%22gridLines%22%3A%7B%22display%22%3Afalse%7D%7D%5D%7D%2C%22plugins%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%7D%2C%22layout%22%3A%7B%22padding%22%3A10%7D%7D%2C%22backgroundColor%22%3A%220d1117%22%7D&w=500&h=220&bkg=0d1117&f=monospace"/>
 
 </div>
@@ -90,7 +90,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      SKILL HISTOGRAM  (animated multi-color SVG)          -->
+<!--      SKILL HISTOGRAM                                      -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -101,8 +101,8 @@
 
 <br/>
 
-<!-- Each bar is a different neon color, animated fill on page load -->
-<img width="100%" src="assets/histogram.svg"/>
+<!-- ✅ FIXED: skill-histogram.svg (not histogram.svg) -->
+<img width="100%" src="assets/skill-histogram.svg"/>
 
 <br/>
 
@@ -121,7 +121,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--     LANGUAGE DISTRIBUTION  (animated donut chart SVG)     -->
+<!--     LANGUAGE DISTRIBUTION                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -132,8 +132,31 @@
 
 <br/>
 
-<!-- Animated donut — segments draw in sequentially with colored glow -->
-<img width="100%" src="assets/donut.svg"/>
+<!-- ✅ FIXED: lang-donut.svg (not donut.svg) -->
+<img width="100%" src="assets/lang-donut.svg"/>
+
+</div>
+
+<br/>
+
+---
+
+<br/>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--          30-DAY ACTIVITY BARS                             -->
+<!-- ══════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+## ◈ 30-DAY COMMIT ACTIVITY ◈
+
+<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FF88&center=true&vCenter=true&width=560&height=22&lines=▸+READING+COMMIT+LOGS...+GRAPH+RENDERING+📊"/>
+
+<br/>
+
+<!-- ✅ activity-bars.svg in assets folder -->
+<img width="100%" src="assets/activity-bars.svg"/>
 
 </div>
 
@@ -382,31 +405,6 @@
     </td>
   </tr>
 </table>
-
-</div>
-
-<br/>
-
----
-
-<br/>
-
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--                 GRID SNAKE PROTOCOL                       -->
-<!-- ══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## ◈ GRID SNAKE PROTOCOL ◈
-
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FFCC&center=true&vCenter=true&width=500&height=22&lines=▸+SNAKE+PROTOCOL+ENGAGED...+CONSUMING+COMMITS+🐍"/>
-
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg">
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg" width="100%">
-</picture>
 
 </div>
 
