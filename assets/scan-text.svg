@@ -1,0 +1,48 @@
+<svg viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg" width="600" height="60">
+<defs>
+  <style>
+    @keyframes typeLine1 {
+      0%,15%  { opacity: 1; }
+      20%,100% { opacity: 0; }
+    }
+    @keyframes typeLine2 {
+      0%,20%  { opacity: 0; }
+      25%,50% { opacity: 1; }
+      55%,100% { opacity: 0; }
+    }
+    @keyframes typeLine3 {
+      0%,55%  { opacity: 0; }
+      60%,100% { opacity: 1; }
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%     { opacity: 0; }
+    }
+    .line1 { animation: typeLine1 6s ease-in-out infinite; }
+    .line2 { animation: typeLine2 6s ease-in-out infinite; }
+    .line3 { animation: typeLine3 6s ease-in-out infinite; }
+    .cursor { animation: blink 0.8s step-end infinite; }
+  </style>
+</defs>
+
+<rect width="600" height="60" fill="#0d1117" rx="8"/>
+
+<!-- Line 1 -->
+<g class="line1">
+  <text x="15" y="22" fill="#00d4ff" font-family="Share Tech Mono, monospace" font-size="12">▸ UNIT DETECTED IN SECTOR PK-1376... SCANNING</text>
+  <text x="420" y="22" fill="#00d4ff" font-family="monospace" font-size="12" class="cursor">█</text>
+</g>
+
+<!-- Line 2 -->
+<g class="line2">
+  <text x="15" y="40" fill="#a78bfa" font-family="Share Tech Mono, monospace" font-size="12">▸ IDENTITY VERIFIED — AHMAD MALIK IS ONLINE</text>
+  <text x="425" y="40" fill="#a78bfa" font-family="monospace" font-size="12" class="cursor">█</text>
+</g>
+
+<!-- Line 3 -->
+<g class="line3">
+  <text x="15" y="56" fill="#ffd700" font-family="Share Tech Mono, monospace" font-size="12">▸ DIRECTIVE: BUILD THINGS THAT THINK 🧠</text>
+  <text x="385" y="56" fill="#ffd700" font-family="monospace" font-size="12" class="cursor">█</text>
+</g>
+
+</svg>
