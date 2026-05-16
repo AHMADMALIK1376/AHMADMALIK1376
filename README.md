@@ -423,13 +423,12 @@ class FullStackArchitect {
 
 <div align="center">
 
-## ◈ NEURAL PULSE NETWORK ◈
+## ◈ PACMAN NETWORK ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FF88&center=true&vCenter=true&width=500&height=22&lines=▸+NEURAL+NETWORK+FIRING...+INFERENCE+IN+PROGRESS+🧠"/>
 
 <br/>
 
-<img width="100%" src="https://raw.githubusercontent.com/AHMADMALIK1376/AHMADMALIK1376/main/assets/neural-pulse.svg"/>
+<img width="100%" src="https://raw.githubusercontent.com/AHMADMALIK1376/AHMADMALIK1376/main/assets/pacman.svg"/>
 
 </div>
 
