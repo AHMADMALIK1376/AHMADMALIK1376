@@ -418,23 +418,18 @@ class FullStackArchitect {
 
 <br/>
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                 GRID SNAKE PROTOCOL                       -->
+<!--              NEURAL PULSE NETWORK                         -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ GRID SNAKE PROTOCOL ◈
+## ◈ NEURAL PULSE NETWORK ◈
 
-<sub>▸ SNAKE PROTOCOL ENGAGED... CONSUMING COMMITS 🐍</sub>
+<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FF88&center=true&vCenter=true&width=500&height=22&lines=▸+NEURAL+NETWORK+FIRING...+INFERENCE+IN+PROGRESS+🧠"/>
 
 <br/>
-<br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution snake" src="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg" width="100%">
-</picture>
+<img width="100%" src="https://raw.githubusercontent.com/AHMADMALIK1376/AHMADMALIK1376/main/assets/neural-pulse.svg"/>
 
 </div>
 
