@@ -50,7 +50,7 @@
 
 <table width="100%">
 <tr>
-<td width="55%" valign="top">
+<td width="45%" valign="top">
 
 ```typescript
 class FullStackArchitect {
@@ -78,7 +78,7 @@ class FullStackArchitect {
 }
 ```
 </td>
-<td width="50%" valign="top">
+<td width="55%" valign="top">
 <div align="center">
 
 <br/>
