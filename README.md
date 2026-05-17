@@ -1,37 +1,73 @@
 <div align="center">
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                      HEADER                               -->
+<!--              ADVANCED HOLOGRAPHIC HEADER                  -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,20:0a001a,50:001a33,80:0a001a,100:000000&height=300&section=header&text=AHMAD%20MALIK&fontSize=80&fontColor=00d4ff&animation=fadeIn&fontAlignY=40&desc=◈%20FULL-STACK%20ENGINEER%20◈%20AI%20ARCHITECT%20◈%20CLOUD%20CRAFTSMAN%20◈&descAlignY=62&descSize=14&descColor=aaffee&stroke=00d4ff&strokeWidth=3"/>
+<!-- Top scan line -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,4&height=2&section=header&text=&fontSize=0"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=20&duration=2000&pause=600&color=00D4FF&center=true&vCenter=true&repeat=true&width=800&height=45&lines=SYSTEM+BOOT...+OK+%E2%96%88;LOADING+AI+MODULES...+%5B%23%23%23%23%23%23%23%23%23%23%5D+100%25;INITIALIZING+NEURAL+STACK...+READY;CONNECTING+TO+CLOUD+GRID...+ONLINE;WELCOME+TO+AHMAD%27S+TERMINAL+%F0%9F%9F%A2"/>
 <br/>
 
-![](https://img.shields.io/badge/STATUS-ONLINE%20%26%20BUILDING-00d4ff?style=flat-square&labelColor=0d1117)
-&nbsp;
-![](https://img.shields.io/badge/LOCATION-PAKISTAN%20🇵🇰-a78bfa?style=flat-square&labelColor=0d1117)
-&nbsp;
-![](https://komarev.com/ghpvc/?username=AHMADMALIK1376&label=PROFILE+VIEWS&style=flat-square&color=ffd700&labelColor=0d1117)
-&nbsp;
-![](https://img.shields.io/github/followers/AHMADMALIK1376?label=FOLLOWERS&style=flat-square&color=ff6b6b&labelColor=0d1117)
+<!-- Glitch name effect -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,20:0a001a,50:001a33,80:0a001a,100:000000&height=280&section=header&text=AHMAD%20MALIK&fontSize=85&fontColor=00d4ff&animation=fadeIn&fontAlignY=35&desc=◈%20FULL-STACK%20ENGINEER%20◈%20AI%20ARCHITECT%20◈%20CLOUD%20CRAFTSMAN%20◈&descAlignY=60&descSize=15&descColor=aaffee&stroke=00d4ff&strokeWidth=3"/>
+
+<!-- Holographic glitch scan lines -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00d4ff11,50:00d4ff00,100:00d4ff11&height=1&section=header&text=&fontSize=0"/>
+
+<!-- Advanced typing matrix -->
+<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=18&duration=1800&pause=400&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=true&width=850&height=120&lines=%E2%96%8C+SYSTEM.BOOT()+%E2%9F%B6+OK;%E2%96%8C+LOADING+AI_MODULES%E2%80%A6+%5B%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%5D+100%25;%E2%96%8C+INITIALIZING+NEURAL_STACK%E2%80%A6+READY;%E2%96%8C+CONNECTING+TO+CLOUD_GRID%E2%80%A6+ONLINE;%E2%96%8C+WELCOME+TO+AHMAD'S+TERMINAL+%F0%9F%9F%A2" alt="Advanced Terminal"/>
+
+<br/>
+
+<!-- Live status grid -->
+<table>
+<tr>
+<td align="center">
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- Advanced badges with glow -->
+<p>
+  <img src="https://img.shields.io/badge/🟢_STATUS-ONLINE_%26_BUILDING-00d4ff?style=for-the-badge&logo=statuspal&logoColor=white&labelColor=0d1117&color=00d4ff"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/📍_BASE-PAKISTAN_🇵🇰-a78bfa?style=for-the-badge&logo=airplayvideo&logoColor=white&labelColor=0d1117&color=a78bfa"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/👁️_VIEWS-1.2K%2B-ffd700?style=for-the-badge&logo=eye&logoColor=white&labelColor=0d1117&color=ffd700"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/⭐_STARS-EARNING-ff6b6b?style=for-the-badge&logo=starship&logoColor=white&labelColor=0d1117&color=ff6b6b"/>
+</p>
+
+<br/>
+
+<!-- Live metrics with actual data -->
+<p>
+  <img src="https://komarev.com/ghpvc/?username=AHMADMALIK1376&label=LIVE+VISITORS&style=for-the-badge&color=00d4ff&labelColor=0d1117"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/followers/AHMADMALIK1376?label=SATELLITES&style=for-the-badge&color=a78bfa&labelColor=0d1117"/>
+  &nbsp;
+  <img src="https://img.shields.io/github/stars/AHMADMALIK1376?label=SIGNALS&style=for-the-badge&color=ffd700&labelColor=0d1117"/>
+</p>
+
+<!-- Bottom scan line -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=2,3,4&height=2&section=footer&text=&fontSize=0"/>
 
 </div>
 
 <br/>
 
 ---
-
-
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--                  ANIMATED INTRO                           -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
+<img src="assets/pacman (1).gif" width="220" />
 
-<img src="assets/cat.gif" width="190" />
 
 <img width="600" src="assets/scan-text.svg"/>
 
