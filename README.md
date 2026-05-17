@@ -14,7 +14,7 @@
 <!-- Holographic glitch scan lines -->
 
 <!-- Advanced typing matrix -->
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=18&duration=1800&pause=400&color=00D4FF&center=true&vCenter=true&multiline=true&repeat=true&width=850&height=120&lines=%E2%96%8C+SYSTEM.BOOT()+%E2%9F%B6+OK;%E2%96%8C+LOADING+AI_MODULES%E2%80%A6+%5B%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%E2%96%88%5D+100%25;%E2%96%8C+INITIALIZING+NEURAL_STACK%E2%80%A6+READY;%E2%96%8C+CONNECTING+TO+CLOUD_GRID%E2%80%A6+ONLINE;%E2%96%8C+WELCOME+TO+AHMAD'S+TERMINAL+%F0%9F%9F%A2" alt="Advanced Terminal"/>
+<img width="100%" src="assets/terminal-boot.svg"/>
 
 <br/>
 
