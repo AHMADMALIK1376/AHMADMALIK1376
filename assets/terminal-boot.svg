@@ -1,0 +1,77 @@
+<svg viewBox="0 0 750 140" xmlns="http://www.w3.org/2000/svg" width="750" height="140">
+<defs>
+  <style>
+    @keyframes type1 {
+      0%,8%   { opacity: 0; }
+      10%,100% { opacity: 1; }
+    }
+    @keyframes type2 {
+      0%,18%  { opacity: 0; }
+      20%,100% { opacity: 1; }
+    }
+    @keyframes type3 {
+      0%,38%  { opacity: 0; }
+      40%,100% { opacity: 1; }
+    }
+    @keyframes type4 {
+      0%,58%  { opacity: 0; }
+      60%,100% { opacity: 1; }
+    }
+    @keyframes type5 {
+      0%,78%  { opacity: 0; }
+      80%,100% { opacity: 1; }
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%     { opacity: 0; }
+    }
+    @keyframes progressBar {
+      0%,18%  { width: 0; }
+      20%,38% { width: 0%; }
+      40%,58% { width: 100%; }
+    }
+    .l1 { animation: type1 5s ease-in-out infinite; }
+    .l2 { animation: type2 5s ease-in-out infinite; }
+    .l3 { animation: type3 5s ease-in-out infinite; }
+    .l4 { animation: type4 5s ease-in-out infinite; }
+    .l5 { animation: type5 5s ease-in-out infinite; }
+    .cursor { animation: blink 0.7s step-end infinite; }
+    .bar-bg { animation: type2 5s ease-in-out infinite; }
+    .bar-fill { animation: progressBar 5s ease-in-out infinite; }
+  </style>
+</defs>
+
+<rect width="750" height="140" fill="#0d1117" rx="10"/>
+
+<!-- Line 1: SYSTEM.BOOT() - Cyan -->
+<g class="l1">
+  <text x="25" y="30" fill="#00d4ff" font-family="Share Tech Mono, monospace" font-size="14">▌ SYSTEM.BOOT() ⟶ OK</text>
+</g>
+
+<!-- Line 2: LOADING AI_MODULES - Green -->
+<g class="l2">
+  <text x="25" y="52" fill="#00ff88" font-family="Share Tech Mono, monospace" font-size="14">▌ LOADING AI_MODULES...</text>
+  <!-- Progress bar bg -->
+  <rect x="230" y="42" width="200" height="12" rx="3" fill="#1f2937" class="bar-bg"/>
+  <!-- Progress bar fill -->
+  <rect x="230" y="42" width="200" height="12" rx="3" fill="#00ff88" class="bar-fill"/>
+  <text x="440" y="52" fill="#00ff88" font-family="Share Tech Mono, monospace" font-size="12">100%</text>
+</g>
+
+<!-- Line 3: INITIALIZING NEURAL - Purple -->
+<g class="l3">
+  <text x="25" y="74" fill="#a78bfa" font-family="Share Tech Mono, monospace" font-size="14">▌ INITIALIZING NEURAL_STACK... READY</text>
+</g>
+
+<!-- Line 4: CONNECTING TO CLOUD - Gold -->
+<g class="l4">
+  <text x="25" y="96" fill="#ffd700" font-family="Share Tech Mono, monospace" font-size="14">▌ CONNECTING TO CLOUD_GRID... ONLINE</text>
+</g>
+
+<!-- Line 5: WELCOME - Red with blinking cursor -->
+<g class="l5">
+  <text x="25" y="118" fill="#ff6b6b" font-family="Share Tech Mono, monospace" font-size="14">▌ WELCOME TO AHMAD'S TERMINAL 🟢</text>
+  <text x="380" y="118" fill="#ff6b6b" font-family="monospace" font-size="14" class="cursor">█</text>
+</g>
+
+</svg>
