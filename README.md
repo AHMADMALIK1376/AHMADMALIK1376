@@ -33,15 +33,11 @@
 
 <!-- Advanced badges with glow -->
 <p>
-<img src="assets/status-online.svg" width="200"/>
-  <!-- <img src="assets/status-offline.svg" width="200"/> -->
+ <img src="https://img.shields.io/badge/🟢_STATUS-ONLINE_%26_BUILDING-00d4ff?style=for-the-badge&logo=statuspal&logoColor=white&labelColor=0d1117&color=00ff88"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/📍_BASE-PAKISTAN_🇵🇰-a78bfa?style=for-the-badge&logo=airplayvideo&logoColor=white&labelColor=0d1117&color=ff6b6b"/>
+  &nbsp;
 
-  &nbsp;
-  <img src="https://img.shields.io/badge/📍_BASE-PAKISTAN_🇵🇰-a78bfa?style=for-the-badge&logo=airplayvideo&logoColor=white&labelColor=0d1117&color=a78bfa"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/👁️_VIEWS-1.2K%2B-ffd700?style=for-the-badge&logo=eye&logoColor=white&labelColor=0d1117&color=ffd700"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/⭐_STARS-EARNING-ff6b6b?style=for-the-badge&logo=starship&logoColor=white&labelColor=0d1117&color=ff6b6b"/>
 </p>
 
 <br/>
@@ -50,9 +46,8 @@
 <p>
   <img src="https://komarev.com/ghpvc/?username=AHMADMALIK1376&label=LIVE+VISITORS&style=for-the-badge&color=00d4ff&labelColor=0d1117"/>
   &nbsp;
-  <img src="https://img.shields.io/github/followers/AHMADMALIK1376?label=SATELLITES&style=for-the-badge&color=a78bfa&labelColor=0d1117"/>
-  &nbsp;
-  <img src="https://img.shields.io/github/stars/AHMADMALIK1376?label=SIGNALS&style=for-the-badge&color=ffd700&labelColor=0d1117"/>
+  <img src="https://img.shields.io/github/followers/AHMADMALIK1376?label=Followers&style=for-the-badge&color=a78bfa&labelColor=0d1117"/>
+ 
 </p>
 
 <!-- Bottom scan line -->
