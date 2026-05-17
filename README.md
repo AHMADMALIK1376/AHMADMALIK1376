@@ -9,12 +9,14 @@
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:30363d&height=220&section=header&text=Ahmad%20Malik&fontSize=55&fontColor=00d4ff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Engineer%20%7C%20Cloud%20Architect&descAlignY=55&descSize=16&descColor=8b949e"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:30363d&height=220&section=header&text=Ahmad%20Malik&fontSize=55&fontColor=ffd700&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Engineer%20%7C%20Cloud%20Architect&descAlignY=55&descSize=16&descColor=ffd700"/>
 
 <!-- Holographic glitch scan lines -->
 
 <!-- Advanced typing matrix -->
+
 <img width="100%" src="assets/terminal-boot.svg"/>
+
 
 <br/>
 
