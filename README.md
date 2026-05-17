@@ -33,7 +33,9 @@
 
 <!-- Advanced badges with glow -->
 <p>
-  <img src="https://img.shields.io/badge/🟢_STATUS-ONLINE_%26_BUILDING-00d4ff?style=for-the-badge&logo=statuspal&logoColor=white&labelColor=0d1117&color=00d4ff"/>
+<img src="assets/status-online.svg" width="200"/>
+  <!-- <img src="assets/status-offline.svg" width="200"/> -->
+
   &nbsp;
   <img src="https://img.shields.io/badge/📍_BASE-PAKISTAN_🇵🇰-a78bfa?style=for-the-badge&logo=airplayvideo&logoColor=white&labelColor=0d1117&color=a78bfa"/>
   &nbsp;
