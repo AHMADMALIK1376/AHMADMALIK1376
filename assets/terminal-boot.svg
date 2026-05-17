@@ -1,77 +1,78 @@
 <svg viewBox="0 0 750 140" xmlns="http://www.w3.org/2000/svg" width="750" height="140">
 <defs>
   <style>
-    @keyframes type1 {
-      0%,8%   { opacity: 0; }
-      10%,100% { opacity: 1; }
+    @keyframes typeLine1 {
+      0%,2%   { clip-path: inset(0 100% 0 0); }
+      10%,100% { clip-path: inset(0 0 0 0); }
     }
-    @keyframes type2 {
-      0%,18%  { opacity: 0; }
-      20%,100% { opacity: 1; }
+    @keyframes typeLine2 {
+      0%,18%  { clip-path: inset(0 100% 0 0); }
+      28%,100% { clip-path: inset(0 0 0 0); }
     }
-    @keyframes type3 {
-      0%,38%  { opacity: 0; }
-      40%,100% { opacity: 1; }
+    @keyframes typeLine3 {
+      0%,38%  { clip-path: inset(0 100% 0 0); }
+      48%,100% { clip-path: inset(0 0 0 0); }
     }
-    @keyframes type4 {
-      0%,58%  { opacity: 0; }
-      60%,100% { opacity: 1; }
+    @keyframes typeLine4 {
+      0%,58%  { clip-path: inset(0 100% 0 0); }
+      68%,100% { clip-path: inset(0 0 0 0); }
     }
-    @keyframes type5 {
-      0%,78%  { opacity: 0; }
-      80%,100% { opacity: 1; }
+    @keyframes typeLine5 {
+      0%,78%  { clip-path: inset(0 100% 0 0); }
+      88%,100% { clip-path: inset(0 0 0 0); }
     }
     @keyframes blink {
       0%,100% { opacity: 1; }
       50%     { opacity: 0; }
     }
-    @keyframes progressBar {
+    @keyframes progressGrow {
       0%,18%  { width: 0; }
-      20%,38% { width: 0%; }
-      40%,58% { width: 100%; }
+      28%,100% { width: 200; }
     }
-    .l1 { animation: type1 5s ease-in-out infinite; }
-    .l2 { animation: type2 5s ease-in-out infinite; }
-    .l3 { animation: type3 5s ease-in-out infinite; }
-    .l4 { animation: type4 5s ease-in-out infinite; }
-    .l5 { animation: type5 5s ease-in-out infinite; }
-    .cursor { animation: blink 0.7s step-end infinite; }
-    .bar-bg { animation: type2 5s ease-in-out infinite; }
-    .bar-fill { animation: progressBar 5s ease-in-out infinite; }
+    .line1 { animation: typeLine1 6s steps(30) infinite; }
+    .line2 { animation: typeLine2 6s steps(30) infinite; }
+    .line3 { animation: typeLine3 6s steps(30) infinite; }
+    .line4 { animation: typeLine4 6s steps(30) infinite; }
+    .line5 { animation: typeLine5 6s steps(30) infinite; }
+    .cursor1 { animation: blink 0.8s step-end infinite; animation-delay: 0s; }
+    .cursor2 { animation: blink 0.8s step-end infinite; animation-delay: 1.2s; }
+    .cursor3 { animation: blink 0.8s step-end infinite; animation-delay: 2.4s; }
+    .cursor4 { animation: blink 0.8s step-end infinite; animation-delay: 3.6s; }
+    .cursor5 { animation: blink 0.8s step-end infinite; animation-delay: 4.8s; }
+    .bar-fill { animation: progressGrow 6s steps(20) infinite; }
   </style>
 </defs>
 
 <rect width="750" height="140" fill="#0d1117" rx="10"/>
 
 <!-- Line 1: SYSTEM.BOOT() - Cyan -->
-<g class="l1">
+<g class="line1">
   <text x="25" y="30" fill="#00d4ff" font-family="Share Tech Mono, monospace" font-size="14">▌ SYSTEM.BOOT() ⟶ OK</text>
+  <text x="300" y="30" fill="#00d4ff" font-family="monospace" font-size="14" class="cursor1">█</text>
 </g>
 
 <!-- Line 2: LOADING AI_MODULES - Green -->
-<g class="l2">
-  <text x="25" y="52" fill="#00ff88" font-family="Share Tech Mono, monospace" font-size="14">▌ LOADING AI_MODULES...</text>
-  <!-- Progress bar bg -->
-  <rect x="230" y="42" width="200" height="12" rx="3" fill="#1f2937" class="bar-bg"/>
-  <!-- Progress bar fill -->
-  <rect x="230" y="42" width="200" height="12" rx="3" fill="#00ff88" class="bar-fill"/>
-  <text x="440" y="52" fill="#00ff88" font-family="Share Tech Mono, monospace" font-size="12">100%</text>
+<g class="line2">
+  <text x="25" y="52" fill="#00ff88" font-family="Share Tech Mono, monospace" font-size="14">▌ LOADING AI_MODULES... [██████████] 100%</text>
+  <text x="480" y="52" fill="#00ff88" font-family="monospace" font-size="14" class="cursor2">█</text>
 </g>
 
 <!-- Line 3: INITIALIZING NEURAL - Purple -->
-<g class="l3">
+<g class="line3">
   <text x="25" y="74" fill="#a78bfa" font-family="Share Tech Mono, monospace" font-size="14">▌ INITIALIZING NEURAL_STACK... READY</text>
+  <text x="400" y="74" fill="#a78bfa" font-family="monospace" font-size="14" class="cursor3">█</text>
 </g>
 
 <!-- Line 4: CONNECTING TO CLOUD - Gold -->
-<g class="l4">
+<g class="line4">
   <text x="25" y="96" fill="#ffd700" font-family="Share Tech Mono, monospace" font-size="14">▌ CONNECTING TO CLOUD_GRID... ONLINE</text>
+  <text x="405" y="96" fill="#ffd700" font-family="monospace" font-size="14" class="cursor4">█</text>
 </g>
 
-<!-- Line 5: WELCOME - Red with blinking cursor -->
-<g class="l5">
+<!-- Line 5: WELCOME - Red -->
+<g class="line5">
   <text x="25" y="118" fill="#ff6b6b" font-family="Share Tech Mono, monospace" font-size="14">▌ WELCOME TO AHMAD'S TERMINAL 🟢</text>
-  <text x="380" y="118" fill="#ff6b6b" font-family="monospace" font-size="14" class="cursor">█</text>
+  <text x="395" y="118" fill="#ff6b6b" font-family="monospace" font-size="14" class="cursor5">█</text>
 </g>
 
 </svg>
