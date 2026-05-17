@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg" width="200" height="40">
+  <defs>
+    <style>
+      @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.5;} }
+      .dot { animation: pulse 2s ease-in-out infinite; }
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#00d4ff"/>
+        <stop offset="100%" stop-color="#0088cc"/>
+      </linearGradient>
+    </style>
+  </defs>
+  <rect width="200" height="40" fill="#0d1117" rx="20" stroke="#00d4ff" stroke-width="1.5"/>
+  <circle cx="30" cy="20" r="8" fill="#00ff88" class="dot"/>
+  <text x="50" y="26" fill="#00d4ff" font-family="monospace" font-size="14" font-weight="bold">ONLINE</text>
+  <text x="160" y="26" text-anchor="end" fill="#4b5563" font-family="monospace" font-size="9">v1.0</text>
+</svg>
