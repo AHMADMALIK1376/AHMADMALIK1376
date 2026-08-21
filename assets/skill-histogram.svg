@@ -1,162 +1,160 @@
 <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" width="760" height="320">
-<defs>
-  <style>
-    .bar { animation: growUp 1.4s cubic-bezier(.22,.61,.36,1) both; transform-origin: bottom; }
-    .bar:nth-child(1)  { animation-delay: 0.05s; }
-    .bar:nth-child(2)  { animation-delay: 0.12s; }
-    .bar:nth-child(3)  { animation-delay: 0.19s; }
-    .bar:nth-child(4)  { animation-delay: 0.26s; }
-    .bar:nth-child(5)  { animation-delay: 0.33s; }
-    .bar:nth-child(6)  { animation-delay: 0.40s; }
-    .bar:nth-child(7)  { animation-delay: 0.47s; }
-    .bar:nth-child(8)  { animation-delay: 0.54s; }
-    .bar:nth-child(9)  { animation-delay: 0.61s; }
-    .bar:nth-child(10) { animation-delay: 0.68s; }
-    @keyframes growUp {
-      from { transform: scaleY(0); opacity: 0; }
-      to   { transform: scaleY(1); opacity: 1; }
-    }
-    .glow-g { filter: drop-shadow(0 0 6px #00ff88cc); }
-    .glow-p { filter: drop-shadow(0 0 6px #a855f7cc); }
-    .glow-b { filter: drop-shadow(0 0 6px #38bdf8cc); }
-    .glow-y { filter: drop-shadow(0 0 6px #fbbf24cc); }
-    .glow-r { filter: drop-shadow(0 0 6px #f87171cc); }
-    .pulse { animation: pulse 2.4s ease-in-out infinite; }
-    @keyframes pulse {
-      0%,100% { opacity:1; } 50% { opacity:.55; }
-    }
-    .scanline {
-      animation: scan 3s linear infinite;
-    }
-    @keyframes scan {
-      0%   { transform: translateY(0); opacity:.18; }
-      100% { transform: translateY(320px); opacity:.05; }
-    }
-  </style>
-  <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#00ff88"/>
-    <stop offset="100%" stop-color="#00cc66" stop-opacity=".6"/>
-  </linearGradient>
-  <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#a855f7"/>
-    <stop offset="100%" stop-color="#7c3aed" stop-opacity=".6"/>
-  </linearGradient>
-  <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#38bdf8"/>
-    <stop offset="100%" stop-color="#0284c7" stop-opacity=".6"/>
-  </linearGradient>
-  <linearGradient id="gy" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#fbbf24"/>
-    <stop offset="100%" stop-color="#d97706" stop-opacity=".6"/>
-  </linearGradient>
-  <linearGradient id="gr" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#f87171"/>
-    <stop offset="100%" stop-color="#dc2626" stop-opacity=".6"/>
-  </linearGradient>
-</defs>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
+      
+      text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      
+      .bar { 
+        animation: slideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both; 
+        transform-origin: bottom; 
+      }
+      .bar:nth-child(1)  { animation-delay: 0.05s; }
+      .bar:nth-child(2)  { animation-delay: 0.10s; }
+      .bar:nth-child(3)  { animation-delay: 0.15s; }
+      .bar:nth-child(4)  { animation-delay: 0.20s; }
+      .bar:nth-child(5)  { animation-delay: 0.25s; }
+      .bar:nth-child(6)  { animation-delay: 0.30s; }
+      .bar:nth-child(7)  { animation-delay: 0.35s; }
+      .bar:nth-child(8)  { animation-delay: 0.40s; }
+      .bar:nth-child(9)  { animation-delay: 0.45s; }
+      .bar:nth-child(10) { animation-delay: 0.50s; }
+      
+      @keyframes slideUp {
+        from { transform: scaleY(0); opacity: 0; }
+        to   { transform: scaleY(1); opacity: 1; }
+      }
+    </style>
+    
+    <!-- Smooth, light, flat gradients -->
+    <linearGradient id="g-expert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="g-advanced" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="g-proficient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="g-intermediate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="g-basic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
 
-<!-- Background -->
-<rect width="760" height="320" fill="#0d1117" rx="12"/>
-<!-- Subtle grid -->
-<line x1="60" y1="40" x2="60" y2="260" stroke="#1f2937" stroke-width=".5"/>
-<line x1="60" y1="260" x2="730" y2="260" stroke="#1f2937" stroke-width=".5"/>
-<line x1="60" y1="208" x2="730" y2="208" stroke="#1f2937" stroke-width=".3" stroke-dasharray="4,4"/>
-<line x1="60" y1="156" x2="730" y2="156" stroke="#1f2937" stroke-width=".3" stroke-dasharray="4,4"/>
-<line x1="60" y1="104" x2="730" y2="104" stroke="#1f2937" stroke-width=".3" stroke-dasharray="4,4"/>
-<line x1="60" y1="52"  x2="730" y2="52"  stroke="#1f2937" stroke-width=".3" stroke-dasharray="4,4"/>
+  <!-- Background -->
+  <rect width="760" height="320" fill="#f8fafc" rx="16"/>
+  
+  <!-- Subtle grid -->
+  <line x1="60" y1="40" x2="60" y2="260" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="60" y1="260" x2="730" y2="260" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="60" y1="208" x2="730" y2="208" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="156" x2="730" y2="156" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="104" x2="730" y2="104" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="52"  x2="730" y2="52"  stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4"/>
 
-<!-- Y labels -->
-<text x="50" y="264" text-anchor="end" fill="#4b5563" font-family="monospace" font-size="9">0</text>
-<text x="50" y="212" text-anchor="end" fill="#4b5563" font-family="monospace" font-size="9">25</text>
-<text x="50" y="160" text-anchor="end" fill="#4b5563" font-family="monospace" font-size="9">50</text>
-<text x="50" y="108" text-anchor="end" fill="#4b5563" font-family="monospace" font-size="9">75</text>
-<text x="50" y="56"  text-anchor="end" fill="#4b5563" font-family="monospace" font-size="9">100</text>
+  <!-- Y labels -->
+  <text x="50" y="264" text-anchor="end" fill="#64748b" font-size="10">0</text>
+  <text x="50" y="212" text-anchor="end" fill="#64748b" font-size="10">25</text>
+  <text x="50" y="160" text-anchor="end" fill="#64748b" font-size="10">50</text>
+  <text x="50" y="108" text-anchor="end" fill="#64748b" font-size="10">75</text>
+  <text x="50" y="56"  text-anchor="end" fill="#64748b" font-size="10">100</text>
 
-<!-- Title -->
-<text x="395" y="22" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="12" letter-spacing="4" class="pulse">◈ NEURAL SKILL HISTOGRAM ◈</text>
+  <!-- Title -->
+  <text x="395" y="28" text-anchor="middle" fill="#334155" font-size="14" font-weight="700" letter-spacing="1.5">SKILL PROFICIENCY OVERVIEW</text>
 
-<!-- BAR GROUP 1 — Python 100% → h=208 -->
-<g class="bar glow-g">
-  <rect x="72"  y="52"  width="46" height="208" fill="url(#gg)" rx="4"/>
-</g>
-<text x="95"  y="275" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="9">Python</text>
-<text x="95"  y="48"  text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="9" font-weight="bold">100%</text>
+  <!-- BAR GROUP 1 — Python 100% -->
+  <g class="bar">
+    <rect x="72" y="52" width="46" height="208" fill="url(#g-expert)" rx="6"/>
+  </g>
+  <text x="95" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">Python</text>
+  <text x="95" y="44"  text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700">100%</text>
 
-<!-- BAR GROUP 2 — Node.js 100% -->
-<g class="bar glow-g">
-  <rect x="130" y="52"  width="46" height="208" fill="url(#gg)" rx="4" opacity=".85"/>
-</g>
-<text x="153" y="275" text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="9">Node.js</text>
-<text x="153" y="48"  text-anchor="middle" fill="#00ff88" font-family="monospace" font-size="9" font-weight="bold">100%</text>
+  <!-- BAR GROUP 2 — Node.js 100% -->
+  <g class="bar">
+    <rect x="130" y="52" width="46" height="208" fill="url(#g-expert)" rx="6" opacity="0.9"/>
+  </g>
+  <text x="153" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">Node.js</text>
+  <text x="153" y="44"  text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700">100%</text>
 
-<!-- BAR GROUP 3 — Playwright 95% → h=197.6 -->
-<g class="bar glow-p">
-  <rect x="188" y="62"  width="46" height="198" fill="url(#gp)" rx="4"/>
-</g>
-<text x="211" y="275" text-anchor="middle" fill="#a855f7" font-family="monospace" font-size="9">Playwright</text>
-<text x="211" y="58"  text-anchor="middle" fill="#a855f7" font-family="monospace" font-size="9" font-weight="bold">95%</text>
+  <!-- BAR GROUP 3 — Playwright 95% -->
+  <g class="bar">
+    <rect x="188" y="62.4" width="46" height="197.6" fill="url(#g-advanced)" rx="6"/>
+  </g>
+  <text x="211" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">Playwright</text>
+  <text x="211" y="54"  text-anchor="middle" fill="#6366f1" font-size="10" font-weight="700">95%</text>
 
-<!-- BAR GROUP 4 — LLM/AI 95% -->
-<g class="bar glow-p">
-  <rect x="246" y="62"  width="46" height="198" fill="url(#gp)" rx="4" opacity=".85"/>
-</g>
-<text x="269" y="275" text-anchor="middle" fill="#a855f7" font-family="monospace" font-size="9">LLM/AI</text>
-<text x="269" y="58"  text-anchor="middle" fill="#a855f7" font-family="monospace" font-size="9" font-weight="bold">95%</text>
+  <!-- BAR GROUP 4 — LLM/AI 95% -->
+  <g class="bar">
+    <rect x="246" y="62.4" width="46" height="197.6" fill="url(#g-advanced)" rx="6" opacity="0.9"/>
+  </g>
+  <text x="269" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">LLM/AI</text>
+  <text x="269" y="54"  text-anchor="middle" fill="#6366f1" font-size="10" font-weight="700">95%</text>
 
-<!-- BAR GROUP 5 — TypeScript 80% → h=166.4 -->
-<g class="bar glow-b">
-  <rect x="304" y="94"  width="46" height="166" fill="url(#gb)" rx="4"/>
-</g>
-<text x="327" y="275" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9">TypeScript</text>
-<text x="327" y="90"  text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold">80%</text>
+  <!-- BAR GROUP 5 — TypeScript 80% -->
+  <g class="bar">
+    <rect x="304" y="93.6" width="46" height="166.4" fill="url(#g-proficient)" rx="6"/>
+  </g>
+  <text x="327" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">TypeScript</text>
+  <text x="327" y="85"  text-anchor="middle" fill="#10b981" font-size="10" font-weight="700">80%</text>
 
-<!-- BAR GROUP 6 — JavaScript 80% -->
-<g class="bar glow-b">
-  <rect x="362" y="94"  width="46" height="166" fill="url(#gb)" rx="4" opacity=".85"/>
-</g>
-<text x="385" y="275" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9">JavaScript</text>
-<text x="385" y="90"  text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold">80%</text>
+  <!-- BAR GROUP 6 — JavaScript 80% -->
+  <g class="bar">
+    <rect x="362" y="93.6" width="46" height="166.4" fill="url(#g-proficient)" rx="6" opacity="0.9"/>
+  </g>
+  <text x="385" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">JavaScript</text>
+  <text x="385" y="85"  text-anchor="middle" fill="#10b981" font-size="10" font-weight="700">80%</text>
 
-<!-- BAR GROUP 7 — React 80% -->
-<g class="bar glow-b">
-  <rect x="420" y="94"  width="46" height="166" fill="url(#gb)" rx="4" opacity=".7"/>
-</g>
-<text x="443" y="275" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9">React</text>
-<text x="443" y="90"  text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold">80%</text>
+  <!-- BAR GROUP 7 — React 80% -->
+  <g class="bar">
+    <rect x="420" y="93.6" width="46" height="166.4" fill="url(#g-proficient)" rx="6" opacity="0.8"/>
+  </g>
+  <text x="443" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">React</text>
+  <text x="443" y="85"  text-anchor="middle" fill="#10b981" font-size="10" font-weight="700">80%</text>
 
-<!-- BAR GROUP 8 — FastAPI 78% → h=162 -->
-<g class="bar glow-b">
-  <rect x="478" y="98"  width="46" height="162" fill="url(#gb)" rx="4" opacity=".6"/>
-</g>
-<text x="501" y="275" text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9">FastAPI</text>
-<text x="501" y="94"  text-anchor="middle" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold">78%</text>
+  <!-- BAR GROUP 8 — FastAPI 78% -->
+  <g class="bar">
+    <rect x="478" y="97.7" width="46" height="162.3" fill="url(#g-proficient)" rx="6" opacity="0.7"/>
+  </g>
+  <text x="501" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">FastAPI</text>
+  <text x="501" y="89"  text-anchor="middle" fill="#10b981" font-size="10" font-weight="700">78%</text>
 
-<!-- BAR GROUP 9 — Docker/GCP 76% → h=158 -->
-<g class="bar glow-y">
-  <rect x="536" y="102" width="46" height="158" fill="url(#gy)" rx="4"/>
-</g>
-<text x="559" y="275" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="9">Docker/GCP</text>
-<text x="559" y="98"  text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="9" font-weight="bold">76%</text>
+  <!-- BAR GROUP 9 — Docker/GCP 76% -->
+  <g class="bar">
+    <rect x="536" y="101.9" width="46" height="158.1" fill="url(#g-intermediate)" rx="6"/>
+  </g>
+  <text x="559" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">Docker/GCP</text>
+  <text x="559" y="93"  text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="700">76%</text>
 
-<!-- BAR GROUP 10 — Java/C++ 55% → h=114 -->
-<g class="bar glow-r">
-  <rect x="594" y="146" width="46" height="114" fill="url(#gr)" rx="4"/>
-</g>
-<text x="617" y="275" text-anchor="middle" fill="#f87171" font-family="monospace" font-size="9">Java / C++</text>
-<text x="617" y="142" text-anchor="middle" fill="#f87171" font-family="monospace" font-size="9" font-weight="bold">55%</text>
+  <!-- BAR GROUP 10 — Java/C++ 55% -->
+  <g class="bar">
+    <rect x="594" y="145.6" width="46" height="114.4" fill="url(#g-basic)" rx="6"/>
+  </g>
+  <text x="617" y="278" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">Java / C++</text>
+  <text x="617" y="137" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="700">55%</text>
 
-<!-- Legend -->
-<rect x="65"  y="292" width="8" height="8" fill="#00ff88" rx="1"/>
-<text x="76"  y="300" fill="#6b7280" font-family="monospace" font-size="8">S-RANK</text>
-<rect x="130" y="292" width="8" height="8" fill="#a855f7" rx="1"/>
-<text x="141" y="300" fill="#6b7280" font-family="monospace" font-size="8">A-RANK</text>
-<rect x="195" y="292" width="8" height="8" fill="#38bdf8" rx="1"/>
-<text x="206" y="300" fill="#6b7280" font-family="monospace" font-size="8">B-RANK</text>
-<rect x="260" y="292" width="8" height="8" fill="#fbbf24" rx="1"/>
-<text x="271" y="300" fill="#6b7280" font-family="monospace" font-size="8">C-RANK</text>
-<rect x="325" y="292" width="8" height="8" fill="#f87171" rx="1"/>
-<text x="336" y="300" fill="#6b7280" font-family="monospace" font-size="8">D-RANK</text>
-
-<!-- scanline effect -->
-<rect x="0" y="-40" width="760" height="40" fill="rgba(0,255,136,0.03)" class="scanline"/>
+  <!-- Legend -->
+  <rect x="65"  y="300" width="10" height="10" fill="#3b82f6" rx="2"/>
+  <text x="81"  y="309" fill="#64748b" font-size="9" font-weight="600">EXPERT</text>
+  
+  <rect x="135" y="300" width="10" height="10" fill="#6366f1" rx="2"/>
+  <text x="151" y="309" fill="#64748b" font-size="9" font-weight="600">ADVANCED</text>
+  
+  <rect x="215" y="300" width="10" height="10" fill="#10b981" rx="2"/>
+  <text x="231" y="309" fill="#64748b" font-size="9" font-weight="600">PROFICIENT</text>
+  
+  <rect x="305" y="300" width="10" height="10" fill="#f59e0b" rx="2"/>
+  <text x="321" y="309" fill="#64748b" font-size="9" font-weight="600">INTERMEDIATE</text>
+  
+  <rect x="405" y="300" width="10" height="10" fill="#ef4444" rx="2"/>
+  <text x="421" y="309" fill="#64748b" font-size="9" font-weight="600">BASIC</text>
 </svg>
