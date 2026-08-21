@@ -110,14 +110,14 @@ class FullStackArchitect {
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      NEURAL                                               -->
+<!--      LLM TRAINING                                         -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ NEURAL NETWORK ◈
+## ◈ LLM TRAINING ◈
 
-<sub>▸ DATASET → HIDDEN LAYERS → MODEL ✓</sub>
+<sub>▸ TOKENS → ATTENTION → LOSS ↓ → CHECKPOINT ✓</sub>
 
 
 <br/>
