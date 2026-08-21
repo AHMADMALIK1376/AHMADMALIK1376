@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="Circuit board with a central processor wired to six project module chips">
+<title>System Board</title>
+<defs><style>
+.s{animation:fade 16s linear infinite}
+@keyframes fade{0%,94%{opacity:1}99%,100%{opacity:0}}
+.tr{stroke-dasharray:100;stroke-dashoffset:100;fill:none;stroke-linecap:round}
+.sg{animation:sgate 16s linear infinite}
+@keyframes sgate{0%,30%{opacity:0}35%,92%{opacity:1}96%,100%{opacity:0}}
+.led{animation:led 1.5s steps(1,end) infinite}
+@keyframes led{0%,52%{opacity:1}53%,100%{opacity:.2}}
+.ring{transform-origin:0 0;animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(.55);opacity:.85}70%,100%{transform:scale(1.5);opacity:0}}
+.die{animation:die 2.4s ease-in-out infinite}
+@keyframes die{0%,100%{opacity:.55}50%{opacity:1}}
+.t0{animation:t0 16s ease-out infinite}
+@keyframes t0{0%,4.0%{stroke-dashoffset:100}12.0%,100%{stroke-dashoffset:0}}
+.k0{animation:k0 16s cubic-bezier(.34,1.4,.64,1) infinite;opacity:0}
+@keyframes k0{0%,10.0%{transform:translateY(9px);opacity:0}17.0%,100%{transform:translateY(0);opacity:1}}
+.g0{animation:g0 2.2s linear infinite;animation-delay:-0.00s}
+@keyframes g0{0%{transform:translate(514px,214px);opacity:0}12%{opacity:1}84%{opacity:1}100%{transform:translate(375px,128px);opacity:0}}
+.b0{animation:b0 2.2s linear infinite;animation-delay:-1.10s}
+@keyframes b0{0%{transform:translate(375px,128px);opacity:0}14%{opacity:1}82%{opacity:1}100%{transform:translate(514px,214px);opacity:0}}
+.t1{animation:t1 16s ease-out infinite}
+@keyframes t1{0%,6.2%{stroke-dashoffset:100}14.2%,100%{stroke-dashoffset:0}}
+.k1{animation:k1 16s cubic-bezier(.34,1.4,.64,1) infinite;opacity:0}
+@keyframes k1{0%,12.2%{transform:translateY(9px);opacity:0}19.2%,100%{transform:translateY(0);opacity:1}}
+.g1{animation:g1 2.2s linear infinite;animation-delay:-0.36s}
+@keyframes g1{0%{transform:translate(600px,174px);opacity:0}12%{opacity:1}84%{opacity:1}100%{transform:translate(600px,131px);opacity:0}}
+.b1{animation:b1 2.2s linear infinite;animation-delay:-1.46s}
+@keyframes b1{0%{transform:translate(600px,131px);opacity:0}14%{opacity:1}82%{opacity:1}100%{transform:translate(600px,174px);opacity:0}}
+.t2{animation:t2 16s ease-out infinite}
+@keyframes t2{0%,8.4%{stroke-dashoffset:100}16.4%,100%{stroke-dashoffset:0}}
+.k2{animation:k2 16s cubic-bezier(.34,1.4,.64,1) infinite;opacity:0}
+@keyframes k2{0%,14.4%{transform:translateY(9px);opacity:0}21.4%,100%{transform:translateY(0);opacity:1}}
+.g2{animation:g2 2.2s linear infinite;animation-delay:-0.72s}
+@keyframes g2{0%{transform:translate(686px,214px);opacity:0}12%{opacity:1}84%{opacity:1}100%{transform:translate(825px,128px);opacity:0}}
+.b2{animation:b2 2.2s linear infinite;animation-delay:-1.82s}
+@keyframes b2{0%{transform:translate(825px,128px);opacity:0}14%{opacity:1}82%{opacity:1}100%{transform:translate(686px,214px);opacity:0}}
+.t3{animation:t3 16s ease-out infinite}
+@keyframes t3{0%,10.6%{stroke-dashoffset:100}18.6%,100%{stroke-dashoffset:0}}
+.k3{animation:k3 16s cubic-bezier(.34,1.4,.64,1) infinite;opacity:0}
+@keyframes k3{0%,16.6%{transform:translateY(9px);opacity:0}23.6%,100%{transform:translateY(0);opacity:1}}
+.g3{animation:g3 2.2s linear infinite;animation-delay:-1.08s}
+@keyframes g3{0%{transform:translate(514px,306px);opacity:0}12%{opacity:1}84%{opacity:1}100%{transform:translate(375px,392px);opacity:0}}
+.b3{animation:b3 2.2s linear infinite;animation-delay:-2.18s}
+@keyframes b3{0%{transform:translate(375px,392px);opacity:0}14%{opacity:1}82%{opacity:1}100%{transform:translate(514px,306px);opacity:0}}
+.t4{animation:t4 16s ease-out infinite}
+@keyframes t4{0%,12.8%{stroke-dashoffset:100}20.8%,100%{stroke-dashoffset:0}}
+.k4{animation:k4 16s cubic-bezier(.34,1.4,.64,1) infinite;opacity:0}
+@keyframes k4{0%,18.8%{transform:translateY(9px);opacity:0}25.8%,100%{transform:translateY(0);opacity:1}}
+.g4{animation:g4 2.2s linear infinite;animation-delay:-1.44s}
+@keyframes g4{0%{transform:translate(600px,346px);opacity:0}12%{opacity:1}84%{opacity:1}100%{transform:translate(600px,389px);opacity:0}}
+.b4{animation:b4 2.2s linear infinite;animation-delay:-2.54s}
+@keyframes b4{0%{transform:translate(600px,389px);opacity:0}14%{opacity:1}82%{opacity:1}100%{transform:translate(600px,346px);opacity:0}}
+.t5{animation:t5 16s ease-out infinite}
+@keyframes t5{0%,15.0%{stroke-dashoffset:100}23.0%,100%{stroke-dashoffset:0}}
+.k5{animation:k5 16s cubic-bezier(.34,1.4,.64,1) infinite;opacity:0}
+@keyframes k5{0%,21.0%{transform:translateY(9px);opacity:0}28.0%,100%{transform:translateY(0);opacity:1}}
+.g5{animation:g5 2.2s linear infinite;animation-delay:-1.80s}
+@keyframes g5{0%{transform:translate(686px,306px);opacity:0}12%{opacity:1}84%{opacity:1}100%{transform:translate(825px,392px);opacity:0}}
+.b5{animation:b5 2.2s linear infinite;animation-delay:-2.90s}
+@keyframes b5{0%{transform:translate(825px,392px);opacity:0}14%{opacity:1}82%{opacity:1}100%{transform:translate(686px,306px);opacity:0}}
+</style></defs>
+<rect x="0" y="0" width="1200" height="520" rx="0" fill="#F4EFE7"/>
+<rect x="14" y="14" width="1172" height="492" rx="18" fill="#CFC2AC"/>
+<rect x="18" y="18" width="1164" height="484" rx="15" fill="#EBE3D5"/>
+<rect x="30" y="30" width="1140" height="460" rx="10" fill="none" stroke="#E2D8C6" stroke-width="1.6"/>
+<g class="s">
+<circle cx="44" cy="44" r="11" fill="#E2D8C6"/><circle cx="44" cy="44" r="6" fill="#F4EFE7"/><circle cx="44" cy="44" r="11" fill="none" stroke="#CFC2AC" stroke-width="1.6"/>
+<circle cx="1156" cy="44" r="11" fill="#E2D8C6"/><circle cx="1156" cy="44" r="6" fill="#F4EFE7"/><circle cx="1156" cy="44" r="11" fill="none" stroke="#CFC2AC" stroke-width="1.6"/>
+<circle cx="44" cy="476" r="11" fill="#E2D8C6"/><circle cx="44" cy="476" r="6" fill="#F4EFE7"/><circle cx="44" cy="476" r="11" fill="none" stroke="#CFC2AC" stroke-width="1.6"/>
+<circle cx="1156" cy="476" r="11" fill="#E2D8C6"/><circle cx="1156" cy="476" r="6" fill="#F4EFE7"/><circle cx="1156" cy="476" r="11" fill="none" stroke="#CFC2AC" stroke-width="1.6"/>
+<path d="M60,180 H140 L170,150 H250" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<path d="M60,340 H140 L170,370 H250" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<path d="M1140,180 H1060 L1030,150 H950" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<path d="M1140,340 H1060 L1030,370 H950" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<path d="M300,60 H520 L548,88" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<path d="M900,60 H680 L652,88" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<path d="M300,460 H520 L548,432" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<path d="M900,460 H680 L652,432" fill="none" stroke="#C99560" stroke-width="2.4" opacity=".45"/>
+<circle cx="60" cy="180" r="5" fill="#AE7A45"/><circle cx="60" cy="180" r="2.2" fill="#EBE3D5"/>
+<circle cx="60" cy="340" r="5" fill="#AE7A45"/><circle cx="60" cy="340" r="2.2" fill="#EBE3D5"/>
+<circle cx="1140" cy="180" r="5" fill="#AE7A45"/><circle cx="1140" cy="180" r="2.2" fill="#EBE3D5"/>
+<circle cx="1140" cy="340" r="5" fill="#AE7A45"/><circle cx="1140" cy="340" r="2.2" fill="#EBE3D5"/>
+<circle cx="300" cy="60" r="5" fill="#AE7A45"/><circle cx="300" cy="60" r="2.2" fill="#EBE3D5"/>
+<circle cx="900" cy="60" r="5" fill="#AE7A45"/><circle cx="900" cy="60" r="2.2" fill="#EBE3D5"/>
+<circle cx="300" cy="460" r="5" fill="#AE7A45"/><circle cx="300" cy="460" r="2.2" fill="#EBE3D5"/>
+<circle cx="900" cy="460" r="5" fill="#AE7A45"/><circle cx="900" cy="460" r="2.2" fill="#EBE3D5"/>
+<circle cx="140" cy="250" r="5" fill="#AE7A45"/><circle cx="140" cy="250" r="2.2" fill="#EBE3D5"/>
+<circle cx="1060" cy="250" r="5" fill="#AE7A45"/><circle cx="1060" cy="250" r="2.2" fill="#EBE3D5"/>
+<path class="tr t0" pathLength="100" d="M514,214 L375,128" stroke="#AE7A45" stroke-width="5"/>
+<path class="tr t0" pathLength="100" d="M514,214 L375,128" stroke="#C99560" stroke-width="2.6"/>
+<circle cx="514" cy="214" r="6" fill="#AE7A45"/><circle cx="375" cy="128" r="6" fill="#AE7A45"/>
+<path class="tr t1" pathLength="100" d="M600,174 L600,131" stroke="#AE7A45" stroke-width="5"/>
+<path class="tr t1" pathLength="100" d="M600,174 L600,131" stroke="#C99560" stroke-width="2.6"/>
+<circle cx="600" cy="174" r="6" fill="#AE7A45"/><circle cx="600" cy="131" r="6" fill="#AE7A45"/>
+<path class="tr t2" pathLength="100" d="M686,214 L825,128" stroke="#AE7A45" stroke-width="5"/>
+<path class="tr t2" pathLength="100" d="M686,214 L825,128" stroke="#C99560" stroke-width="2.6"/>
+<circle cx="686" cy="214" r="6" fill="#AE7A45"/><circle cx="825" cy="128" r="6" fill="#AE7A45"/>
+<path class="tr t3" pathLength="100" d="M514,306 L375,392" stroke="#AE7A45" stroke-width="5"/>
+<path class="tr t3" pathLength="100" d="M514,306 L375,392" stroke="#C99560" stroke-width="2.6"/>
+<circle cx="514" cy="306" r="6" fill="#AE7A45"/><circle cx="375" cy="392" r="6" fill="#AE7A45"/>
+<path class="tr t4" pathLength="100" d="M600,346 L600,389" stroke="#AE7A45" stroke-width="5"/>
+<path class="tr t4" pathLength="100" d="M600,346 L600,389" stroke="#C99560" stroke-width="2.6"/>
+<circle cx="600" cy="346" r="6" fill="#AE7A45"/><circle cx="600" cy="389" r="6" fill="#AE7A45"/>
+<path class="tr t5" pathLength="100" d="M686,306 L825,392" stroke="#AE7A45" stroke-width="5"/>
+<path class="tr t5" pathLength="100" d="M686,306 L825,392" stroke="#C99560" stroke-width="2.6"/>
+<circle cx="686" cy="306" r="6" fill="#AE7A45"/><circle cx="825" cy="392" r="6" fill="#AE7A45"/>
+<rect x="535" y="162" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="535" y="344" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="502" y="195" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="684" y="195" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="561" y="162" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="561" y="344" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="502" y="221" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="684" y="221" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="587" y="162" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="587" y="344" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="502" y="247" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="684" y="247" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="613" y="162" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="613" y="344" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="502" y="273" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="684" y="273" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="639" y="162" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="639" y="344" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="502" y="299" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="684" y="299" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="665" y="162" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="665" y="344" width="16" height="14" rx="2" fill="#C99560"/>
+<rect x="502" y="325" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="684" y="325" width="14" height="16" rx="2" fill="#C99560"/>
+<rect x="514" y="174" width="172" height="172" rx="12" fill="#38322B"/>
+<rect x="524" y="184" width="152" height="152" rx="8" fill="#4A4239"/>
+<rect class="die" x="570" y="222" width="60" height="60" rx="6" fill="#0077C8"/>
+<text x="600" y="286" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="15" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">FULL-STACK</text>
+<text x="600" y="306" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#A2988A" text-anchor="middle" letter-spacing="1.4">AM &#183; 2026</text>
+<g transform="translate(600,252)"><circle class="ring" r="46" fill="none" stroke="#0077C8" stroke-width="2.6"/></g>
+<g transform="translate(250,118)"><g class="k0">
+  <rect x="-136" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-125" y="-43" width="250" height="86" rx="9" fill="#FBF7F0" stroke="#CFC2AC" stroke-width="1.8"/>
+  <rect x="-125" y="-43" width="250" height="14" rx="7" fill="#0077C8"/>
+  <rect x="-125" y="-35" width="250" height="6" rx="0" fill="#0077C8"/>
+  <g transform="translate(-93,9) scale(0.72)"><path d="M-2,-16 h8 a5,5 0 0,1 5,5 v7 a5,5 0 0,1 -5,5 h-9 a5,5 0 0,0 -5,5 v4 h-4 a5,5 0 0,1 -5,-5 v-8 a5,5 0 0,1 5,-5 h9 a5,5 0 0,0 5,-5 v-3 Z" fill="#3776AB"/><path d="M2,16 h-8 a5,5 0 0,1 -5,-5 v-7 a5,5 0 0,1 5,-5 h9 a5,5 0 0,0 5,-5 v-4 h4 a5,5 0 0,1 5,5 v8 a5,5 0 0,1 -5,5 h-9 a5,5 0 0,0 -5,5 v3 Z" fill="#FFD43B"/><circle cx="-6.5" cy="-11.5" r="1.9" fill="#FAF5EC"/><circle cx="6.5" cy="11.5" r="1.9" fill="#3B3B3B"/></g>
+  <text x="-63" y="1" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#38322B" text-anchor="start" letter-spacing="0">AI Detection Engine</text>
+  <text x="-63" y="21" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">Python &#183; LLM Vision &#183; Voting</text>
+  <circle cx="109" cy="-36" r="3.4" fill="#FAF5EC" class="led"/>
+  <text x="-115" y="-32.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" font-weight="700" fill="#FAF5EC" text-anchor="start" letter-spacing="1">MODULE_01</text>
+</g></g>
+<g transform="translate(600,88)"><g class="k1">
+  <rect x="-136" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-125" y="-43" width="250" height="86" rx="9" fill="#FBF7F0" stroke="#CFC2AC" stroke-width="1.8"/>
+  <rect x="-125" y="-43" width="250" height="14" rx="7" fill="#AAC832"/>
+  <rect x="-125" y="-35" width="250" height="6" rx="0" fill="#AAC832"/>
+  <g transform="translate(-93,9) scale(0.72)"><circle cx="0" cy="0" r="3.6" fill="#1B93BC"/><ellipse rx="15" ry="5.6" fill="none" stroke="#1B93BC" stroke-width="2.4" transform="rotate(0)"/><ellipse rx="15" ry="5.6" fill="none" stroke="#1B93BC" stroke-width="2.4" transform="rotate(60)"/><ellipse rx="15" ry="5.6" fill="none" stroke="#1B93BC" stroke-width="2.4" transform="rotate(-60)"/></g>
+  <text x="-63" y="1" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#38322B" text-anchor="start" letter-spacing="0">Full-Stack Platforms</text>
+  <text x="-63" y="21" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">React &#183; FastAPI &#183; MongoDB</text>
+  <circle cx="109" cy="-36" r="3.4" fill="#FAF5EC" class="led"/>
+  <text x="-115" y="-32.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" font-weight="700" fill="#FAF5EC" text-anchor="start" letter-spacing="1">MODULE_02</text>
+</g></g>
+<g transform="translate(950,118)"><g class="k2">
+  <rect x="-136" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-125" y="-43" width="250" height="86" rx="9" fill="#FBF7F0" stroke="#CFC2AC" stroke-width="1.8"/>
+  <rect x="-125" y="-43" width="250" height="14" rx="7" fill="#F88379"/>
+  <rect x="-125" y="-35" width="250" height="6" rx="0" fill="#F88379"/>
+  <g transform="translate(-93,9) scale(0.72)"><path d="M9,-17 L17,-13 V13 L9,17 L-6,2 L-13,7 L-17,4 V-4 L-13,-7 L-6,-2 Z" fill="#0F7FC4"/><path d="M9,-8 L-3,0 L9,8 Z" fill="#FBF7F0"/></g>
+  <text x="-63" y="1" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#38322B" text-anchor="start" letter-spacing="0">VS Code Extensions</text>
+  <text x="-63" y="21" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">TypeScript &#183; Canvas API</text>
+  <circle cx="109" cy="-36" r="3.4" fill="#FAF5EC" class="led"/>
+  <text x="-115" y="-32.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" font-weight="700" fill="#FAF5EC" text-anchor="start" letter-spacing="1">MODULE_03</text>
+</g></g>
+<g transform="translate(250,402)"><g class="k3">
+  <rect x="-136" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-125" y="-43" width="250" height="86" rx="9" fill="#FBF7F0" stroke="#CFC2AC" stroke-width="1.8"/>
+  <rect x="-125" y="-43" width="250" height="14" rx="7" fill="#D41F26"/>
+  <rect x="-125" y="-35" width="250" height="6" rx="0" fill="#D41F26"/>
+  <g transform="translate(-93,9) scale(0.72)"><rect x="-16" y="-16" width="32" height="32" rx="4" fill="#2F72BC"/><text x="0" y="7" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="0">TS</text></g>
+  <text x="-63" y="1" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#38322B" text-anchor="start" letter-spacing="0">Browser Automation</text>
+  <text x="-63" y="21" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">Playwright &#183; BS4 &#183; Node.js</text>
+  <circle cx="109" cy="-36" r="3.4" fill="#FAF5EC" class="led"/>
+  <text x="-115" y="-32.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" font-weight="700" fill="#FAF5EC" text-anchor="start" letter-spacing="1">MODULE_04</text>
+</g></g>
+<g transform="translate(600,432)"><g class="k4">
+  <rect x="-136" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-125" y="-43" width="250" height="86" rx="9" fill="#FBF7F0" stroke="#CFC2AC" stroke-width="1.8"/>
+  <rect x="-125" y="-43" width="250" height="14" rx="7" fill="#AAC832"/>
+  <rect x="-125" y="-35" width="250" height="6" rx="0" fill="#AAC832"/>
+  <g transform="translate(-93,9) scale(0.72)"><path d="M0,-17 C10,-8 10,6 0,16.5 C-10,6 -10,-8 0,-17 Z" fill="#357E35"/><path d="M0,-14 V15" stroke="#255E25" stroke-width="2" fill="none"/></g>
+  <text x="-63" y="1" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#38322B" text-anchor="start" letter-spacing="0">Data Systems</text>
+  <text x="-63" y="21" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">Firebase &#183; MongoDB &#183; SQL</text>
+  <circle cx="109" cy="-36" r="3.4" fill="#FAF5EC" class="led"/>
+  <text x="-115" y="-32.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" font-weight="700" fill="#FAF5EC" text-anchor="start" letter-spacing="1">MODULE_05</text>
+</g></g>
+<g transform="translate(950,402)"><g class="k5">
+  <rect x="-136" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-29" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-15" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="-1" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="13" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-136" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="124" y="27" width="12" height="8" rx="2" fill="#C99560"/>
+  <rect x="-125" y="-43" width="250" height="86" rx="9" fill="#FBF7F0" stroke="#CFC2AC" stroke-width="1.8"/>
+  <rect x="-125" y="-43" width="250" height="14" rx="7" fill="#0077C8"/>
+  <rect x="-125" y="-35" width="250" height="6" rx="0" fill="#0077C8"/>
+  <g transform="translate(-93,9) scale(0.72)"><rect x="-15" y="-3" width="7" height="7" rx="1" fill="#1266A8"/><rect x="-7" y="-3" width="7" height="7" rx="1" fill="#1266A8"/><rect x="1" y="-3" width="7" height="7" rx="1" fill="#1266A8"/><rect x="-7" y="-11" width="7" height="7" rx="1" fill="#1266A8"/><rect x="1" y="-11" width="7" height="7" rx="1" fill="#1266A8"/><path d="M-19,5 H14 C14,12 8,16 1,16 H-8 C-14,16 -19,11 -19,5 Z" fill="#1266A8"/><path d="M14,3 C18,0 21,3 21,3 C19,7 16,7 14,6 Z" fill="#1266A8"/></g>
+  <text x="-63" y="1" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#38322B" text-anchor="start" letter-spacing="0">Cloud Deployments</text>
+  <text x="-63" y="21" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">GCP &#183; AWS &#183; Docker &#183; CI/CD</text>
+  <circle cx="109" cy="-36" r="3.4" fill="#FAF5EC" class="led"/>
+  <text x="-115" y="-32.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" font-weight="700" fill="#FAF5EC" text-anchor="start" letter-spacing="1">MODULE_06</text>
+</g></g>
+<g class="sg">
+  <circle class="g0" r="5.5" fill="#FAF5EC"/>
+  <circle class="b0" r="4" fill="#0077C8"/>
+  <circle class="g1" r="5.5" fill="#FAF5EC"/>
+  <circle class="b1" r="4" fill="#0077C8"/>
+  <circle class="g2" r="5.5" fill="#FAF5EC"/>
+  <circle class="b2" r="4" fill="#0077C8"/>
+  <circle class="g3" r="5.5" fill="#FAF5EC"/>
+  <circle class="b3" r="4" fill="#0077C8"/>
+  <circle class="g4" r="5.5" fill="#FAF5EC"/>
+  <circle class="b4" r="4" fill="#0077C8"/>
+  <circle class="g5" r="5.5" fill="#FAF5EC"/>
+  <circle class="b5" r="4" fill="#0077C8"/>
+</g>
+<text x="48" y="486" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="2.4">AHMADMALIK1376 &#183; SYSTEM BOARD</text>
+<text x="1152" y="486" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="2.4">6 MODULES &#183; ALL SYSTEMS NOMINAL</text>
+</g></svg>

@@ -110,20 +110,19 @@ class FullStackArchitect {
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      SKILL HISTOGRAM                                      -->
+<!--      LLM TRAINING                                         -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ SKILL PROFICIENCY MATRIX ◈
+## ◈ LLM TRAINING ◈
 
-<sub>▸ SCANNING SKILL DATABASE... ALL MODULES LOADED ✓</sub>
+<sub>▸ DATASETS → FORWARD PASS → BACKPROP ✓</sub>
 
 
 <br/>
 
-<!-- ✅ FIXED: skill-histogram.svg (not histogram.svg) -->
-<img width="100%" src="assets/skill-histogram.svg"/>
+<img width="100%" src="assets/neural.svg"/>
 
 <br/>
 
@@ -149,7 +148,7 @@ class FullStackArchitect {
 
 ## ◈ LANGUAGE DISTRIBUTION ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=A78BFA&center=true&vCenter=true&width=560&height=22&lines=▸+SCANNING+REPO+LANGUAGE+BYTES...+CHART+RENDERING+📊"/>
+<sub>▸ SCANNING REPO LANGUAGE BYTES... CHART RENDERING 📊</sub>
 
 <br/>
 
@@ -172,7 +171,7 @@ class FullStackArchitect {
 
 ## ◈ 30-DAY COMMIT ACTIVITY ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FF88&center=true&vCenter=true&width=560&height=22&lines=▸+READING+COMMIT+LOGS...+GRAPH+RENDERING+📊"/>
+<sub>▸ READING COMMIT LOGS... GRAPH RENDERING 📊</sub>
 
 <br/>
 
@@ -273,7 +272,7 @@ class FullStackArchitect {
 
 ## ◈ SYSTEM METRICS ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=FF6B6B&center=true&vCenter=true&width=500&height=22&lines=▸+PULLING+LIVE+TELEMETRY...+DATA+STREAM+OPEN+📡"/>
+<sub>▸ PULLING LIVE TELEMETRY... DATA STREAM OPEN 📡</sub>
 
 <br/>
 
@@ -323,7 +322,7 @@ class FullStackArchitect {
 
 ## ◈ ACHIEVEMENT NODES ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=FFD700&center=true&vCenter=true&width=500&height=22&lines=▸+SCANNING+TROPHY+VAULT...+ACHIEVEMENTS+UNLOCKED+🏆"/>
+<sub>▸ SCANNING TROPHY VAULT... ACHIEVEMENTS UNLOCKED 🏆</sub>
 
 <br/>
 
@@ -337,111 +336,6 @@ class FullStackArchitect {
 
 <br/>
 
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--                 DEPLOYMENT CATALOG                        -->
-<!-- ══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## ◈ DEPLOYMENT CATALOG ◈
-
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00D4FF&center=true&vCenter=true&width=500&height=22&lines=▸+6+MODULES+FOUND...+RENDERING+CATALOG+🚀"/>
-
-<br/>
-
-<table>
-  <tr>
-    <td align="center" width="31%">
-      <br/>
-      <img width="64" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
-      <br/><br/>
-      <strong>AI Detection Engine</strong>
-      <br/><br/>
-      <code>Python · LLM Vision · Voting Algo</code>
-      <br/><br/>
-      <sub>Hybrid rule-based heuristics with ensemble model architecture</sub>
-      <br/><br/>
-     <sub>MODULE_01</sub>
-      <br/><br/>
-    </td>
-    <td align="center" width="31%">
-      <br/>
-      <img width="64" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
-      <br/><br/>
-      <strong>Full-Stack Platforms</strong>
-      <br/><br/>
-      <code>React · FastAPI · MongoDB · Cloud</code>
-      <br/><br/>
-      <sub>Cloud-native architecture with real-time data pipelines</sub>
-      <br/><br/>
-     <sub>MODULE_02</sub>
-      <br/><br/>
-    </td>
-    <td align="center" width="31%">
-      <br/>
-      <img width="64" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/>
-      <br/><br/>
-      <strong>VS Code Extensions</strong>
-      <br/><br/>
-      <code>TypeScript · Canvas API · Diagnostics</code>
-      <br/><br/>
-      <sub>Custom rendering engine with real-time code intelligence</sub>
-      <br/><br/>
-      <sub>MODULE_03</sub>
-      <br/><br/>
-    </td>
-  </tr>
-  <tr><td colspan="3"><br/></td></tr>
-  <tr>
-    <td align="center" width="31%">
-      <br/>
-      <img width="64" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/>
-      <br/><br/>
-      <strong>Browser Automation</strong>
-      <br/><br/>
-      <code>Playwright · BS4 · Node.js</code>
-      <br/><br/>
-      <sub>Lazy-load handling with intelligent data extraction</sub>
-      <br/><br/>
-   <sub>MODULE_04</sub>
-      <br/><br/>
-    </td>
-    <td align="center" width="31%">
-      <br/>
-      <img width="64" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/>
-      <br/><br/>
-      <strong>Data Systems</strong>
-      <br/><br/>
-      <code>Firebase · MongoDB · SQL · Oracle</code>
-      <br/><br/>
-      <sub>Multi-database architecture with live cross-sync pipelines</sub>
-      <br/><br/>
-     <sub>MODULE_05</sub>
-      <br/><br/>
-    </td>
-    <td align="center" width="31%">
-      <br/>
-      <img width="64" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/>
-      <br/><br/>
-      <strong>Cloud Deployments</strong>
-      <br/><br/>
-      <code>GCP · AWS · Docker · CI/CD</code>
-      <br/><br/>
-      <sub>Containerized solutions with fully automated workflows</sub>
-      <br/><br/>
-     <sub>MODULE_06</sub>
-      <br/><br/>
-    </td>
-  </tr>
-</table>
-
-</div>
-
-<br/>
-
----
-
-<br/>
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--              BUILD & DEPLOY PIPELINE                      -->
 <!-- ══════════════════════════════════════════════════════════ -->
@@ -472,7 +366,7 @@ class FullStackArchitect {
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=18&duration=3500&pause=1500&color=FFD700&center=true&vCenter=true&repeat=true&width=780&height=40&lines=%22Automate+the+boring.+Architect+the+complex.+Ship+the+impossible.%22"/>
+### “Automate the boring. Architect the complex. Ship the impossible.”
 
 <br/>
 
@@ -498,7 +392,7 @@ class FullStackArchitect {
 
 ## ◈ OPEN CHANNEL ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=2500&pause=800&color=00D4FF&center=true&vCenter=true&repeat=true&width=520&height=22&lines=▸+OPENING+COMMS+CHANNEL...+ENCRYPTION+ON+🔐;▸+CHANNEL+OPEN+—+SEND+YOUR+SIGNAL+📡"/>
+<sub>▸ OPENING COMMS CHANNEL... ENCRYPTION ON 🔐 &nbsp;·&nbsp; CHANNEL OPEN — SEND YOUR SIGNAL 📡</sub>
 
 <br/><br/>
 
@@ -508,7 +402,7 @@ class FullStackArchitect {
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=14&duration=4000&pause=2000&color=00D4FF&center=true&vCenter=true&width=650&lines=TRANSMISSION+COMPLETE.+AWAITING+YOUR+SIGNAL...+📡;LET%27S+BUILD+SOMETHING+THE+WORLD+HASN%27T+SEEN.+👾;SYSTEM+STANDING+BY...+%F0%9F%9F%A2"/>
+<sub>TRANSMISSION COMPLETE. AWAITING YOUR SIGNAL... 📡 &nbsp;·&nbsp; LET’S BUILD SOMETHING THE WORLD HASN’T SEEN. 👾 &nbsp;·&nbsp; SYSTEM STANDING BY... 🟢</sub>
 
 </div>
 
