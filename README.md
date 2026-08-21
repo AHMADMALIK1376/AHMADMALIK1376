@@ -110,20 +110,19 @@ class FullStackArchitect {
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      SKILL HISTOGRAM                                      -->
+<!--      THE STACK                                            -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ SKILL PROFICIENCY MATRIX ◈
+## ◈ THE STACK ◈
 
-<sub>▸ SCANNING SKILL DATABASE... ALL MODULES LOADED ✓</sub>
+<sub>▸ ASSEMBLING LAYERS... CLOUD → DATA → BACKEND → FRONTEND ✓</sub>
 
 
 <br/>
 
-<!-- ✅ FIXED: skill-histogram.svg (not histogram.svg) -->
-<img width="100%" src="assets/skill-histogram.svg"/>
+<img width="100%" src="assets/the-stack.svg"/>
 
 <br/>
 
@@ -149,7 +148,7 @@ class FullStackArchitect {
 
 ## ◈ LANGUAGE DISTRIBUTION ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=A78BFA&center=true&vCenter=true&width=560&height=22&lines=▸+SCANNING+REPO+LANGUAGE+BYTES...+CHART+RENDERING+📊"/>
+<sub>▸ SCANNING REPO LANGUAGE BYTES... CHART RENDERING 📊</sub>
 
 <br/>
 
@@ -172,7 +171,7 @@ class FullStackArchitect {
 
 ## ◈ 30-DAY COMMIT ACTIVITY ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00FF88&center=true&vCenter=true&width=560&height=22&lines=▸+READING+COMMIT+LOGS...+GRAPH+RENDERING+📊"/>
+<sub>▸ READING COMMIT LOGS... GRAPH RENDERING 📊</sub>
 
 <br/>
 
@@ -273,7 +272,7 @@ class FullStackArchitect {
 
 ## ◈ SYSTEM METRICS ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=FF6B6B&center=true&vCenter=true&width=500&height=22&lines=▸+PULLING+LIVE+TELEMETRY...+DATA+STREAM+OPEN+📡"/>
+<sub>▸ PULLING LIVE TELEMETRY... DATA STREAM OPEN 📡</sub>
 
 <br/>
 
@@ -323,7 +322,7 @@ class FullStackArchitect {
 
 ## ◈ ACHIEVEMENT NODES ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=FFD700&center=true&vCenter=true&width=500&height=22&lines=▸+SCANNING+TROPHY+VAULT...+ACHIEVEMENTS+UNLOCKED+🏆"/>
+<sub>▸ SCANNING TROPHY VAULT... ACHIEVEMENTS UNLOCKED 🏆</sub>
 
 <br/>
 
@@ -345,7 +344,7 @@ class FullStackArchitect {
 
 ## ◈ DEPLOYMENT CATALOG ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=4000&pause=2000&color=00D4FF&center=true&vCenter=true&width=500&height=22&lines=▸+6+MODULES+FOUND...+RENDERING+CATALOG+🚀"/>
+<sub>▸ 6 MODULES FOUND... RENDERING CATALOG 🚀</sub>
 
 <br/>
 
@@ -472,7 +471,7 @@ class FullStackArchitect {
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=600&size=18&duration=3500&pause=1500&color=FFD700&center=true&vCenter=true&repeat=true&width=780&height=40&lines=%22Automate+the+boring.+Architect+the+complex.+Ship+the+impossible.%22"/>
+### “Automate the boring. Architect the complex. Ship the impossible.”
 
 <br/>
 
@@ -498,7 +497,7 @@ class FullStackArchitect {
 
 ## ◈ OPEN CHANNEL ◈
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=13&duration=2500&pause=800&color=00D4FF&center=true&vCenter=true&repeat=true&width=520&height=22&lines=▸+OPENING+COMMS+CHANNEL...+ENCRYPTION+ON+🔐;▸+CHANNEL+OPEN+—+SEND+YOUR+SIGNAL+📡"/>
+<sub>▸ OPENING COMMS CHANNEL... ENCRYPTION ON 🔐 &nbsp;·&nbsp; CHANNEL OPEN — SEND YOUR SIGNAL 📡</sub>
 
 <br/><br/>
 
@@ -508,7 +507,7 @@ class FullStackArchitect {
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=14&duration=4000&pause=2000&color=00D4FF&center=true&vCenter=true&width=650&lines=TRANSMISSION+COMPLETE.+AWAITING+YOUR+SIGNAL...+📡;LET%27S+BUILD+SOMETHING+THE+WORLD+HASN%27T+SEEN.+👾;SYSTEM+STANDING+BY...+%F0%9F%9F%A2"/>
+<sub>TRANSMISSION COMPLETE. AWAITING YOUR SIGNAL... 📡 &nbsp;·&nbsp; LET’S BUILD SOMETHING THE WORLD HASN’T SEEN. 👾 &nbsp;·&nbsp; SYSTEM STANDING BY... 🟢</sub>
 
 </div>
 

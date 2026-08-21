@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 412" width="1060" height="412" role="img" aria-label="Isometric full-stack architecture: cloud, data, backend and frontend layers">
+<title>The Stack</title>
+<defs><style>
+.s{animation:fade 12s linear infinite}
+@keyframes fade{0%,92%{opacity:1}98%,100%{opacity:0}}
+.nm{font-family:ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:19px;font-weight:800;letter-spacing:2.4px}
+.sb{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;fill:#8A7F73;letter-spacing:.2px}
+.hd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;letter-spacing:3px;fill:#8A7F73;text-anchor:end}
+.cn{stroke-dasharray:100;stroke-dashoffset:100;stroke-width:1.8;fill:none}
+.egate{animation:egate 12s linear infinite}
+@keyframes egate{0%,40%{opacity:0}46%,88%{opacity:1}93%,100%{opacity:0}}
+.emove{animation:emove 2.5s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes emove{0%{transform:translateY(0);opacity:0}10%{opacity:1}88%{opacity:1}100%{transform:translateY(-204px);opacity:0}}
+@keyframes ering{0%{transform:scale(.15);opacity:.85}55%,100%{transform:scale(1.02);opacity:0}}
+.p0{animation:p0 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p0{0%,28%{transform:translateY(56px);opacity:0}37%,100%{transform:translateY(0);opacity:1}}
+.l0{animation:l0 12s ease-out infinite;opacity:0}
+@keyframes l0{0%,32%{transform:translateX(-18px);opacity:0}40%,100%{transform:translateX(0);opacity:1}}
+.c0{animation:c0 12s linear infinite}
+@keyframes c0{0%,32%{stroke-dashoffset:100}39%,100%{stroke-dashoffset:0}}
+.r0{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-0.000s}
+.p1{animation:p1 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p1{0%,20%{transform:translateY(56px);opacity:0}29%,100%{transform:translateY(0);opacity:1}}
+.l1{animation:l1 12s ease-out infinite;opacity:0}
+@keyframes l1{0%,24%{transform:translateX(-18px);opacity:0}32%,100%{transform:translateX(0);opacity:1}}
+.c1{animation:c1 12s linear infinite}
+@keyframes c1{0%,24%{stroke-dashoffset:100}31%,100%{stroke-dashoffset:0}}
+.r1{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-0.833s}
+.p2{animation:p2 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p2{0%,12%{transform:translateY(56px);opacity:0}21%,100%{transform:translateY(0);opacity:1}}
+.l2{animation:l2 12s ease-out infinite;opacity:0}
+@keyframes l2{0%,16%{transform:translateX(-18px);opacity:0}24%,100%{transform:translateX(0);opacity:1}}
+.c2{animation:c2 12s linear infinite}
+@keyframes c2{0%,16%{stroke-dashoffset:100}23%,100%{stroke-dashoffset:0}}
+.r2{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-1.667s}
+.p3{animation:p3 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p3{0%,4%{transform:translateY(56px);opacity:0}13%,100%{transform:translateY(0);opacity:1}}
+.l3{animation:l3 12s ease-out infinite;opacity:0}
+@keyframes l3{0%,8%{transform:translateX(-18px);opacity:0}16%,100%{transform:translateX(0);opacity:1}}
+.c3{animation:c3 12s linear infinite}
+@keyframes c3{0%,8%{stroke-dashoffset:100}15%,100%{stroke-dashoffset:0}}
+.r3{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-2.500s}
+</style></defs>
+<rect width="1060" height="412" fill="#F2EDE6"/>
+<g class="s">
+<text class="hd" x="1016" y="40">FULL-STACK ARCHITECTURE</text>
+<g transform="translate(296,300)"><g class="p3">
+  <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#D9B93A"/>
+  <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#BFA22E"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#F2D24B"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#F9E68B" stroke-width="1.6" transform="scale(.58)"/>
+</g></g>
+<g transform="translate(296,232)"><g class="p2">
+  <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#E06B60"/>
+  <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#C4564C"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#F88379"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#FCB0A9" stroke-width="1.6" transform="scale(.58)"/>
+</g></g>
+<g transform="translate(296,164)"><g class="p1">
+  <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#93AE28"/>
+  <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#7D941F"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#AAC832"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#C8DE72" stroke-width="1.6" transform="scale(.58)"/>
+</g></g>
+<g transform="translate(296,96)"><g class="p0">
+  <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#0063A8"/>
+  <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#00538C"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#0077C8"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#4DA6E0" stroke-width="1.6" transform="scale(.58)"/>
+</g></g>
+<g class="egate">
+  <g transform="translate(296,96)"><path class="r0" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#4DA6E0" stroke-width="2.6"/></g>
+  <g transform="translate(296,164)"><path class="r1" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#C8DE72" stroke-width="2.6"/></g>
+  <g transform="translate(296,232)"><path class="r2" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#FCB0A9" stroke-width="2.6"/></g>
+  <g transform="translate(296,300)"><path class="r3" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#F9E68B" stroke-width="2.6"/></g>
+  <g transform="translate(296,300)"><g class="emove" style="animation-delay:0s"><circle r="7" fill="#FAF5EC"/><circle r="12" fill="none" stroke="#FAF5EC" stroke-width="2"/></g></g>
+  <g transform="translate(296,300)"><g class="emove" style="animation-delay:-0.83s"><circle r="7" fill="#FAF5EC"/><circle r="12" fill="none" stroke="#FAF5EC" stroke-width="2"/></g></g>
+  <g transform="translate(296,300)"><g class="emove" style="animation-delay:-1.66s"><circle r="7" fill="#FAF5EC"/><circle r="12" fill="none" stroke="#FAF5EC" stroke-width="2"/></g></g>
+</g>
+<path class="cn c0" pathLength="100" d="M458,96 H548" stroke="#0077C8"/>
+<g class="l0">
+  <text class="nm" x="566" y="92" fill="#0077C8">FRONTEND</text>
+  <text class="sb" x="566" y="115">React &#183; Tailwind &#183; Vite &#183; TypeScript</text>
+</g>
+<path class="cn c1" pathLength="100" d="M458,164 H548" stroke="#AAC832"/>
+<g class="l1">
+  <text class="nm" x="566" y="160" fill="#AAC832">BACKEND</text>
+  <text class="sb" x="566" y="183">Node &#183; FastAPI &#183; Python &#183; Playwright</text>
+</g>
+<path class="cn c2" pathLength="100" d="M458,232 H548" stroke="#F88379"/>
+<g class="l2">
+  <text class="nm" x="566" y="228" fill="#F88379">DATA</text>
+  <text class="sb" x="566" y="251">MongoDB &#183; Firebase &#183; SQL &#183; Oracle</text>
+</g>
+<path class="cn c3" pathLength="100" d="M458,300 H548" stroke="#F2D24B"/>
+<g class="l3">
+  <text class="nm" x="566" y="296" fill="#F2D24B">CLOUD</text>
+  <text class="sb" x="566" y="319">GCP &#183; AWS &#183; Docker &#183; CI/CD</text>
+</g>
+</g></svg>
