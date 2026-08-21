@@ -1,100 +1,185 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 412" width="1060" height="412" role="img" aria-label="Isometric full-stack architecture: cloud, data, backend and frontend layers">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 790" width="1200" height="790" role="img" aria-label="Full-stack architecture layers and the six shipped project modules">
 <title>The Stack</title>
 <defs><style>
-.s{animation:fade 12s linear infinite}
-@keyframes fade{0%,92%{opacity:1}98%,100%{opacity:0}}
-.nm{font-family:ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:19px;font-weight:800;letter-spacing:2.4px}
-.sb{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;fill:#8A7F73;letter-spacing:.2px}
-.hd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;letter-spacing:3px;fill:#8A7F73;text-anchor:end}
+.s{animation:fade 14s linear infinite}
+@keyframes fade{0%,93%{opacity:1}98%,100%{opacity:0}}
+.nm{font-family:ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:20px;font-weight:800;letter-spacing:2.4px}
+.sb{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;fill:#8A7F73}
+.hd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;letter-spacing:3px;fill:#A99E91}
 .cn{stroke-dasharray:100;stroke-dashoffset:100;stroke-width:1.8;fill:none}
-.egate{animation:egate 12s linear infinite}
-@keyframes egate{0%,40%{opacity:0}46%,88%{opacity:1}93%,100%{opacity:0}}
-.emove{animation:emove 2.5s cubic-bezier(.4,0,.6,1) infinite}
-@keyframes emove{0%{transform:translateY(0);opacity:0}10%{opacity:1}88%{opacity:1}100%{transform:translateY(-204px);opacity:0}}
-@keyframes ering{0%{transform:scale(.15);opacity:.85}55%,100%{transform:scale(1.02);opacity:0}}
-.p0{animation:p0 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
-@keyframes p0{0%,28%{transform:translateY(56px);opacity:0}37%,100%{transform:translateY(0);opacity:1}}
-.l0{animation:l0 12s ease-out infinite;opacity:0}
-@keyframes l0{0%,32%{transform:translateX(-18px);opacity:0}40%,100%{transform:translateX(0);opacity:1}}
-.c0{animation:c0 12s linear infinite}
-@keyframes c0{0%,32%{stroke-dashoffset:100}39%,100%{stroke-dashoffset:0}}
-.r0{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-0.000s}
-.p1{animation:p1 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
-@keyframes p1{0%,20%{transform:translateY(56px);opacity:0}29%,100%{transform:translateY(0);opacity:1}}
-.l1{animation:l1 12s ease-out infinite;opacity:0}
-@keyframes l1{0%,24%{transform:translateX(-18px);opacity:0}32%,100%{transform:translateX(0);opacity:1}}
-.c1{animation:c1 12s linear infinite}
-@keyframes c1{0%,24%{stroke-dashoffset:100}31%,100%{stroke-dashoffset:0}}
-.r1{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-0.833s}
-.p2{animation:p2 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
-@keyframes p2{0%,12%{transform:translateY(56px);opacity:0}21%,100%{transform:translateY(0);opacity:1}}
-.l2{animation:l2 12s ease-out infinite;opacity:0}
-@keyframes l2{0%,16%{transform:translateX(-18px);opacity:0}24%,100%{transform:translateX(0);opacity:1}}
-.c2{animation:c2 12s linear infinite}
-@keyframes c2{0%,16%{stroke-dashoffset:100}23%,100%{stroke-dashoffset:0}}
-.r2{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-1.667s}
-.p3{animation:p3 12s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
-@keyframes p3{0%,4%{transform:translateY(56px);opacity:0}13%,100%{transform:translateY(0);opacity:1}}
-.l3{animation:l3 12s ease-out infinite;opacity:0}
-@keyframes l3{0%,8%{transform:translateX(-18px);opacity:0}16%,100%{transform:translateX(0);opacity:1}}
-.c3{animation:c3 12s linear infinite}
-@keyframes c3{0%,8%{stroke-dashoffset:100}15%,100%{stroke-dashoffset:0}}
-.r3{transform-origin:0 0;animation:ering 2.5s ease-out infinite;animation-delay:-2.500s}
+.egate{animation:egate 14s linear infinite}
+@keyframes egate{0%,52%{opacity:0}57%,90%{opacity:1}94%,100%{opacity:0}}
+.emove{animation:emove 2.6s cubic-bezier(.42,0,.58,1) infinite}
+@keyframes emove{0%{transform:translateY(0);opacity:0}6%{opacity:1}94%{opacity:1}100%{transform:translateY(-394px);opacity:0}}
+.edip{transform-origin:0 0;animation:edip 2.6s linear infinite}
+@keyframes edip{0%{transform:scale(1)}8.69%{transform:scale(1)}12.69%{transform:scale(.4)}16.69%{transform:scale(1)}25.95%{transform:scale(1)}29.95%{transform:scale(.4)}33.95%{transform:scale(1)}43.21%{transform:scale(1)}47.21%{transform:scale(.4)}51.21%{transform:scale(1)}60.47%{transform:scale(1)}64.47%{transform:scale(.4)}68.47%{transform:scale(1)}100%{transform:scale(1)}}
+@keyframes ering{0%{transform:scale(.25);opacity:.95}65%,100%{transform:scale(1.6);opacity:0}}
+.p0{animation:p0 14s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p0{0%,24%{transform:translateY(58px);opacity:0}32%,100%{transform:translateY(0);opacity:1}}
+.l0{animation:l0 14s ease-out infinite;opacity:0}
+@keyframes l0{0%,27%{transform:translateX(-18px);opacity:0}34%,100%{transform:translateX(0);opacity:1}}
+.c0{animation:c0 14s linear infinite}
+@keyframes c0{0%,27%{stroke-dashoffset:100}33%,100%{stroke-dashoffset:0}}
+.r0{transform-origin:0 0;animation:ering 2.6s ease-out infinite;animation-delay:-0.924s}
+.p1{animation:p1 14s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p1{0%,17%{transform:translateY(58px);opacity:0}25%,100%{transform:translateY(0);opacity:1}}
+.l1{animation:l1 14s ease-out infinite;opacity:0}
+@keyframes l1{0%,20%{transform:translateX(-18px);opacity:0}27%,100%{transform:translateX(0);opacity:1}}
+.c1{animation:c1 14s linear infinite}
+@keyframes c1{0%,20%{stroke-dashoffset:100}26%,100%{stroke-dashoffset:0}}
+.r1{transform-origin:0 0;animation:ering 2.6s ease-out infinite;animation-delay:-1.373s}
+.p2{animation:p2 14s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p2{0%,10%{transform:translateY(58px);opacity:0}18%,100%{transform:translateY(0);opacity:1}}
+.l2{animation:l2 14s ease-out infinite;opacity:0}
+@keyframes l2{0%,13%{transform:translateX(-18px);opacity:0}20%,100%{transform:translateX(0);opacity:1}}
+.c2{animation:c2 14s linear infinite}
+@keyframes c2{0%,13%{stroke-dashoffset:100}19%,100%{stroke-dashoffset:0}}
+.r2{transform-origin:0 0;animation:ering 2.6s ease-out infinite;animation-delay:-1.821s}
+.p3{animation:p3 14s cubic-bezier(.22,1,.36,1) infinite;opacity:0}
+@keyframes p3{0%,3%{transform:translateY(58px);opacity:0}11%,100%{transform:translateY(0);opacity:1}}
+.l3{animation:l3 14s ease-out infinite;opacity:0}
+@keyframes l3{0%,6%{transform:translateX(-18px);opacity:0}13%,100%{transform:translateX(0);opacity:1}}
+.c3{animation:c3 14s linear infinite}
+@keyframes c3{0%,6%{stroke-dashoffset:100}12%,100%{stroke-dashoffset:0}}
+.r3{transform-origin:0 0;animation:ering 2.6s ease-out infinite;animation-delay:-2.270s}
+.m0{animation:m0 14s ease-out infinite;opacity:0}
+@keyframes m0{0%,32%{transform:translateY(14px);opacity:0}40%,100%{transform:translateY(0);opacity:1}}
+.m1{animation:m1 14s ease-out infinite;opacity:0}
+@keyframes m1{0%,35%{transform:translateY(14px);opacity:0}43%,100%{transform:translateY(0);opacity:1}}
+.m2{animation:m2 14s ease-out infinite;opacity:0}
+@keyframes m2{0%,38%{transform:translateY(14px);opacity:0}46%,100%{transform:translateY(0);opacity:1}}
+.m3{animation:m3 14s ease-out infinite;opacity:0}
+@keyframes m3{0%,41%{transform:translateY(14px);opacity:0}49%,100%{transform:translateY(0);opacity:1}}
+.m4{animation:m4 14s ease-out infinite;opacity:0}
+@keyframes m4{0%,44%{transform:translateY(14px);opacity:0}52%,100%{transform:translateY(0);opacity:1}}
+.m5{animation:m5 14s ease-out infinite;opacity:0}
+@keyframes m5{0%,47%{transform:translateY(14px);opacity:0}55%,100%{transform:translateY(0);opacity:1}}
 </style></defs>
-<rect width="1060" height="412" fill="#F2EDE6"/>
+<rect width="1200" height="790" fill="#F2EDE6"/>
 <g class="s">
-<text class="hd" x="1016" y="40">FULL-STACK ARCHITECTURE</text>
-<g transform="translate(296,300)"><g class="p3">
-  <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#D9B93A"/>
-  <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#BFA22E"/>
-  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#F2D24B"/>
-  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#F9E68B" stroke-width="1.6" transform="scale(.58)"/>
+<text x="1160" y="44" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="600" fill="#A99E91" text-anchor="end" letter-spacing="3">FULL-STACK ARCHITECTURE</text>
+<g transform="translate(300,314)"><g class="p3">
+  <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#B0181E"/>
+  <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#8F1318"/>
+  <ellipse cy="48" rx="15" ry="7.5" fill="#2E2A25"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z M-15,45 a15,7.5 0 1,0 30,0 a15,7.5 0 1,0 -30,0 Z" fill="#D41F26" fill-rule="evenodd"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#F0645F" stroke-width="1.6" transform="scale(.58)"/>
+  <ellipse cy="45" rx="15" ry="7.5" fill="none" stroke="#F0645F" stroke-width="2"/>
 </g></g>
-<g transform="translate(296,232)"><g class="p2">
+<g transform="translate(300,246)"><g class="p2">
   <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#E06B60"/>
   <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#C4564C"/>
-  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#F88379"/>
+  <ellipse cy="48" rx="15" ry="7.5" fill="#2E2A25"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z M-15,45 a15,7.5 0 1,0 30,0 a15,7.5 0 1,0 -30,0 Z" fill="#F88379" fill-rule="evenodd"/>
   <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#FCB0A9" stroke-width="1.6" transform="scale(.58)"/>
+  <ellipse cy="45" rx="15" ry="7.5" fill="none" stroke="#FCB0A9" stroke-width="2"/>
 </g></g>
-<g transform="translate(296,164)"><g class="p1">
+<g transform="translate(300,178)"><g class="p1">
   <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#93AE28"/>
   <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#7D941F"/>
-  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#AAC832"/>
+  <ellipse cy="48" rx="15" ry="7.5" fill="#2E2A25"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z M-15,45 a15,7.5 0 1,0 30,0 a15,7.5 0 1,0 -30,0 Z" fill="#AAC832" fill-rule="evenodd"/>
   <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#C8DE72" stroke-width="1.6" transform="scale(.58)"/>
+  <ellipse cy="45" rx="15" ry="7.5" fill="none" stroke="#C8DE72" stroke-width="2"/>
 </g></g>
-<g transform="translate(296,96)"><g class="p0">
+<g transform="translate(300,110)"><g class="p0">
   <path d="M-152,0 L0,76 L0,93 L-152,17 Z" fill="#0063A8"/>
   <path d="M152,0 L0,76 L0,93 L152,17 Z" fill="#00538C"/>
-  <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="#0077C8"/>
+  <ellipse cy="48" rx="15" ry="7.5" fill="#2E2A25"/>
+  <path d="M0,-76 L152,0 L0,76 L-152,0 Z M-15,45 a15,7.5 0 1,0 30,0 a15,7.5 0 1,0 -30,0 Z" fill="#0077C8" fill-rule="evenodd"/>
   <path d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#4DA6E0" stroke-width="1.6" transform="scale(.58)"/>
+  <ellipse cy="45" rx="15" ry="7.5" fill="none" stroke="#4DA6E0" stroke-width="2"/>
 </g></g>
 <g class="egate">
-  <g transform="translate(296,96)"><path class="r0" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#4DA6E0" stroke-width="2.6"/></g>
-  <g transform="translate(296,164)"><path class="r1" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#C8DE72" stroke-width="2.6"/></g>
-  <g transform="translate(296,232)"><path class="r2" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#FCB0A9" stroke-width="2.6"/></g>
-  <g transform="translate(296,300)"><path class="r3" d="M0,-76 L152,0 L0,76 L-152,0 Z" fill="none" stroke="#F9E68B" stroke-width="2.6"/></g>
-  <g transform="translate(296,300)"><g class="emove" style="animation-delay:0s"><circle r="7" fill="#FAF5EC"/><circle r="12" fill="none" stroke="#FAF5EC" stroke-width="2"/></g></g>
-  <g transform="translate(296,300)"><g class="emove" style="animation-delay:-0.83s"><circle r="7" fill="#FAF5EC"/><circle r="12" fill="none" stroke="#FAF5EC" stroke-width="2"/></g></g>
-  <g transform="translate(296,300)"><g class="emove" style="animation-delay:-1.66s"><circle r="7" fill="#FAF5EC"/><circle r="12" fill="none" stroke="#FAF5EC" stroke-width="2"/></g></g>
+  <g transform="translate(300,155)"><ellipse class="r0" rx="39.0" ry="19.5" fill="none" stroke="#4DA6E0" stroke-width="3"/></g>
+  <g transform="translate(300,223)"><ellipse class="r1" rx="39.0" ry="19.5" fill="none" stroke="#C8DE72" stroke-width="3"/></g>
+  <g transform="translate(300,291)"><ellipse class="r2" rx="39.0" ry="19.5" fill="none" stroke="#FCB0A9" stroke-width="3"/></g>
+  <g transform="translate(300,359)"><ellipse class="r3" rx="39.0" ry="19.5" fill="none" stroke="#F0645F" stroke-width="3"/></g>
+  <g transform="translate(300,409)"><g class="emove" style="animation-delay:0s"><g class="edip" style="animation-delay:0s"><circle r="7" fill="#FFFFFF"/><circle r="12" fill="none" stroke="#FFFFFF" stroke-width="2"/></g></g></g>
+  <g transform="translate(300,409)"><g class="emove" style="animation-delay:-0.87s"><g class="edip" style="animation-delay:-0.87s"><circle r="7" fill="#FFFFFF"/><circle r="12" fill="none" stroke="#FFFFFF" stroke-width="2"/></g></g></g>
+  <g transform="translate(300,409)"><g class="emove" style="animation-delay:-1.73s"><g class="edip" style="animation-delay:-1.73s"><circle r="7" fill="#FFFFFF"/><circle r="12" fill="none" stroke="#FFFFFF" stroke-width="2"/></g></g></g>
 </g>
-<path class="cn c0" pathLength="100" d="M458,96 H548" stroke="#0077C8"/>
+<path class="cn c0" pathLength="100" d="M462,110 H604" stroke="#0077C8"/>
 <g class="l0">
-  <text class="nm" x="566" y="92" fill="#0077C8">FRONTEND</text>
-  <text class="sb" x="566" y="115">React &#183; Tailwind &#183; Vite &#183; TypeScript</text>
+  <text x="620" y="106" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#0077C8" text-anchor="start" letter-spacing="2.4">FRONTEND</text>
+  <text x="620" y="130" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">React &#183; Tailwind &#183; Vite &#183; TypeScript</text>
 </g>
-<path class="cn c1" pathLength="100" d="M458,164 H548" stroke="#AAC832"/>
+<path class="cn c1" pathLength="100" d="M462,178 H604" stroke="#AAC832"/>
 <g class="l1">
-  <text class="nm" x="566" y="160" fill="#AAC832">BACKEND</text>
-  <text class="sb" x="566" y="183">Node &#183; FastAPI &#183; Python &#183; Playwright</text>
+  <text x="620" y="174" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#AAC832" text-anchor="start" letter-spacing="2.4">BACKEND</text>
+  <text x="620" y="198" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">Node &#183; FastAPI &#183; Python &#183; Playwright</text>
 </g>
-<path class="cn c2" pathLength="100" d="M458,232 H548" stroke="#F88379"/>
+<path class="cn c2" pathLength="100" d="M462,246 H604" stroke="#F88379"/>
 <g class="l2">
-  <text class="nm" x="566" y="228" fill="#F88379">DATA</text>
-  <text class="sb" x="566" y="251">MongoDB &#183; Firebase &#183; SQL &#183; Oracle</text>
+  <text x="620" y="242" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#F88379" text-anchor="start" letter-spacing="2.4">DATA</text>
+  <text x="620" y="266" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">MongoDB &#183; Firebase &#183; SQL &#183; Oracle</text>
 </g>
-<path class="cn c3" pathLength="100" d="M458,300 H548" stroke="#F2D24B"/>
+<path class="cn c3" pathLength="100" d="M462,314 H604" stroke="#D41F26"/>
 <g class="l3">
-  <text class="nm" x="566" y="296" fill="#F2D24B">CLOUD</text>
-  <text class="sb" x="566" y="319">GCP &#183; AWS &#183; Docker &#183; CI/CD</text>
+  <text x="620" y="310" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#D41F26" text-anchor="start" letter-spacing="2.4">CLOUD</text>
+  <text x="620" y="334" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">GCP &#183; AWS &#183; Docker &#183; CI/CD</text>
+</g>
+<path d="M30,450 H1170" stroke="#DCD3C5" stroke-width="1.6" fill="none"/>
+<text x="30" y="480" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="600" fill="#A99E91" text-anchor="start" letter-spacing="3">DEPLOYMENT CATALOG</text>
+<text x="1160" y="480" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="600" fill="#A99E91" text-anchor="end" letter-spacing="3">6 MODULES SHIPPED</text>
+<g class="m0">
+  <rect x="30" y="496" width="360" height="124" rx="12" fill="#FBF7F0" stroke="#DCD3C5" stroke-width="1.6"/>
+  <rect x="30" y="496" width="5" height="124" rx="2.5" fill="#0077C8"/>
+  <circle cx="82" cy="546" r="28" fill="#F2EDE6"/>
+  <g transform="translate(82,546) scale(1.0)"><path d="M-2,-16 h8 a5,5 0 0,1 5,5 v7 a5,5 0 0,1 -5,5 h-9 a5,5 0 0,0 -5,5 v4 h-4 a5,5 0 0,1 -5,-5 v-8 a5,5 0 0,1 5,-5 h9 a5,5 0 0,0 5,-5 v-3 Z" fill="#3776AB"/><path d="M2,16 h-8 a5,5 0 0,1 -5,-5 v-7 a5,5 0 0,1 5,-5 h9 a5,5 0 0,0 5,-5 v-4 h4 a5,5 0 0,1 5,5 v8 a5,5 0 0,1 -5,5 h-9 a5,5 0 0,0 -5,5 v3 Z" fill="#FFD43B"/><circle cx="-6.5" cy="-11.5" r="1.9" fill="#FAF5EC"/><circle cx="6.5" cy="11.5" r="1.9" fill="#3B3B3B"/></g>
+  <text x="124" y="540" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#3F3830" text-anchor="start" letter-spacing="0">AI Detection Engine</text>
+  <text x="124" y="562" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">Python &#183; LLM Vision &#183; Voting Algo</text>
+  <circle cx="130" cy="592" r="3.5" fill="#0077C8"/>
+  <text x="142" y="596" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#A99E91" text-anchor="start" letter-spacing="1.2">MODULE_01</text>
+</g>
+<g class="m1">
+  <rect x="420" y="496" width="360" height="124" rx="12" fill="#FBF7F0" stroke="#DCD3C5" stroke-width="1.6"/>
+  <rect x="420" y="496" width="5" height="124" rx="2.5" fill="#AAC832"/>
+  <circle cx="472" cy="546" r="28" fill="#F2EDE6"/>
+  <g transform="translate(472,546) scale(1.0)"><circle cx="0" cy="0" r="3.6" fill="#2E9CC0"/><ellipse rx="15" ry="5.6" fill="none" stroke="#2E9CC0" stroke-width="2.2" transform="rotate(0)"/><ellipse rx="15" ry="5.6" fill="none" stroke="#2E9CC0" stroke-width="2.2" transform="rotate(60)"/><ellipse rx="15" ry="5.6" fill="none" stroke="#2E9CC0" stroke-width="2.2" transform="rotate(-60)"/></g>
+  <text x="514" y="540" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#3F3830" text-anchor="start" letter-spacing="0">Full-Stack Platforms</text>
+  <text x="514" y="562" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">React &#183; FastAPI &#183; MongoDB &#183; Cloud</text>
+  <circle cx="520" cy="592" r="3.5" fill="#AAC832"/>
+  <text x="532" y="596" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#A99E91" text-anchor="start" letter-spacing="1.2">MODULE_02</text>
+</g>
+<g class="m2">
+  <rect x="810" y="496" width="360" height="124" rx="12" fill="#FBF7F0" stroke="#DCD3C5" stroke-width="1.6"/>
+  <rect x="810" y="496" width="5" height="124" rx="2.5" fill="#F88379"/>
+  <circle cx="862" cy="546" r="28" fill="#F2EDE6"/>
+  <g transform="translate(862,546) scale(1.0)"><path d="M9,-17 L17,-13 V13 L9,17 L-6,2 L-13,7 L-17,4 V-4 L-13,-7 L-6,-2 Z" fill="#0F7FC4"/><path d="M9,-8 L-3,0 L9,8 Z" fill="#FBF7F0"/></g>
+  <text x="904" y="540" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#3F3830" text-anchor="start" letter-spacing="0">VS Code Extensions</text>
+  <text x="904" y="562" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">TypeScript &#183; Canvas API &#183; Diagnostics</text>
+  <circle cx="910" cy="592" r="3.5" fill="#F88379"/>
+  <text x="922" y="596" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#A99E91" text-anchor="start" letter-spacing="1.2">MODULE_03</text>
+</g>
+<g class="m3">
+  <rect x="30" y="638" width="360" height="124" rx="12" fill="#FBF7F0" stroke="#DCD3C5" stroke-width="1.6"/>
+  <rect x="30" y="638" width="5" height="124" rx="2.5" fill="#D41F26"/>
+  <circle cx="82" cy="688" r="28" fill="#F2EDE6"/>
+  <g transform="translate(82,688) scale(1.0)"><rect x="-16" y="-16" width="32" height="32" rx="4" fill="#2F72BC"/><text x="0" y="7" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="0">TS</text></g>
+  <text x="124" y="682" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#3F3830" text-anchor="start" letter-spacing="0">Browser Automation</text>
+  <text x="124" y="704" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">Playwright &#183; BS4 &#183; Node.js</text>
+  <circle cx="130" cy="734" r="3.5" fill="#D41F26"/>
+  <text x="142" y="738" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#A99E91" text-anchor="start" letter-spacing="1.2">MODULE_04</text>
+</g>
+<g class="m4">
+  <rect x="420" y="638" width="360" height="124" rx="12" fill="#FBF7F0" stroke="#DCD3C5" stroke-width="1.6"/>
+  <rect x="420" y="638" width="5" height="124" rx="2.5" fill="#AAC832"/>
+  <circle cx="472" cy="688" r="28" fill="#F2EDE6"/>
+  <g transform="translate(472,688) scale(1.0)"><path d="M0,-17 C10,-8 10,6 0,16.5 C-10,6 -10,-8 0,-17 Z" fill="#3E8E3E"/><path d="M0,-14 V15" stroke="#2C6B2C" stroke-width="2" fill="none"/></g>
+  <text x="514" y="682" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#3F3830" text-anchor="start" letter-spacing="0">Data Systems</text>
+  <text x="514" y="704" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">Firebase &#183; MongoDB &#183; SQL &#183; Oracle</text>
+  <circle cx="520" cy="734" r="3.5" fill="#AAC832"/>
+  <text x="532" y="738" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#A99E91" text-anchor="start" letter-spacing="1.2">MODULE_05</text>
+</g>
+<g class="m5">
+  <rect x="810" y="638" width="360" height="124" rx="12" fill="#FBF7F0" stroke="#DCD3C5" stroke-width="1.6"/>
+  <rect x="810" y="638" width="5" height="124" rx="2.5" fill="#0077C8"/>
+  <circle cx="862" cy="688" r="28" fill="#F2EDE6"/>
+  <g transform="translate(862,688) scale(1.0)"><rect x="-15" y="-3" width="7" height="7" rx="1" fill="#1D7FCC"/><rect x="-7" y="-3" width="7" height="7" rx="1" fill="#1D7FCC"/><rect x="1" y="-3" width="7" height="7" rx="1" fill="#1D7FCC"/><rect x="-7" y="-11" width="7" height="7" rx="1" fill="#1D7FCC"/><rect x="1" y="-11" width="7" height="7" rx="1" fill="#1D7FCC"/><path d="M-19,5 H14 C14,12 8,16 1,16 H-8 C-14,16 -19,11 -19,5 Z" fill="#1D7FCC"/><path d="M14,3 C18,0 21,3 21,3 C19,7 16,7 14,6 Z" fill="#1D7FCC"/></g>
+  <text x="904" y="682" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#3F3830" text-anchor="start" letter-spacing="0">Cloud Deployments</text>
+  <text x="904" y="704" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="400" fill="#8A7F73" text-anchor="start" letter-spacing="0">GCP &#183; AWS &#183; Docker &#183; CI/CD</text>
+  <circle cx="910" cy="734" r="3.5" fill="#0077C8"/>
+  <text x="922" y="738" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#A99E91" text-anchor="start" letter-spacing="1.2">MODULE_06</text>
 </g>
 </g></svg>
