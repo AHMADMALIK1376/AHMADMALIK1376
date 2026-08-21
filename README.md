@@ -110,19 +110,19 @@ class FullStackArchitect {
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      THE STACK                                            -->
+<!--      SYSTEM BOARD                                         -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ THE STACK ◈
+## ◈ SYSTEM BOARD ◈
 
-<sub>▸ ASSEMBLING LAYERS... CLOUD → DATA → BACKEND → FRONTEND ✓</sub>
+<sub>▸ CORE ONLINE... 6 MODULES WIRED... ALL SYSTEMS NOMINAL ✓</sub>
 
 
 <br/>
 
-<img width="100%" src="assets/the-stack.svg"/>
+<img width="100%" src="assets/system-board.svg"/>
 
 <br/>
 
