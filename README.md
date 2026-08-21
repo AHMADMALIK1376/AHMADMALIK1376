@@ -115,9 +115,9 @@ class FullStackArchitect {
 
 <div align="center">
 
-## ◈ NEURAL ◈
+## ◈ NEURAL NETWORK ◈
 
-<sub>▸ FULL-STACK AI ENGINEER · REACT · NODE · PYTHON · LLM INTEGRATION ✓</sub>
+<sub>▸ DATASET → HIDDEN LAYERS → MODEL ✓</sub>
 
 
 <br/>
