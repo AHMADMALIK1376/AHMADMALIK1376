@@ -110,19 +110,19 @@ class FullStackArchitect {
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      SYSTEM BOARD                                         -->
+<!--      REQUEST LIFECYCLE                                    -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ SYSTEM BOARD ◈
+## ◈ REQUEST LIFECYCLE ◈
 
-<sub>▸ CORE ONLINE... 6 MODULES WIRED... ALL SYSTEMS NOMINAL ✓</sub>
+<sub>▸ POST /api/analyze → INFER → QUERY → 200 OK ✓</sub>
 
 
 <br/>
 
-<img width="100%" src="assets/system-board.svg"/>
+<img width="100%" src="assets/request-lifecycle.svg"/>
 
 <br/>
 
