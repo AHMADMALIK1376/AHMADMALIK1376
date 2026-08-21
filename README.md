@@ -110,19 +110,19 @@ class FullStackArchitect {
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      REQUEST LIFECYCLE                                    -->
+<!--      NEURAL                                               -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ REQUEST LIFECYCLE ◈
+## ◈ NEURAL ◈
 
-<sub>▸ POST /api/analyze → INFER → QUERY → 200 OK ✓</sub>
+<sub>▸ FULL-STACK AI ENGINEER · REACT · NODE · PYTHON · LLM INTEGRATION ✓</sub>
 
 
 <br/>
 
-<img width="100%" src="assets/request-lifecycle.svg"/>
+<img width="100%" src="assets/neural.svg"/>
 
 <br/>
 
