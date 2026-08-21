@@ -117,7 +117,7 @@ class FullStackArchitect {
 
 ## ◈ LLM TRAINING ◈
 
-<sub>▸ TOKENS → ATTENTION → LOSS ↓ → CHECKPOINT ✓</sub>
+<sub>▸ DATASETS → FORWARD PASS → BACKPROP ✓</sub>
 
 
 <br/>
