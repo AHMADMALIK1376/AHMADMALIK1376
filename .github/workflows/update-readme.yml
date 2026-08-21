@@ -11,10 +11,8 @@ on:
     # Every day at 00:30 UTC
     - cron: "30 0 * * *"
 
-  # Re-run whenever you push to main (so a fresh commit triggers an update)
-  push:
-    branches:
-      - main
+  # Deliberately NOT triggered on push: this job rewrites README.md and
+  # commits it, so a push trigger would fire a bot commit on every commit.
 
   # Allow manual trigger from the Actions tab in GitHub
   workflow_dispatch:
