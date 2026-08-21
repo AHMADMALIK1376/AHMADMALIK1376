@@ -20,14 +20,6 @@
 
 <br/>
 
-<!-- Live status grid -->
-
-<tr>
-<td align="center">
-
-</td>
-</tr>
-</table>
 
 <br/>
 
@@ -64,7 +56,6 @@
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
-<img src="assets/pacman (1).gif" width="220" />
 
 
 <img width="600" src="assets/scan-text.svg"/>
@@ -452,17 +443,17 @@ class FullStackArchitect {
 
 <br/>
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--              NEURAL PULSE NETWORK                         -->
+<!--              BUILD & DEPLOY PIPELINE                      -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ PACMAN NETWORK ◈
+## ◈ BUILD & DEPLOY PIPELINE ◈
 
 
 <br/>
 
-<img width="100%" src="https://raw.githubusercontent.com/AHMADMALIK1376/AHMADMALIK1376/main/assets/pacman.svg"/>
+<img width="100%" src="assets/ship-it.svg"/>
 
 </div>
 
@@ -514,8 +505,6 @@ class FullStackArchitect {
 [![EMAIL](https://img.shields.io/badge/📡%20SIGNAL-ahmadmalik1376%40gmail.com-00d4ff?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=0d1117)](mailto:ahmadmalik1376@gmail.com)
 &nbsp;
 [![GITHUB](https://img.shields.io/badge/⟁%20GITHUB-AHMADMALIK1376-a78bfa?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=0d1117)](https://github.com/AHMADMALIK1376)
-&nbsp;
-[![RESUME](https://img.shields.io/badge/📄%20RESUME-DOWNLOAD-ffd700?style=for-the-badge&logo=googledocs&logoColor=ffffff&labelColor=0d1117)](#)
 
 <br/><br/>
 
