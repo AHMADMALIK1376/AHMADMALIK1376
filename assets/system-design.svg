@@ -64,6 +64,10 @@
 <rect x="0" y="0" width="1240" height="560" rx="0" fill="#F2EDE6"/>
 <text x="60" y="44" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="3.4">SYSTEM DESIGN</text>
 <text x="1180" y="44" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="2.6">REQUEST FLOW &#183; SERVICES</text>
+<rect x="236" y="42" width="768" height="120" rx="16" fill="none" stroke="#A2988A" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="240" y="34" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="2.4">EDGE TIER</text>
+<rect x="236" y="404" width="768" height="114" rx="16" fill="none" stroke="#A2988A" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="240" y="536" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="2.4">DATA &amp; COMPUTE</text>
 <path class="cl" d="M570,210 L570,175 L330,175 L330,140"/>
 <circle cx="570" cy="210" r="9" fill="#2E2A24"/>
 <rect x="321" y="130" width="18" height="14" rx="3" fill="#2E2A24"/>
@@ -96,6 +100,24 @@
 <rect x="901" y="410" width="18" height="14" rx="3" fill="#2E2A24"/>
 <circle cx="670" cy="385" r="6" fill="#2E2A24"/>
 <circle cx="910" cy="385" r="6" fill="#2E2A24"/>
+<path d="M405,460 H545" fill="none" stroke="#2E2A24" stroke-width="5" stroke-linecap="round"/>
+<path d="M695,460 H835" fill="none" stroke="#2E2A24" stroke-width="5" stroke-linecap="round"/>
+<rect x="426.5" y="146.0" width="47.0" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="450.0" y="160.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">HTTPS</text>
+<rect x="631.1" y="165.0" width="33.8" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="648.0" y="179.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">TCP</text>
+<rect x="766.5" y="146.0" width="47.0" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="790.0" y="160.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">OAUTH</text>
+<rect x="344.0" y="251.0" width="47.0" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="367.5" y="265.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">HTTPS</text>
+<rect x="849.0" y="251.0" width="47.0" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="872.5" y="265.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">REDIS</text>
+<rect x="436.4" y="356.0" width="27.2" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="450.0" y="370.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">S3</text>
+<rect x="631.1" y="375.0" width="33.8" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="648.0" y="389.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">SQL</text>
+<rect x="769.8" y="356.0" width="40.4" height="20" rx="10" fill="#F2EDE6" stroke="#2E2A24" stroke-width="2"/>
+<text x="790.0" y="370.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="800" fill="#2E2A24" text-anchor="middle" letter-spacing="0.8">gRPC</text>
 <rect x="520" y="210" width="200" height="140" rx="14" fill="#2E2A24"/>
 <rect x="534" y="224" width="172" height="96" rx="7" fill="#26313A"/>
 <rect class="cd0" x="546" y="236" width="52" height="6" rx="3" fill="#0077C8"/>
@@ -107,53 +129,88 @@
 <rect x="534" y="328" width="172" height="16" rx="4" fill="#26313A"/>
 <text x="620" y="340" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="2.4">API GATEWAY</text>
 <circle cx="698" cy="220" r="5" fill="#AAC832" class="led"/>
+<rect x="523" y="244" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="712" y="244" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="523" y="264" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="712" y="264" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="523" y="284" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="712" y="284" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="523" y="304" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="712" y="304" width="5" height="13" rx="2.5" fill="#26313A"/>
+<rect x="590" y="214" width="14" height="5" rx="2" fill="#26313A"/>
+<rect x="612" y="214" width="14" height="5" rx="2" fill="#26313A"/>
+<rect x="634" y="214" width="14" height="5" rx="2" fill="#26313A"/>
 <g transform="translate(330,100)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#0077C8" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><path d="M-30,10 a16,16 0 0,1 3,-31 a20,20 0 0,1 38,-4 a15,15 0 0,1 5,29 Z" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">CDN</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g transform="translate(620,100)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#AAC832" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><rect x="-30" y="-14" width="22" height="28" rx="4" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M-4,0 H14 M14,-14 H26" stroke="#2E2A24" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="28" cy="-14" r="4" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M-4,0 H14 M14,0 H26" stroke="#2E2A24" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="28" cy="0" r="4" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M-4,0 H14 M14,14 H26" stroke="#2E2A24" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="28" cy="14" r="4" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M14,-14 V14" stroke="#2E2A24" stroke-width="3" fill="none"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">LOAD BALANCER</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g transform="translate(910,100)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#D41F26" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><path d="M0,-20 L20,-12 V4 C20,14 10,20 0,22 C-10,20 -20,14 -20,4 V-12 Z" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M-7,0 L-2,6 L8,-7" fill="none" stroke="#2E2A24" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">AUTH</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g transform="translate(140,280)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#F88379" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><rect x="-32" y="-20" width="64" height="40" rx="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M-32,-9 H32" stroke="#2E2A24" stroke-width="3" fill="none"/><circle cx="-24" cy="-15" r="2.4" fill="#2E2A24"/><circle cx="-16" cy="-15" r="2.4" fill="#2E2A24"/><circle cx="-8" cy="-15" r="2.4" fill="#2E2A24"/><rect x="-24" y="-3" width="30" height="4" rx="2" fill="#2E2A24"/><rect x="-24" y="6" width="20" height="4" rx="2" fill="#2E2A24"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">CLIENT</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g transform="translate(1100,280)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#D4A373" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><path d="M6,-22 L-14,4 H-1 L-6,22 L14,-4 H1 Z" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">CACHE</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g transform="translate(330,460)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#0077C8" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><rect x="-28" y="-12" width="56" height="16" rx="4" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><circle cx="18" cy="-4" r="3" fill="#2E2A24"/><rect x="-28" y="2" width="56" height="16" rx="4" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><circle cx="18" cy="10" r="3" fill="#2E2A24"/><rect x="-28" y="-26" width="56" height="16" rx="4" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><circle cx="18" cy="-18" r="3" fill="#2E2A24"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">OBJECT STORE</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g transform="translate(620,460)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#AAC832" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><ellipse cy="-14" rx="26" ry="9" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M-26,-14 V12 a26,9 0 0,0 52,0 V-14" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><ellipse cy="-14" rx="26" ry="9" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3" stroke-linejoin="round"/><path d="M-26,0 a26,9 0 0,0 52,0" fill="none" stroke="#2E2A24" stroke-width="2.6"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">DATABASE</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g transform="translate(910,460)">
   <rect x="-75.0" y="-40.0" width="150" height="80" rx="12" fill="#F88379" stroke="#2E2A24" stroke-width="4" stroke-linejoin="round"/>
   <g transform="translate(0,-12) scale(0.82)"><path d="M-22,-14 L0,-20" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M-22,-14 L0,0" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M-22,-14 L0,20" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M-22,14 L0,-20" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M-22,14 L0,0" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M-22,14 L0,20" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M0,-20 L22,-8" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M0,-20 L22,12" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M0,0 L22,-8" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M0,0 L22,12" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M0,20 L22,-8" stroke="#2E2A24" stroke-width="2" fill="none"/><path d="M0,20 L22,12" stroke="#2E2A24" stroke-width="2" fill="none"/><circle cx="-22" cy="-14" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2.6"/><circle cx="-22" cy="14" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2.6"/><circle cx="0" cy="-20" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2.6"/><circle cx="0" cy="0" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2.6"/><circle cx="0" cy="20" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2.6"/><circle cx="22" cy="-8" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2.6"/><circle cx="22" cy="12" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2.6"/></g>
   <rect x="-75.0" y="12" width="150" height="28" rx="12" fill="#2E2A24"/><rect x="-75.0" y="12" width="150" height="14" rx="0" fill="#2E2A24"/>
   <text x="0" y="31" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="800" fill="#FAF5EC" text-anchor="middle" letter-spacing="1.6">LLM SERVICE</text>
+  <circle cx="60.0" cy="-26.0" r="4.5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2" class="led"/>
+  <circle cx="-63.0" cy="32" r="2.6" fill="#FAF5EC"/>
+  <circle cx="63.0" cy="32" r="2.6" fill="#FAF5EC"/>
 </g>
 <g class="o0"><g class="of0"><circle cx="0" cy="0" r="7" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3"/></g></g>
 <g class="b0"><g class="bf0"><circle cx="0" cy="0" r="5.5" fill="#AAC832" stroke="#2E2A24" stroke-width="2.6"/></g></g>
@@ -171,4 +228,8 @@
 <g class="b6"><g class="bf6"><circle cx="0" cy="0" r="5.5" fill="#AAC832" stroke="#2E2A24" stroke-width="2.6"/></g></g>
 <g class="o7"><g class="of7"><circle cx="0" cy="0" r="7" fill="#FAF5EC" stroke="#2E2A24" stroke-width="3"/></g></g>
 <g class="b7"><g class="bf7"><circle cx="0" cy="0" r="5.5" fill="#AAC832" stroke="#2E2A24" stroke-width="2.6"/></g></g>
+<circle cx="994" cy="532" r="5" fill="#FAF5EC" stroke="#2E2A24" stroke-width="2"/>
+<text x="1006" y="536" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">REQUEST</text>
+<circle cx="1104" cy="532" r="5" fill="#AAC832" stroke="#2E2A24" stroke-width="2"/>
+<text x="1116" y="536" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">RESPONSE</text>
 </svg>

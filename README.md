@@ -10,56 +10,7 @@
 
 <img width="100%" src="assets/intro.svg"/>
 
-
-
-<img width="100%" src="assets/terminal-boot.svg"/>
-
-
-<br/>
-
-
-<br/>
-
-<!-- Advanced badges with glow -->
-<p>
- <img src="https://img.shields.io/badge/🟢_STATUS-ONLINE_%26_BUILDING-00d4ff?style=for-the-badge&logo=statuspal&logoColor=white&labelColor=0d1117&color=00ff88"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/📍_BASE-PAKISTAN_🇵🇰-a78bfa?style=for-the-badge&logo=airplayvideo&logoColor=white&labelColor=0d1117&color=ff6b6b"/>
-  &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=AHMADMALIK1376&label=👁️+VIEWS&style=for-the-badge&color=ffd700&labelColor=0d1117"/>
-  
-
-</p>
-
-<br/>
-
-<p>
-  &nbsp;
-  <img src="https://img.shields.io/github/followers/AHMADMALIK1376?label=Followers&style=for-the-badge&color=a78bfa&labelColor=0d1117"/>
- 
-</p>
-
-
 </div>
-
-<br/>
-
----
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--                  ANIMATED INTRO                           -->
-<!-- ══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-
-<img width="600" src="assets/scan-text.svg"/>
-
-
-</div>
-
-
-
----
 
 <br/>
 
