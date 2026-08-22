@@ -38,8 +38,9 @@ _MASK_B64 = (
 AEGEAN, CORAL = "#0077C8", "#F88379"
 BROWN, TEAMIST, CRIMSON = "#D4A373", "#AAC832", "#D41F26"
 SKY = "#F2EDE6"
-OCEAN = "#EAE3D8"
-COPPER = "#CBBEA8"
+GRID = "#E6DBCA"        # dot grid, as on the introduction banner
+TRACE = "#E1D5C2"       # routed track
+TRACE_D = "#CDBEA6"     # vias and the travelling pulse
 INK = "#2E2A24"
 INK_2 = "#5E5349"
 MUTED = "#7D7266"
@@ -226,6 +227,48 @@ def _ocean_traces(landset, limit=11):
     return chosen
 
 
+def _route_clear(pts, landset):
+    """True when no part of the polyline passes over land."""
+    for i in range(len(pts) - 1):
+        (x0, y0), (x1, y1) = pts[i], pts[i + 1]
+        steps = int(max(abs(x1 - x0), abs(y1 - y0)) * 4) + 1
+        for k in range(steps + 1):
+            x = x0 + (x1 - x0) * k / float(steps)
+            y = y0 + (y1 - y0) * k / float(steps)
+            if (int(round(y)), int(round(x)) % COLS) in landset:
+                return False
+    return True
+
+
+def _routes(landset, limit=11):
+    """Ocean runs turned into tracks that step a row via a 45 degree elbow.
+
+    The introduction's traces run horizontally, break to a diagonal, then carry
+    on; these do the same, but only where the row they step into is also open
+    water. Anything that cannot bend cleanly stays a straight run.
+    """
+    out = []
+    for (r, c0, c1) in _ocean_traces(landset, limit):
+        span = c1 - c0
+        bent = None
+        for dr in (1, -1):
+            r2 = r + dr
+            if not (0 <= r2 < ROWS):
+                continue
+            for frac in (0.34, 0.5, 0.66):
+                cm = c0 + int(span * frac)
+                if cm + 1 >= c1:
+                    continue
+                pts = [(c0, r), (cm, r), (cm + 1, r2), (c1, r2)]
+                if _route_clear(pts, landset):
+                    bent = pts
+                    break
+            if bent:
+                break
+        out.append(bent or [(c0, r), (c1, r)])
+    return out
+
+
 def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
     land = land_cells()
     landset = set(land)
@@ -244,14 +287,11 @@ def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
     h = int(legend_y + 108)
 
     css = ["@keyframes pop{0%{opacity:0;transform:translateY(7px)}}",
-           "@keyframes scan{0%{transform:translateX(0)}100%{transform:translateX(" +
-           "%.0fpx" % map_w + ")}}",
            "@keyframes fade{0%{opacity:0}}",
            # backwards, not forwards: the keyframes only pin 0%, so the implicit
            # 100% is whatever the element already computes to. Holding opacity:0
            # on .t and filling forwards would leave every tile stuck invisible.
            ".t{animation:pop .5s ease-out backwards}",
-           ".scan{animation:scan 11s linear infinite}",
            ".lg{animation:fade .6s ease-out both}"]
     for c in range(COLS):
         css.append(".k%d{animation-delay:%.3fs}" % (c, 0.25 + c * 0.007))
@@ -260,44 +300,38 @@ def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" '
            'role="img" aria-label="Language distribution as a world map, area by share">'
            % (w, h, w, h),
-           "<title>Language Distribution</title>", "<defs>__STYLE__</defs>",
+           "<title>Language Distribution</title>",
+           '<defs><pattern id="dg" width="26" height="26" patternUnits="userSpaceOnUse">'
+           '<circle cx="1.5" cy="1.5" r="1" fill="%s"/></pattern>__STYLE__</defs>' % GRID,
            '<rect width="%d" height="%d" fill="%s"/>' % (w, h, SKY)]
 
     # ── circuit substrate ────────────────────────────────────────────────
-    dots = []
-    for y in range(88, int(legend_y) - 8, 24):
-        for x in range(28, w - 20, 24):
-            dots.append("M%d,%dh0.1" % (x, y))
-    out.append('<path d="%s" stroke="%s" stroke-width="2.2" stroke-linecap="round" '
-               'opacity=".55" fill="none"/>' % ("".join(dots), COPPER))
+    # The same substrate as the introduction banner: a 26px pad grid, tracks
+    # that break to a 45 degree diagonal and carry on, two-tone vias, and a
+    # pulse running the first leg of a track. No ocean panel, so the board
+    # reads right across the image the way it does up top.
+    out.append('<rect width="%d" height="%d" fill="url(#dg)"/>' % (w, h))
 
-    out.append('<rect x="%d" y="%d" width="%.1f" height="%.1f" rx="14" fill="%s"/>'
-               % (MAP_X - 14, MAP_Y - 14, map_w + 28, map_h + 28, OCEAN))
+    def px(cell):
+        c, r = cell
+        return (MAP_X + c * PITCH, MAP_Y + r * PITCH + PITCH / 2.0)
 
-    for i, (r, c0, c1) in enumerate(_ocean_traces(landset)):
-        y = MAP_Y + r * PITCH + PITCH / 2.0
-        x0 = MAP_X + c0 * PITCH
-        x1 = MAP_X + c1 * PITCH
-        seg = x1 - x0
-        # a 45 degree elbow at each end, the way a routed track turns
-        d = ("M%.1f,%.1f L%.1f,%.1f L%.1f,%.1f L%.1f,%.1f"
-             % (x0 - 7, y - 7, x0, y, x1, y, x1 + 7, y - 7))
-        length = seg + 19.8
-        pulse = colour[order[i % len(order)]]
-        out.append('<path d="%s" stroke="%s" stroke-width="1.6" fill="none" '
-                   'stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>' % (d, COPPER))
-        # a keyframe of its own per trace rather than one shared rule reading a
-        # custom property: this renders inside an <img>, so the fewer moving
-        # parts the CSS depends on, the better
-        css.append("@keyframes dash%d{to{stroke-dashoffset:%.1f}}" % (i, -(length + 46)))
-        css.append(".p%d{animation:dash%d %.1fs linear infinite;animation-delay:%.1fs}"
-                   % (i, i, max(4.5, seg / 58.0), i * 0.7))
-        out.append('<path class="p%d" d="%s" stroke="%s" stroke-width="2.2" fill="none" '
-                   'stroke-linecap="round" stroke-linejoin="round" opacity=".85" '
-                   'stroke-dasharray="15 %.1f"/>' % (i, d, pulse, length + 31))
-        for vx in (x0, x1):
-            out.append('<circle cx="%.1f" cy="%.1f" r="2.9" fill="%s" stroke="%s" '
-                       'stroke-width="1.5"/>' % (vx, y, SKY, COPPER))
+    for i, pts in enumerate(_routes(landset)):
+        xy = [px(pt) for pt in pts]
+        d = "M%.1f,%.1f " % xy[0] + " ".join("L%.1f,%.1f" % q for q in xy[1:])
+        out.append('<path d="%s" fill="none" stroke="%s" stroke-width="1.6" '
+                   'stroke-linecap="round" stroke-linejoin="round"/>' % (d, TRACE))
+        for vx, vy in (xy[0], xy[-1]):
+            out.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (vx, vy, TRACE_D))
+            out.append('<circle cx="%.1f" cy="%.1f" r="1.7" fill="%s"/>' % (vx, vy, SKY))
+        # the pulse rides the opening horizontal leg, as it does on the banner
+        (x0, y0), (x1, _) = xy[0], xy[1]
+        css.append(".pl%d{animation:pl%d %ds linear infinite;animation-delay:-%.1fs}"
+                   % (i, i, 7 + i % 4, i * 1.6))
+        css.append("@keyframes pl%d{0%%{transform:translateX(%.1fpx);opacity:0}"
+                   "15%%,80%%{opacity:1}100%%{transform:translateX(%.1fpx);opacity:0}}"
+                   % (i, x0, x1))
+        out.append('<circle class="pl%d" cy="%.1f" r="3" fill="%s"/>' % (i, y0, TRACE_D))
 
     # ── territories ──────────────────────────────────────────────────────
     out.append("<g>")
@@ -309,8 +343,6 @@ def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
                       colour.get(nm, FAINT)))
     out.append("</g>")
 
-    out.append('<g class="scan"><rect x="%d" y="%.1f" width="2.4" height="%.1f" fill="%s" '
-               'opacity=".28"/></g>' % (MAP_X, MAP_Y - 8, map_h + 16, INK))
 
     # ── header ───────────────────────────────────────────────────────────
     out.append(_txt(48, 52, "LANGUAGE DISTRIBUTION", 13, INK, "800", "start", "3.4"))
