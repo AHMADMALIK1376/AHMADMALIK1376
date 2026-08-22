@@ -197,13 +197,13 @@
 
 <br/>
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=AHMADMALIK1376&show_icons=true&hide_border=true&bg_color=F2EDE6&title_color=0077C8&icon_color=F88379&text_color=5E5349&ring_color=0077C8&border_radius=6&custom_title=CORE+STATISTICS"/>
+<img height="175" src="https://github-readme-stats.vercel.app/api?username=AHMADMALIK1376&show_icons=true&hide_border=true&bg_color=f2ede6&title_color=0077c8&icon_color=f88379&text_color=5e5349&ring_color=0077c8&border_radius=6&custom_title=CORE+STATISTICS"/>
 &nbsp;&nbsp;
-<img height="175" src="https://github-readme-streak-stats.herokuapp.com/?user=AHMADMALIK1376&theme=default&hide_border=true&background=F2EDE6&ring=0077C8&fire=D41F26&currStreakLabel=0077C8&sideLabels=5E5349&dates=7D7266&border_radius=6&currStreakNum=2E2A24&sideNums=2E2A24"/>
+<img height="175" src="https://github-readme-streak-stats.herokuapp.com/?user=AHMADMALIK1376&hide_border=true&background=f2ede6&ring=0077c8&fire=d41f26&currStreakLabel=0077c8&sideLabels=5e5349&dates=7d7266&border_radius=6&currStreakNum=2e2a24&sideNums=2e2a24"/>
 
 <br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AHMADMALIK1376&layout=compact&hide_border=true&bg_color=F2EDE6&title_color=0077C8&text_color=5E5349&border_radius=6&custom_title=LANGUAGE+DISTRIBUTION&langs_count=8"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AHMADMALIK1376&layout=compact&hide_border=true&bg_color=f2ede6&title_color=0077c8&text_color=5e5349&border_radius=6&custom_title=LANGUAGE+DISTRIBUTION&langs_count=8"/>
 
 </div>
 
