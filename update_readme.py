@@ -108,6 +108,7 @@ def analyse_events(events: list) -> dict:
     cutoff = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
     commits_by_repo: dict = {}
     total_commits = pr_count = issue_count = star_count = 0
+    push_count = 0
  
     for ev in events:
         ts = datetime.fromisoformat(ev["created_at"].replace("Z", "+00:00"))
@@ -117,11 +118,21 @@ def analyse_events(events: list) -> dict:
         etype = ev["type"]
  
         if etype == "PushEvent":
-            n = len(ev["payload"].get("commits", []))
+            # The public events feed does not carry commit details on every
+            # push, so prefer the counts when they are there and fall back to
+            # counting the push itself rather than silently reporting zero.
+            payload = ev["payload"]
+            n = payload.get("size")
+            if n is None:
+                n = len(payload.get("commits", [])) or 1
             commits_by_repo[repo_label] = commits_by_repo.get(repo_label, 0) + n
             total_commits += n
+            push_count += 1
         elif etype == "PullRequestEvent":
-            pr_count += 1
+            # This fires for opened, merged and closed alike; count only the
+            # opens so a single pull request is not tallied several times.
+            if ev["payload"].get("action") == "opened":
+                pr_count += 1
         elif etype in ("IssuesEvent", "IssueCommentEvent"):
             issue_count += 1
         elif etype == "WatchEvent":
@@ -137,6 +148,7 @@ def analyse_events(events: list) -> dict:
         "pr_count": pr_count,
         "issue_count": issue_count,
         "star_count": star_count,
+        "push_count": push_count,
     }
  
  
@@ -427,6 +439,10 @@ def main():
     # Analyse
     print("\n📊 Analysing activity...")
     activity = analyse_events(events)
+
+    # The telemetry tiles need the activity counts, so they are drawn here
+    # rather than alongside the language chart above.
+    chartgen.metrics_panel(user, repos, activity, lang_bytes)
     pids     = derive_pids(activity["commits_by_repo"])
     skills   = derive_skills(lang_bytes)
  
