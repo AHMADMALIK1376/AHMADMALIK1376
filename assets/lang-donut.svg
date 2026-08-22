@@ -1,100 +1,70 @@
-<svg viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg" width="500" height="340">
+<svg viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg" width="420" height="285">
 <defs>
   <style>
-    .seg { fill: none; stroke-width: 22; transform-origin: center; stroke-linecap: round; }
+    .seg { fill: none; stroke-width: 14; transform-origin: center; stroke-linecap: round; }
     .bg-grid { fill: #f5f0eb; }
-    .circuit-line { fill: none; stroke: #d4c5b9; stroke-width: 1.5; stroke-linecap: round; }
+    .circuit-line { fill: none; stroke: #d4c5b9; stroke-width: 1; stroke-linecap: round; }
     .dot { fill: #d4c5b9; stroke: #f5f0eb; stroke-width: 1; }
     .text-main { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
   </style>
 </defs>
 
-<!-- Circuit / Blueprint Background matching the uploaded image style -->
+<!-- Circuit / Blueprint Background -->
 <rect width="500" height="340" class="bg-grid"/>
 
-<!-- Grid dots pattern -->
 <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-  <circle cx="2" cy="2" r="1" fill="#e3d8cc"/>
+  <circle cx="2" cy="2" r="0.8" fill="#e3d8cc"/>
 </pattern>
 <rect width="500" height="340" fill="url(#dots)"/>
 
-<!-- Background Circuit Lines & Nodes -->
+<!-- Circuit Lines & Nodes -->
 <path class="circuit-line" d="M40 20 L110 20 L130 40 L230 40 L245 25 L255 25 L270 40 L370 40 L390 20 L460 20"/>
 <path class="circuit-line" d="M40 320 L110 320 L130 300 L230 300 L245 315 L255 315 L270 300 L370 300 L390 320 L460 320"/>
 <path class="circuit-line" d="M110 60 L110 140 L130 160 L130 260 L110 280"/>
 <path class="circuit-line" d="M270 55 L270 285"/>
 <path class="circuit-line" d="M450 120 L480 120 L480 220 L450 220"/>
 
-<!-- Circuit Nodes / Dots -->
-<circle cx="245" cy="25" r="2.5" class="dot"/>
-<circle cx="255" cy="25" r="2.5" class="dot"/>
-<circle cx="245" cy="315" r="2.5" class="dot"/>
-<circle cx="255" cy="315" r="2.5" class="dot"/>
-<circle cx="110" cy="60" r="2.5" class="dot"/>
-<circle cx="110" cy="280" r="2.5" class="dot"/>
-<circle cx="480" cy="120" r="2.5" class="dot"/>
-<circle cx="480" cy="220" r="2.5" class="dot"/>
+<circle cx="245" cy="25" r="2" class="dot"/>
+<circle cx="255" cy="25" r="2" class="dot"/>
+<circle cx="245" cy="315" r="2" class="dot"/>
+<circle cx="255" cy="315" r="2" class="dot"/>
 
-<!-- Concentric Non-3D Radial Chart matching the old content and blueprint background -->
-<!-- Center at 165, 175 -->
+<!-- Concentric Tracks -->
+<circle cx="155" cy="165" r="95" fill="none" stroke="#e8dfd3" stroke-width="14"/>
+<circle cx="155" cy="165" r="77" fill="none" stroke="#e8dfd3" stroke-width="14"/>
+<circle cx="155" cy="165" r="59" fill="none" stroke="#e8dfd3" stroke-width="14"/>
+<circle cx="155" cy="165" r="41" fill="none" stroke="#e8dfd3" stroke-width="14"/>
+<circle cx="155" cy="165" r="23" fill="none" stroke="#e8dfd3" stroke-width="14"/>
 
-<!-- Base tracks (faint background rings) -->
-<circle cx="165" cy="175" r="125" fill="none" stroke="#e8dfd3" stroke-width="22"/>
-<circle cx="165" cy="175" r="100" fill="none" stroke="#e8dfd3" stroke-width="22"/>
-<circle cx="165" cy="175" r="75" fill="none" stroke="#e8dfd3" stroke-width="22"/>
-<circle cx="165" cy="175" r="50" fill="none" stroke="#e8dfd3" stroke-width="22"/>
+<!-- Data Arcs (Dasharray values will be dynamically overwritten by your update_readme.py script) -->
+<circle class="seg" cx="155" cy="165" r="95" stroke-dasharray="0 597" stroke="#0077C8" transform="rotate(-90 155 165)"/>
+<circle class="seg" cx="155" cy="165" r="77" stroke-dasharray="0 484" stroke="#F88379" transform="rotate(-90 155 165)"/>
+<circle class="seg" cx="155" cy="165" r="59" stroke-dasharray="0 371" stroke="#F2D24B" transform="rotate(-90 155 165)"/>
+<circle class="seg" cx="155" cy="165" r="41" stroke-dasharray="0 258" stroke="#D4A373" transform="rotate(-90 155 165)"/>
+<circle class="seg" cx="155" cy="165" r="23" stroke-dasharray="0 145" stroke="hsl(72, 60%, 49%)" transform="rotate(-90 155 165)"/>
 
-<!-- Active Data Arcs using requested colors and original language percentages -->
-<!-- 1. Python (Comparison color: #0077C8) - 42% -> ~527 out of 785 arc length -->
-<circle class="seg" cx="165" cy="175" r="125" stroke-dasharray="527 785" stroke="#0077C8" transform="rotate(-90 165 175)"/>
+<circle cx="155" cy="165" r="12" fill="#D41F26"/>
 
-<!-- 2. TypeScript (Correlation color: #F88379) - 22% -> ~276 out of 628 arc length -->
-<circle class="seg" cx="165" cy="175" r="100" stroke-dasharray="276 628" stroke="#F88379" transform="rotate(-90 165 175)"/>
-
-<!-- 3. JavaScript (Part-to-Whole color: #F2D24B) - 14% -> ~140 out of 471 arc length -->
-<circle class="seg" cx="165" cy="175" r="75" stroke-dasharray="140 471" stroke="#F2D24B" transform="rotate(-90 165 175)"/>
-
-<!-- 4. Other (Temporal color: #D4A373) - 10% -> ~63 out of 314 arc length -->
-<circle class="seg" cx="165" cy="175" r="50" stroke-dasharray="63 314" stroke="#D4A373" transform="rotate(-90 165 175)"/>
-
-<!-- Center Solid Circle with Title -->
-<circle cx="165" cy="175" r="32" fill="#D41F26"/>
-<text x="165" y="171" text-anchor="middle" fill="#ffffff" class="text-main" font-size="9" font-weight="bold">STACK</text>
-<text x="165" y="181" text-anchor="middle" fill="#ffffff" class="text-main" font-size="7">DIST</text>
-
-<!-- Legend — Right Side Layout -->
-<g transform="translate(300, 65)">
-  <!-- Python -->
-  <circle cx="12" cy="12" r="10" fill="#0077C8"/>
-  <text x="32" y="16" fill="#2c241d" class="text-main" font-size="11" font-weight="bold">Python</text>
-  <text x="135" y="16" text-anchor="end" fill="#0077C8" class="text-main" font-size="11" font-weight="bold">42%</text>
-
-  <!-- TypeScript -->
-  <circle cx="12" cy="45" r="10" fill="#F88379"/>
-  <text x="32" y="49" fill="#2c241d" class="text-main" font-size="11" font-weight="bold">TypeScript</text>
-  <text x="135" y="49" text-anchor="end" fill="#F88379" class="text-main" font-size="11" font-weight="bold">22%</text>
-
-  <!-- JavaScript -->
-  <circle cx="12" cy="78" r="10" fill="#F2D24B"/>
-  <text x="32" y="82" fill="#2c241d" class="text-main" font-size="11" font-weight="bold">JavaScript</text>
-  <text x="135" y="82" text-anchor="end" fill="#F2D24B" class="text-main" font-size="11" font-weight="bold">14%</text>
-
-  <!-- Other -->
-  <circle cx="12" cy="111" r="10" fill="#D4A373"/>
-  <text x="32" y="115" fill="#2c241d" class="text-main" font-size="11" font-weight="bold">Other</text>
-  <text x="135" y="115" text-anchor="end" fill="#D4A373" class="text-main" font-size="11" font-weight="bold">10%</text>
-
-  <!-- Java -->
-  <circle cx="12" cy="144" r="10" fill="hsl(72, 60%, 49%)"/>
-  <text x="32" y="148" fill="#2c241d" class="text-main" font-size="11" font-weight="bold">Java</text>
-  <text x="135" y="148" text-anchor="end" fill="#6a9923" class="text-main" font-size="11" font-weight="bold">7%</text>
-
-  <!-- C++ -->
-  <circle cx="12" cy="177" r="10" fill="#D41F26"/>
-  <text x="32" y="181" fill="#2c241d" class="text-main" font-size="11" font-weight="bold">C++</text>
-  <text x="135" y="181" text-anchor="end" fill="#D41F26" class="text-main" font-size="11" font-weight="bold">5%</text>
+<!-- Legend -->
+<g transform="translate(285, 55)">
+  <circle cx="10" cy="10" r="7" fill="#0077C8"/>
+  <text x="26" y="14" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Python</text>
+  
+  <circle cx="10" cy="35" r="7" fill="#F88379"/>
+  <text x="26" y="39" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">TypeScript</text>
+  
+  <circle cx="10" cy="60" r="7" fill="#F2D24B"/>
+  <text x="26" y="64" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">JavaScript</text>
+  
+  <circle cx="10" cy="85" r="7" fill="#D4A373"/>
+  <text x="26" y="89" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Other</text>
+  
+  <circle cx="10" cy="110" r="7" fill="hsl(72, 60%, 49%)"/>
+  <text x="26" y="114" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Java</text>
+  
+  <circle cx="10" cy="135" r="7" fill="#D41F26"/>
+  <text x="26" cy="139" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">C++</text>
 </g>
 
-<!-- Footer branding -->
 <text x="250" y="328" text-anchor="middle" fill="#8c7a6b" class="text-main" font-size="8">auto-updated daily · github.com/AHMADMALIK1376</text>
 </svg>
