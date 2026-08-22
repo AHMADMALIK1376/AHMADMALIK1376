@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 312" width="1240" height="312" role="img" aria-label="Ahmad Malik, Full-Stack AI Engineer: production web applications and LLM-powered systems">
 <title>Ahmad Malik</title>
-<defs><clipPath id="tp"><rect class="typ" x="104" y="180" width="0" height="30"/></clipPath><style>
+<defs><clipPath id="tp"><rect class="typ" x="104" y="180" width="0" height="30"/></clipPath><pattern id="dg" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#E6DBCA"/></pattern><style>
 .sp{transform-origin:0 0}
 @keyframes sp{0%,2%{transform:scaleY(0)}12%,93%{transform:scaleY(1)}97%,100%{transform:scaleY(0)}}
 .nm{animation:nm 10s cubic-bezier(.22,1,.36,1) infinite}
@@ -40,8 +40,64 @@
 @keyframes fa1{0%,37%{transform:translateX(10px);opacity:0}45%,93%{transform:translateX(0);opacity:1}97%,100%{opacity:0}}
 .fa2{animation:fa2 10s ease-out infinite}
 @keyframes fa2{0%,44%{transform:translateX(10px);opacity:0}52%,93%{transform:translateX(0);opacity:1}97%,100%{opacity:0}}
+.pl0{animation:pl0 7s linear infinite;animation-delay:-0s}
+@keyframes pl0{0%{transform:translateX(120px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(300px);opacity:0}}
+.pl1{animation:pl1 8s linear infinite;animation-delay:-3s}
+@keyframes pl1{0%{transform:translateX(540px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(700px);opacity:0}}
+.pl2{animation:pl2 9s linear infinite;animation-delay:-6s}
+@keyframes pl2{0%{transform:translateX(1000px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(1120px);opacity:0}}
 </style></defs>
 <rect x="0" y="0" width="1240" height="312" rx="0" fill="#F2EDE6"/>
+<rect x="0" y="0" width="1240" height="312" rx="0" fill="url(#dg)"/>
+<path d="M0,33 H32 L72,73" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0,113 H32 L72,153" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0,193 H32 L72,233" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120,14 H300 L326,40 H520" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M600,40 H740 L766,14 H960" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1000,14 H1120 L1146,40 H1240" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60,296 H240 L266,272 H460" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M540,272 H700 L726,296 H900" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M960,296 H1080 L1106,272 H1240" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M812,70 V150 L840,178 V240" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M900,240 V170 L928,142 V70" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1240,120 H1204 V196 H1240" fill="none" stroke="#E1D5C2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="120" cy="14" r="4" fill="#CDBEA6"/>
+<circle cx="120" cy="14" r="1.7" fill="#F2EDE6"/>
+<circle cx="520" cy="14" r="4" fill="#CDBEA6"/>
+<circle cx="520" cy="14" r="1.7" fill="#F2EDE6"/>
+<circle cx="600" cy="40" r="4" fill="#CDBEA6"/>
+<circle cx="600" cy="40" r="1.7" fill="#F2EDE6"/>
+<circle cx="960" cy="14" r="4" fill="#CDBEA6"/>
+<circle cx="960" cy="14" r="1.7" fill="#F2EDE6"/>
+<circle cx="1000" cy="14" r="4" fill="#CDBEA6"/>
+<circle cx="1000" cy="14" r="1.7" fill="#F2EDE6"/>
+<circle cx="1240" cy="14" r="4" fill="#CDBEA6"/>
+<circle cx="1240" cy="14" r="1.7" fill="#F2EDE6"/>
+<circle cx="60" cy="296" r="4" fill="#CDBEA6"/>
+<circle cx="60" cy="296" r="1.7" fill="#F2EDE6"/>
+<circle cx="460" cy="272" r="4" fill="#CDBEA6"/>
+<circle cx="460" cy="272" r="1.7" fill="#F2EDE6"/>
+<circle cx="540" cy="272" r="4" fill="#CDBEA6"/>
+<circle cx="540" cy="272" r="1.7" fill="#F2EDE6"/>
+<circle cx="900" cy="296" r="4" fill="#CDBEA6"/>
+<circle cx="900" cy="296" r="1.7" fill="#F2EDE6"/>
+<circle cx="960" cy="296" r="4" fill="#CDBEA6"/>
+<circle cx="960" cy="296" r="1.7" fill="#F2EDE6"/>
+<circle cx="812" cy="70" r="4" fill="#CDBEA6"/>
+<circle cx="812" cy="70" r="1.7" fill="#F2EDE6"/>
+<circle cx="840" cy="240" r="4" fill="#CDBEA6"/>
+<circle cx="840" cy="240" r="1.7" fill="#F2EDE6"/>
+<circle cx="900" cy="240" r="4" fill="#CDBEA6"/>
+<circle cx="900" cy="240" r="1.7" fill="#F2EDE6"/>
+<circle cx="928" cy="70" r="4" fill="#CDBEA6"/>
+<circle cx="928" cy="70" r="1.7" fill="#F2EDE6"/>
+<circle cx="1204" cy="120" r="4" fill="#CDBEA6"/>
+<circle cx="1204" cy="120" r="1.7" fill="#F2EDE6"/>
+<circle cx="1204" cy="196" r="4" fill="#CDBEA6"/>
+<circle cx="1204" cy="196" r="1.7" fill="#F2EDE6"/>
+<circle class="pl0" cy="14" r="3" fill="#CDBEA6"/>
+<circle class="pl1" cy="272" r="3" fill="#CDBEA6"/>
+<circle class="pl2" cy="14" r="3" fill="#CDBEA6"/>
 <g transform="translate(72,56)"><g class="sp0"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#0077C8"/></g></g>
 <g transform="translate(72,96)"><g class="sp1"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#F88379"/></g></g>
 <g transform="translate(72,136)"><g class="sp2"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#AAC832"/></g></g>
