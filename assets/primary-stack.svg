@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 200" width="1240" height="200" role="img" aria-label="Primary stack by category">
+<title>Primary Stack</title>
+<defs><style>
+@keyframes rise{0%{opacity:0;transform:translateY(10px)}}
+.c0{animation:rise .6s ease-out both;animation-delay:0.00s}
+.c1{animation:rise .6s ease-out both;animation-delay:0.10s}
+.c2{animation:rise .6s ease-out both;animation-delay:0.20s}
+.c3{animation:rise .6s ease-out both;animation-delay:0.30s}
+</style></defs>
+<rect x="0" y="0" width="1240" height="200" rx="0" fill="#F2EDE6"/>
+<text x="48" y="40" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="3.2">PRIMARY STACK</text>
+<text x="1192" y="40" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="2">WHAT I ACTUALLY BUILD WITH</text>
+<path d="M48,54 H1192" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
+<g class="c0">
+  <rect x="48.0" y="74" width="26" height="6" rx="3" fill="#0077C8"/>
+  <text x="48.0" y="102" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="2.4">LANGUAGES</text>
+  <rect x="48.0" y="118" width="90.0" height="26" rx="13" fill="#FBF7F0" stroke="#0077C8" stroke-width="1.6"/>
+  <text x="93.0" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">JavaScript</text>
+  <rect x="145.0" y="118" width="90.0" height="26" rx="13" fill="#FBF7F0" stroke="#0077C8" stroke-width="1.6"/>
+  <text x="190.0" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">TypeScript</text>
+  <rect x="242.0" y="118" width="62.0" height="26" rx="13" fill="#FBF7F0" stroke="#0077C8" stroke-width="1.6"/>
+  <text x="273.0" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">Python</text>
+  <rect x="48.0" y="150" width="41.0" height="26" rx="13" fill="#FBF7F0" stroke="#0077C8" stroke-width="1.6"/>
+  <text x="68.5" y="167" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">SQL</text>
+</g>
+<g class="c1">
+  <rect x="334.0" y="74" width="26" height="6" rx="3" fill="#AAC832"/>
+  <text x="334.0" y="102" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="2.4">FRAMEWORKS</text>
+  <rect x="334.0" y="118" width="55.0" height="26" rx="13" fill="#FBF7F0" stroke="#AAC832" stroke-width="1.6"/>
+  <text x="361.5" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">React</text>
+  <rect x="396.0" y="118" width="69.0" height="26" rx="13" fill="#FBF7F0" stroke="#AAC832" stroke-width="1.6"/>
+  <text x="430.5" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">Node.js</text>
+  <rect x="472.0" y="118" width="69.0" height="26" rx="13" fill="#FBF7F0" stroke="#AAC832" stroke-width="1.6"/>
+  <text x="506.5" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">Express</text>
+  <rect x="334.0" y="150" width="69.0" height="26" rx="13" fill="#FBF7F0" stroke="#AAC832" stroke-width="1.6"/>
+  <text x="368.5" y="167" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">FastAPI</text>
+</g>
+<g class="c2">
+  <rect x="620.0" y="74" width="26" height="6" rx="3" fill="#F88379"/>
+  <text x="620.0" y="102" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="2.4">AI / LLM</text>
+  <rect x="620.0" y="118" width="90.0" height="26" rx="13" fill="#FBF7F0" stroke="#F88379" stroke-width="1.6"/>
+  <text x="665.0" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">Claude API</text>
+  <rect x="717.0" y="118" width="90.0" height="26" rx="13" fill="#FBF7F0" stroke="#F88379" stroke-width="1.6"/>
+  <text x="762.0" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">Prompt Eng</text>
+  <rect x="814.0" y="118" width="62.0" height="26" rx="13" fill="#FBF7F0" stroke="#F88379" stroke-width="1.6"/>
+  <text x="845.0" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">Vision</text>
+</g>
+<g class="c3">
+  <rect x="906.0" y="74" width="26" height="6" rx="3" fill="#D4A373"/>
+  <text x="906.0" y="102" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="2.4">INFRA</text>
+  <rect x="906.0" y="118" width="62.0" height="26" rx="13" fill="#FBF7F0" stroke="#D4A373" stroke-width="1.6"/>
+  <text x="937.0" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">Docker</text>
+  <rect x="975.0" y="118" width="41.0" height="26" rx="13" fill="#FBF7F0" stroke="#D4A373" stroke-width="1.6"/>
+  <text x="995.5" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">GCP</text>
+  <rect x="1023.0" y="118" width="41.0" height="26" rx="13" fill="#FBF7F0" stroke="#D4A373" stroke-width="1.6"/>
+  <text x="1043.5" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">AWS</text>
+  <rect x="1071.0" y="118" width="69.0" height="26" rx="13" fill="#FBF7F0" stroke="#D4A373" stroke-width="1.6"/>
+  <text x="1105.5" y="135" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#2E2A24" text-anchor="middle" letter-spacing="0.3">MongoDB</text>
+</g>
+</svg>
