@@ -197,59 +197,17 @@
 
 <br/>
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=AHMADMALIK1376&show_icons=true&hide_border=true&bg_color=f2ede6&title_color=0077c8&icon_color=f88379&text_color=5e5349&ring_color=0077c8&border_radius=6&custom_title=CORE+STATISTICS"/>
-&nbsp;&nbsp;
-<img height="175" src="https://github-readme-streak-stats.herokuapp.com/?user=AHMADMALIK1376&hide_border=true&background=f2ede6&ring=0077c8&fire=d41f26&currStreakLabel=0077c8&sideLabels=5e5349&dates=7d7266&border_radius=6&currStreakNum=2e2a24&sideNums=2e2a24"/>
-
-<br/><br/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AHMADMALIK1376&layout=compact&hide_border=true&bg_color=f2ede6&title_color=0077c8&text_color=5e5349&border_radius=6&custom_title=LANGUAGE+DISTRIBUTION&langs_count=8"/>
+<img width="100%" src="assets/system-metrics.svg"/>
 
 </div>
 
 <br/>
 
----
+
 
 <br/>
 
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--                  DEPLOYMENT HISTORY                        -->
-<!-- ══════════════════════════════════════════════════════════ -->
 
-<div align="center">
-
-## ◈ DEPLOYMENT HISTORY ◈
-
-<br/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AHMADMALIK1376&custom_title=NEURAL+COMMIT+GRAPH&bg_color=F2EDE6&color=0077C8&line=F88379&point=D41F26&area_color=0077C818&title_color=5E5349&hide_border=true&radius=6"/>
-
-</div>
-
-<br/>
-
----
-
-<br/>
-
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--                  ACHIEVEMENT NODES                         -->
-<!-- ══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## ◈ ACHIEVEMENT NODES ◈
-
-<sub>▸ SCANNING TROPHY VAULT... ACHIEVEMENTS UNLOCKED 🏆</sub>
-
-<br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=AHMADMALIK1376&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6"/>
-
-</div>
-
-<br/>
 
 ---
 
@@ -271,33 +229,6 @@
 
 <br/>
 
----
-
-<br/>
-
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--                    CORE DIRECTIVE                          -->
-<!-- ══════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## ◈ CORE DIRECTIVE ◈
-
-<br/>
-
-### “Automate the boring. Architect the complex. Ship the impossible.”
-
-<br/>
-
-*— Ahmad Malik &nbsp;`⟁ Engineer · Builder · Architect`*
-
-<br/><br/>
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=flat" alt="Dev Quote"/>
-
-</div>
-
-<br/>
 
 ---
 
