@@ -58,7 +58,7 @@
 
 <br/>
 
-<img width="100%" src="assets/lang-distribution.svg"/>
+<img width="100%" src="assets/lang-map.svg"/>
 
 </div>
 
