@@ -1,10 +1,8 @@
 <div align="center">
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--              INTRODUCTION                                 -->
+<!--               INTRODUCTION                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
-
-
 
 <br/>
 
@@ -15,7 +13,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--              SYSTEM DESIGN                                 -->
+<!--               SYSTEM DESIGN                                -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -36,7 +34,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--      LLM TRAINING                                         -->
+<!--      LLM TRAINING                                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -45,18 +43,17 @@
 
 <sub>▸ DATASETS → FORWARD PASS → BACKPROP ✓</sub>
 
-
 <br/>
 
 <img width="100%" src="assets/neural.svg"/>
 
 <br/>
 
-![](https://img.shields.io/badge/S--RANK-Python%20%7C%20Node.js%20%7C%20Playwright%20%7C%20LLM%2FAI-00d4ff?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/S--RANK-Python%20%7C%20Node.js%20%7C%20Playwright%20%7C%20LLM%2FAI-0077C8?style=flat-square&labelColor=5E5349)
 &nbsp;
-![](https://img.shields.io/badge/A--RANK-TypeScript%20%7C%20React%20%7C%20FastAPI%20%7C%20Docker-a78bfa?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/A--RANK-TypeScript%20%7C%20React%20%7C%20FastAPI%20%7C%20Docker-F88379?style=flat-square&labelColor=5E5349)
 &nbsp;
-![](https://img.shields.io/badge/B--RANK-Java%20%7C%20C%2B%2B-555555?style=flat-square&labelColor=0d1117)
+![](https://img.shields.io/badge/B--RANK-Java%20%7C%20C%2B%2B-D4A373?style=flat-square&labelColor=5E5349)
 
 </div>
 
@@ -67,7 +64,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--     LANGUAGE DISTRIBUTION                                 -->
+<!--      LANGUAGE DISTRIBUTION                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -78,7 +75,6 @@
 
 <br/>
 
-<!-- ✅ FIXED: lang-donut.svg (not donut.svg) -->
 <img width="100%" src="assets/lang-donut.svg"/>
 
 </div>
@@ -90,7 +86,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--          30-DAY ACTIVITY BARS                             -->
+<!--          30-DAY ACTIVITY BARS                              -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -101,7 +97,6 @@
 
 <br/>
 
-<!-- ✅ activity-bars.svg in assets folder -->
 <img width="100%" src="assets/activity-bars.svg"/>
 
 </div>
@@ -113,7 +108,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                    TECH ARSENAL                           -->
+<!--                    TECH ARSENAL                            -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -126,7 +121,7 @@
 <summary align="center"><b>Languages & Core</b></summary>
 <br/>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,typescript,javascript,java,cpp,html,css&theme=dark&perline=7" />
+  <img src="https://skillicons.dev/icons?i=python,typescript,javascript,java,cpp,html,css&theme=light&perline=7" />
 </p>
 </details>
 
@@ -136,7 +131,7 @@
 <summary align="center"><b>Backend & APIs</b></summary>
 <br/>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,fastapi,express,py&theme=dark&perline=4" />
+  <img src="https://skillicons.dev/icons?i=nodejs,fastapi,express,py&theme=light&perline=4" />
   <br/><br/>
   <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" />
   &nbsp;
@@ -152,7 +147,7 @@
 <summary align="center"><b>Frontend & UI</b></summary>
 <br/>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,tailwind,vite,html,css&theme=dark&perline=5" />
+  <img src="https://skillicons.dev/icons?i=react,tailwind,vite,html,css&theme=light&perline=5" />
   <br/><br/>
   <img src="https://img.shields.io/badge/Canvas_API-FF6F00?style=for-the-badge&logo=html5&logoColor=white" />
 </p>
@@ -164,7 +159,7 @@
 <summary align="center"><b>Databases</b></summary>
 <br/>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=mongodb,firebase,mysql,postgresql&theme=dark&perline=4" />
+  <img src="https://skillicons.dev/icons?i=mongodb,firebase,mysql,postgresql&theme=light&perline=4" />
   <br/><br/>
   <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
 </p>
@@ -176,7 +171,7 @@
 <summary align="center"><b>Cloud & DevOps</b></summary>
 <br/>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=gcp,aws,docker,git,linux&theme=dark&perline=5" />
+  <img src="https://skillicons.dev/icons?i=gcp,aws,docker,git,linux&theme=light&perline=5" />
   <br/><br/>
   <img src="https://img.shields.io/badge/WSL_2-0078D4?style=for-the-badge&logo=windows&logoColor=white" />
   &nbsp;
@@ -191,7 +186,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                   SYSTEM METRICS                          -->
+<!--                    SYSTEM METRICS                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -202,13 +197,13 @@
 
 <br/>
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=AHMADMALIK1376&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00d4ff&icon_color=a78bfa&text_color=c9d1d9&ring_color=00d4ff&border_radius=6&custom_title=CORE+STATISTICS"/>
+<img height="175" src="https://github-readme-stats.vercel.app/api?username=AHMADMALIK1376&show_icons=true&hide_border=true&bg_color=F2EDE6&title_color=0077C8&icon_color=F88379&text_color=5E5349&ring_color=0077C8&border_radius=6&custom_title=CORE+STATISTICS"/>
 &nbsp;&nbsp;
-<img height="175" src="https://github-readme-streak-stats.herokuapp.com/?user=AHMADMALIK1376&theme=dark&hide_border=true&background=0d1117&ring=00d4ff&fire=ffd700&currStreakLabel=00d4ff&sideLabels=a78bfa&dates=888888&border_radius=6&currStreakNum=ffffff&sideNums=ffffff"/>
+<img height="175" src="https://github-readme-streak-stats.herokuapp.com/?user=AHMADMALIK1376&theme=default&hide_border=true&background=F2EDE6&ring=0077C8&fire=D41F26&currStreakLabel=0077C8&sideLabels=5E5349&dates=7D7266&border_radius=6&currStreakNum=2E2A24&sideNums=2E2A24"/>
 
 <br/><br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AHMADMALIK1376&layout=compact&hide_border=true&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9&border_radius=6&custom_title=LANGUAGE+DISTRIBUTION&langs_count=8"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AHMADMALIK1376&layout=compact&hide_border=true&bg_color=F2EDE6&title_color=0077C8&text_color=5E5349&border_radius=6&custom_title=LANGUAGE+DISTRIBUTION&langs_count=8"/>
 
 </div>
 
@@ -219,18 +214,16 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                 DEPLOYMENT HISTORY                        -->
+<!--                  DEPLOYMENT HISTORY                        -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 ## ◈ DEPLOYMENT HISTORY ◈
 
-
-
 <br/>
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AHMADMALIK1376&custom_title=NEURAL+COMMIT+GRAPH&bg_color=0d1117&color=00d4ff&line=a78bfa&point=ffd700&area_color=00d4ff18&title_color=00d4ff&area=true&hide_border=true&radius=6"/>
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AHMADMALIK1376&custom_title=NEURAL+COMMIT+GRAPH&bg_color=F2EDE6&color=0077C8&line=F88379&point=D41F26&area_color=0077C818&title_color=5E5349&hide_border=true&radius=6"/>
 
 </div>
 
@@ -241,7 +234,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                  ACHIEVEMENT NODES                        -->
+<!--                  ACHIEVEMENT NODES                         -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -252,7 +245,7 @@
 
 <br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=AHMADMALIK1376&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6"/>
+<img src="https://github-profile-trophy.vercel.app/?username=AHMADMALIK1376&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6"/>
 
 </div>
 
@@ -263,13 +256,12 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--              BUILD & DEPLOY PIPELINE                      -->
+<!--              BUILD & DEPLOY PIPELINE                       -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 ## ◈ BUILD & DEPLOY PIPELINE ◈
-
 
 <br/>
 
@@ -282,8 +274,9 @@
 ---
 
 <br/>
+
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                    CORE DIRECTIVE                         -->
+<!--                    CORE DIRECTIVE                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -300,7 +293,7 @@
 
 <br/><br/>
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Dev Quote"/>
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=flat" alt="Dev Quote"/>
 
 </div>
 
@@ -311,7 +304,7 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                     OPEN CHANNEL                          -->
+<!--                      OPEN CHANNEL                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -322,9 +315,9 @@
 
 <br/><br/>
 
-[![EMAIL](https://img.shields.io/badge/📡%20SIGNAL-ahmadmalik1376%40gmail.com-00d4ff?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=0d1117)](mailto:ahmadmalik1376@gmail.com)
+[![EMAIL](https://img.shields.io/badge/📡%20SIGNAL-ahmadmalik1376%40gmail.com-0077C8?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=5E5349)](mailto:ahmadmalik1376@gmail.com)
 &nbsp;
-[![GITHUB](https://img.shields.io/badge/⟁%20GITHUB-AHMADMALIK1376-a78bfa?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=0d1117)](https://github.com/AHMADMALIK1376)
+[![GITHUB](https://img.shields.io/badge/⟁%20GITHUB-AHMADMALIK1376-F88379?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=5E5349)](https://github.com/AHMADMALIK1376)
 
 <br/><br/>
 
@@ -333,4 +326,4 @@
 </div>
 
 <!-- FOOTER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:000000,50:001a33,100:000000&height=120&section=footer&reversal=false"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:F2EDE6,50:CDBEA6,100:F2EDE6&height=120&section=footer&reversal=false"/>
