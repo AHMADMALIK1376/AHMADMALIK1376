@@ -14,6 +14,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import quote
 
 import chartgen
+import worldmap
  
 # ─────────────────────────────────────────────
 #  CONFIG
@@ -434,7 +435,7 @@ def main():
     # Charts, drawn from the data just fetched so they cannot drift out of date
     print("\n[charts] Rendering from live API data...")
     non_fork = [r for r in repos if not r.get("fork")]
-    chartgen.language_chart(lang_bytes, repo_count=len(non_fork))
+    worldmap.language_map(lang_bytes, repo_count=len(non_fork))
 
     # Analyse
     print("\n📊 Analysing activity...")
