@@ -1,19 +1,16 @@
 <div align="center">
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--              CLEAN STATIC HEADER                          -->
+<!--              INTRODUCTION                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
-<!-- Top line -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0d1117&height=2&section=header&text=&fontSize=0"/>
+
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:30363d&height=220&section=header&text=Ahmad%20Malik&fontSize=55&fontColor=ffd700&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20AI%20Engineer%20%7C%20Cloud%20Architect&descAlignY=55&descSize=16&descColor=ffd700"/>
+<img width="100%" src="assets/intro.svg"/>
 
-<!-- Holographic glitch scan lines -->
 
-<!-- Advanced typing matrix -->
 
 <img width="100%" src="assets/terminal-boot.svg"/>
 
@@ -36,15 +33,12 @@
 
 <br/>
 
-<!-- Live metrics with actual data -->
 <p>
-  <img src="https://komarev.com/ghpvc/?username=AHMADMALIK1376&label=LIVE+VISITORS&style=for-the-badge&color=00d4ff&labelColor=0d1117"/>
   &nbsp;
   <img src="https://img.shields.io/github/followers/AHMADMALIK1376?label=Followers&style=for-the-badge&color=a78bfa&labelColor=0d1117"/>
  
 </p>
 
-<!-- Bottom scan line -->
 
 </div>
 
@@ -78,9 +72,9 @@
 <td width="50%" valign="top">
 
 ```typescript
-class FullStackArchitect {
+class FullStackAIEngineer {
   name = "Ahmad Malik";
-  title = "Full-Stack Developer & AI Engineer";
+  title = "Full-Stack AI Engineer";
   location = "Pakistan";
 
   expertise = {

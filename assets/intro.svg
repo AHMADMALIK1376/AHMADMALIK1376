@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 312" width="1240" height="312" role="img" aria-label="Ahmad Malik, Full-Stack AI Engineer: production web applications and LLM-powered systems">
+<title>Ahmad Malik</title>
+<defs><clipPath id="tp"><rect class="typ" x="104" y="180" width="0" height="30"/></clipPath><style>
+.sp{transform-origin:0 0}
+@keyframes sp{0%,2%{transform:scaleY(0)}12%,93%{transform:scaleY(1)}97%,100%{transform:scaleY(0)}}
+.nm{animation:nm 10s cubic-bezier(.22,1,.36,1) infinite}
+@keyframes nm{0%,8%{transform:translateY(14px);opacity:0}20%,93%{transform:translateY(0);opacity:1}97%,100%{opacity:0}}
+.eb{animation:eb 10s ease-out infinite}
+@keyframes eb{0%,5%{opacity:0}12%,93%{opacity:1}97%,100%{opacity:0}}
+.rl{stroke-dasharray:100;stroke-dashoffset:100;animation:rl 10s ease-out infinite}
+@keyframes rl{0%,17%{stroke-dashoffset:100}27%,93%{stroke-dashoffset:0}97%,100%{stroke-dashoffset:100}}
+.typ{animation:typ 10s steps(38,end) infinite}
+@keyframes typ{0%,27%{width:0}58%,93%{width:560px}97%,100%{width:0}}
+.tc{animation:tc 10s steps(38,end) infinite, blink 1.05s steps(1,end) infinite}
+@keyframes tc{0%,27%{transform:translateX(0)}58%,93%{transform:translateX(560px)}97%,100%{transform:translateX(0)}}
+@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+.dot{animation:dot 2.2s ease-in-out infinite}
+@keyframes dot{0%,100%{opacity:1}50%{opacity:.35}}
+.sp0{transform-origin:0 0;animation:sp 10s cubic-bezier(.22,1,.36,1) infinite;animation-delay:-0.00s}
+@keyframes sp0{0%,2%{transform:scaleY(0)}10%,93%{transform:scaleY(1)}97%,100%{transform:scaleY(0)}}
+.sp1{transform-origin:0 0;animation:sp 10s cubic-bezier(.22,1,.36,1) infinite;animation-delay:-0.00s}
+@keyframes sp1{0%,4%{transform:scaleY(0)}12%,93%{transform:scaleY(1)}97%,100%{transform:scaleY(0)}}
+.sp2{transform-origin:0 0;animation:sp 10s cubic-bezier(.22,1,.36,1) infinite;animation-delay:-0.00s}
+@keyframes sp2{0%,6%{transform:scaleY(0)}14%,93%{transform:scaleY(1)}97%,100%{transform:scaleY(0)}}
+.sp3{transform-origin:0 0;animation:sp 10s cubic-bezier(.22,1,.36,1) infinite;animation-delay:-0.00s}
+@keyframes sp3{0%,8%{transform:scaleY(0)}16%,93%{transform:scaleY(1)}97%,100%{transform:scaleY(0)}}
+.sp4{transform-origin:0 0;animation:sp 10s cubic-bezier(.22,1,.36,1) infinite;animation-delay:-0.00s}
+@keyframes sp4{0%,10%{transform:scaleY(0)}18%,93%{transform:scaleY(1)}97%,100%{transform:scaleY(0)}}
+.ch0{animation:ch0 10s cubic-bezier(.34,1.4,.64,1) infinite}
+@keyframes ch0{0%,58%{transform:translateY(8px);opacity:0}65%,93%{transform:translateY(0);opacity:1}97%,100%{opacity:0}}
+.ch1{animation:ch1 10s cubic-bezier(.34,1.4,.64,1) infinite}
+@keyframes ch1{0%,62%{transform:translateY(8px);opacity:0}69%,93%{transform:translateY(0);opacity:1}97%,100%{opacity:0}}
+.ch2{animation:ch2 10s cubic-bezier(.34,1.4,.64,1) infinite}
+@keyframes ch2{0%,66%{transform:translateY(8px);opacity:0}73%,93%{transform:translateY(0);opacity:1}97%,100%{opacity:0}}
+.ch3{animation:ch3 10s cubic-bezier(.34,1.4,.64,1) infinite}
+@keyframes ch3{0%,70%{transform:translateY(8px);opacity:0}77%,93%{transform:translateY(0);opacity:1}97%,100%{opacity:0}}
+.fa0{animation:fa0 10s ease-out infinite}
+@keyframes fa0{0%,30%{transform:translateX(10px);opacity:0}38%,93%{transform:translateX(0);opacity:1}97%,100%{opacity:0}}
+.fa1{animation:fa1 10s ease-out infinite}
+@keyframes fa1{0%,37%{transform:translateX(10px);opacity:0}45%,93%{transform:translateX(0);opacity:1}97%,100%{opacity:0}}
+.fa2{animation:fa2 10s ease-out infinite}
+@keyframes fa2{0%,44%{transform:translateX(10px);opacity:0}52%,93%{transform:translateX(0);opacity:1}97%,100%{opacity:0}}
+</style></defs>
+<rect x="0" y="0" width="1240" height="312" rx="0" fill="#F2EDE6"/>
+<g transform="translate(72,56)"><g class="sp0"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#0077C8"/></g></g>
+<g transform="translate(72,96)"><g class="sp1"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#F88379"/></g></g>
+<g transform="translate(72,136)"><g class="sp2"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#AAC832"/></g></g>
+<g transform="translate(72,176)"><g class="sp3"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#D41F26"/></g></g>
+<g transform="translate(72,216)"><g class="sp4"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#D4A373"/></g></g>
+<g class="eb"><text x="104" y="80" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="800" fill="#00568F" text-anchor="start" letter-spacing="3.6">FULL-STACK AI ENGINEER</text></g>
+<g class="nm"><text x="104" y="142" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="-1.4">AHMAD MALIK</text></g>
+<path class="rl" pathLength="100" d="M104,164 H764" stroke="#D9D0C1" stroke-width="1.6" fill="none"/>
+<g clip-path="url(#tp)"><text x="104" y="202" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#7D7266" text-anchor="start" letter-spacing="0">Production web applications and LLM-powered systems.</text></g>
+<g transform="translate(106,186)"><rect class="tc" width="2" height="20" rx="1" fill="#5E5349"/></g>
+<g class="ch0">
+  <rect x="104" y="230" width="139.5" height="30" rx="15" fill="#E2EEF7"/>
+  <text x="173.75" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#00568F" text-anchor="middle" letter-spacing="1.4">LLM INTEGRATION</text>
+</g>
+<g class="ch1">
+  <rect x="255.5" y="230" width="139.5" height="30" rx="15" fill="#FBE8E5"/>
+  <text x="325.25" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#B84A40" text-anchor="middle" letter-spacing="1.4">COMPUTER VISION</text>
+</g>
+<g class="ch2">
+  <rect x="407.0" y="230" width="161.4" height="30" rx="15" fill="#EEF4DC"/>
+  <text x="487.7" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#63801A" text-anchor="middle" letter-spacing="1.4">BROWSER AUTOMATION</text>
+</g>
+<g class="ch3">
+  <rect x="580.4" y="230" width="139.5" height="30" rx="15" fill="#FAE3E3"/>
+  <text x="650.15" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#A5151B" text-anchor="middle" letter-spacing="1.4">API &amp; DATABASES</text>
+</g>
+<g class="fa0">
+  <text x="1168" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">BASED IN</text>
+  <text x="1168" y="110" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">Rawalpindi, Pakistan</text>
+</g>
+<g class="fa1">
+  <text x="1168" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">FOCUS</text>
+  <text x="1168" y="172" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">LLM Integration &#183; Vision</text>
+</g>
+<g class="fa2">
+  <text x="1168" y="212" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">STATUS</text>
+  <circle cx="1016" cy="230" r="5" fill="#AAC832" class="dot"/>
+  <text x="1168" y="234" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">Open to opportunities</text>
+</g>
+<path d="M990,56 V256" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
+</svg>
