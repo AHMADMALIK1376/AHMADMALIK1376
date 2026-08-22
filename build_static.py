@@ -12,6 +12,8 @@ which also lets each one carry its own caption instead of needing a separate
 """
 import os
 
+import arsenal
+
 AEGEAN, CORAL = "#0077C8", "#F88379"
 BROWN, TEAMIST, CRIMSON = "#D4A373", "#AAC832", "#D41F26"
 SKY = "#F2EDE6"
@@ -141,3 +143,4 @@ if __name__ == "__main__":
     for slug, title, caption, accent in HEADINGS:
         print("  wrote %s" % heading(slug, title, caption, accent))
     stack_strip()
+    arsenal.arsenal()

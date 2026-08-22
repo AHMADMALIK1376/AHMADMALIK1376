@@ -87,70 +87,12 @@
 <div align="center">
 
 <img width="100%" src="assets/h-tech-arsenal.svg"/>
+
+<br/>
+
+<img width="100%" src="assets/arsenal.svg"/>
+
 </div>
-
-<details open>
-<summary align="center"><b>Languages & Core</b></summary>
-<br/>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,typescript,javascript,java,cpp,html,css&theme=light&perline=7" />
-</p>
-</details>
-
-<br/>
-
-<details>
-<summary align="center"><b>Backend & APIs</b></summary>
-<br/>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=nodejs,fastapi,express,py&theme=light&perline=4" />
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/BeautifulSoup-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Uvicorn-FF6F00?style=for-the-badge&logo=python&logoColor=white" />
-</p>
-</details>
-
-<br/>
-
-<details>
-<summary align="center"><b>Frontend & UI</b></summary>
-<br/>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=react,tailwind,vite,html,css&theme=light&perline=5" />
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Canvas_API-FF6F00?style=for-the-badge&logo=html5&logoColor=white" />
-</p>
-</details>
-
-<br/>
-
-<details>
-<summary align="center"><b>Databases</b></summary>
-<br/>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=mongodb,firebase,mysql,postgresql&theme=light&perline=4" />
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
-</p>
-</details>
-
-<br/>
-
-<details>
-<summary align="center"><b>Cloud & DevOps</b></summary>
-<br/>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=gcp,aws,docker,git,linux&theme=light&perline=5" />
-  <br/><br/>
-  <img src="https://img.shields.io/badge/WSL_2-0078D4?style=for-the-badge&logo=windows&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/n8n-2396F3?style=for-the-badge&logo=n8n&logoColor=white" />
-</p>
-</details>
-
 
 ---
 <!-- ══════════════════════════════════════════════════════════ -->
