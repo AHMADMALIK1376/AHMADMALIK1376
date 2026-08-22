@@ -64,39 +64,20 @@
 <br/>
 
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--              IDENTITY + PROCESS MONITOR                   -->
+<!--              SYSTEM DESIGN                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
+<div align="center">
 
-```typescript
-class FullStackAIEngineer {
-  name = "Ahmad Malik";
-  title = "Full-Stack AI Engineer";
-  location = "Pakistan";
+## ◈ SYSTEM DESIGN ◈
 
-  expertise = {
-    languages: ["Python", "TypeScript", "JavaScript", "Java", "C++"],
-    backend: ["Node.js", "FastAPI", "Python", "Playwright"],
-    frontend: ["React", "Tailwind CSS", "Vite", "HTML5/CSS3"],
-    databases: ["MongoDB", "Firebase", "SQL", "Oracle"],
-    cloud: ["Google Cloud", "AWS", "Docker"],
-    tools: ["Git", "WSL 2", "n8n", "BeautifulSoup4"]
-  };
+<sub>▸ CLIENT → CDN → GATEWAY → SERVICES → DATA ✓</sub>
 
-  specialties = [
-    "AI/LLM Integration",
-    "Full-Stack Web Applications", 
-    "Browser Automation",
-    "VS Code Extensions"
-  ];
+<br/>
 
-  currentlyBuilding = "AI-Powered Development Tools & Automation Systems";
-}
-```
-</td> <td width="50%" valign="middle"><div align="center"><img width="95%" src="assets/project-donut.svg"/></div></td> </tr> </table>
+<img width="100%" src="assets/system-design.svg"/>
+
+</div>
 <br/>
 
 ---
