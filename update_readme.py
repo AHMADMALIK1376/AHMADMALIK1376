@@ -12,6 +12,8 @@ import json
 import requests
 from datetime import datetime, timedelta, timezone
 from urllib.parse import quote
+
+import chartgen
  
 # ─────────────────────────────────────────────
 #  CONFIG
@@ -416,7 +418,12 @@ def main():
     events       = fetch_events()
     repos        = fetch_repos()
     lang_bytes   = fetch_language_bytes(repos)
- 
+
+    # Charts, drawn from the data just fetched so they cannot drift out of date
+    print("\n[charts] Rendering from live API data...")
+    non_fork = [r for r in repos if not r.get("fork")]
+    chartgen.language_chart(lang_bytes, repo_count=len(non_fork))
+
     # Analyse
     print("\n📊 Analysing activity...")
     activity = analyse_events(events)

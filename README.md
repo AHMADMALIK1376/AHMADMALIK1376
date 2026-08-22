@@ -71,11 +71,11 @@
 
 ## ◈ LANGUAGE DISTRIBUTION ◈
 
-<sub>▸ SCANNING REPO LANGUAGE BYTES... CHART RENDERING 📊</sub>
+<sub>▸ LIVE FROM THE GITHUB API · REBUILT DAILY ✓</sub>
 
 <br/>
 
-<img width="100%" src="assets/lang-donut.svg"/>
+<img width="100%" src="assets/lang-distribution.svg"/>
 
 </div>
 
