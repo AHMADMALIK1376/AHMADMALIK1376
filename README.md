@@ -10,93 +10,25 @@
 
 <img width="100%" src="assets/intro.svg"/>
 
-
-
-<img width="100%" src="assets/terminal-boot.svg"/>
-
-
-<br/>
-
-
-<br/>
-
-<!-- Advanced badges with glow -->
-<p>
- <img src="https://img.shields.io/badge/🟢_STATUS-ONLINE_%26_BUILDING-00d4ff?style=for-the-badge&logo=statuspal&logoColor=white&labelColor=0d1117&color=00ff88"/>
-  &nbsp;
-  <img src="https://img.shields.io/badge/📍_BASE-PAKISTAN_🇵🇰-a78bfa?style=for-the-badge&logo=airplayvideo&logoColor=white&labelColor=0d1117&color=ff6b6b"/>
-  &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=AHMADMALIK1376&label=👁️+VIEWS&style=for-the-badge&color=ffd700&labelColor=0d1117"/>
-  
-
-</p>
-
-<br/>
-
-<p>
-  &nbsp;
-  <img src="https://img.shields.io/github/followers/AHMADMALIK1376?label=Followers&style=for-the-badge&color=a78bfa&labelColor=0d1117"/>
- 
-</p>
-
-
 </div>
 
 <br/>
 
----
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                  ANIMATED INTRO                           -->
+<!--              SYSTEM DESIGN                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
+## ◈ SYSTEM DESIGN ◈
 
-<img width="600" src="assets/scan-text.svg"/>
-
-
-</div>
-
-
-
----
+<sub>▸ CLIENT → CDN → GATEWAY → SERVICES → DATA ✓</sub>
 
 <br/>
 
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--              IDENTITY + PROCESS MONITOR                   -->
-<!-- ══════════════════════════════════════════════════════════ -->
+<img width="100%" src="assets/system-design.svg"/>
 
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
-
-```typescript
-class FullStackAIEngineer {
-  name = "Ahmad Malik";
-  title = "Full-Stack AI Engineer";
-  location = "Pakistan";
-
-  expertise = {
-    languages: ["Python", "TypeScript", "JavaScript", "Java", "C++"],
-    backend: ["Node.js", "FastAPI", "Python", "Playwright"],
-    frontend: ["React", "Tailwind CSS", "Vite", "HTML5/CSS3"],
-    databases: ["MongoDB", "Firebase", "SQL", "Oracle"],
-    cloud: ["Google Cloud", "AWS", "Docker"],
-    tools: ["Git", "WSL 2", "n8n", "BeautifulSoup4"]
-  };
-
-  specialties = [
-    "AI/LLM Integration",
-    "Full-Stack Web Applications", 
-    "Browser Automation",
-    "VS Code Extensions"
-  ];
-
-  currentlyBuilding = "AI-Powered Development Tools & Automation Systems";
-}
-```
-</td> <td width="50%" valign="middle"><div align="center"><img width="95%" src="assets/project-donut.svg"/></div></td> </tr> </table>
+</div>
 <br/>
 
 ---
