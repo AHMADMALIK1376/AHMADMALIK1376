@@ -1,70 +1,124 @@
-<svg viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg" width="420" height="285">
+<svg viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg" width="500" height="240">
 <defs>
   <style>
-    .seg { fill: none; stroke-width: 14; transform-origin: center; stroke-linecap: round; }
-    .bg-grid { fill: #f5f0eb; }
-    .circuit-line { fill: none; stroke: #d4c5b9; stroke-width: 1; stroke-linecap: round; }
-    .dot { fill: #d4c5b9; stroke: #f5f0eb; stroke-width: 1; }
-    .text-main { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .seg { fill: none; stroke-width: 9; transform-origin: center; stroke-linecap: round; }
+    .bg-grid { fill: #F2EDE6; }
+    
+    /* Authentic angled circuit path style from your reference snippet */
+    .circuit-line { fill: none; stroke: #E1D5C2; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    
+    /* Terminal node style (Double ring circle matching your header banner) */
+    .node-outer { fill: #F2EDE6; stroke: #CDBEA6; stroke-width: 1.5; }
+    .node-inner { fill: #CDBEA6; }
+
+    /* Moving data dots traveling along the exact circuit bends */
+    .travel-dot { fill: #A2988A; }
+    .anim-dot-left { animation: moveLeftPath 3.2s linear infinite; }
+    .anim-dot-right { animation: moveRightPath 3.2s linear infinite; }
+
+    @keyframes moveLeftPath {
+      0% { transform: translate(0px, 0px); opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translate(130px, 0px); opacity: 0; }
+    }
+    @keyframes moveRightPath {
+      0% { transform: translate(0px, 0px); opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { transform: translate(-130px, 0px); opacity: 0; }
+    }
+
+    .dot-node { fill: #CDBEA6; }
+    .box-bg { stroke: #CDBEA6; stroke-width: 1.2; rx: 6; }
+    .text-main { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 8.5px; font-weight: 700; fill: #ffffff; letter-spacing: 0.8px; }
+    .text-sub { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 7.5px; fill: #7D7266; letter-spacing: 0.5px; }
   </style>
+  <pattern id="dg" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#E6DBCA"/></pattern>
 </defs>
 
-<!-- Circuit / Blueprint Background -->
-<rect width="500" height="340" class="bg-grid"/>
+<!-- Blueprint Background with Dot Grid Pattern -->
+<rect width="500" height="240" class="bg-grid"/>
+<rect width="500" height="240" fill="url(#dg)"/>
 
-<pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-  <circle cx="2" cy="2" r="0.8" fill="#e3d8cc"/>
-</pattern>
-<rect width="500" height="340" fill="url(#dots)"/>
+<!-- Angular/Bent Circuit Paths (Matched to your style: horizontal to diagonal bend to horizontal) -->
+<path class="circuit-line" d="M45 45 H105 L130 75 H180"/>
+<path class="circuit-line" d="M45 110 H115 L140 110 H180"/>
+<path class="circuit-line" d="M45 175 H105 L130 145 H180"/>
 
-<!-- Circuit Lines & Nodes -->
-<path class="circuit-line" d="M40 20 L110 20 L130 40 L230 40 L245 25 L255 25 L270 40 L370 40 L390 20 L460 20"/>
-<path class="circuit-line" d="M40 320 L110 320 L130 300 L230 300 L245 315 L255 315 L270 300 L370 300 L390 320 L460 320"/>
-<path class="circuit-line" d="M110 60 L110 140 L130 160 L130 260 L110 280"/>
-<path class="circuit-line" d="M270 55 L270 285"/>
-<path class="circuit-line" d="M450 120 L480 120 L480 220 L450 220"/>
+<path class="circuit-line" d="M455 45 H395 L370 75 H320"/>
+<path class="circuit-line" d="M455 110 H385 L360 110 H320"/>
+<path class="circuit-line" d="M455 175 H395 L370 145 H320"/>
 
-<circle cx="245" cy="25" r="2" class="dot"/>
-<circle cx="255" cy="25" r="2" class="dot"/>
-<circle cx="245" cy="315" r="2" class="dot"/>
-<circle cx="255" cy="315" r="2" class="dot"/>
+<!-- Moving Data Dots (Traveling along the upper/lower level of paths) -->
+<circle cx="55" cy="45" r="2.2" class="travel-dot anim-dot-left"/>
+<circle cx="55" cy="110" r="2.2" class="travel-dot anim-dot-left"/>
+<circle cx="55" cy="175" r="2.2" class="travel-dot anim-dot-left"/>
 
-<!-- Concentric Tracks -->
-<circle cx="155" cy="165" r="95" fill="none" stroke="#e8dfd3" stroke-width="14"/>
-<circle cx="155" cy="165" r="77" fill="none" stroke="#e8dfd3" stroke-width="14"/>
-<circle cx="155" cy="165" r="59" fill="none" stroke="#e8dfd3" stroke-width="14"/>
-<circle cx="155" cy="165" r="41" fill="none" stroke="#e8dfd3" stroke-width="14"/>
-<circle cx="155" cy="165" r="23" fill="none" stroke="#e8dfd3" stroke-width="14"/>
+<circle cx="445" cy="45" r="2.2" class="travel-dot anim-dot-right"/>
+<circle cx="445" cy="110" r="2.2" class="travel-dot anim-dot-right"/>
+<circle cx="445" cy="175" r="2.2" class="travel-dot anim-dot-right"/>
+
+<!-- Terminal Nodes (Double rings at edges) -->
+<!-- Left Terminals -->
+<circle cx="45" cy="45" r="5" class="node-outer"/><circle cx="45" cy="45" r="1.8" class="node-inner"/>
+<circle cx="45" cy="110" r="5" class="node-outer"/><circle cx="45" cy="110" r="1.8" class="node-inner"/>
+<circle cx="45" cy="175" r="5" class="node-outer"/><circle cx="45" cy="175" r="1.8" class="node-inner"/>
+
+<!-- Right Terminals -->
+<circle cx="455" cy="45" r="5" class="node-outer"/><circle cx="455" cy="45" r="1.8" class="node-inner"/>
+<circle cx="455" cy="110" r="5" class="node-outer"/><circle cx="455" cy="110" r="1.8" class="node-inner"/>
+<circle cx="455" cy="175" r="5" class="node-outer"/><circle cx="455" cy="175" r="1.8" class="node-inner"/>
+
+<!-- Circuit Joint Dots -->
+<circle cx="130" cy="75" r="2" class="dot-node"/>
+<circle cx="370" cy="75" r="2" class="dot-node"/>
+<circle cx="130" cy="145" r="2" class="dot-node"/>
+<circle cx="370" cy="145" r="2" class="dot-node"/>
+
+<!-- CENTRALIZED GRAPH (Centered at X: 250, Y: 110) -->
+<circle cx="250" cy="110" r="62" fill="none" stroke="#E1D5C2" stroke-width="9"/>
+<circle cx="250" cy="110" r="51" fill="none" stroke="#E1D5C2" stroke-width="9"/>
+<circle cx="250" cy="110" r="40" fill="none" stroke="#E1D5C2" stroke-width="9"/>
+<circle cx="250" cy="110" r="29" fill="none" stroke="#E1D5C2" stroke-width="9"/>
+<circle cx="250" cy="110" r="18" fill="none" stroke="#E1D5C2" stroke-width="9"/>
 
 <!-- Data Arcs -->
-<circle class="seg" cx="155" cy="165" r="95" stroke-dasharray="0 597" stroke="#0077C8" transform="rotate(-90 155 165)"/>
-<circle class="seg" cx="155" cy="165" r="77" stroke-dasharray="0 484" stroke="#F88379" transform="rotate(-90 155 165)"/>
-<circle class="seg" cx="155" cy="165" r="59" stroke-dasharray="0 371" stroke="#F2D24B" transform="rotate(-90 155 165)"/>
-<circle class="seg" cx="155" cy="165" r="41" stroke-dasharray="0 258" stroke="#D4A373" transform="rotate(-90 155 165)"/>
-<circle class="seg" cx="155" cy="165" r="23" stroke-dasharray="0 145" stroke="hsl(72, 60%, 49%)" transform="rotate(-90 155 165)"/>
+<circle class="seg" cx="250" cy="110" r="62" stroke-dasharray="0 390" stroke="#0077C8" transform="rotate(-90 250 110)"/>
+<circle class="seg" cx="250" cy="110" r="51" stroke-dasharray="0 320" stroke="#F88379" transform="rotate(-90 250 110)"/>
+<circle class="seg" cx="250" cy="110" r="40" stroke-dasharray="0 251" stroke="#00A896" transform="rotate(-90 250 110)"/>
+<circle class="seg" cx="250" cy="110" r="29" stroke-dasharray="0 182" stroke="#D4A373" transform="rotate(-90 250 110)"/>
+<circle class="seg" cx="250" cy="110" r="18" stroke-dasharray="0 113" stroke="hsl(72, 60%, 49%)" transform="rotate(-90 250 110)"/>
 
-<circle cx="155" cy="165" r="12" fill="#D41F26"/>
+<circle cx="250" cy="110" r="9" fill="#D41F26"/>
 
-<!-- Legend (Corrected order: Python -> TS -> JS -> Other -> Java -> C++) -->
-<g transform="translate(285, 55)">
-  <circle cx="10" cy="10" r="7" fill="#0077C8"/>
-  <text x="26" y="14" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Python</text>
-  
-  <circle cx="10" cy="35" r="7" fill="#F88379"/>
-  <text x="26" y="39" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">TypeScript</text>
-  
-  <circle cx="10" cy="60" r="7" fill="#F2D24B"/>
-  <text x="26" y="64" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">JavaScript</text>
-  
-  <circle cx="10" cy="85" r="7" fill="#D4A373"/>
-  <text x="26" y="89" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Other</text>
-  
-  <circle cx="10" cy="110" r="7" fill="hsl(72, 60%, 49%)"/>
-  <text x="26" y="114" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Java</text>
-  
-  <circle cx="10" cy="135" r="7" fill="#D41F26"/>
-  <text x="26" y="139" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">C++</text>
-</g>
+<!-- LEFT SIDE BOX LABELS (Placed above the circuit paths) -->
+<!-- Python -->
+<rect x="55" y="16" width="70" height="24" fill="#0077C8" class="box-bg"/>
+<text x="90" y="32" text-anchor="middle" class="text-main">PYTHON</text>
 
-<text x="250" y="328" text-anchor="middle" fill="#8c7a6b" class="text-main" font-size="8">auto-updated daily · github.com/AHMADMALIK1376</text>
+<!-- TypeScript -->
+<rect x="55" y="81" width="75" height="24" fill="#F88379" class="box-bg"/>
+<text x="92.5" y="97" text-anchor="middle" class="text-main">TYPESCRIPT</text>
+
+<!-- JavaScript -->
+<rect x="55" y="146" width="75" height="24" fill="#00A896" class="box-bg"/>
+<text x="92.5" y="162" text-anchor="middle" class="text-main">JAVASCRIPT</text>
+
+
+<!-- RIGHT SIDE BOX LABELS (Placed above the circuit paths) -->
+<!-- Other -->
+<rect x="375" y="16" width="70" height="24" fill="#D4A373" class="box-bg"/>
+<text x="410" y="32" text-anchor="middle" class="text-main">OTHER</text>
+
+<!-- Java -->
+<rect x="370" y="81" width="75" height="24" fill="hsl(72, 60%, 49%)" class="box-bg"/>
+<text x="407.5" y="97" text-anchor="middle" class="text-main" fill="#2c241d">JAVA</text>
+
+<!-- C++ -->
+<rect x="375" y="146" width="70" height="24" fill="#D41F26" class="box-bg"/>
+<text x="410" y="162" text-anchor="middle" class="text-main">C++</text>
+
+<!-- Footer (Placed under the graph) -->
+<text x="250" y="218" text-anchor="middle" class="text-sub">AUTO-UPDATED DAILY · GITHUB.COM/AHMADMALIK1376</text>
 </svg>
