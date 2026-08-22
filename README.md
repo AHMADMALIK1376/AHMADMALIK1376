@@ -18,60 +18,43 @@
 
 <div align="center">
 
-## ◈ SYSTEM DESIGN ◈
-
-<sub>▸ CLIENT → LOAD BALANCER → WEB TIER → FANOUT → QUEUE → WORKERS ✓</sub>
+<img width="100%" src="assets/h-system-design.svg"/>
 
 <br/>
 
-<img width="100%" src="assets/system-design-feed.svg"/>
+<img width="100%" src="assets/architecture.svg"/>
 
 </div>
-<br/>
 
 ---
-
-<br/>
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--      LLM TRAINING                                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ LLM TRAINING ◈
-
-<sub>▸ DATASETS → FORWARD PASS → BACKPROP ✓</sub>
+<img width="100%" src="assets/h-llm-training.svg"/>
 
 <br/>
 
 <img width="100%" src="assets/neural.svg"/>
 
+<img width="100%" src="assets/primary-stack.svg"/>
+
 <br/>
 
-![](https://img.shields.io/badge/S--RANK-Python%20%7C%20Node.js%20%7C%20Playwright%20%7C%20LLM%2FAI-0077C8?style=flat-square&labelColor=5E5349)
-&nbsp;
-![](https://img.shields.io/badge/A--RANK-TypeScript%20%7C%20React%20%7C%20FastAPI%20%7C%20Docker-F88379?style=flat-square&labelColor=5E5349)
-&nbsp;
-![](https://img.shields.io/badge/B--RANK-Java%20%7C%20C%2B%2B-D4A373?style=flat-square&labelColor=5E5349)
 
 </div>
 
-<br/>
 
 ---
-
-<br/>
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--      LANGUAGE DISTRIBUTION                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ LANGUAGE DISTRIBUTION ◈
-
-<sub>▸ LIVE FROM THE GITHUB API · REBUILT DAILY ✓</sub>
+<img width="100%" src="assets/h-language-distribution.svg"/>
 
 <br/>
 
@@ -79,21 +62,15 @@
 
 </div>
 
-<br/>
 
 ---
-
-<br/>
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--          30-DAY ACTIVITY BARS                              -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ 30-DAY COMMIT ACTIVITY ◈
-
-<sub>▸ READING COMMIT LOGS... GRAPH RENDERING 📊</sub>
+<img width="100%" src="assets/h-commit-activity.svg"/>
 
 <br/>
 
@@ -101,20 +78,15 @@
 
 </div>
 
-<br/>
 
 ---
-
-<br/>
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--                    TECH ARSENAL                            -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ TECH ARSENAL ◈
-
+<img width="100%" src="assets/h-tech-arsenal.svg"/>
 </div>
 
 <details open>
@@ -179,70 +151,46 @@
 </p>
 </details>
 
-<br/>
 
 ---
-
-<br/>
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--                    SYSTEM METRICS                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ SYSTEM METRICS ◈
-
-<sub>▸ PULLING LIVE TELEMETRY... DATA STREAM OPEN 📡</sub>
+<img width="100%" src="assets/h-system-metrics.svg"/>
 
 <br/>
 
-<img width="100%" src="assets/system-metrics.svg"/>
+<img width="100%" src="assets/telemetry.svg"/>
 
 </div>
 
-<br/>
-
-
-
-<br/>
-
-
 
 ---
-
-<br/>
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--              BUILD & DEPLOY PIPELINE                       -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ BUILD & DEPLOY PIPELINE ◈
-
+<img width="100%" src="assets/h-build-deploy.svg"/>
 <br/>
 
 <img width="100%" src="assets/ship-it.svg"/>
 
 </div>
 
-<br/>
-
 
 ---
-
-<br/>
-
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--                      OPEN CHANNEL                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-## ◈ OPEN CHANNEL ◈
-
-<sub>▸ OPENING COMMS CHANNEL... ENCRYPTION ON 🔐 &nbsp;·&nbsp; CHANNEL OPEN — SEND YOUR SIGNAL 📡</sub>
+<img width="100%" src="assets/h-open-channel.svg"/>
 
 <br/><br/>
 

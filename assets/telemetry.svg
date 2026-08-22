@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 404" width="1240" height="404" role="img" aria-label="Live account telemetry">
+<title>System Metrics</title>
+<defs><style>
+@keyframes lift{0%{opacity:0;transform:translateY(12px)}}
+@keyframes fade{0%{opacity:0}}
+.t0{animation:lift .6s cubic-bezier(.22,1,.36,1) both;animation-delay:0.00s}
+.n0{animation:fade .5s ease-out both;animation-delay:0.30s}
+.t1{animation:lift .6s cubic-bezier(.22,1,.36,1) both;animation-delay:0.08s}
+.n1{animation:fade .5s ease-out both;animation-delay:0.38s}
+.t2{animation:lift .6s cubic-bezier(.22,1,.36,1) both;animation-delay:0.16s}
+.n2{animation:fade .5s ease-out both;animation-delay:0.46s}
+.t3{animation:lift .6s cubic-bezier(.22,1,.36,1) both;animation-delay:0.24s}
+.n3{animation:fade .5s ease-out both;animation-delay:0.54s}
+.t4{animation:lift .6s cubic-bezier(.22,1,.36,1) both;animation-delay:0.32s}
+.n4{animation:fade .5s ease-out both;animation-delay:0.62s}
+.t5{animation:lift .6s cubic-bezier(.22,1,.36,1) both;animation-delay:0.40s}
+.n5{animation:fade .5s ease-out both;animation-delay:0.70s}
+</style></defs>
+<rect x="0" y="0" width="1240" height="404" rx="0" fill="#F2EDE6"/>
+<text x="48" y="52" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="3.4">SYSTEM METRICS</text>
+<text x="1192" y="52" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="2.2">LIVE FROM THE GITHUB API</text>
+<path d="M48,70 H1192" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
+<g class="t0">
+  <rect x="48.0" y="104" width="370.7" height="104" rx="10" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.4"/>
+  <rect x="48.0" y="120" width="5" height="72" rx="2.5" fill="#0077C8"/>
+  <text x="72.0" y="136" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="2.2">PUBLIC REPOS</text>
+  <text x="72.0" y="174" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" font-weight="800" fill="#0077C8" text-anchor="start" letter-spacing="0" class="n0">11</text>
+  <text x="72.0" y="193" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">NOT COUNTING FORKS</text>
+</g>
+<g class="t1">
+  <rect x="434.7" y="104" width="370.7" height="104" rx="10" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.4"/>
+  <rect x="434.7" y="120" width="5" height="72" rx="2.5" fill="#AAC832"/>
+  <text x="458.7" y="136" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="2.2">STARS EARNED</text>
+  <text x="458.7" y="174" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" font-weight="800" fill="#AAC832" text-anchor="start" letter-spacing="0" class="n1">4</text>
+  <text x="458.7" y="193" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">ACROSS OWN REPOSITORIES</text>
+</g>
+<g class="t2">
+  <rect x="821.3" y="104" width="370.7" height="104" rx="10" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.4"/>
+  <rect x="821.3" y="120" width="5" height="72" rx="2.5" fill="#F88379"/>
+  <text x="845.3" y="136" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="2.2">FOLLOWERS</text>
+  <text x="845.3" y="174" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" font-weight="800" fill="#F88379" text-anchor="start" letter-spacing="0" class="n2">12</text>
+  <text x="845.3" y="193" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">ON GITHUB</text>
+</g>
+<g class="t3">
+  <rect x="48.0" y="224" width="370.7" height="104" rx="10" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.4"/>
+  <rect x="48.0" y="240" width="5" height="72" rx="2.5" fill="#D41F26"/>
+  <text x="72.0" y="256" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="2.2">PUSHES / 30D</text>
+  <text x="72.0" y="294" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" font-weight="800" fill="#D41F26" text-anchor="start" letter-spacing="0" class="n3">91</text>
+  <text x="72.0" y="313" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">TO PUBLIC REPOSITORIES</text>
+</g>
+<g class="t4">
+  <rect x="434.7" y="224" width="370.7" height="104" rx="10" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.4"/>
+  <rect x="434.7" y="240" width="5" height="72" rx="2.5" fill="#D4A373"/>
+  <text x="458.7" y="256" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="2.2">PULL REQUESTS</text>
+  <text x="458.7" y="294" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" font-weight="800" fill="#D4A373" text-anchor="start" letter-spacing="0" class="n4">29</text>
+  <text x="458.7" y="313" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">OPENED IN THE LAST 30 DAYS</text>
+</g>
+<g class="t5">
+  <rect x="821.3" y="224" width="370.7" height="104" rx="10" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.4"/>
+  <rect x="821.3" y="240" width="5" height="72" rx="2.5" fill="#0077C8"/>
+  <text x="845.3" y="256" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="2.2">LANGUAGES</text>
+  <text x="845.3" y="294" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="30" font-weight="800" fill="#0077C8" text-anchor="start" letter-spacing="0" class="n5">6</text>
+  <text x="845.3" y="313" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">DETECTED BY LINGUIST</text>
+</g>
+<path d="M48,348 H1192" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
+<text x="48" y="376" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="2">MOST ACTIVE REPOSITORY: Folium</text>
+<text x="1192" y="376" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="1.6">REBUILT DAILY</text>
+</svg>

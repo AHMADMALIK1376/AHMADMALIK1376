@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 82" width="1240" height="82" role="img" aria-label="LLM TRAINING">
+<title>LLM TRAINING</title>
+<style>.p{transform-origin:0 0;animation:sweep 1s cubic-bezier(.22,1,.36,1) both}@keyframes sweep{0%{transform:scaleX(0)}}.f{animation:fin .7s ease-out both;animation-delay:.25s}@keyframes fin{0%{opacity:0;transform:translateX(-8px)}}</style>
+<rect x="0" y="0" width="1240" height="82" rx="0" fill="#F2EDE6"/>
+<g class="f">
+  <rect x="48" y="22" width="26" height="8" rx="4" fill="#F88379"/>
+  <rect x="48" y="35" width="16" height="8" rx="4" fill="#F88379"/>
+  <rect x="48" y="48" width="9" height="8" rx="4" fill="#F88379"/>
+</g>
+<g class="f"><text x="92" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="21" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="3.6">LLM TRAINING</text></g>
+<g class="f"><text x="92" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#7D7266" text-anchor="start" letter-spacing="2">DATASETS → FORWARD PASS → BACKPROP</text></g>
+<g transform="translate(48,74)"><rect class="p" width="1144" height="2" fill="#D9D0C1"/></g>
+<g transform="translate(48,74)"><rect class="p" width="150" height="2" fill="#F88379"/></g>
+</svg>
