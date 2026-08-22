@@ -20,11 +20,11 @@
 
 ## ◈ SYSTEM DESIGN ◈
 
-<sub>▸ CLIENT → CDN → GATEWAY → SERVICES → DATA ✓</sub>
+<sub>▸ CLIENT → LOAD BALANCER → WEB TIER → FANOUT → QUEUE → WORKERS ✓</sub>
 
 <br/>
 
-<img width="100%" src="assets/system-design.svg"/>
+<img width="100%" src="assets/system-design-feed.svg"/>
 
 </div>
 <br/>
