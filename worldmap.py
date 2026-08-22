@@ -51,9 +51,9 @@ MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
 WHEEL = [AEGEAN, CORAL, TEAMIST, CRIMSON, BROWN, INK_2]
 
-PITCH = 9.6            # centre-to-centre spacing of one cell
-TILE = 8.2             # drawn size, the remainder reads as the gap
-MAP_X, MAP_Y = 121, 104
+PITCH = 7.4            # centre-to-centre spacing of one cell
+TILE = 6.3             # drawn size, the remainder reads as the gap
+MAP_X, MAP_Y = 235, 86
 
 # Anchors keep each territory somewhere sensible instead of scattering it.
 # Order is by share, largest first, so the biggest language starts on the
@@ -283,8 +283,8 @@ def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
     w = 1240
     map_w = COLS * PITCH
     map_h = ROWS * PITCH
-    legend_y = MAP_Y + map_h + 40
-    h = int(legend_y + 108)
+    legend_y = MAP_Y + map_h + 30
+    h = int(legend_y + 100)
 
     css = ["@keyframes pop{0%{opacity:0;transform:translateY(7px)}}",
            "@keyframes fade{0%{opacity:0}}",
@@ -333,6 +333,35 @@ def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
                    % (i, x0, x1))
         out.append('<circle class="pl%d" cy="%.1f" r="3" fill="%s"/>' % (i, y0, TRACE_D))
 
+    # Tracks running in from the edges, as on the banner, so the margins beside
+    # the map carry board too rather than sitting bare. These are clear of the
+    # grid by construction: they stop short of it on either side.
+    n_ocean = len(_routes(landset))
+    edge_x0, edge_x1 = MAP_X - 16, MAP_X + map_w + 16
+    for j, (off, side) in enumerate(((36, "L"), (140, "L"), (250, "L"), (330, "L"),
+                                     (74, "R"), (186, "R"), (296, "R"))):
+        y = MAP_Y + off
+        knee = 46 + (j % 3) * 20
+        if side == "L":
+            bend = knee
+            pts = [(0.0, y), (bend, y), (bend + 24.0, y + 24), (edge_x0, y + 24)]
+        else:
+            bend = w - knee
+            pts = [(float(w), y), (bend, y), (bend - 24.0, y + 24), (edge_x1, y + 24)]
+        d = "M%.1f,%.1f " % pts[0] + " ".join("L%.1f,%.1f" % q for q in pts[1:])
+        out.append('<path d="%s" fill="none" stroke="%s" stroke-width="1.6" '
+                   'stroke-linecap="round" stroke-linejoin="round"/>' % (d, TRACE))
+        vx, vy = pts[-1]
+        out.append('<circle cx="%.1f" cy="%.1f" r="4" fill="%s"/>' % (vx, vy, TRACE_D))
+        out.append('<circle cx="%.1f" cy="%.1f" r="1.7" fill="%s"/>' % (vx, vy, SKY))
+        i = n_ocean + j
+        css.append(".pl%d{animation:pl%d %ds linear infinite;animation-delay:-%.1fs}"
+                   % (i, i, 8 + j % 3, j * 1.9))
+        css.append("@keyframes pl%d{0%%{transform:translateX(%.1fpx);opacity:0}"
+                   "15%%,80%%{opacity:1}100%%{transform:translateX(%.1fpx);opacity:0}}"
+                   % (i, pts[0][0], pts[1][0]))
+        out.append('<circle class="pl%d" cy="%.1f" r="3" fill="%s"/>' % (i, y, TRACE_D))
+
     # ── territories ──────────────────────────────────────────────────────
     out.append("<g>")
     for (r, c) in land:
@@ -345,13 +374,13 @@ def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
 
 
     # ── header ───────────────────────────────────────────────────────────
-    out.append(_txt(48, 52, "LANGUAGE DISTRIBUTION", 13, INK, "800", "start", "3.4"))
+    out.append(_txt(48, 46, "LANGUAGE DISTRIBUTION", 13, INK, "800", "start", "3.4"))
     meta = "%s ACROSS %s REPOS" % (_human_bytes(total), repo_count if repo_count else "ALL")
-    out.append(_txt(w - 48, 52, meta.upper(), 12, FAINT, "600", "end", "2.2"))
-    out.append('<path d="M48,70 H%d" stroke="%s" stroke-width="1.4" fill="none"/>' % (w - 48, RULE))
-    out.append(_txt(48, 90, "TERRITORY IS PROPORTIONAL TO BYTES HELD", 9.5, MUTED, "600",
+    out.append(_txt(w - 48, 46, meta.upper(), 12, FAINT, "600", "end", "2.2"))
+    out.append('<path d="M48,60 H%d" stroke="%s" stroke-width="1.4" fill="none"/>' % (w - 48, RULE))
+    out.append(_txt(48, 76, "TERRITORY IS PROPORTIONAL TO BYTES HELD", 9.5, MUTED, "600",
                     "start", "1.8"))
-    out.append(_txt(w - 48, 90, "%d CELLS OF LAND" % len(land), 9.5, FAINT, "600", "end", "1.6"))
+    out.append(_txt(w - 48, 76, "%d CELLS OF LAND" % len(land), 9.5, FAINT, "600", "end", "1.6"))
 
     # ── legend ───────────────────────────────────────────────────────────
     cols = min(len(order), 6)
@@ -361,25 +390,25 @@ def language_map(lang_bytes, repo_count=None, path="assets/lang-map.svg"):
         share = lang_bytes.get(name, 0) * 100.0 / total
         css.append(".l%d{animation-delay:%.2fs}" % (i, 0.9 + i * 0.07))
         out.append('<g class="lg l%d">' % i)
-        out.append("  " + '<rect x="%.1f" y="%.1f" width="%.1f" height="62" rx="9" fill="%s" '
+        out.append("  " + '<rect x="%.1f" y="%.1f" width="%.1f" height="54" rx="8" fill="%s" '
                           'stroke="%s" stroke-width="1.3"/>'
                           % (x, legend_y, cell_w - 12, CARD, RULE))
-        out.append("  " + '<rect x="%.1f" y="%.1f" width="5" height="34" rx="2.5" fill="%s"/>'
-                          % (x + 13, legend_y + 14, colour[name]))
-        out.append("  " + _txt(x + 28, legend_y + 26, name, 11.5, INK, "700", "start", "0.4"))
+        out.append("  " + '<rect x="%.1f" y="%.1f" width="4.5" height="30" rx="2.2" fill="%s"/>'
+                          % (x + 12, legend_y + 12, colour[name]))
+        out.append("  " + _txt(x + 26, legend_y + 23, name, 11, INK, "700", "start", "0.4"))
         pct = "&lt;0.1%" if 0 < share < 0.05 else "%.1f%%" % share
-        out.append("  " + ('<text x="%.1f" y="%.1f" font-family="%s" font-size="15" '
+        out.append("  " + ('<text x="%.1f" y="%.1f" font-family="%s" font-size="14" '
                            'font-weight="800" fill="%s" letter-spacing="0">%s</text>'
-                           % (x + 28, legend_y + 46, MONO, colour[name], pct)))
-        out.append("  " + _txt(x + cell_w - 24, legend_y + 46,
+                           % (x + 26, legend_y + 42, MONO, colour[name], pct)))
+        out.append("  " + _txt(x + cell_w - 22, legend_y + 42,
                                "%d" % got.get(name, 0), 9.5, FAINT, "600", "end", "0.6"))
         out.append("</g>")
 
     out.append('<path d="M48,%d H%d" stroke="%s" stroke-width="1.4" fill="none"/>'
-               % (h - 34, w - 48, RULE))
-    out.append(_txt(48, h - 14, "GENERATED FROM THE GITHUB API · REBUILT DAILY",
+               % (h - 30, w - 48, RULE))
+    out.append(_txt(48, h - 12, "GENERATED FROM THE GITHUB API · REBUILT DAILY",
                     10, FAINT, "600", "start", "2"))
-    out.append(_txt(w - 48, h - 14, "GITHUB.COM/AHMADMALIK1376", 10, FAINT, "600", "end", "1.6"))
+    out.append(_txt(w - 48, h - 12, "GITHUB.COM/AHMADMALIK1376", 10, FAINT, "600", "end", "1.6"))
     out.append("</svg>")
 
     svg = "\n".join(out).replace("__STYLE__", "<style>\n" + "\n".join(css) + "\n</style>")
