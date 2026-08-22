@@ -36,7 +36,7 @@
 <circle cx="155" cy="165" r="41" fill="none" stroke="#e8dfd3" stroke-width="14"/>
 <circle cx="155" cy="165" r="23" fill="none" stroke="#e8dfd3" stroke-width="14"/>
 
-<!-- Data Arcs (Dasharray values will be dynamically overwritten by your update_readme.py script) -->
+<!-- Data Arcs -->
 <circle class="seg" cx="155" cy="165" r="95" stroke-dasharray="0 597" stroke="#0077C8" transform="rotate(-90 155 165)"/>
 <circle class="seg" cx="155" cy="165" r="77" stroke-dasharray="0 484" stroke="#F88379" transform="rotate(-90 155 165)"/>
 <circle class="seg" cx="155" cy="165" r="59" stroke-dasharray="0 371" stroke="#F2D24B" transform="rotate(-90 155 165)"/>
@@ -45,7 +45,7 @@
 
 <circle cx="155" cy="165" r="12" fill="#D41F26"/>
 
-<!-- Legend -->
+<!-- Legend (Corrected order: Python -> TS -> JS -> Other -> Java -> C++) -->
 <g transform="translate(285, 55)">
   <circle cx="10" cy="10" r="7" fill="#0077C8"/>
   <text x="26" y="14" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Python</text>
@@ -63,7 +63,7 @@
   <text x="26" y="114" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">Java</text>
   
   <circle cx="10" cy="135" r="7" fill="#D41F26"/>
-  <text x="26" cy="139" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">C++</text>
+  <text x="26" y="139" fill="#2c241d" class="text-main" font-size="10" font-weight="bold">C++</text>
 </g>
 
 <text x="250" y="328" text-anchor="middle" fill="#8c7a6b" class="text-main" font-size="8">auto-updated daily · github.com/AHMADMALIK1376</text>
