@@ -62,6 +62,10 @@ NAME_Y = 142 + SHIFT
 # setting the letters individually means their spacing has to be stated
 ADV = {"M": .86, ".": .30, "A": .70, "H": .76, "D": .74, " ": .30,
        "L": .62, "I": .32, "K": .72}
+# Set one glyph at a time, so the gap between them has to be added here. The
+# letter-spacing attribute is no use: on a single-character run it pads the
+# trailing edge rather than sitting between anything.
+GAP = 6.0
 
 FLY_Y = 118                     # the altitude the formation holds
 TILE = 30
@@ -105,7 +109,7 @@ glyphs, lx = [], float(LEFT)
 for chn in NAME:
     wdt = ADV.get(chn, .70) * NAME_SIZE
     glyphs.append((chn, lx, wdt))
-    lx += wdt - 1.4
+    lx += wdt + GAP
 NAME_W = lx - LEFT
 
 tiles, i = [], 0
@@ -129,34 +133,38 @@ N = len(tiles)
 # back in every time would be exhausting at that length.
 css += [
     ".sp{transform-origin:0 0}",
-    ".eb{animation:eb %s ease-out both}" % DUR,
-    ".rl{stroke-dasharray:100;stroke-dashoffset:100;animation:rl %s ease-out both}" % DUR,
-    ".typ{animation:typ %s steps(38,end) both}" % DUR,
-    ".tc{animation:tc %s steps(38,end) both, blink 1.05s steps(1,end) infinite}" % DUR,
+    ".eb{animation:eb %s ease-out infinite}" % DUR,
+    ".rl{stroke-dasharray:100;stroke-dashoffset:100;animation:rl %s ease-out infinite}" % DUR,
+    ".typ{animation:typ %s steps(38,end) infinite}" % DUR,
+    ".tc{animation:tc %s steps(38,end) infinite, blink 1.05s steps(1,end) infinite}" % DUR,
     "@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}",
     ".dot{animation:dot 2.2s ease-in-out infinite}",
     "@keyframes dot{0%,100%{opacity:1}50%{opacity:.35}}",
 ]
 kf("eb", "0%,1%{opacity:0}4%,100%{opacity:1}")
-kf("rl", "0%,36%{stroke-dashoffset:100}40%,100%{stroke-dashoffset:0}")
-kf("typ", "0%,41%{width:0}53%,100%{width:" + str(LINE_W) + "px}")
-kf("tc", "0%,41%{transform:translateX(0)}53%,100%{transform:translateX("
+# the rest writes itself once the name is down, then everything falls
+HOLD_FROM, FALL_AT, FALL_TO = 52.0, 84.0, 93.0
+css.append(".fall{animation:fall %s cubic-bezier(.45,0,.9,.6) infinite}" % DUR)
+kf("fall", "0%%,%.0f%%{transform:translateY(0)}%.0f%%,100%%{transform:translateY(%dpx)}" % (FALL_AT, FALL_TO, H + 120))
+kf("rl", "0%,33%{stroke-dashoffset:100}36%,100%{stroke-dashoffset:0}")
+kf("typ", "0%,36%{width:0}46%,100%{width:" + str(LINE_W) + "px}")
+kf("tc", "0%,36%{transform:translateX(0)}46%,100%{transform:translateX("
    + str(LINE_W) + "px)}")
 for i in range(len(SPINE)):
-    css.append(".sp%d{transform-origin:0 0;animation:sp%d %s cubic-bezier(.22,1,.36,1) both}"
+    css.append(".sp%d{transform-origin:0 0;animation:sp%d %s cubic-bezier(.22,1,.36,1) infinite}"
                % (i, i, DUR))
     kf("sp%d" % i, "0%%,%.1f%%{transform:scaleY(0)}%.1f%%,100%%{transform:scaleY(1)}"
        % (1 + i * 0.6, 3 + i * 0.6))
 for i in range(len(CHIPS)):
-    t = 54 + i * 2
-    css.append(".ch%d{animation:ch%d %s cubic-bezier(.34,1.4,.64,1) both}" % (i, i, DUR))
-    kf("ch%d" % i, "0%%,%d%%{transform:translateY(8px);opacity:0}"
-       "%d%%,100%%{transform:translateY(0);opacity:1}" % (t, t + 4))
+    t = 46 + i * 1.5
+    css.append(".ch%d{animation:ch%d %s cubic-bezier(.34,1.4,.64,1) infinite}" % (i, i, DUR))
+    kf("ch%d" % i, "0%%,%.1f%%{transform:translateY(8px);opacity:0}"
+       "%.1f%%,100%%{transform:translateY(0);opacity:1}" % (t, t + 4))
 for i in range(len(FACTS)):
-    t = 44 + i * 4
-    css.append(".fa%d{animation:fa%d %s ease-out both}" % (i, i, DUR))
-    kf("fa%d" % i, "0%%,%d%%{transform:translateX(10px);opacity:0}"
-       "%d%%,100%%{transform:translateX(0);opacity:1}" % (t, t + 5))
+    t = 38 + i * 3
+    css.append(".fa%d{animation:fa%d %s ease-out infinite}" % (i, i, DUR))
+    kf("fa%d" % i, "0%%,%.1f%%{transform:translateX(10px);opacity:0}"
+       "%.1f%%,100%%{transform:translateX(0);opacity:1}" % (t, t + 5))
 
 add('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" role="img" '
     'aria-label="M. Ahmad Malik, Full-Stack AI Engineer: a drone delivers the letters of the name '
@@ -195,6 +203,11 @@ for i, (x0, x1, yy) in enumerate(((120, 300, 14), (540, 700, 272), (1000, 1120, 
     kf("pl%d" % i, "0%%{transform:translateX(%dpx);opacity:0}"
        "15%%,80%%{opacity:1}100%%{transform:translateX(%dpx);opacity:0}" % (x0, x1))
     add('<circle class="pl%d" cy="%d" r="3" fill="%s"/>' % (i, yy, TRACE_D))
+add("</g>")
+
+# ══ everything written on the board, which is what falls ═══════════════
+add('<g class="fall">')
+add('<g transform="translate(0,%d)">' % SHIFT)
 
 for i, c in enumerate(SPINE):
     add('<g transform="translate(72,%d)"><g class="sp%d">%s</g></g>'
@@ -228,9 +241,10 @@ for i, (label, val, dot) in enumerate(FACTS):
     add("  " + txt(W - 72, y + 22, val, 14, INK_2, "600", "end", SANS, "0"))
     add("</g>")
 add('<path d="M%d,56 V256" stroke="%s" stroke-width="1.4" fill="none"/>' % (W - 250, RULE))
-add("</g>")
+add("</g>")   # end of the shifted panel; the fall group stays open for the letters
 
 # ══ the letters, each dropped by its own aircraft ══════════════════════
+lettermk = []
 css.append(".rot{transform-origin:0 0;animation:rot .24s linear infinite}")
 kf("rot", "0%,100%{transform:scaleX(1)}50%{transform:scaleX(.12)}")
 css.append(".bob{animation:bob 2.6s ease-in-out infinite}")
@@ -291,8 +305,12 @@ for i, (chn, gx, cxx) in enumerate(tiles):
        "%.3f%%,100%%{opacity:1;transform:translateY(0)}"
        % (drop - 0.01, FALL, drop, FALL, drop + 1.1))
     css.append(".ln%d{animation:ln%d %s cubic-bezier(.4,1.5,.6,1) infinite}" % (i, i, DUR))
-    add('<g class="ln%d">%s</g>'
-        % (i, txt(gx, NAME_Y, chn, NAME_SIZE, INK, "800", "start", SANS, "-1.4")))
+    lettermk.append('<g class="ln%d">%s</g>'
+                    % (i, txt(gx, NAME_Y, chn, NAME_SIZE, INK, "800", "start", SANS, "0")))
+
+for mk in lettermk:
+    add(mk)
+add("</g>")
 
 add("</svg>")
 
