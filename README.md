@@ -90,7 +90,7 @@
 
 <br/>
 
-<img width="100%" src="assets/assembly.svg"/>
+<img width="100%" src="assets/robot-arsenal.svg"/>
 
 </div>
 
