@@ -15,6 +15,7 @@ from urllib.parse import quote
 
 import chartgen
 import worldmap
+import arsenal
  
 # ─────────────────────────────────────────────
 #  CONFIG
@@ -436,6 +437,9 @@ def main():
     print("\n[charts] Rendering from live API data...")
     non_fork = [r for r in repos if not r.get("fork")]
     worldmap.language_map(lang_bytes, repo_count=len(non_fork))
+    # the arsenal folds in any language the API reports that is not
+    # already declared, so the section keeps up on its own
+    arsenal.arsenal(lang_bytes=lang_bytes)
 
     # Analyse
     print("\n📊 Analysing activity...")
