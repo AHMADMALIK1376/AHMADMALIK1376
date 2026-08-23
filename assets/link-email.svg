@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 62" width="452" height="62" role="img" aria-label="EMAIL: ahmadmalik1376@gmail.com">
+<title>EMAIL</title>
+<rect width="452" height="62" rx="13" fill="#0077C8"/>
+<path d="M13,0 H66 V62 H13 A13,13 0 0 1 0,49 V13 A13,13 0 0 1 13,0 Z" fill="#0A5FA0"/>
+<g transform="translate(21.0,19.0) scale(1.000)"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" fill="#FBF7F0"/></g>
+<text x="88" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="800" fill="#CFE4F5" text-anchor="start" letter-spacing="2.6">EMAIL</text>
+<text x="88" y="45" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#FBF7F0" text-anchor="start" letter-spacing="0.4">ahmadmalik1376@gmail.com</text>
+</svg>

@@ -247,9 +247,15 @@ def _flat(groups):
 
 
 def _package(i, c):
-    """One part as an IC package: body, pins down both sides, pin-one dot."""
-    tint = _mix(CARD, c["brand"], 0.12)
-    mark = _readable(c["brand"], tint)
+    """One part as an IC package: body, pins down both sides, pin-one dot.
+
+    The body is the brand colour at full strength rather than a wash of it, so
+    the mark has to invert: a light mark on the darker brands, ink on the ones
+    too pale to carry white. Which way round is decided by luminance rather than
+    by eye, so a brand added later gets it right on its own.
+    """
+    tint = c["brand"]
+    mark = CARD if _lum(tint) < 0.46 else INK
     g = ['<g id="c%d">' % i]
     for j in range(3):
         py = 11 + j * 15
