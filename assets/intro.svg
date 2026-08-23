@@ -10,8 +10,6 @@
 .dot{animation:dot 2.2s ease-in-out infinite}
 @keyframes dot{0%,100%{opacity:1}50%{opacity:.35}}
 @keyframes eb{0%,1%{opacity:0}4%,100%{opacity:1}}
-.fall{animation:fall 32s cubic-bezier(.45,0,.9,.6) infinite}
-@keyframes fall{0%,84%{transform:translateY(0)}93%,100%{transform:translateY(542px)}}
 @keyframes rl{0%,33%{stroke-dashoffset:100}36%,100%{stroke-dashoffset:0}}
 @keyframes typ{0%,36%{width:0}46%,100%{width:560px}}
 @keyframes tc{0%,36%{transform:translateX(0)}46%,100%{transform:translateX(560px)}}
@@ -45,6 +43,38 @@
 @keyframes pl1{0%{transform:translateX(540px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(700px);opacity:0}}
 .pl2{animation:pl2 9s linear infinite;animation-delay:-6s}
 @keyframes pl2{0%{transform:translateX(1000px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(1120px);opacity:0}}
+@keyframes kn0{0%,93.004%{transform:translate(0,0) rotate(0)}94.104%{transform:translate(-38px,-13px) rotate(6deg)}96.000%,100%{transform:translate(-412px,26px) rotate(17deg)}}
+.kn0{animation:kn0 32s linear infinite}
+@keyframes kn1{0%,93.004%{transform:translate(0,0) rotate(0)}94.104%{transform:translate(-38px,-13px) rotate(-8deg)}96.000%,100%{transform:translate(-412px,-14px) rotate(-23deg)}}
+.kn1{animation:kn1 32s linear infinite}
+@keyframes kn2{0%,93.004%{transform:translate(0,0) rotate(0)}94.104%{transform:translate(-38px,-13px) rotate(11deg)}96.000%,100%{transform:translate(-412px,40px) rotate(31deg)}}
+.kn2{animation:kn2 32s linear infinite}
+@keyframes kn3{0%,93.004%{transform:translate(0,0) rotate(0)}94.104%{transform:translate(-38px,-13px) rotate(-4deg)}96.000%,100%{transform:translate(-412px,8px) rotate(-12deg)}}
+.kn3{animation:kn3 32s linear infinite}
+@keyframes kn4{0%,93.004%{transform:translate(0,0) rotate(0)}94.104%{transform:translate(-38px,-13px) rotate(8deg)}96.000%,100%{transform:translate(-412px,-22px) rotate(24deg)}}
+.kn4{animation:kn4 32s linear infinite}
+@keyframes kn5{0%,92.771%{transform:translate(0,0) rotate(0)}93.871%{transform:translate(-38px,-13px) rotate(-12deg)}96.000%,100%{transform:translate(-444px,34px) rotate(-34deg)}}
+.kn5{animation:kn5 32s linear infinite}
+@keyframes kn6{0%,90.371%{transform:translate(0,0) rotate(0)}91.471%{transform:translate(-38px,-13px) rotate(6deg)}96.000%,100%{transform:translate(-774px,26px) rotate(17deg)}}
+.kn6{animation:kn6 32s linear infinite}
+@keyframes kn7{0%,91.462%{transform:translate(0,0) rotate(0)}92.562%{transform:translate(-38px,-13px) rotate(-8deg)}96.000%,100%{transform:translate(-624px,-14px) rotate(-23deg)}}
+.kn7{animation:kn7 32s linear infinite}
+@keyframes kn8{0%,92.264%{transform:translate(0,0) rotate(0)}93.364%{transform:translate(-38px,-13px) rotate(11deg)}96.000%,100%{transform:translate(-514px,40px) rotate(31deg)}}
+.kn8{animation:kn8 32s linear infinite}
+@keyframes kn9{0%,91.162%{transform:translate(0,0) rotate(0)}92.262%{transform:translate(-38px,-13px) rotate(-4deg)}96.000%,100%{transform:translate(-665px,8px) rotate(-12deg)}}
+.kn9{animation:kn9 32s linear infinite}
+@keyframes kn10{0%,89.980%{transform:translate(0,0) rotate(0)}91.080%{transform:translate(-38px,-13px) rotate(8deg)}96.000%,100%{transform:translate(-828px,-22px) rotate(24deg)}}
+.kn10{animation:kn10 32s linear infinite}
+@keyframes kn11{0%,88.799%{transform:translate(0,0) rotate(0)}89.899%{transform:translate(-38px,-13px) rotate(-12deg)}96.000%,100%{transform:translate(-990px,34px) rotate(-34deg)}}
+.kn11{animation:kn11 32s linear infinite}
+@keyframes kn12{0%,85.600%{transform:translate(0,0) rotate(0)}86.700%{transform:translate(-38px,-13px) rotate(6deg)}96.000%,100%{transform:translate(-1430px,26px) rotate(17deg)}}
+.kn12{animation:kn12 32s linear infinite}
+@keyframes kn13{0%,85.600%{transform:translate(0,0) rotate(0)}86.700%{transform:translate(-38px,-13px) rotate(-8deg)}96.000%,100%{transform:translate(-1430px,-14px) rotate(-23deg)}}
+.kn13{animation:kn13 32s linear infinite}
+@keyframes kn14{0%,85.600%{transform:translate(0,0) rotate(0)}86.700%{transform:translate(-38px,-13px) rotate(11deg)}96.000%,100%{transform:translate(-1430px,40px) rotate(31deg)}}
+.kn14{animation:kn14 32s linear infinite}
+@keyframes kn15{0%,86.327%{transform:translate(0,0) rotate(0)}87.427%{transform:translate(-38px,-13px) rotate(-4deg)}96.000%,100%{transform:translate(-1330px,8px) rotate(-12deg)}}
+.kn15{animation:kn15 32s linear infinite}
 .rot{transform-origin:0 0;animation:rot .24s linear infinite}
 @keyframes rot{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.12)}}
 .bob{animation:bob 2.6s ease-in-out infinite}
@@ -57,6 +87,8 @@
 .tv0{animation:tv0 32s steps(1,end) infinite}
 @keyframes ln0{0%,9.890%{opacity:0;transform:translateY(-84px)}9.900%{opacity:1;transform:translateY(-84px)}11.000%,100%{opacity:1;transform:translateY(0)}}
 .ln0{animation:ln0 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn16{0%,92.513%{transform:translate(0,0) rotate(0)}93.613%{transform:translate(-38px,-13px) rotate(8deg)}96.000%,100%{transform:translate(-479px,-22px) rotate(24deg)}}
+.kn16{animation:kn16 32s linear infinite}
 @keyframes fl1{0%,4.200%{transform:translateX(1360px)}11.200%,13.000%{transform:translateX(200.6px)}18.000%,100%{transform:translateX(-190px)}}
 .fl1{animation:fl1 32s ease-in-out infinite}
 @keyframes fv1{0%,4.190%{opacity:0}4.200%,17.600%{opacity:1}18.000%,100%{opacity:0}}
@@ -65,6 +97,8 @@
 .tv1{animation:tv1 32s steps(1,end) infinite}
 @keyframes ln1{0%,12.090%{opacity:0;transform:translateY(-84px)}12.100%{opacity:1;transform:translateY(-84px)}13.200%,100%{opacity:1;transform:translateY(0)}}
 .ln1{animation:ln1 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn17{0%,92.069%{transform:translate(0,0) rotate(0)}93.169%{transform:translate(-38px,-13px) rotate(-12deg)}96.000%,100%{transform:translate(-541px,34px) rotate(-34deg)}}
+.kn17{animation:kn17 32s linear infinite}
 @keyframes fl2{0%,6.400%{transform:translateX(1360px)}13.400%,15.200%{transform:translateX(247.4px)}20.200%,100%{transform:translateX(-190px)}}
 .fl2{animation:fl2 32s ease-in-out infinite}
 @keyframes fv2{0%,6.390%{opacity:0}6.400%,19.800%{opacity:1}20.200%,100%{opacity:0}}
@@ -73,6 +107,8 @@
 .tv2{animation:tv2 32s steps(1,end) infinite}
 @keyframes ln2{0%,14.290%{opacity:0;transform:translateY(-84px)}14.300%{opacity:1;transform:translateY(-84px)}15.400%,100%{opacity:1;transform:translateY(0)}}
 .ln2{animation:ln2 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn18{0%,91.728%{transform:translate(0,0) rotate(0)}92.828%{transform:translate(-38px,-13px) rotate(6deg)}96.000%,100%{transform:translate(-587px,26px) rotate(17deg)}}
+.kn18{animation:kn18 32s linear infinite}
 @keyframes fl3{0%,8.600%{transform:translateX(1360px)}15.600%,17.400%{transform:translateX(298.8px)}22.400%,100%{transform:translateX(-190px)}}
 .fl3{animation:fl3 32s ease-in-out infinite}
 @keyframes fv3{0%,8.590%{opacity:0}8.600%,22.000%{opacity:1}22.400%,100%{opacity:0}}
@@ -81,6 +117,8 @@
 .tv3{animation:tv3 32s steps(1,end) infinite}
 @keyframes ln3{0%,16.490%{opacity:0;transform:translateY(-84px)}16.500%{opacity:1;transform:translateY(-84px)}17.600%,100%{opacity:1;transform:translateY(0)}}
 .ln3{animation:ln3 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn19{0%,91.354%{transform:translate(0,0) rotate(0)}92.454%{transform:translate(-38px,-13px) rotate(-8deg)}96.000%,100%{transform:translate(-639px,-14px) rotate(-23deg)}}
+.kn19{animation:kn19 32s linear infinite}
 @keyframes fl4{0%,10.800%{transform:translateX(1360px)}17.800%,19.600%{transform:translateX(348.5px)}24.600%,100%{transform:translateX(-190px)}}
 .fl4{animation:fl4 32s ease-in-out infinite}
 @keyframes fv4{0%,10.790%{opacity:0}10.800%,24.200%{opacity:1}24.600%,100%{opacity:0}}
@@ -89,6 +127,8 @@
 .tv4{animation:tv4 32s steps(1,end) infinite}
 @keyframes ln4{0%,18.690%{opacity:0;transform:translateY(-84px)}18.700%{opacity:1;transform:translateY(-84px)}19.800%,100%{opacity:1;transform:translateY(0)}}
 .ln4{animation:ln4 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn20{0%,90.993%{transform:translate(0,0) rotate(0)}92.093%{transform:translate(-38px,-13px) rotate(11deg)}96.000%,100%{transform:translate(-688px,40px) rotate(31deg)}}
+.kn20{animation:kn20 32s linear infinite}
 @keyframes fl5{0%,13.000%{transform:translateX(1360px)}20.000%,21.800%{transform:translateX(394.8px)}26.800%,100%{transform:translateX(-190px)}}
 .fl5{animation:fl5 32s ease-in-out infinite}
 @keyframes fv5{0%,12.990%{opacity:0}13.000%,26.400%{opacity:1}26.800%,100%{opacity:0}}
@@ -97,6 +137,8 @@
 .tv5{animation:tv5 32s steps(1,end) infinite}
 @keyframes ln5{0%,20.890%{opacity:0;transform:translateY(-84px)}20.900%{opacity:1;transform:translateY(-84px)}22.000%,100%{opacity:1;transform:translateY(0)}}
 .ln5{animation:ln5 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn21{0%,90.656%{transform:translate(0,0) rotate(0)}91.756%{transform:translate(-38px,-13px) rotate(-4deg)}96.000%,100%{transform:translate(-735px,8px) rotate(-12deg)}}
+.kn21{animation:kn21 32s linear infinite}
 @keyframes fl6{0%,15.200%{transform:translateX(1360px)}22.200%,24.000%{transform:translateX(468.4px)}29.000%,100%{transform:translateX(-190px)}}
 .fl6{animation:fl6 32s ease-in-out infinite}
 @keyframes fv6{0%,15.190%{opacity:0}15.200%,28.600%{opacity:1}29.000%,100%{opacity:0}}
@@ -105,6 +147,8 @@
 .tv6{animation:tv6 32s steps(1,end) infinite}
 @keyframes ln6{0%,23.090%{opacity:0;transform:translateY(-84px)}23.100%{opacity:1;transform:translateY(-84px)}24.200%,100%{opacity:1;transform:translateY(0)}}
 .ln6{animation:ln6 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn22{0%,90.121%{transform:translate(0,0) rotate(0)}91.221%{transform:translate(-38px,-13px) rotate(8deg)}96.000%,100%{transform:translate(-808px,-22px) rotate(24deg)}}
+.kn22{animation:kn22 32s linear infinite}
 @keyframes fl7{0%,17.400%{transform:translateX(1360px)}24.400%,26.200%{transform:translateX(518.1px)}31.200%,100%{transform:translateX(-190px)}}
 .fl7{animation:fl7 32s ease-in-out infinite}
 @keyframes fv7{0%,17.390%{opacity:0}17.400%,30.800%{opacity:1}31.200%,100%{opacity:0}}
@@ -113,6 +157,8 @@
 .tv7{animation:tv7 32s steps(1,end) infinite}
 @keyframes ln7{0%,25.290%{opacity:0;transform:translateY(-84px)}25.300%{opacity:1;transform:translateY(-84px)}26.400%,100%{opacity:1;transform:translateY(0)}}
 .ln7{animation:ln7 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn23{0%,89.759%{transform:translate(0,0) rotate(0)}90.859%{transform:translate(-38px,-13px) rotate(-12deg)}96.000%,100%{transform:translate(-858px,34px) rotate(-34deg)}}
+.kn23{animation:kn23 32s linear infinite}
 @keyframes fl8{0%,19.600%{transform:translateX(1360px)}26.600%,28.400%{transform:translateX(561.0px)}33.400%,100%{transform:translateX(-190px)}}
 .fl8{animation:fl8 32s ease-in-out infinite}
 @keyframes fv8{0%,19.590%{opacity:0}19.600%,33.000%{opacity:1}33.400%,100%{opacity:0}}
@@ -121,6 +167,8 @@
 .tv8{animation:tv8 32s steps(1,end) infinite}
 @keyframes ln8{0%,27.490%{opacity:0;transform:translateY(-84px)}27.500%{opacity:1;transform:translateY(-84px)}28.600%,100%{opacity:1;transform:translateY(0)}}
 .ln8{animation:ln8 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn24{0%,89.447%{transform:translate(0,0) rotate(0)}90.547%{transform:translate(-38px,-13px) rotate(6deg)}96.000%,100%{transform:translate(-901px,26px) rotate(17deg)}}
+.kn24{animation:kn24 32s linear infinite}
 @keyframes fl9{0%,21.800%{transform:translateX(1360px)}28.800%,30.600%{transform:translateX(593.4px)}35.600%,100%{transform:translateX(-190px)}}
 .fl9{animation:fl9 32s ease-in-out infinite}
 @keyframes fv9{0%,21.790%{opacity:0}21.800%,35.200%{opacity:1}35.600%,100%{opacity:0}}
@@ -129,6 +177,8 @@
 .tv9{animation:tv9 32s steps(1,end) infinite}
 @keyframes ln9{0%,29.690%{opacity:0;transform:translateY(-84px)}29.700%{opacity:1;transform:translateY(-84px)}30.800%,100%{opacity:1;transform:translateY(0)}}
 .ln9{animation:ln9 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn25{0%,89.212%{transform:translate(0,0) rotate(0)}90.312%{transform:translate(-38px,-13px) rotate(-8deg)}96.000%,100%{transform:translate(-933px,-14px) rotate(-23deg)}}
+.kn25{animation:kn25 32s linear infinite}
 @keyframes fl10{0%,24.000%{transform:translateX(1360px)}31.000%,32.800%{transform:translateX(628.5px)}37.800%,100%{transform:translateX(-190px)}}
 .fl10{animation:fl10 32s ease-in-out infinite}
 @keyframes fv10{0%,23.990%{opacity:0}24.000%,37.400%{opacity:1}37.800%,100%{opacity:0}}
@@ -137,6 +187,14 @@
 .tv10{animation:tv10 32s steps(1,end) infinite}
 @keyframes ln10{0%,31.890%{opacity:0;transform:translateY(-84px)}31.900%{opacity:1;transform:translateY(-84px)}33.000%,100%{opacity:1;transform:translateY(0)}}
 .ln10{animation:ln10 32s cubic-bezier(.4,1.5,.6,1) infinite}
+@keyframes kn26{0%,88.957%{transform:translate(0,0) rotate(0)}90.057%{transform:translate(-38px,-13px) rotate(11deg)}96.000%,100%{transform:translate(-968px,40px) rotate(31deg)}}
+.kn26{animation:kn26 32s linear infinite}
+@keyframes doze{0%,84%{transform:translateX(1500px)}96%,100%{transform:translateX(-150px)}}
+.doze{animation:doze 32s linear infinite}
+@keyframes dozv{0%,84.0%{opacity:0}84.0%,96.8%{opacity:1}97.0%,100%{opacity:0}}
+.dozv{animation:dozv 32s steps(1,end) infinite}
+.trk{animation:trk .5s linear infinite}
+@keyframes trk{to{transform:translateX(-16px)}}
 </style></defs>
 <rect x="0" y="0" width="1240" height="422" rx="0" fill="#F2EDE6"/>
 <rect x="0" y="0" width="1240" height="422" rx="0" fill="url(#dg)"/>
@@ -191,47 +249,23 @@
 <circle class="pl1" cy="272" r="3" fill="#CDBEA6"/>
 <circle class="pl2" cy="14" r="3" fill="#CDBEA6"/>
 </g>
-<g class="fall">
 <g transform="translate(0,110)">
-<g transform="translate(72,56)"><g class="sp0"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#0077C8"/></g></g>
-<g transform="translate(72,96)"><g class="sp1"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#F88379"/></g></g>
-<g transform="translate(72,136)"><g class="sp2"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#AAC832"/></g></g>
-<g transform="translate(72,176)"><g class="sp3"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#D41F26"/></g></g>
-<g transform="translate(72,216)"><g class="sp4"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#D4A373"/></g></g>
-<g class="eb"><text x="104" y="80" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="800" fill="#00568F" text-anchor="start" letter-spacing="3.6">FULL-STACK AI ENGINEER</text></g>
-<path class="rl" pathLength="100" d="M104,164 H764" stroke="#D9D0C1" stroke-width="1.6" fill="none"/>
-<g clip-path="url(#tp)"><text x="104" y="202" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#7D7266" text-anchor="start" letter-spacing="0">Production web applications and LLM-powered systems.</text></g>
-<g transform="translate(106,186)"><rect class="tc" width="2" height="20" rx="1" fill="#5E5349"/></g>
-<g class="ch0">
-  <rect x="104" y="230" width="139.5" height="30" rx="15" fill="#E2EEF7"/>
-  <text x="173.75" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#00568F" text-anchor="middle" letter-spacing="1.4">LLM INTEGRATION</text>
-</g>
-<g class="ch1">
-  <rect x="255.5" y="230" width="139.5" height="30" rx="15" fill="#FBE8E5"/>
-  <text x="325.25" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#B84A40" text-anchor="middle" letter-spacing="1.4">COMPUTER VISION</text>
-</g>
-<g class="ch2">
-  <rect x="407.0" y="230" width="161.4" height="30" rx="15" fill="#EEF4DC"/>
-  <text x="487.7" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#63801A" text-anchor="middle" letter-spacing="1.4">BROWSER AUTOMATION</text>
-</g>
-<g class="ch3">
-  <rect x="580.4" y="230" width="139.5" height="30" rx="15" fill="#FAE3E3"/>
-  <text x="650.15" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#A5151B" text-anchor="middle" letter-spacing="1.4">API &amp; DATABASES</text>
-</g>
-<g class="fa0">
-  <text x="1168" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">BASED IN</text>
-  <text x="1168" y="110" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">Rawalpindi, Pakistan</text>
-</g>
-<g class="fa1">
-  <text x="1168" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">FOCUS</text>
-  <text x="1168" y="172" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">LLM Integration &#183; Vision</text>
-</g>
-<g class="fa2">
-  <text x="1168" y="212" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">STATUS</text>
-  <circle cx="1016" cy="230" r="5" fill="#AAC832" class="dot"/>
-  <text x="1168" y="234" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">Open to opportunities</text>
-</g>
-<path d="M990,56 V256" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
+<g class="kn0"><g transform="translate(72,56)"><g class="sp0"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#0077C8"/></g></g></g>
+<g class="kn1"><g transform="translate(72,96)"><g class="sp1"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#F88379"/></g></g></g>
+<g class="kn2"><g transform="translate(72,136)"><g class="sp2"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#AAC832"/></g></g></g>
+<g class="kn3"><g transform="translate(72,176)"><g class="sp3"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#D41F26"/></g></g></g>
+<g class="kn4"><g transform="translate(72,216)"><g class="sp4"><rect x="0" y="0" width="5" height="34" rx="2.5" fill="#D4A373"/></g></g></g>
+<g class="kn5"><g class="eb"><text x="104" y="80" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="800" fill="#00568F" text-anchor="start" letter-spacing="3.6">FULL-STACK AI ENGINEER</text></g></g>
+<g class="kn6"><path class="rl" pathLength="100" d="M104,164 H764" stroke="#D9D0C1" stroke-width="1.6" fill="none"/></g>
+<g class="kn7"><g clip-path="url(#tp)"><text x="104" y="202" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="16.5" font-weight="400" fill="#7D7266" text-anchor="start" letter-spacing="0">Production web applications and LLM-powered systems.</text></g><g transform="translate(106,186)"><rect class="tc" width="2" height="20" rx="1" fill="#5E5349"/></g></g>
+<g class="kn8"><g class="ch0"><rect x="104" y="230" width="139.5" height="30" rx="15" fill="#E2EEF7"/><text x="173.75" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#00568F" text-anchor="middle" letter-spacing="1.4">LLM INTEGRATION</text></g></g>
+<g class="kn9"><g class="ch1"><rect x="255.5" y="230" width="139.5" height="30" rx="15" fill="#FBE8E5"/><text x="325.25" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#B84A40" text-anchor="middle" letter-spacing="1.4">COMPUTER VISION</text></g></g>
+<g class="kn10"><g class="ch2"><rect x="407.0" y="230" width="161.4" height="30" rx="15" fill="#EEF4DC"/><text x="487.7" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#63801A" text-anchor="middle" letter-spacing="1.4">BROWSER AUTOMATION</text></g></g>
+<g class="kn11"><g class="ch3"><rect x="580.4" y="230" width="139.5" height="30" rx="15" fill="#FAE3E3"/><text x="650.15" y="249" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#A5151B" text-anchor="middle" letter-spacing="1.4">API &amp; DATABASES</text></g></g>
+<g class="kn12"><g class="fa0"><text x="1168" y="88" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">BASED IN</text><text x="1168" y="110" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">Rawalpindi, Pakistan</text></g></g>
+<g class="kn13"><g class="fa1"><text x="1168" y="150" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">FOCUS</text><text x="1168" y="172" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">LLM Integration &#183; Vision</text></g></g>
+<g class="kn14"><g class="fa2"><text x="1168" y="212" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#A2988A" text-anchor="end" letter-spacing="2.4">STATUS</text><circle cx="1016" cy="230" r="5" fill="#AAC832" class="dot"/><text x="1168" y="234" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#5E5349" text-anchor="end" letter-spacing="0">Open to opportunities</text></g></g>
+<g class="kn15"><path d="M990,56 V256" stroke="#D9D0C1" stroke-width="1.4" fill="none"/></g>
 </g>
 <g class="fv0"><g class="fl0"><g transform="translate(0,118)"><g class="bob" style="animation-delay:-0.00s">
   <rect x="-46" y="-5" width="92" height="4" rx="2" fill="#39332B"/><rect x="-44.5" y="-12" width="5" height="8" rx="2" fill="#B9AC97"/><ellipse cx="-42" cy="-13" rx="19" ry="2.6" fill="#2E2A24" opacity=".2"/><g transform="translate(-42,-13)"><g class="rot" style="animation-delay:-0.00s"><rect x="-19" y="-1.4" width="38" height="2.8" rx="1.4" fill="#2E2A24"/></g></g><rect x="39.5" y="-12" width="5" height="8" rx="2" fill="#B9AC97"/><ellipse cx="42" cy="-13" rx="19" ry="2.6" fill="#2E2A24" opacity=".2"/><g transform="translate(42,-13)"><g class="rot" style="animation-delay:-0.08s"><rect x="-19" y="-1.4" width="38" height="2.8" rx="1.4" fill="#2E2A24"/></g></g><rect x="-24" y="-19" width="48" height="24" rx="9" fill="#0077C8" stroke="#39332B" stroke-width="1.6"/><rect x="7" y="-15" width="13" height="10" rx="3.5" fill="#FBF7F0"/><rect x="-19" y="-15" width="16" height="5" rx="2.5" fill="#F0C419"/><circle cx="-21" cy="-4" r="2.8" fill="#F88379" class="dot"/><path d="M-13,5 L-10,26 M13,5 L10,26" stroke="#39332B" stroke-width="1.5" fill="none"/>
@@ -277,16 +311,54 @@
   <rect x="-46" y="-5" width="92" height="4" rx="2" fill="#39332B"/><rect x="-44.5" y="-12" width="5" height="8" rx="2" fill="#B9AC97"/><ellipse cx="-42" cy="-13" rx="19" ry="2.6" fill="#2E2A24" opacity=".2"/><g transform="translate(-42,-13)"><g class="rot" style="animation-delay:-0.00s"><rect x="-19" y="-1.4" width="38" height="2.8" rx="1.4" fill="#2E2A24"/></g></g><rect x="39.5" y="-12" width="5" height="8" rx="2" fill="#B9AC97"/><ellipse cx="42" cy="-13" rx="19" ry="2.6" fill="#2E2A24" opacity=".2"/><g transform="translate(42,-13)"><g class="rot" style="animation-delay:-0.08s"><rect x="-19" y="-1.4" width="38" height="2.8" rx="1.4" fill="#2E2A24"/></g></g><rect x="-24" y="-19" width="48" height="24" rx="9" fill="#0077C8" stroke="#39332B" stroke-width="1.6"/><rect x="7" y="-15" width="13" height="10" rx="3.5" fill="#FBF7F0"/><rect x="-19" y="-15" width="16" height="5" rx="2.5" fill="#F0C419"/><circle cx="-21" cy="-4" r="2.8" fill="#F88379" class="dot"/><path d="M-13,5 L-10,26 M13,5 L10,26" stroke="#39332B" stroke-width="1.5" fill="none"/>
   <g class="tv10"><g transform="translate(-15,26)"><rect x="0" y="0" width="30" height="30" rx="5" fill="#FBF7F0" stroke="#0077C8" stroke-width="1.4"/><text x="15.0" y="21" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="15" font-weight="800" fill="#0077C8" text-anchor="middle" letter-spacing="0">K</text></g></g>
 </g></g></g></g>
-<g class="ln0"><text x="104.0" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">M.</text></g>
-<g class="ln1"><text x="180.96" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">A</text></g>
-<g class="ln2"><text x="226.16" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">H</text></g>
-<g class="ln3"><text x="274.72" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">M</text></g>
-<g class="ln4"><text x="328.88" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">A</text></g>
-<g class="ln5"><text x="374.08" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">D</text></g>
-<g class="ln6"><text x="444.32" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">M</text></g>
-<g class="ln7"><text x="498.48" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">A</text></g>
-<g class="ln8"><text x="543.6800000000001" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">L</text></g>
-<g class="ln9"><text x="584.4000000000001" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">I</text></g>
-<g class="ln10"><text x="608.32" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">K</text></g>
-</g>
+<g class="kn16"><g class="ln0"><text x="104.0" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">M.</text></g></g>
+<g class="kn17"><g class="ln1"><text x="180.96" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">A</text></g></g>
+<g class="kn18"><g class="ln2"><text x="226.16" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">H</text></g></g>
+<g class="kn19"><g class="ln3"><text x="274.72" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">M</text></g></g>
+<g class="kn20"><g class="ln4"><text x="328.88" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">A</text></g></g>
+<g class="kn21"><g class="ln5"><text x="374.08" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">D</text></g></g>
+<g class="kn22"><g class="ln6"><text x="444.32" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">M</text></g></g>
+<g class="kn23"><g class="ln7"><text x="498.48" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">A</text></g></g>
+<g class="kn24"><g class="ln8"><text x="543.6800000000001" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">L</text></g></g>
+<g class="kn25"><g class="ln9"><text x="584.4000000000001" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">I</text></g></g>
+<g class="kn26"><g class="ln10"><text x="608.32" y="252" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">K</text></g></g>
+<g class="dozv"><g class="doze"><g transform="translate(0,404)">
+  <path d="M-56,-96 L-150,-52" stroke="#4A4A4A" stroke-width="15" stroke-linecap="round" fill="none"/>
+  <rect x="-196" y="-206" width="26" height="206" rx="5" fill="#4A4A4A"/>
+  <rect x="-204" y="-22" width="44" height="20" rx="4" fill="#4A4A4A"/>
+  <rect x="-192" y="-196" width="8" height="188" rx="3" fill="#5F5F5F"/>
+  <rect x="-132" y="-52" width="250" height="52" rx="26" fill="#4A4A4A"/>
+  <rect x="-116" y="-40" width="218" height="28" rx="14" fill="#5F5F5F"/>
+  <circle cx="-104" cy="-26" r="13" fill="#4A4A4A"/>
+  <circle cx="-64" cy="-26" r="13" fill="#4A4A4A"/>
+  <circle cx="-24" cy="-26" r="13" fill="#4A4A4A"/>
+  <circle cx="16" cy="-26" r="13" fill="#4A4A4A"/>
+  <circle cx="56" cy="-26" r="13" fill="#4A4A4A"/>
+  <circle cx="96" cy="-26" r="13" fill="#4A4A4A"/>
+  <g clip-path="none">
+    <rect x="-130" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-114" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-98" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-82" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-66" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-50" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-34" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-18" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="-2" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="14" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="30" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="46" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="62" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="78" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="94" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+    <rect x="110" y="-54" width="7" height="5" rx="2" fill="#5F5F5F"/>
+  </g>
+  <rect x="-64" y="-124" width="176" height="76" rx="9" fill="#F5C518" stroke="#D9A520" stroke-width="2"/>
+  <rect x="-58" y="-86" width="150" height="10" rx="4" fill="#D9A520"/>
+  <rect x="16" y="-186" width="100" height="64" rx="7" fill="#F5C518" stroke="#D9A520" stroke-width="2"/>
+  <rect x="8" y="-198" width="118" height="16" rx="5" fill="#D9A520"/>
+  <rect x="30" y="-176" width="72" height="46" rx="4" fill="#2E6B8F"/>
+  <rect x="-18" y="-196" width="15" height="74" rx="3" fill="#4A4A4A"/>
+  <rect x="-24" y="-208" width="27" height="15" rx="4" fill="#4A4A4A"/>
+</g></g></g>
 </svg>
