@@ -70,6 +70,7 @@ GROUPS = [
     ]),
     ("DATABASES", CRIMSON, [
         ("MongoDB", "mongodb", "#47A248", "Mg"),
+        ("Supabase", None, "#2E9E6B", "Sb"),
         ("NoSQL", None, "#6E8F3F", "NoS"),
         ("PostgreSQL", "postgresql", "#4169E1", "Pg", "Postgres"),
         ("MySQL", "mysql", "#4479A1", "My"),
@@ -102,12 +103,12 @@ LANG_SLUG = {"python": "python", "typescript": "typescript",
 LANG_ALIAS = {"html": "html5"}
 
 W = 1240
-DUR = 10.0                 # one full pass over the board
-PLACE_END = 86.0           # the rest of the timeline rests over the tape
+DUR = 30.0                 # a slower pass, then a long rest before it repeats
+PLACE_END = 55.0           # seating ends here; the rest holds the full board
 
 CHIP = 52
 SLOT_P = 60
-LABEL_W = 84
+LABEL_W = 92            # wide enough for "CLOUD & OPS" at the larger size
 ROW_P = 74
 BOARD_Y0 = 172
 COL_LABEL_X = (48, 566)    # the two board columns
@@ -271,7 +272,7 @@ def _package(i, c):
     return "".join(g)
 
 
-def arsenal(lang_bytes=None, path="assets/robot-arsenal.svg"):
+def arsenal(lang_bytes=None, path="assets/arsenal-board.svg"):
     groups, found = _build_groups(lang_bytes)
     chips = _flat(groups)
     n = len(chips)
@@ -298,12 +299,12 @@ def arsenal(lang_bytes=None, path="assets/robot-arsenal.svg"):
            '<rect width="%d" height="%d" fill="%s"/>' % (W, h, SKY),
            '<rect width="%d" height="%d" fill="url(#ag)"/>' % (W, h)]
 
-    out.append(_txt(48, 44, "TECH ARSENAL", 13, INK, "800", "start", "3.4"))
+    out.append(_txt(48, 44, "TECH ARSENAL", 14, INK, "800", "start", "3.4"))
     out.append(_txt(W - 48, 44, "%d PARTS · %d GROUPS" % (n, len(groups)),
-                    12, FAINT, "600", "end", "2.2"))
+                    12.5, FAINT, "600", "end", "2.2"))
     out.append('<path d="M48,58 H%d" stroke="%s" stroke-width="1.4" fill="none"/>' % (W - 48, RULE))
     out.append(_txt(48, 76, "NEW LANGUAGES ARE DETECTED FROM THE GITHUB API AND ADDED "
-                            "AUTOMATICALLY", 9.5, MUTED, "600", "start", "1.6"))
+                            "AUTOMATICALLY", 10.5, MUTED, "600", "start", "1.6"))
 
     # ── board ────────────────────────────────────────────────────────────
     out.append('<rect x="32" y="150" width="1046" height="%d" rx="14" fill="%s" '
@@ -314,8 +315,8 @@ def arsenal(lang_bytes=None, path="assets/robot-arsenal.svg"):
         y = BOARD_Y0 + row * ROW_P
         out.append('<rect x="%d" y="%d" width="4" height="%d" rx="2" fill="%s"/>'
                    % (lx, y + 6, CHIP - 14, accent))
-        out.append(_txt(lx + 12, y + 20, label, 9.5, INK, "800", "start", "1.3"))
-        out.append(_txt(lx + 12, y + 34, "%d" % len(items[:MAX_PER_ROW]), 8.5,
+        out.append(_txt(lx + 12, y + 20, label, 11, INK, "800", "start", "1.2"))
+        out.append(_txt(lx + 12, y + 36, "%d" % len(items[:MAX_PER_ROW]), 9.5,
                         FAINT, "600", "start", "1"))
         for k, item in enumerate(items[:MAX_PER_ROW]):
             x = lx + LABEL_W + k * SLOT_P
@@ -323,8 +324,8 @@ def arsenal(lang_bytes=None, path="assets/robot-arsenal.svg"):
             out.append('<rect x="%d" y="%d" width="%d" height="%d" rx="7" fill="none" '
                        'stroke="%s" stroke-width="1.3" stroke-dasharray="4 4"/>'
                        % (x + 5, y, CHIP - 10, CHIP, STEEL))
-            out.append(_txt(x + CHIP / 2.0, y + CHIP + 11, short,
-                            6.8 if len(short) <= 10 else 6.1, MUTED, "700", "middle", "0.2"))
+            out.append(_txt(x + CHIP / 2.0, y + CHIP + 13, short,
+                            9.2 if len(short) <= 9 else 8.1, INK, "700", "middle", "0.2"))
 
     # ── feed tape, standing on the right ─────────────────────────────────
     out.append(_txt(FEED_X, FEED_Y - 44, "FEED", 9, FAINT, "800", "middle", "2"))
@@ -435,8 +436,8 @@ def arsenal(lang_bytes=None, path="assets/robot-arsenal.svg"):
     foot = "MARKS BY SIMPLE ICONS (CC0) · DRAWN IN, NOT FETCHED"
     if found:
         foot = "DETECTED FROM THE API: " + ", ".join(found[:4]).upper() + " · " + foot
-    out.append(_txt(48, h - 10, foot, 9.5, FAINT, "600", "start", "1.6"))
-    out.append(_txt(W - 48, h - 10, "GITHUB.COM/AHMADMALIK1376", 9.5, FAINT, "600", "end", "1.6"))
+    out.append(_txt(48, h - 10, foot, 10, FAINT, "600", "start", "1.6"))
+    out.append(_txt(W - 48, h - 10, "GITHUB.COM/AHMADMALIK1376", 10, FAINT, "600", "end", "1.6"))
     out.append("</svg>")
 
     svg = "\n".join(out).replace("__STYLE__", "<style>\n" + "\n".join(css) + "\n</style>")

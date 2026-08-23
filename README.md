@@ -90,7 +90,7 @@
 
 <br/>
 
-<img width="100%" src="assets/robot-arsenal.svg"/>
+<img width="100%" src="assets/arsenal-board.svg"/>
 
 </div>
 
