@@ -12,6 +12,8 @@ which also lets each one carry its own caption instead of needing a separate
 """
 import os
 
+import logos
+
 
 AEGEAN, CORAL = "#0077C8", "#F88379"
 BROWN, TEAMIST, CRIMSON = "#D4A373", "#AAC832", "#D41F26"
@@ -138,7 +140,58 @@ def stack_strip(outdir="assets"):
     return path
 
 
+# ── contact buttons ──────────────────────────────────────────────────────
+# Drawn here rather than pulled from img.shields.io. They are the last two
+# third-party images the README had, and a contact link that renders as a broken
+# box because someone else's host is down is worse than useless.
+#
+# LinkedIn has no mark here on purpose: Simple Icons dropped it at the owner's
+# request, as it did AWS and Oracle, so the button carries the name in type
+# rather than an approximation of the logo.
+CONTACTS = [
+    ("email", "gmail", "#0A5FA0", "#0077C8", "ahmadmalik1376@gmail.com", "EMAIL"),
+    ("linkedin", None, "#084E96", "#0A66C2", "/in/ahmadmalik1376", "LINKEDIN"),
+]
+
+
+def contact_button(slug, icon, cap_col, body_col, label, kicker, outdir="assets"):
+    w, h, cap = 452, 62, 66
+    ink = "#FBF7F0"
+    out = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" '
+           'role="img" aria-label="%s: %s">' % (w, h, w, h, kicker, label),
+           "<title>%s</title>" % kicker,
+           '<rect width="%d" height="%d" rx="13" fill="%s"/>' % (w, h, body_col),
+           '<path d="M13,0 H%d V%d H13 A13,13 0 0 1 0,%d V13 A13,13 0 0 1 13,0 Z" fill="%s"/>'
+           % (cap, h, h - 13, cap_col)]
+    d = logos.ICONS.get(icon) if icon else None
+    if d:
+        s_ = 24.0 / 24.0
+        out.append('<g transform="translate(%.1f,%.1f) scale(%.3f)"><path d="%s" fill="%s"/></g>'
+                   % (cap / 2.0 - 12, h / 2.0 - 12, s_, d, ink))
+    else:
+        # a generic profile card, not anyone's logo
+        out.append('<rect x="%.1f" y="%.1f" width="26" height="20" rx="4" fill="none" '
+                   'stroke="%s" stroke-width="2.2"/>' % (cap / 2.0 - 13, h / 2.0 - 10, ink))
+        out.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="%s"/>'
+                   % (cap / 2.0 - 5, h / 2.0 - 2, ink))
+        out.append('<path d="M%.1f,%.1f h9" stroke="%s" stroke-width="2.2" '
+                   'stroke-linecap="round"/>' % (cap / 2.0 + 2, h / 2.0 - 4, ink))
+        out.append('<path d="M%.1f,%.1f h9" stroke="%s" stroke-width="2.2" '
+                   'stroke-linecap="round"/>' % (cap / 2.0 + 2, h / 2.0 + 2, ink))
+    out.append(_txt(cap + 22, 26, kicker, 9, "#CFE4F5", "800", "start", "2.6"))
+    out.append(_txt(cap + 22, 45, label, 15, ink, "700", "start", "0.4"))
+    out.append("</svg>")
+    path = os.path.join(outdir, "link-%s.svg" % slug)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(chr(10).join(out))
+    print("  wrote %s" % path)
+    return path
+
+
 if __name__ == "__main__":
     for slug, title, caption, accent in HEADINGS:
         print("  wrote %s" % heading(slug, title, caption, accent))
     stack_strip()
+    for c in CONTACTS:
+        contact_button(*c)

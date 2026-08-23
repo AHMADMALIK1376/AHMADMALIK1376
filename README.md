@@ -105,7 +105,7 @@
 
 <br/>
 
-<img width="100%" src="assets/telemetry.svg"/>
+<img width="100%" src="assets/year-dial.svg"/>
 
 </div>
 
@@ -134,15 +134,15 @@
 
 <img width="100%" src="assets/h-open-channel.svg"/>
 
-<br/><br/>
+<br/>
 
-[![EMAIL](https://img.shields.io/badge/📡%20SIGNAL-ahmadmalik1376%40gmail.com-0077C8?style=for-the-badge&logo=gmail&logoColor=ffffff&labelColor=5E5349)](mailto:ahmadmalik1376@gmail.com)
-&nbsp;
-[![GITHUB](https://img.shields.io/badge/⟁%20GITHUB-AHMADMALIK1376-F88379?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=5E5349)](https://github.com/AHMADMALIK1376)
+[<img src="assets/link-email.svg" alt="Email: ahmadmalik1376@gmail.com" height="52"/>](mailto:ahmadmalik1376@gmail.com)
+&nbsp;&nbsp;
+[<img src="assets/link-linkedin.svg" alt="LinkedIn: /in/ahmadmalik1376" height="52"/>](https://www.linkedin.com/in/ahmadmalik1376/)
 
-<br/><br/>
+<br/>
 
-<sub>TRANSMISSION COMPLETE. AWAITING YOUR SIGNAL... 📡 &nbsp;·&nbsp; LET’S BUILD SOMETHING THE WORLD HASN’T SEEN. 👾 &nbsp;·&nbsp; SYSTEM STANDING BY... 🟢</sub>
+<sub>OPEN TO OPPORTUNITIES &nbsp;·&nbsp; BUILDING FULL-STACK AI AND MERN SYSTEMS &nbsp;·&nbsp; USUALLY REPLIES WITHIN A DAY</sub>
 
 </div>
 
