@@ -33,8 +33,8 @@ HEAD_H = 82
 HEADINGS = [
     ("system-design", "SYSTEM DESIGN",
      "CLIENT → LOAD BALANCER → WEB TIER → FANOUT → QUEUE → WORKERS", AEGEAN),
-    ("llm-training", "LLM TRAINING",
-     "DATASETS → FORWARD PASS → BACKPROP", CORAL),
+    ("llm-training", "HOW AI ANSWERS",
+     "PROMPT → TOKENS → ATTENTION → NEXT TOKEN → REPEAT", CORAL),
     ("language-distribution", "LANGUAGE DISTRIBUTION",
      "TERRITORY SIZED BY SHARE · LIVE FROM THE GITHUB API", TEAMIST),
     ("commit-activity", "COMMIT ACTIVITY",

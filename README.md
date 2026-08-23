@@ -37,7 +37,7 @@
 
 <br/>
 
-<img width="100%" src="assets/neural.svg"/>
+<img width="100%" src="assets/inference.svg"/>
 
 <img width="100%" src="assets/primary-stack.svg"/>
 
