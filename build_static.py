@@ -33,8 +33,8 @@ HEAD_H = 82
 HEADINGS = [
     ("system-design", "SYSTEM DESIGN",
      "CLIENT → LOAD BALANCER → WEB TIER → FANOUT → QUEUE → WORKERS", AEGEAN),
-    ("llm-training", "HOW AI ANSWERS",
-     "PROMPT → TOKENS → ATTENTION → NEXT TOKEN → REPEAT", CORAL),
+    ("llm-training", "HOW AI WORKS",
+     "WHAT HAPPENS BETWEEN YOUR QUESTION AND THE ANSWER", CORAL),
     ("language-distribution", "LANGUAGE DISTRIBUTION",
      "TERRITORY SIZED BY SHARE · LIVE FROM THE GITHUB API", TEAMIST),
     ("commit-activity", "COMMIT ACTIVITY",
@@ -47,13 +47,6 @@ HEADINGS = [
      "SOURCE → BUILD → SHIP", TEAMIST),
     ("open-channel", "OPEN CHANNEL",
      "GET IN TOUCH", CORAL),
-]
-
-STACK = [
-    ("LANGUAGES", ["JavaScript", "TypeScript", "Python", "SQL"], AEGEAN),
-    ("FRAMEWORKS", ["React", "Node.js", "Express", "FastAPI"], TEAMIST),
-    ("AI / LLM", ["Claude API", "Prompt Eng", "Vision"], CORAL),
-    ("INFRA", ["Docker", "GCP", "AWS", "MongoDB"], BROWN),
 ]
 
 
@@ -94,49 +87,6 @@ def heading(slug, title, caption, accent, outdir="assets"):
     path = os.path.join(outdir, "h-%s.svg" % slug)
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(out))
-    return path
-
-
-def stack_strip(outdir="assets"):
-    """Replaces the S/A/B rank badges, which invented a ranking and listed
-    languages that appear in none of the repositories."""
-    col_w = (W - 96) / float(len(STACK))
-    h = 200
-    css = ["@keyframes rise{0%{opacity:0;transform:translateY(10px)}}"]
-    out = ['<?xml version="1.0" encoding="UTF-8"?>',
-           '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" '
-           'role="img" aria-label="Primary stack by category">' % (W, h, W, h),
-           "<title>Primary Stack</title>", "<defs>__STYLE__</defs>",
-           _rr(0, 0, W, h, 0, SKY),
-           _txt(48, 40, "PRIMARY STACK", 12, INK, "800", "start", "3.2"),
-           _txt(W - 48, 40, "WHAT I ACTUALLY BUILD WITH", 10, FAINT, "600", "end", "2")]
-    out.append('<path d="M48,54 H%d" stroke="%s" stroke-width="1.4" fill="none"/>' % (W - 48, RULE))
-    n = 0
-    for ci_, (cat, items, colr) in enumerate(STACK):
-        x = 48 + ci_ * col_w
-        css.append(".c%d{animation:rise .6s ease-out both;animation-delay:%.2fs}"
-                   % (ci_, ci_ * 0.1))
-        out.append('<g class="c%d">' % ci_)
-        out.append("  " + _rr(x, 74, 26, 6, 3, colr))
-        out.append("  " + _txt(x, 102, cat, 11, INK, "800", "start", "2.4"))
-        # wrap onto a second row rather than silently dropping the overflow
-        px, py = x, 118
-        for item in items:
-            cw = len(item) * 7.0 + 20
-            if px + cw > x + col_w - 12:
-                px, py = x, py + 32
-            out.append("  " + _rr(px, py, cw, 26, 13, CARD,
-                                  'stroke="%s" stroke-width="1.6"' % colr))
-            out.append("  " + _txt(px + cw / 2, py + 17, item, 10.5, INK, "600", "middle", "0.3"))
-            px += cw + 7
-            n += 1
-        out.append("</g>")
-    out.append("</svg>")
-    svg = "\n".join(out).replace("__STYLE__", "<style>\n" + "\n".join(css) + "\n</style>")
-    path = os.path.join(outdir, "primary-stack.svg")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(svg)
-    print("  wrote %s (%d chips)" % (path, n))
     return path
 
 
@@ -192,6 +142,5 @@ def contact_button(slug, icon, cap_col, body_col, label, kicker, outdir="assets"
 if __name__ == "__main__":
     for slug, title, caption, accent in HEADINGS:
         print("  wrote %s" % heading(slug, title, caption, accent))
-    stack_strip()
     for c in CONTACTS:
         contact_button(*c)

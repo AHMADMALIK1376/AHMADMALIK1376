@@ -109,13 +109,13 @@ def build(path="assets/inference.svg"):
            'tokenised, attention weighs earlier tokens, the network scores every candidate '
            'word, one is sampled, and the loop repeats with that word added to the input">'
            % (W, H, W, H),
-           "<title>How A Model Answers</title>",
+           "<title>How AI Works</title>",
            '<defs><pattern id="ig" width="26" height="26" patternUnits="userSpaceOnUse">'
            '<circle cx="1.5" cy="1.5" r="1" fill="%s"/></pattern>__STYLE__</defs>' % GRID,
            '<rect width="%d" height="%d" fill="%s"/>' % (W, H, SKY),
            '<rect width="%d" height="%d" fill="url(#ig)"/>' % (W, H)]
 
-    out.append(_txt(48, 46, "HOW A MODEL ANSWERS", 14, INK, "800", "start", "3.4"))
+    out.append(_txt(48, 46, "HOW AI WORKS", 14, INK, "800", "start", "3.4"))
     out.append(_txt(W - 48, 46, "ONE TOKEN AT A TIME", 12.5, FAINT, "600", "end", "2.2"))
     out.append('<path d="M48,60 H%d" stroke="%s" stroke-width="1.4" fill="none"/>' % (W - 48, RULE))
     out.append(_txt(48, 80, "PROMPT → TOKENS → ATTENTION → NETWORK → SCORES → SAMPLE → BACK "
@@ -185,38 +185,92 @@ def build(path="assets/inference.svg"):
                     8, FAINT, "600", "start", "0.8"))
 
     # ── the network itself ───────────────────────────────────────────────
-    _stage(out, NET_X, 190, "NETWORK", "weights, learned")
-    layers = [6, 8, 8, 5]
+    # A transformer block, in the order the data actually goes through it:
+    # multi-head attention, add and norm, feed-forward, add and norm. The two
+    # arcs down the left are the residual connections, which carry the input
+    # around each sublayer and are added back on the far side. Without them a
+    # stack this deep does not train, so leaving them out would have been the
+    # kind of tidy diagram that teaches the wrong thing.
+    _stage(out, NET_X, 208, "NETWORK", "weights, learned")
+    NW = 200
+
+    def norm_bar(y, label):
+        out.append(_rr(NET_X, y, NW, 17, 5, _mix(CARD, BROWN, 0.30),
+                       'stroke="%s" stroke-width="1.1"' % _mix(RULE, BROWN, 0.5)))
+        out.append(_txt(NET_X + NW / 2, y + 12, label, 8, INK, "800", "middle", "1.4"))
+
+    def residual(y0, y1, tag):
+        rx = NET_X - 13
+        out.append('<path d="M%d,%d H%d V%d H%d" fill="none" stroke="%s" '
+                   'stroke-width="1.6" stroke-linecap="round"/>'
+                   % (NET_X + 6, y0, rx, y1, NET_X + 6, _mix(RULE, TEAMIST, 0.6)))
+        out.append('<circle cx="%d" cy="%d" r="6.5" fill="%s" stroke="%s" '
+                   'stroke-width="1.4"/>' % (NET_X + 6, y1, CARD, _mix(RULE, TEAMIST, 0.7)))
+        out.append(_txt(NET_X + 6, y1 + 3.4, "+", 10, _mix(MUTED, TEAMIST, .5), "800", "middle"))
+        out.append(_txt(rx - 4, (y0 + y1) / 2, tag, 7.5, FAINT, "700", "end", "0.6"))
+
+    # multi-head attention, drawn as four planes because there are many heads
+    head_y = BAND_Y + 8
+    for h in range(4):
+        out.append(_rr(NET_X + 26 + h * 9, head_y + (3 - h) * 7, 118, 40, 5,
+                       _mix(CARD, CORAL, 0.20 + h * 0.10),
+                       'stroke="%s" stroke-width="1.1"' % _mix(RULE, CORAL, 0.55)))
+    for qkv, dx in (("Q", 8), ("K", 40), ("V", 72)):
+        out.append(_rr(NET_X + 57 + dx, head_y + 30, 22, 15, 3, _mix(CARD, CORAL, 0.62)))
+        out.append(_txt(NET_X + 68 + dx, head_y + 41, qkv, 8.5, INK, "800", "middle"))
+    out.append(_txt(NET_X + NW, head_y - 2, "4 HEADS", 7.5, FAINT, "700", "end", "0.8"))
+    residual(BAND_Y + 4, head_y + 60, "SKIP")
+    norm_bar(head_y + 68, "ADD & NORM")
+
+    # feed-forward: wide in the middle, back down on the way out
+    ff_top = head_y + 96
+    layers = [(0, 6, AEGEAN), (74, 9, VIOLET), (148, 6, TEAMIST)]
     cols = []
-    for li, cnt in enumerate(layers):
-        x = NET_X + li * 58
-        ys = [BAND_Y + 22 + k * (230.0 / max(1, cnt - 1)) for k in range(cnt)]
-        cols.append((x, ys))
+    for dx, cnt, colr in layers:
+        ys = [ff_top + 8 + k * (112.0 / max(1, cnt - 1)) for k in range(cnt)]
+        cols.append((NET_X + 26 + dx, ys, colr))
     for li in range(len(cols) - 1):
-        x0, ys0 = cols[li]
-        x1, ys1 = cols[li + 1]
-        for a in ys0:
-            for b in ys1:
-                out.append('<path d="M%.1f,%.1f L%.1f,%.1f" stroke="%s" stroke-width="0.7" '
-                           'opacity=".35" fill="none"/>' % (x0 + 7, a, x1 - 7, b, _mix(RULE, INK, .1)))
-    for li, (x, ys) in enumerate(cols):
-        for k, y in enumerate(ys):
-            col = (AEGEAN, VIOLET, TEAMIST, CORAL)[li % 4]
-            out.append('<circle cx="%.1f" cy="%.1f" r="6.5" fill="%s"/>' % (x, y, _mix(CARD, col, .8)))
-    # a wave of activation crossing the layers, once per generated token
-    for li in range(len(cols)):
+        x0, ys0, _ = cols[li]
+        x1, ys1, _ = cols[li + 1]
+        for ai, a in enumerate(ys0):
+            for bi, b in enumerate(ys1):
+                # a weight is a number, so the lines carry different strengths
+                wgt = 0.10 + ((ai * 5 + bi * 3) % 7) / 9.0
+                out.append('<path d="M%.1f,%.1f L%.1f,%.1f" stroke="%s" '
+                           'stroke-width="%.2f" opacity="%.2f" fill="none"/>'
+                           % (x0 + 6, a, x1 - 6, b, _mix(RULE, INK, 0.25),
+                              0.5 + wgt * 1.4, 0.20 + wgt * 0.5))
+    for li, (x, ys, colr) in enumerate(cols):
+        for y in ys:
+            out.append('<circle cx="%.1f" cy="%.1f" r="6" fill="%s" stroke="%s" '
+                       'stroke-width="1.2"/>' % (x, y, _mix(CARD, colr, 0.72),
+                                                 _mix(RULE, colr, 0.6)))
+    out.append(_txt(NET_X + 26, ff_top + 136, "FEED FORWARD · 4x WIDE", 7.5,
+                    FAINT, "700", "start", "0.6"))
+    residual(head_y + 88, ff_top + 148, "SKIP")
+    norm_bar(ff_top + 156, "ADD & NORM")
+    out.append(_txt(NET_X + NW / 2, ff_top + 190, "× N BLOCKS, STACKED", 8.5,
+                    _mix(MUTED, VIOLET, 0.35), "800", "middle", "1.4"))
+
+    # a wave of activation crossing the block, once per generated token
+    waves = [(NET_X + 88, head_y + 20, 46)] + [(c[0], sum(c[1]) / len(c[1]), 0) for c in cols]
+    for li, (wx, wy, _sp) in enumerate(waves):
         stops = [(0.0, "opacity:0")]
-        for s in range(STEPS):
-            t0 = LEAD + s * SPAN + SPAN * (0.10 + li * 0.07)
+        for st in range(STEPS):
+            t0 = LEAD + st * SPAN + SPAN * (0.08 + li * 0.06)
             stops += [(max(0.0, t0 - 0.01), "opacity:0"), (t0, "opacity:1"),
-                      (min(100.0, t0 + SPAN * 0.16), "opacity:0")]
+                      (min(100.0, t0 + SPAN * 0.14), "opacity:0")]
         stops.append((100.0, "opacity:0"))
         css.append(_kf("wv%d" % li, stops))
         css.append(".wv%d{animation:wv%d " % (li, li) + "%.1f" % DUR + "s linear infinite}")
-        x, ys = cols[li]
-        for y in ys:
-            out.append('<circle class="wv%d" cx="%.1f" cy="%.1f" r="10" fill="none" '
-                       'stroke="%s" stroke-width="2.4"/>' % (li, x, y, TEAMIST))
+        if li == 0:
+            out.append('<rect class="wv%d" x="%.1f" y="%.1f" width="118" height="40" rx="5" '
+                       'fill="none" stroke="%s" stroke-width="2.4"/>'
+                       % (li, NET_X + 53, head_y, TEAMIST))
+        else:
+            for y in cols[li - 1][1]:
+                out.append('<circle class="wv%d" cx="%.1f" cy="%.1f" r="10" fill="none" '
+                           'stroke="%s" stroke-width="2.2"/>' % (li, cols[li - 1][0], y, TEAMIST))
 
     # ── logits: a score for every candidate, then one is sampled ─────────
     _stage(out, LOG_X, 170, "SCORES", "a distribution, not an answer")
