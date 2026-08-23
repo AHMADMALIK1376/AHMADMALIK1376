@@ -803,13 +803,13 @@
 <g class="rd r3">
   <text x="980.0" y="258.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="800" fill="#7D7266" text-anchor="start" letter-spacing="2.2">PUSHES / 30D</text>
   <path d="M980,268 H1180" stroke="#D9D0C1" stroke-width="1.2"/>
-  <text x="980.0" y="304.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="32" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="-0.5">91</text>
+  <text x="980.0" y="304.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="32" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="-0.5">100</text>
   <text x="980.0" y="322.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">TO PUBLIC REPOSITORIES</text>
 </g>
 <g class="rd r4">
   <text x="700.0" y="366.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="800" fill="#7D7266" text-anchor="start" letter-spacing="2.2">PULL REQUESTS</text>
   <path d="M700,376 H900" stroke="#D9D0C1" stroke-width="1.2"/>
-  <text x="700.0" y="412.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="32" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="-0.5">29</text>
+  <text x="700.0" y="412.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="32" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="-0.5">39</text>
   <text x="700.0" y="430.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="600" fill="#A2988A" text-anchor="start" letter-spacing="1.2">OPENED IN THE LAST 30 DAYS</text>
 </g>
 <g class="rd r5">
