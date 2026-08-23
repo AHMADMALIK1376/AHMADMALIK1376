@@ -122,18 +122,28 @@ def website(s=1.0):
 
 
 def drone(bodyc, accentc, cargo):
-    """Side-elevation cargo quadcopter. Drawn with the ground at y=0 so it drops
-    straight into the same transform the truck used; the pallet hangs at exactly
-    the height the unloading arm reaches."""
+    """Side-elevation cargo quadcopter, drawn with the ground at y=0 so the
+    pallet hangs at exactly the height the unloading arm reaches."""
     g = rr(24, -92, 144, 13, 4, STEEL_X, 'stroke="%s" stroke-width="2"' % OUTLINE)
     g += rr(24, -83, 144, 5, 2, INK)
+    for skid in (44, 148):                       # pallet skids
+        g += rr(skid - 5, -79, 10, 7, 2, STEEL_D)
+    # slings, and a net across the load
     g += ('<path d="M78,-236 L40,-92 M114,-236 L152,-92" stroke="%s" stroke-width="2.5" '
           'fill="none" stroke-linecap="round"/>' % INK)
+    g += ('<path d="M34,-104 H158 M52,-92 L52,-116 M96,-92 L96,-116 M140,-92 L140,-116" '
+          'stroke="%s" stroke-width="1.4" fill="none" opacity=".55"/>' % INK)
     g += rr(18, -262, 56, 8, 4, INK) + rr(118, -262, 56, 8, 4, INK)
+    for br in ((40, 74), (152, 118)):            # boom braces back to the hull
+        g += ('<path d="M%d,-254 L%d,-236" stroke="%s" stroke-width="2.4" fill="none" '
+              'stroke-linecap="round"/>' % (br[0], br[1], INK))
     g += rr(60, -272, 72, 36, 14, bodyc, 'stroke="%s" stroke-width="2"' % OUTLINE)
-    g += rr(108, -266, 20, 16, 5, CREAM)
+    g += rr(108, -266, 20, 16, 5, CREAM)         # canopy
     g += rr(66, -262, 26, 7, 3.5, accentc)
     g += rr(84, -240, 24, 9, 3, STEEL_X)
+    g += ci(126, -244, 5, STEEL_D)               # sensor pod under the nose
+    g += ci(126, -244, 2, INK)
+    g += rr(52, -268, 10, 22, 4, accentc)        # tail fin
     for i, rx in enumerate((30, 162)):
         g += rr(rx - 4, -276, 8, 16, 3, STEEL_X)
         # a flat disc plus a fast-squashing blade reads as spin without any blur
@@ -141,6 +151,7 @@ def drone(bodyc, accentc, cargo):
         g += ('<g transform="translate(%d,-278)"><g class="rotor" style="animation-delay:-%.2fs">'
               '%s</g></g>' % (rx, i * 0.07, rr(-34, -2.2, 68, 4.4, 2.2, INK)))
     g += ci(64, -254, 4.5, CRIMSON, 'class="lamp"')
+    g += ci(150, -256, 4, TEAMIST, 'class="lamp2"')       # starboard nav light
     return g + cargo
 
 
@@ -250,7 +261,6 @@ for i, pk in enumerate(PICKS):
                % (i, pk - 0.6, pk))
 
 arm_keyframes(1, ARM_A_START)
-arm_keyframes(2, ARM_B_START)
 item_keyframes("it0", 349, 440, 0.0, 3.0)          # raw crate
 item_keyframes("it1", 496, 595, 3.6, 3.4)          # frontend
 item_keyframes("it2", 651, 750, 7.4, 3.4)          # + backend
@@ -301,6 +311,106 @@ def arm(idx, bx, shoulder_y, seg, payload):
     g += ci(bx, shoulder_y + 6, 13, INK) + ci(bx, shoulder_y + 6, 6, STEEL_X)
     for bl in ((-7, -7), (7, -7), (-7, 7), (7, 7)):                  # shoulder bolt circle
         g += ci(bx + bl[0], shoulder_y + 6 + bl[1], 1.7, STEEL_D)
+    return g
+
+
+
+# ══ tower crane ═══════════════════════════════════════════════════════
+# Lifts the finished site off the end of the belt and sets it into the rack.
+# A slewing arm cannot cover that span without either an implausibly long reach
+# or swinging straight through the cabinet, so the load rides a trolley along a
+# jib instead, which is how the job is really done.
+MAST_X, JIB_Y = 1098, 96
+PICK_X, DROP_X = 1015, 1231
+HOOK_UP, HOOK_DN = 62, 186          # cable payed out, in pixels below the jib
+
+
+def crane_keyframes():
+    tr, hk, ld = [], [], []
+    for c in range(RUNS):
+        st = ARM_B_START + c * PERIOD
+        for at, x in ((0.00, PICK_X), (0.30, PICK_X), (0.50, DROP_X),
+                      (0.72, DROP_X), (1.00, PICK_X)):
+            tr.append("{:.2f}%{{transform:translateX({}px)}}".format(st + PERIOD * at, x))
+        for at, y in ((0.00, HOOK_UP), (0.14, HOOK_DN), (0.22, HOOK_DN),
+                      (0.32, HOOK_UP), (0.50, HOOK_UP), (0.58, HOOK_DN),
+                      (0.64, HOOK_DN), (0.74, HOOK_UP), (1.00, HOOK_UP)):
+            hk.append("{:.2f}%{{transform:translateY({}px)}}".format(st + PERIOD * at, y))
+        # the load is only in the hook between the grab and the release
+        ld.append("{:.2f}%{{opacity:0}}".format(st + PERIOD * 0.17))
+        ld.append("{:.2f}%{{opacity:1}}".format(st + PERIOD * 0.20))
+        ld.append("{:.2f}%{{opacity:1}}".format(st + PERIOD * 0.60))
+        ld.append("{:.2f}%{{opacity:0}}".format(st + PERIOD * 0.63))
+    css.append("@keyframes trly{0%%{transform:translateX(%dpx)}%s100%%{transform:translateX(%dpx)}}"
+               % (PICK_X, "".join(tr), PICK_X))
+    css.append("@keyframes hoist{0%%{transform:translateY(%dpx)}%s100%%{transform:translateY(%dpx)}}"
+               % (HOOK_UP, "".join(hk), HOOK_UP))
+    css.append("@keyframes cload{0%%{opacity:0}%s100%%{opacity:0}}" % "".join(ld))
+    # the cable has to grow with the hook, so it scales on the same numbers
+    css.append("@keyframes cable{0%%{transform:scaleY(%d)}%s100%%{transform:scaleY(%d)}}"
+               % (HOOK_UP, "".join(hk).replace("translateY(", "scaleY(").replace("px)", ")"),
+                  HOOK_UP))
+    css.append(".trly{animation:trly %s ease-in-out infinite}" % DUR)
+    css.append(".hoist{animation:hoist %s ease-in-out infinite}" % DUR)
+    css.append(".cable{transform-origin:0 0;animation:cable %s ease-in-out infinite}" % DUR)
+    css.append(".cload{animation:cload %s steps(1,end) infinite}" % DUR)
+
+
+def lattice(x0, y0, x1, y1, depth, horiz=True):
+    """X-braced truss between two rails, the way a crane boom is built."""
+    g = ""
+    if horiz:
+        g += rr(x0, y0, x1 - x0, 4, 2, LEMON) + rr(x0, y1 - 4, x1 - x0, 4, 2, LEMON)
+        step = 26
+        for bx in range(int(x0), int(x1) - step, step):
+            g += ('<path d="M%d,%d L%d,%d M%d,%d L%d,%d" stroke="%s" stroke-width="2.4" '
+                  'fill="none"/>' % (bx, y1 - 4, bx + step, y0 + 4,
+                                     bx, y0 + 4, bx + step, y1 - 4, LEMON))
+    else:
+        g += rr(x0, y0, 4, y1 - y0, 2, LEMON) + rr(x1 - 4, y0, 4, y1 - y0, 2, LEMON)
+        step = 28
+        for by in range(int(y0), int(y1) - step, step):
+            g += ('<path d="M%d,%d L%d,%d M%d,%d L%d,%d" stroke="%s" stroke-width="2.4" '
+                  'fill="none"/>' % (x0 + 4, by, x1 - 4, by + step,
+                                     x1 - 4, by, x0 + 4, by + step, LEMON))
+    return g
+
+
+def crane():
+    g = rr(MAST_X - 42, GROUND - 18, 84, 18, 4, STEEL_X,
+           'stroke="%s" stroke-width="2"' % OUTLINE)
+    for bolt in (-30, -11, 11, 30):
+        g += ci(MAST_X + bolt, GROUND - 9, 3.2, INK)
+    g += lattice(MAST_X - 22, JIB_Y + 16, MAST_X + 22, GROUND - 16, 0, horiz=False)
+    for band in range(3):                        # hazard banding low on the mast
+        by = GROUND - 60 + band * 14
+        g += '<path d="M%d,%d l11,-10 h9 l-11,10 Z" fill="%s"/>' % (MAST_X - 16, by, INK)
+        g += '<path d="M%d,%d l11,-10 h9 l-11,10 Z" fill="%s"/>' % (MAST_X + 2, by, INK)
+    # cab, slewing ring, jib and counter-jib
+    g += rr(MAST_X - 52, JIB_Y + 16, 30, 26, 4, LEMON,
+            'stroke="%s" stroke-width="2"' % OUTLINE)
+    g += rr(MAST_X - 47, JIB_Y + 21, 20, 13, 2, CREAM)
+    g += rr(MAST_X - 30, JIB_Y + 6, 60, 12, 4, INK)
+    g += lattice(985, JIB_Y - 14, MAST_X + 172, JIB_Y + 8, 0)
+    g += rr(MAST_X + 150, JIB_Y - 22, 40, 26, 4, STEEL_D,
+            'stroke="%s" stroke-width="2"' % OUTLINE)      # counterweight
+    g += ('<path d="M%d,%d L%d,%d M%d,%d L%d,%d" stroke="%s" stroke-width="3" fill="none" '
+          'stroke-linecap="round"/>'
+          % (MAST_X, JIB_Y - 42, 1000, JIB_Y - 12, MAST_X, JIB_Y - 42,
+             MAST_X + 160, JIB_Y - 18, LEMON))             # pendant stays
+    g += rr(MAST_X - 6, JIB_Y - 46, 12, 34, 4, LEMON,
+            'stroke="%s" stroke-width="2"' % OUTLINE)      # apex tower
+    # trolley, cable, hook and the load it carries
+    g += '<g class="trly"><g transform="translate(0,%d)">' % (JIB_Y + 8)
+    g += rr(-16, -8, 32, 12, 3, INK)
+    g += ci(-9, 4, 4, STEEL_X) + ci(9, 4, 4, STEEL_X)
+    g += '<g transform="translate(0,4)"><rect class="cable" x="-1.4" width="2.8" height="1" fill="%s"/></g>' % INK
+    g += '<g class="hoist"><g transform="translate(0,4)">'
+    g += rr(-11, 0, 22, 9, 3, STEEL_D, 'stroke="%s" stroke-width="1.6"' % OUTLINE)
+    g += ('<path d="M0,9 v7 a7,7 0 1,0 7,7" fill="none" stroke="%s" stroke-width="3.4" '
+          'stroke-linecap="round"/>' % INK)
+    g += '<g class="cload"><g transform="translate(0,44)">%s</g></g>' % website(0.6)
+    g += "</g></g></g></g>"
     return g
 
 
@@ -503,28 +613,30 @@ add(txt(1288, 316, "SW", 8, STEEL_X))
 add(txt(1231, 367, "DEPLOY", 17, INK, ls="2"))
 add('<g transform="translate(1213,289)"><circle class="dpul" r="26" fill="none" stroke="%s" '
     'stroke-width="4"/></g>' % TEAMIST)
-for i, d in enumerate(("0s", "-.87s", "-1.74s")):
-    add('<g transform="translate(1231,104)"><g class="sig" style="animation-delay:%s">'
-        '<path d="M-26,0 A26,26 0 0,1 26,0" fill="none" stroke="%s" stroke-width="4" '
-        'stroke-linecap="round"/></g></g>' % (d, TEAMIST))
 
 # ── inbound truck, crates depleting as they are lifted ────────────────
-# crates 0 and 1 ride the first aircraft, crate 2 the second, matching PICKS
-cargo_a = ""
-for i, cx in enumerate((60, 116)):
-    cargo_a += '<g class="cr%d"><g transform="translate(%d,-104)">%s</g></g>' % (i, cx, crate(0.72))
-cargo_b = '<g class="cr2"><g transform="translate(88,-104)">%s</g></g>' % crate(0.72)
+# Both aircraft land with a full pallet of three. The lifted crates are the
+# ones keyed to PICKS; the remainder flies back out still aboard, which is what
+# a part-unload actually looks like.
+cargo_a = '<g class="cr0"><g transform="translate(44,-104)">%s</g></g>' % crate(0.72)
+cargo_a += '<g class="cr1"><g transform="translate(86,-104)">%s</g></g>' % crate(0.72)
+cargo_a += '<g transform="translate(128,-104)">%s</g>' % crate(0.72)
+cargo_b = '<g class="cr2"><g transform="translate(44,-104)">%s</g></g>' % crate(0.72)
+for _cx in (86, 128):
+    cargo_b += '<g transform="translate(%d,-104)">%s</g>' % (_cx, crate(0.72))
+
 add(rr(26, 356, 148, 16, 4, STEEL_X))            # landing pad stays when the drone is out
 add(rr(40, 361, 24, 6, 3, LEMON)) 
 add(rr(96, 361, 24, 6, 3, LEMON))
 add(rr(136, 361, 24, 6, 3, LEMON))
 add('<g class="tin"><g class="hover">%s</g></g>' % drone(AEGEAN, LEMON, cargo_a))
 add('<g class="tin2"><g class="hover" style="animation-delay:-1.4s">%s</g></g>'
-    % drone(TEAMIST, CORAL, cargo_b))
+    % drone(CORAL, CREAM, cargo_b))
 
 # ── robots ────────────────────────────────────────────────────────────
 add(arm(1, 250, 170, 140, crate(0.66)))
-add(arm(2, 1114, 170, 140, website(0.6)))
+crane_keyframes()
+add(crane())
 
 add("</svg>")
 svg = "\n".join(out).replace("__STYLE__", "<style>\n" + "\n".join(css) + "\n</style>")
