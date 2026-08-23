@@ -99,7 +99,11 @@ BOARD_Y0 = 176             # top edge of the first row of chips
 RAIL_L, RAIL_R = 84, 1196
 FEED_X, FEED_Y = 140, 199  # where the gantry picks, centre of the top chip
 FEED_P = 58                # chip pitch on the tape
-DIP = 13                   # how far the nozzle drops to pick and to seat
+DIP = 15                   # how far the arm reaches past hover to pick and seat
+TRACK_Y = 118              # the linear track the carriage rides
+L1, L2 = 200.0, 165.0      # upper arm and forearm, slim so they do not
+                           # mask the board they are reaching over
+CARRIAGE_OFF = 80.0        # the carriage sits this far left of what it reaches
 
 
 def _esc(s):
@@ -149,6 +153,30 @@ def _readable(brand, backdrop):
             break
         colour = _mix(colour, INK, 0.16)
     return colour
+
+
+def _carriage_x(target_x):
+    """Where the carriage parks to reach a given x, kept on the track."""
+    return max(60.0, min(1180.0, target_x - CARRIAGE_OFF))
+
+
+def _ik(sx, sy, tx, ty, l1, l2):
+    """Shoulder and elbow angles that put the wrist on (tx, ty).
+
+    Standard two-link solution. The reach is clamped to what the arm can
+    actually do, so a target it cannot make becomes a full stretch rather than
+    a maths error.
+    """
+    import math
+    dx, dy = tx - sx, ty - sy
+    d = math.hypot(dx, dy)
+    d = max(abs(l1 - l2) + 0.01, min(l1 + l2 - 0.01, d))
+    base = math.degrees(math.atan2(dy, dx))
+    ca = max(-1.0, min(1.0, (d * d + l1 * l1 - l2 * l2) / (2 * d * l1)))
+    cb = max(-1.0, min(1.0, (l1 * l1 + l2 * l2 - d * d) / (2 * l1 * l2)))
+    a = math.degrees(math.acos(ca))
+    b = math.degrees(math.acos(cb))
+    return base - a, 180.0 - b
 
 
 def _kf(name, stops):
@@ -298,54 +326,84 @@ def arsenal(path="assets/assembly.svg"):
         out.append('<use class="seat%d" href="#c%d" x="%d" y="%d"/>'
                    % (i, i, c["x"], c["y"]))
 
-    # ── the gantry ───────────────────────────────────────────────────────
-    # Crossbeam moves in Y, the head rides it in X, the nozzle dips in Z. Each
-    # sits in its own group: a CSS transform overrides a transform attribute on
-    # the same element, so the three motions have to nest rather than share.
-    for rail in (RAIL_L, RAIL_R):
-        out.append('<rect x="%d" y="150" width="5" height="370" rx="2.5" fill="%s"/>'
-                   % (rail - 2, STEEL))
+    # ── the arm ────────────────────────────────────────────────
+    # A carriage rides a linear track and a two-link arm hangs from it, bending
+    # at the shoulder and the elbow to reach each socket. The joint angles are
+    # solved below with real two-link inverse kinematics rather than eyeballed,
+    # so the wrist lands on the socket it is aiming at.
+    #
+    # Rotation has to sit on its own element every time: a CSS transform
+    # overrides a transform attribute on the same element, so the static offsets
+    # out to the elbow and the wrist each get a plain <g> of their own.
+    out.append('<rect x="52" y="%d" width="1136" height="5" rx="2.5" fill="%s"/>'
+               % (TRACK_Y - 12, STEEL))
+    out.append('<rect x="52" y="%d" width="1136" height="5" rx="2.5" fill="%s"/>'
+               % (TRACK_Y + 7, STEEL))
+    teeth = "".join("M%d,%dv8" % (tx, TRACK_Y - 4) for tx in range(62, 1186, 13))
+    out.append('<path d="%s" stroke="%s" stroke-width="2" fill="none"/>' % (teeth, TRACE_D))
+    for ex in (56, 1184):
+        out.append('<rect x="%d" y="%d" width="9" height="30" rx="3" fill="%s"/>'
+                   % (ex - 4, TRACK_Y - 15, STEEL))
 
-    beam, head, noz = [], [], []
+    car, upper, fore, wrist = [], [], [], []
     for i, c in enumerate(chips):
         c0 = i * span
-        cx = c["x"] + CHIP / 2.0
-        cy = c["y"] + CHIP / 2.0
-        beam += [(c0, "transform:translateY(" + "%.1f" % FEED_Y + "px)"),
-                 (c0 + span * 0.25, "transform:translateY(" + "%.1f" % FEED_Y + "px)"),
-                 (c0 + span * 0.62, "transform:translateY(" + "%.1f" % cy + "px)"),
-                 (c0 + span * 0.86, "transform:translateY(" + "%.1f" % cy + "px)")]
-        head += [(c0, "transform:translateX(" + "%.1f" % FEED_X + "px)"),
-                 (c0 + span * 0.25, "transform:translateX(" + "%.1f" % FEED_X + "px)"),
-                 (c0 + span * 0.62, "transform:translateX(" + "%.1f" % cx + "px)"),
-                 (c0 + span * 0.86, "transform:translateX(" + "%.1f" % cx + "px)")]
-        noz += [(c0, "transform:translateY(0)"),
-                (c0 + span * 0.08, "transform:translateY(" + "%d" % DIP + "px)"),
-                (c0 + span * 0.20, "transform:translateY(0)"),
-                (c0 + span * 0.64, "transform:translateY(0)"),
-                (c0 + span * 0.72, "transform:translateY(" + "%d" % DIP + "px)"),
-                (c0 + span * 0.84, "transform:translateY(0)")]
-    beam.append((100.0, "transform:translateY(" + "%.1f" % FEED_Y + "px)"))
-    head.append((100.0, "transform:translateX(" + "%.1f" % FEED_X + "px)"))
-    noz.append((100.0, "transform:translateY(0)"))
+        tx, ty = c["x"] + CHIP / 2.0, c["y"] + CHIP / 2.0
+        for at, (px_, py_, hold) in (
+                (0.00, (FEED_X, FEED_Y, "hover")),
+                (0.08, (FEED_X, FEED_Y, "touch")),
+                (0.20, (FEED_X, FEED_Y, "hover")),
+                (0.25, (FEED_X, FEED_Y, "hover")),
+                (0.62, (tx, ty, "hover")),
+                (0.72, (tx, ty, "touch")),
+                (0.84, (tx, ty, "hover")),
+                (0.86, (tx, ty, "hover"))):
+            cx = _carriage_x(px_)
+            goal_y = py_ + (DIP if hold == "touch" else 0) - DIP
+            sh, el = _ik(cx, TRACK_Y, px_, goal_y, L1, L2)
+            t = c0 + span * at
+            car.append((t, "transform:translateX(" + "%.1f" % cx + "px)"))
+            upper.append((t, "transform:rotate(" + "%.2f" % sh + "deg)"))
+            fore.append((t, "transform:rotate(" + "%.2f" % el + "deg)"))
+            wrist.append((t, "transform:rotate(" + "%.2f" % (-(sh + el)) + "deg)"))
 
-    css.append(_kf("beam", beam))
-    css.append(_kf("head", head))
-    css.append(_kf("noz", noz))
-    css.append(".beam{animation:beam " + "%.1f" % DUR + "s ease-in-out infinite}")
-    css.append(".head{animation:head " + "%.1f" % DUR + "s ease-in-out infinite}")
-    css.append(".noz{animation:noz " + "%.1f" % DUR + "s ease-in-out infinite}")
+    # settle back over the feeder for the hold at the end of the loop
+    cx = _carriage_x(FEED_X)
+    sh, el = _ik(cx, TRACK_Y, FEED_X, FEED_Y - DIP, L1, L2)
+    car.append((100.0, "transform:translateX(" + "%.1f" % cx + "px)"))
+    upper.append((100.0, "transform:rotate(" + "%.2f" % sh + "deg)"))
+    fore.append((100.0, "transform:rotate(" + "%.2f" % el + "deg)"))
+    wrist.append((100.0, "transform:rotate(" + "%.2f" % (-(sh + el)) + "deg)"))
 
-    out.append('<g class="beam">')
-    out.append('  <rect x="%d" y="-3" width="%d" height="6" rx="3" fill="%s"/>'
-               % (RAIL_L, RAIL_R - RAIL_L, STEEL))
-    out.append('  <g class="head">')
-    out.append('    <g class="noz">')
-    out.append('      <rect x="-26" y="-21" width="52" height="26" rx="6" fill="%s" '
-               'stroke="%s" stroke-width="1.6"/>' % (CARD, INK))
-    out.append('      <rect x="-19" y="-16" width="38" height="6" rx="3" fill="%s"/>' % TRACE_D)
-    out.append('      <rect x="-4" y="4" width="8" height="12" rx="2" fill="%s"/>' % INK)
-    out.append('      <path d="M-9,16 H9 L5,22 H-5 Z" fill="%s"/>' % INK)
+    for nm, stops in (("car", car), ("upper", upper), ("fore", fore), ("wrist", wrist)):
+        css.append(_kf(nm, stops))
+        css.append("." + nm + "{transform-origin:0 0;animation:" + nm + " "
+                   + "%.1f" % DUR + "s ease-in-out infinite}")
+
+    out.append('<g transform="translate(0,%d)">' % TRACK_Y)
+    out.append('  <g class="car">')
+    out.append('    <rect x="-23" y="-16" width="46" height="31" rx="6" fill="%s" '
+               'stroke="%s" stroke-width="1.8"/>' % (CARD, INK))
+    for rx_ in (-12, 12):                       # rollers gripping the track
+        out.append('    <circle cx="%d" cy="-8" r="4.2" fill="%s" stroke="%s" '
+                   'stroke-width="1.5"/>' % (rx_, SKY, INK))
+    out.append('    <rect x="-11" y="4" width="22" height="5" rx="2.5" fill="%s"/>' % TRACE_D)
+    out.append('    <g class="upper">')
+    out.append('      <rect x="-6" y="-6" width="%d" height="12" rx="6" fill="%s" '
+               'stroke="%s" stroke-width="1.7"/>' % (int(L1) + 12, STEEL, INK))
+    out.append('      <circle cx="0" cy="0" r="5" fill="%s"/>' % INK)
+    out.append('      <g transform="translate(%d,0)">' % int(L1))
+    out.append('        <g class="fore">')
+    out.append('          <rect x="-5" y="-5" width="%d" height="10" rx="5" fill="%s" '
+               'stroke="%s" stroke-width="1.6"/>' % (int(L2) + 10, STEEL, INK))
+    out.append('          <circle cx="0" cy="0" r="4.5" fill="%s"/>' % INK)
+    out.append('          <g transform="translate(%d,0)">' % int(L2))
+    out.append('            <g class="wrist">')
+    out.append('              <rect x="-11" y="-11" width="22" height="17" rx="4" fill="%s" '
+               'stroke="%s" stroke-width="1.7"/>' % (CARD, INK))
+    for jx in (-12, 9):                          # jaws either side of the chip
+        out.append('              <rect x="%d" y="3" width="3.4" height="15" rx="1.7" fill="%s"/>'
+                   % (jx, INK))
     for i in range(n):
         c0 = i * span
         css.append(_kf("grip%d" % i, [
@@ -356,8 +414,12 @@ def arsenal(path="assets/assembly.svg"):
             (min(100.0, c0 + span * 0.78), "opacity:0"),
             (100.0, "opacity:0")]))
         css.append(".grip%d{animation:grip%d " % (i, i) + "%.1f" % DUR + "s linear infinite}")
-        out.append('      <use class="grip%d" href="#c%d" x="%d" y="22"/>'
+        out.append('              <use class="grip%d" href="#c%d" x="%d" y="6"/>'
                    % (i, i, -CHIP / 2))
+    out.append("            </g>")
+    out.append("          </g>")
+    out.append("        </g>")
+    out.append("      </g>")
     out.append("    </g>")
     out.append("  </g>")
     out.append("</g>")
