@@ -120,7 +120,7 @@
 <img width="100%" src="assets/h-build-deploy.svg"/>
 <br/>
 
-<img width="100%" src="assets/ship-it.svg"/>
+<img width="100%" src="assets/pipeline.svg"/>
 
 </div>
 
