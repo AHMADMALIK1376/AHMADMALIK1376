@@ -20,7 +20,7 @@ import os
 OUT = "assets"
 W, H = 1340, 450
 GROUND, BELT_Y, ITEM_Y = 376, 306, 288
-DUR = "24s"
+DUR = "40s"
 
 AEGEAN, CORAL, LEMON = "#0077C8", "#F88379", "#F2D24B"
 BROWN, TEAMIST, CRIMSON = "#D4A373", "#AAC832", "#D41F26"
@@ -31,10 +31,13 @@ BELTC, OUTLINE, BROWN_D = "#6E645B", "#B5A695", "#BC8A5F"
 AEG_D, GREEN_D = "#005A96", "#7E9A1E"
 SANS = "ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
 
-PERIOD = 100.0 / 6.0           # one production run = 1/6 of the loop
-ARM_A_START = 16.0
-ARM_B_START = 39.5
-RUNS = 3
+# One run is four seconds of a forty second loop. RUNS is six because each
+# aircraft lands with three crates and the arm has to empty both pallets; at
+# three runs it could only ever clear half of what was delivered.
+PERIOD = 10.0                  # one production run, as a percentage of the loop
+ARM_A_START = 9.0
+ARM_B_START = 23.0
+RUNS = 6
 # the arm cycle: dwell empty at the truck (grip closes at .11), lift at .20, arrive
 # at the belt at .50, release at .60, then swing back empty from .68
 REL = [ARM_A_START + k * PERIOD + PERIOD * 0.60 for k in range(RUNS)]
@@ -242,12 +245,12 @@ css += [
     # neither can be away while its own crate is due to be lifted.
     ".tin{animation:tin %s ease-in-out infinite}" % DUR,
     ("@keyframes tin{0%,3%{transform:translate(-340px,330px)}"
-     "12%,40%{transform:translate(20px,376px)}"
-     "50%,100%{transform:translate(-340px,330px)}}"),
+     "7%,33%{transform:translate(20px,376px)}"
+     "40%,100%{transform:translate(-340px,330px)}}"),
     ".tin2{animation:tin2 %s ease-in-out infinite}" % DUR,
-    ("@keyframes tin2{0%,42%{transform:translate(-340px,330px)}"
-     "50%,72%{transform:translate(20px,376px)}"
-     "82%,100%{transform:translate(-340px,330px)}}"),
+    ("@keyframes tin2{0%,31%{transform:translate(-340px,330px)}"
+     "37%,63%{transform:translate(20px,376px)}"
+     "71%,100%{transform:translate(-340px,330px)}}"),
 ]
 for i in range(6):
     css.append(".dp%d{animation:dp 1.8s ease-in infinite;animation-delay:-%.2fs}" % (i, i * 0.3))
@@ -257,15 +260,16 @@ css.append("@keyframes dp{0%{transform:translateY(0);opacity:0}20%{opacity:1}"
 # crates vanish off the bed as the arm takes them, and are restocked off-screen
 for i, pk in enumerate(PICKS):
     css.append(".cr%d{animation:cr%d %s steps(1,end) infinite}" % (i, i, DUR))
-    css.append("@keyframes cr%d{0%%,%.2f%%{opacity:1}%.2f%%,77%%{opacity:0}78%%,100%%{opacity:1}}"
-               % (i, pk - 0.6, pk))
+    # restocked at 92%, by which point both aircraft are away and out of frame
+    css.append("@keyframes cr%d{0%%,%.2f%%{opacity:1}%.2f%%,92%%{opacity:0}93%%,100%%{opacity:1}}"
+               % (i, pk - 0.5, pk))
 
 arm_keyframes(1, ARM_A_START)
-item_keyframes("it0", 349, 440, 0.0, 3.0)          # raw crate
-item_keyframes("it1", 496, 595, 3.6, 3.4)          # frontend
-item_keyframes("it2", 651, 750, 7.4, 3.4)          # + backend
-item_keyframes("it3", 806, 880, 11.2, 2.6)         # + database
-item_keyframes("it4", 961, 1015, 14.2, 2.3, 1.4)   # assembled website
+item_keyframes("it0", 349, 440, 0.00, 1.80)        # raw crate
+item_keyframes("it1", 496, 595, 2.16, 2.04)        # frontend
+item_keyframes("it2", 651, 750, 4.44, 2.04)        # + backend
+item_keyframes("it3", 806, 880, 6.72, 1.56)        # + database
+item_keyframes("it4", 961, 1015, 8.52, 1.38, 0.84) # assembled website
 
 
 def arm(idx, bx, shoulder_y, seg, payload):
@@ -506,7 +510,7 @@ add('<g class="it4">%s</g>' % website(0.86))
 # from REL rather than guessed: it3 finishes its run at REL+13.8 and it4 appears
 # at REL+14.2, so the clamps have to be shut across that handover or the site
 # would appear to assemble itself in mid-air.
-CLAMP_IN, CLAMP_OUT = 13.3, 15.2
+CLAMP_IN, CLAMP_OUT = 7.98, 9.12
 _cl, _cr, _rm, _wd = [], [], [], []
 for _r in REL:
     for arr, out_v, in_v in ((_cl, "translateX(0)", "translateX(30px)"),
@@ -516,9 +520,9 @@ for _r in REL:
         arr.append("{:.2f}%{{transform:{}}}".format(_r + CLAMP_IN, in_v))
         arr.append("{:.2f}%{{transform:{}}}".format(_r + CLAMP_OUT - 0.5, in_v))
         arr.append("{:.2f}%{{transform:{}}}".format(_r + CLAMP_OUT, out_v))
-    _wd.append("{:.2f}%{{opacity:0;transform:scale(.4)}}".format(_r + 13.9))
-    _wd.append("{:.2f}%{{opacity:1;transform:scale(1)}}".format(_r + 14.2))
-    _wd.append("{:.2f}%{{opacity:0;transform:scale(1.9)}}".format(_r + 15.0))
+    _wd.append("{:.2f}%{{opacity:0;transform:scale(.4)}}".format(_r + 8.34))
+    _wd.append("{:.2f}%{{opacity:1;transform:scale(1)}}".format(_r + 8.52))
+    _wd.append("{:.2f}%{{opacity:0;transform:scale(1.9)}}".format(_r + 9.00))
 for nm, arr, rest in (("clL", _cl, "translateX(0)"), ("clR", _cr, "translateX(0)"),
                       ("ram", _rm, "translateY(0)")):
     css.append("@keyframes %s{0%%{transform:%s}%s100%%{transform:%s}}"
@@ -615,15 +619,15 @@ add('<g transform="translate(1213,289)"><circle class="dpul" r="26" fill="none" 
     'stroke-width="4"/></g>' % TEAMIST)
 
 # ── inbound truck, crates depleting as they are lifted ────────────────
-# Both aircraft land with a full pallet of three. The lifted crates are the
-# ones keyed to PICKS; the remainder flies back out still aboard, which is what
-# a part-unload actually looks like.
-cargo_a = '<g class="cr0"><g transform="translate(44,-104)">%s</g></g>' % crate(0.72)
-cargo_a += '<g class="cr1"><g transform="translate(86,-104)">%s</g></g>' % crate(0.72)
-cargo_a += '<g transform="translate(128,-104)">%s</g>' % crate(0.72)
-cargo_b = '<g class="cr2"><g transform="translate(44,-104)">%s</g></g>' % crate(0.72)
-for _cx in (86, 128):
-    cargo_b += '<g transform="translate(%d,-104)">%s</g>' % (_cx, crate(0.72))
+# Both aircraft land with a full pallet of three, and both are emptied: the
+# first aircraft's crates are lifted on runs one to three, the second's on runs
+# four to six.
+cargo_a = "".join(
+    '<g class="cr%d"><g transform="translate(%d,-104)">%s</g></g>' % (i, cx, crate(0.72))
+    for i, cx in enumerate((44, 86, 128)))
+cargo_b = "".join(
+    '<g class="cr%d"><g transform="translate(%d,-104)">%s</g></g>' % (i + 3, cx, crate(0.72))
+    for i, cx in enumerate((44, 86, 128)))
 
 add(rr(26, 356, 148, 16, 4, STEEL_X))            # landing pad stays when the drone is out
 add(rr(40, 361, 24, 6, 3, LEMON)) 
