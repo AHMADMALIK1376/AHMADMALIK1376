@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 600" width="1240" height="600" role="img" aria-label="How a language model answers a question: the prompt is tokenised, attention weighs earlier tokens, the network scores every candidate word, one is sampled, and the loop repeats with that word added to the input">
-<title>How AI Works</title>
+<title>Demystifying Artificial Intelligence</title>
 <defs><pattern id="ig" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#E6DBCA"/></pattern><style>
 @keyframes fade{0%{opacity:0}}
 @keyframes glow{0%,100%{opacity:.18}50%{opacity:1}}
