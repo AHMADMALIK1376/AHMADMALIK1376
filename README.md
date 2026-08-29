@@ -72,7 +72,7 @@
 
 <br/>
 
-<img width="100%" src="assets/activity-bars.svg"/>
+<img width="100%" src="assets/activity.svg"/>
 
 </div>
 
