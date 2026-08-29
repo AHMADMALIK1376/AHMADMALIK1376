@@ -3,19 +3,19 @@
 The introduction banner.
 
 Eleven carriers fly in from the right, one letter each, and set the name. The
-rest of the panel writes itself behind them. The finished thing stands for ten
-seconds, and then a dozer comes in from the right and pushes the whole lot off
-the left edge.
+rest of the panel writes itself behind them. The finished thing stands for about
+ten seconds, and then a heavy carrier comes down, throws a net over the whole
+panel, gathers it into a bundle and lifts it out of frame.
 
-What a piece is hit is worked out from the blade's position rather than the
-machine's body, so a thing on the right goes before a thing on the left, which
-is the only way a machine travelling one way can look right. After contact a
-piece travels with the blade rather than dropping where it stood, so everything
-ends up in one heap driven off the frame, tumbled rather than tidy.
+Everything converges on one point rather than each piece going its own way,
+because that is what a net closing does to its contents. Each piece takes a
+small fixed offset around that point so the bundle has body rather than
+everything stacking on one spot, and a rotation so nothing is still sitting in
+its reading position once it is in the net.
 
 Layout note: CSS `transform` OVERRIDES a `transform=` attribute on the same
 element, so anything animated is nested inside a plain positioning <g>. That is
-also why a knocked piece gets its own wrapper: its reveal already animates a
+also why a gathered piece gets its own wrapper: its reveal already animates a
 transform, and the two cannot share an element.
 
 The existing panel is not rewritten to new coordinates. It is drawn as it was
@@ -49,10 +49,6 @@ CARD = "#FBF7F0"
 STEEL = "#B9AC97"
 ARM = "#F0C419"
 ARM_DK = "#39332B"
-# the machine, taken from the reference: bright yellow body, ochre roof,
-# blue glass, dark grey undercarriage and blade
-DOZ_Y, DOZ_YD = "#F5C518", "#D9A520"
-DOZ_GL, DOZ_DK, DOZ_MD = "#2E6B8F", "#4A4A4A", "#5F5F5F"
 SANS = "ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
@@ -82,14 +78,14 @@ FLY_Y = 70                      # the altitude the formation holds
 TILE = 30
 FALL = 74                       # how far a letter drops out of its carrier
 
-# The clearing pass. The blade leads the machine by 190px, so what a thing is
-# hit is worked out from the blade's position rather than the body's, and every
-# piece then travels left with the blade instead of dropping where it stood.
-GROUND = H - 18
-BLADE_LEAD = 190
-DOZ_FROM, DOZ_TO_X = 1500.0, -150.0
-BLADE_START, BLADE_END = DOZ_FROM - BLADE_LEAD, DOZ_TO_X - BLADE_LEAD
-DOZE_AT, DOZE_END = 84.0, 96.0
+# The lift. A heavy carrier drops a net over the finished panel, the panel
+# gathers into it, and the whole bundle goes up and out of frame.
+GX, GY = 620.0, 208.0           # where everything is drawn together
+LIFT_H = H + 300                # far enough that the bundle really leaves
+NET_HALF_W, NET_HALF_H = 570.0, 96.0
+BIG_IN, BIG_HOVER = 78.0, 83.0  # the carrier comes down
+NET_OPEN, NET_SHUT = 86.0, 92.0
+RISE_END = 98.0
 
 # One aircraft per letter, entering from the right on a stagger. Each flies to
 # its own place in the name, releases, and carries on out to the left, so the
@@ -169,71 +165,40 @@ _kn = [0]
 KNOCKS = []          # (x, y, is_letter) per piece, for offline previews
 
 
-def blade_at(t):
-    """Where the blade is at a given point in the loop."""
-    f = (t - DOZE_AT) / (DOZE_END - DOZE_AT)
-    return BLADE_START + f * (BLADE_END - BLADE_START)
+def knock(x, y, markup, gy):
+    """Wrap a piece so the net gathers it in and carries it out.
 
+    Every piece converges on the same point rather than each going its own way:
+    a net closing pulls its contents together, so they have to end up bunched.
+    Each one gets a small fixed offset around that point so the bundle has some
+    body instead of everything stacking on one spot, and a rotation so nothing
+    is still sitting in its reading position once it is in the net.
 
-def knock(x, y, markup, floor):
-    """Wrap a piece so the blade shoves it left when it reaches it.
+    `gy` is the gather height in whatever space the piece lives in, since the
+    panel is drawn shifted and the name is not.
 
-    Contact comes from the blade's own position, so a thing on the right is hit
-    before a thing on the left, which is the only way a machine travelling one
-    way can look right.
-
-    A struck piece is knocked back, then dropped onto the floor and pushed along
-    it. It does not keep the height it was written at: a heap being bulldozed
-    sits on the ground, and pieces left at their own heights read as floating
-    rather than cleared. `floor` is that ground line in whatever coordinate
-    space the piece lives in, since the panel is drawn shifted and the name is
-    not.
+    transform-box:fill-box is not optional here. On an SVG element
+    transform-origin defaults to the view-box origin, not the element, so a
+    rotated piece swings about the top-left corner of the whole banner and is
+    flung hundreds of pixels off. This makes it turn where it lies.
     """
     i = _kn[0]
     _kn[0] += 1
-    KNOCKS.append((x, y, floor == GROUND))
-    hit = DOZE_AT + (BLADE_START - x) / (BLADE_START - BLADE_END) * (DOZE_END - DOZE_AT)
-    hit = max(DOZE_AT, min(DOZE_END - 0.6, hit))
-    ang = (17, -23, 31, -12, 24, -34)[i % 6]      # fixed, so a rebuild is identical
-    settle = min(DOZE_END, hit + 2.0)
-    # the heap is a few deep rather than one flat layer
-    rest_y = floor - 14 - (i % 4) * 11 - y
-    # how far ahead of the mouldboard this piece rides, so the heap has
-    # depth instead of every piece sitting on the same line
-    lead = 34 + (i % 5) * 27
+    KNOCKS.append((x, y))
+    jx = (-84, 52, -32, 94, -112, 16, 68, -62)[i % 8]
+    jy = (-28, 14, 36, -16, 6, -38, 24, -4)[i % 8]
+    ang = (17, -23, 31, -12, 24, -34, 9, -28)[i % 8]
+    dx, dy = GX + jx - x, gy + jy - y
     kf("kn%d" % i,
-       "0%%,%.3f%%{transform:translate(0,0) rotate(0)}"
-       "%.3f%%{transform:translate(-30px,-11px) rotate(%.0fdeg)}"
-       "%.3f%%{transform:translate(%.0fpx,%.0fpx) rotate(%.0fdeg)}"
-       "%.3f%%,100%%{transform:translate(%.0fpx,%.0fpx) rotate(%.0fdeg)}"
-       % (hit, min(DOZE_END, hit + 0.7), ang * 0.3,
-          settle, blade_at(settle) - x - lead, rest_y, ang,
-          DOZE_END, BLADE_END - x - lead, rest_y, ang))
-    # transform-box:fill-box is not optional here. On an SVG element
-    # transform-origin defaults to the view-box origin, not the element, so a
-    # rotated piece swings about the top-left corner of the whole banner and
-    # is flung hundreds of pixels off. This makes it turn where it lies.
-    css.append(".kn%d{transform-box:fill-box;transform-origin:center;animation:kn%d %s linear infinite}" % (i, i, DUR))
+       "0%%,%.2f%%{transform:translate(0,0) rotate(0)}"
+       "%.2f%%{transform:translate(%.0fpx,%.0fpx) rotate(%.0fdeg) scale(.5)}"
+       "%.2f%%,100%%{transform:translate(%.0fpx,%.0fpx) rotate(%.0fdeg) scale(.5)}"
+       % (NET_OPEN, NET_SHUT, dx, dy, ang,
+          RISE_END, dx, dy - LIFT_H, ang))
+    css.append(".kn%d{transform-box:fill-box;transform-origin:center;"
+               "animation:kn%d %s cubic-bezier(.5,0,.5,1) infinite}" % (i, i, DUR))
     return '<g class="kn%d">%s</g>' % (i, markup)
-kf("rl", "0%,33%{stroke-dashoffset:100}36%,100%{stroke-dashoffset:0}")
-kf("typ", "0%,36%{width:0}46%,100%{width:" + str(LINE_W) + "px}")
-kf("tc", "0%,36%{transform:translateX(0)}46%,100%{transform:translateX("
-   + str(LINE_W) + "px)}")
-for i in range(len(SPINE)):
-    css.append(".sp%d{transform-origin:0 0;animation:sp%d %s cubic-bezier(.22,1,.36,1) infinite}"
-               % (i, i, DUR))
-    kf("sp%d" % i, "0%%,%.1f%%{transform:scaleY(0)}%.1f%%,100%%{transform:scaleY(1)}"
-       % (1 + i * 0.6, 3 + i * 0.6))
-for i in range(len(CHIPS)):
-    t = 46 + i * 1.5
-    css.append(".ch%d{animation:ch%d %s cubic-bezier(.34,1.4,.64,1) infinite}" % (i, i, DUR))
-    kf("ch%d" % i, "0%%,%.1f%%{transform:translateY(8px);opacity:0}"
-       "%.1f%%,100%%{transform:translateY(0);opacity:1}" % (t, t + 4))
-for i in range(len(FACTS)):
-    t = 38 + i * 3
-    css.append(".fa%d{animation:fa%d %s ease-out infinite}" % (i, i, DUR))
-    kf("fa%d" % i, "0%%,%.1f%%{transform:translateX(10px);opacity:0}"
-       "%.1f%%,100%%{transform:translateX(0);opacity:1}" % (t, t + 5))
+
 
 add('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" role="img" '
     'aria-label="M. Ahmad Malik, Full-Stack AI Engineer: a drone delivers the letters of the name '
@@ -280,18 +245,18 @@ add('<g transform="translate(0,%d)">' % SHIFT)
 for i, c in enumerate(SPINE):
     add(knock(72, 56 + i * 40, '<g transform="translate(72,%d)"><g class="sp%d">%s'
               "</g></g>" % (56 + i * 40, i, rr(0, 0, 5, 34, 2.5, c)),
-              GROUND - SHIFT))
+              GY - SHIFT))
 
 add(knock(LEFT, 80, '<g class="eb">' + txt(LEFT, 80, "FULL-STACK AI ENGINEER", 13, AEG_D, "800",
-                                       "start", MONO, "3.6") + "</g>", GROUND - SHIFT))
+                                       "start", MONO, "3.6") + "</g>", GY - SHIFT))
 add(knock(LEFT + 330, 164,
           '<path class="rl" pathLength="100" d="M%d,164 H%d" stroke="%s" stroke-width="1.6" '
-          'fill="none"/>' % (LEFT, LEFT + 660, RULE), GROUND - SHIFT))
+          'fill="none"/>' % (LEFT, LEFT + 660, RULE), GY - SHIFT))
 add(knock(LEFT + 180, 200,
           '<g clip-path="url(#tp)">'
           + txt(LEFT, 202, LINE, 16.5, MUTED, "400", "start", SANS, "0") + "</g>"
           + '<g transform="translate(%d,186)"><rect class="tc" width="2" height="20" rx="1" '
-            'fill="%s"/></g>' % (LEFT + 2, INK_2), GROUND - SHIFT))
+            'fill="%s"/></g>' % (LEFT + 2, INK_2), GY - SHIFT))
 
 cx = LEFT
 for i, (label, colr) in enumerate(CHIPS):
@@ -301,7 +266,7 @@ for i, (label, colr) in enumerate(CHIPS):
               '<g class="ch%d">%s%s</g>'
               % (i, rr(cx, 230, cw, 30, 15, TINTS[colr]),
                  txt(cx + cw / 2, 249, label, 11, colr, "700", "middle", MONO, "1.4")),
-              GROUND - SHIFT))
+              GY - SHIFT))
     cx += cw + 12
 
 for i, (label, val, dot) in enumerate(FACTS):
@@ -311,10 +276,10 @@ for i, (label, val, dot) in enumerate(FACTS):
         body += ci(W - 72 - 152, y + 18, 5, dot, 'class="dot"')
     body += txt(W - 72, y + 22, val, 14, INK_2, "600", "end", SANS, "0")
     add(knock(W - 150, y + 10, '<g class="fa%d">%s</g>' % (i, body),
-              GROUND - SHIFT))
+              GY - SHIFT))
 add(knock(W - 250, 156,
           '<path d="M%d,56 V256" stroke="%s" stroke-width="1.4" fill="none"/>'
-          % (W - 250, RULE), GROUND - SHIFT))
+          % (W - 250, RULE), GY - SHIFT))
 add("</g>")
 
 # ══ the letters, each dropped by its own aircraft ══════════════════════
@@ -381,52 +346,80 @@ for i, (chn, gx, cxx) in enumerate(tiles):
     css.append(".ln%d{animation:ln%d %s cubic-bezier(.4,1.5,.6,1) infinite}" % (i, i, DUR))
     lettermk.append(knock(cxx, NAME_Y, '<g class="ln%d">%s</g>'
                           % (i, txt(gx, NAME_Y, chn, NAME_SIZE, INK, "800", "start",
-                                    SANS, "0")), GROUND))
+                                    SANS, "0")), GY))
 
 for mk in lettermk:
     add(mk)
 
 
-# ══ the machine that clears it ═════════════════════════════════════════
-# Drawn about its own ground line at y=0 and facing left, so the blade leads.
-# It only exists for the length of the pass; the rest of the loop it is not in
-# the file's way at all.
-kf("doze", "0%%,%.0f%%{transform:translateX(%.0fpx)}%.0f%%,100%%{transform:translateX(%.0fpx)}"
-   % (DOZE_AT, DOZ_FROM, DOZE_END, DOZ_TO_X))
-css.append(".doze{animation:doze %s linear infinite}" % DUR)
-kf("dozv", "0%%,%.1f%%{opacity:0}%.1f%%,%.1f%%{opacity:1}%.1f%%,100%%{opacity:0}"
-   % (DOZE_AT - 0.01, DOZE_AT, DOZE_END + 0.8, DOZE_END + 1.0))
-css.append(".dozv{animation:dozv %s steps(1,end) infinite}" % DUR)
-css.append(".trk{animation:trk .5s linear infinite}")
-kf("trk", "to{transform:translateX(-16px)}")
 
-add('<g class="dozv"><g class="doze"><g transform="translate(0,%d)">' % GROUND)
-# Blade first, so the arm and the body sit over it: a vertical mouldboard with a
-# cutting foot along the bottom, exactly as on the reference.
-add("  " + rr(-186, -232, 23, 226, 3, DOZ_DK))
-add("  " + rr(-206, -26, 50, 20, 4, DOZ_DK))
-add("  " + rr(-182, -224, 7, 210, 2, DOZ_MD))
-# push arm, running from the blade back up to the hull
-add("  " + '<path d="M-168,-46 L-58,-104" stroke="%s" stroke-width="14" '
-           'stroke-linecap="round" fill="none"/>' % DOZ_DK)
-# the hydraulic block where the arm meets the hull, in the ochre of the roof
-add("  " + '<path d="M-74,-124 L-40,-104 L-52,-82 L-86,-102 Z" fill="%s"/>' % DOZ_YD)
-# undercarriage: a stadium of track with road wheels inside
-add("  " + rr(-124, -56, 244, 56, 28, DOZ_DK))
-for wx in range(-88, 96, 44):
-    add("  " + ci(wx, -28, 15, DOZ_MD))
-add("  " + rr(-108, -72, 214, 18, 5, DOZ_DK))
-# hull, with the front dropping away toward the blade
-add("  " + '<path d="M-62,-70 L-62,-118 L-40,-138 L104,-138 L104,-70 Z" fill="%s"/>' % DOZ_Y)
-add("  " + rr(-56, -92, 152, 11, 4, DOZ_YD))
-# cab and its overhanging roof
-add("  " + rr(26, -206, 92, 70, 5, DOZ_Y))
-add("  " + rr(18, -220, 108, 17, 4, DOZ_YD))
-add("  " + '<path d="M40,-196 L112,-196 L112,-150 L40,-150 Z" fill="%s"/>' % DOZ_GL)
-# exhaust stack, standing clear of the cab
-add("  " + rr(-6, -214, 14, 82, 2, DOZ_DK))
-add("  " + rr(-11, -226, 24, 14, 3, DOZ_DK))
-add("</g></g></g>")
+# ══ the heavy carrier and its net ══════════════════════════════════════
+# The carrier drops in above the finished panel, the net falls open across the
+# full width of the type, closes as the panel gathers into it, and the whole
+# bundle goes up together. Net and carrier ride one transform each so they
+# cannot drift apart, and the net's scale is what reads as open or shut.
+kf("bigfly",
+   "0%%,%.0f%%{transform:translateY(-300px)}"
+   "%.0f%%,%.0f%%{transform:translateY(0)}"
+   "%.0f%%,100%%{transform:translateY(-%dpx)}"
+   % (BIG_IN, BIG_HOVER, NET_SHUT, RISE_END, LIFT_H))
+css.append(".bigfly{animation:bigfly %s cubic-bezier(.4,0,.4,1) infinite}" % DUR)
+kf("bigv", "0%%,%.2f%%{opacity:0}%.2f%%,%.2f%%{opacity:1}%.2f%%,100%%{opacity:0}"
+   % (BIG_IN - 0.01, BIG_IN, RISE_END, RISE_END + 1.0))
+css.append(".bigv{animation:bigv %s steps(1,end) infinite}" % DUR)
+# furled on the way in, thrown wide over the panel, then drawn shut on the bundle
+kf("netopen",
+   "0%%,%.0f%%{transform:scale(.16,.30)}"
+   "%.0f%%{transform:scale(1,1)}"
+   "%.0f%%,100%%{transform:scale(.44,.70)}"
+   % (BIG_HOVER, NET_OPEN, NET_SHUT))
+css.append(".netopen{transform-box:fill-box;transform-origin:center top;"
+           "animation:netopen %s cubic-bezier(.4,0,.4,1) infinite}" % DUR)
+
+add('<g class="bigv"><g class="bigfly">')
+add('  <g transform="translate(%.0f,%.0f)">' % (GX, 44))
+# four rotors on two booms, the far pair drawn smaller so it reads as depth
+for bx, scl in ((-176, .82), (-92, 1.0), (92, 1.0), (176, .82)):
+    add("    " + rr(bx - 4, -20, 8, 16, 3, STEEL))
+    add('    <ellipse cx="%d" cy="-21" rx="%.0f" ry="%.0f" fill="%s" opacity=".18"/>'
+        % (bx, 46 * scl, 5 * scl, INK))
+    add('    <g transform="translate(%d,-21)"><g class="rot" style="animation-delay:-%.2fs">%s'
+        "</g></g>" % (bx, abs(bx) * 0.002, rr(-46 * scl, -2.4, 92 * scl, 4.8, 2.4, INK)))
+add("    " + rr(-190, -6, 380, 7, 3.5, ARM_DK))
+add("    " + rr(-70, -34, 140, 42, 12, AEGEAN, 'stroke="%s" stroke-width="2"' % ARM_DK))
+add("    " + rr(24, -27, 38, 20, 5, CARD))
+add("    " + rr(-58, -27, 40, 9, 4, ARM))
+add("    " + ci(-62, -12, 4, CORAL, 'class="dot"'))
+add("    " + rr(-24, 8, 48, 10, 4, ARM_DK))
+add("  </g>")
+
+# the net: a bag hung on four lines, drawn open and scaled shut
+add('  <g class="netopen"><g transform="translate(%.0f,%.0f)">' % (GX, GY))
+for sx in (-1, 1):
+    add('    <path d="M%.0f,%.0f L%.0f,%.0f" stroke="%s" stroke-width="2.2" fill="none"/>'
+        % (sx * 66, -164, sx * NET_HALF_W, -NET_HALF_H, ARM_DK))
+    add('    <path d="M%.0f,%.0f L%.0f,%.0f" stroke="%s" stroke-width="1.8" fill="none"/>'
+        % (sx * 30, -164, sx * NET_HALF_W * .45, -NET_HALF_H, ARM_DK))
+add('    <path d="M%.0f,%.0f Q0,%.0f %.0f,%.0f" fill="none" stroke="%s" stroke-width="3" '
+    'stroke-linecap="round"/>'
+    % (-NET_HALF_W, -NET_HALF_H, NET_HALF_H * 2.5, NET_HALF_W, -NET_HALF_H, ARM_DK))
+add('    <path d="M%.0f,%.0f H%.0f" stroke="%s" stroke-width="3" stroke-linecap="round"/>'
+    % (-NET_HALF_W, -NET_HALF_H, NET_HALF_W, ARM_DK))
+# the mesh, converging toward the bottom of the bag the way a net does
+for k in range(-9, 10):
+    fx = k / 9.0
+    add('    <path d="M%.0f,%.0f Q%.0f,%.0f %.0f,%.0f" fill="none" stroke="%s" '
+        'stroke-width="1.3" opacity=".65"/>'
+        % (fx * NET_HALF_W, -NET_HALF_H, fx * NET_HALF_W * .6, NET_HALF_H * 1.1,
+           fx * NET_HALF_W * .22, NET_HALF_H * 1.55, ARM_DK))
+for lvl in (0.34, 0.72, 1.06):
+    add('    <path d="M%.0f,%.0f Q0,%.0f %.0f,%.0f" fill="none" stroke="%s" '
+        'stroke-width="1.3" opacity=".65"/>'
+        % (-NET_HALF_W * (1 - lvl * .42), -NET_HALF_H + lvl * NET_HALF_H * 1.5,
+           NET_HALF_H * (1.1 + lvl),
+           NET_HALF_W * (1 - lvl * .42), -NET_HALF_H + lvl * NET_HALF_H * 1.5, ARM_DK))
+add("  </g></g>")
+add("</g></g>")
 
 add("</svg>")
 

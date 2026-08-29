@@ -10,71 +10,44 @@
 .dot{animation:dot 2.2s ease-in-out infinite}
 @keyframes dot{0%,100%{opacity:1}50%{opacity:.35}}
 @keyframes eb{0%,1%{opacity:0}4%,100%{opacity:1}}
-@keyframes rl{0%,33%{stroke-dashoffset:100}36%,100%{stroke-dashoffset:0}}
-@keyframes typ{0%,36%{width:0}46%,100%{width:560px}}
-@keyframes tc{0%,36%{transform:translateX(0)}46%,100%{transform:translateX(560px)}}
-.sp0{transform-origin:0 0;animation:sp0 32s cubic-bezier(.22,1,.36,1) infinite}
-@keyframes sp0{0%,1.0%{transform:scaleY(0)}3.0%,100%{transform:scaleY(1)}}
-.sp1{transform-origin:0 0;animation:sp1 32s cubic-bezier(.22,1,.36,1) infinite}
-@keyframes sp1{0%,1.6%{transform:scaleY(0)}3.6%,100%{transform:scaleY(1)}}
-.sp2{transform-origin:0 0;animation:sp2 32s cubic-bezier(.22,1,.36,1) infinite}
-@keyframes sp2{0%,2.2%{transform:scaleY(0)}4.2%,100%{transform:scaleY(1)}}
-.sp3{transform-origin:0 0;animation:sp3 32s cubic-bezier(.22,1,.36,1) infinite}
-@keyframes sp3{0%,2.8%{transform:scaleY(0)}4.8%,100%{transform:scaleY(1)}}
-.sp4{transform-origin:0 0;animation:sp4 32s cubic-bezier(.22,1,.36,1) infinite}
-@keyframes sp4{0%,3.4%{transform:scaleY(0)}5.4%,100%{transform:scaleY(1)}}
-.ch0{animation:ch0 32s cubic-bezier(.34,1.4,.64,1) infinite}
-@keyframes ch0{0%,46.0%{transform:translateY(8px);opacity:0}50.0%,100%{transform:translateY(0);opacity:1}}
-.ch1{animation:ch1 32s cubic-bezier(.34,1.4,.64,1) infinite}
-@keyframes ch1{0%,47.5%{transform:translateY(8px);opacity:0}51.5%,100%{transform:translateY(0);opacity:1}}
-.ch2{animation:ch2 32s cubic-bezier(.34,1.4,.64,1) infinite}
-@keyframes ch2{0%,49.0%{transform:translateY(8px);opacity:0}53.0%,100%{transform:translateY(0);opacity:1}}
-.ch3{animation:ch3 32s cubic-bezier(.34,1.4,.64,1) infinite}
-@keyframes ch3{0%,50.5%{transform:translateY(8px);opacity:0}54.5%,100%{transform:translateY(0);opacity:1}}
-.fa0{animation:fa0 32s ease-out infinite}
-@keyframes fa0{0%,38.0%{transform:translateX(10px);opacity:0}43.0%,100%{transform:translateX(0);opacity:1}}
-.fa1{animation:fa1 32s ease-out infinite}
-@keyframes fa1{0%,41.0%{transform:translateX(10px);opacity:0}46.0%,100%{transform:translateX(0);opacity:1}}
-.fa2{animation:fa2 32s ease-out infinite}
-@keyframes fa2{0%,44.0%{transform:translateX(10px);opacity:0}49.0%,100%{transform:translateX(0);opacity:1}}
 .pl0{animation:pl0 7s linear infinite;animation-delay:-0s}
 @keyframes pl0{0%{transform:translateX(120px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(300px);opacity:0}}
 .pl1{animation:pl1 8s linear infinite;animation-delay:-3s}
 @keyframes pl1{0%{transform:translateX(540px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(700px);opacity:0}}
 .pl2{animation:pl2 9s linear infinite;animation-delay:-6s}
 @keyframes pl2{0%{transform:translateX(1000px);opacity:0}15%,80%{opacity:1}100%{transform:translateX(1120px);opacity:0}}
-@keyframes kn0{0%,93.004%{transform:translate(0,0) rotate(0)}93.704%{transform:translate(-30px,-11px) rotate(5deg)}95.004%{transform:translate(-309px,224px) rotate(17deg)}96.000%,100%{transform:translate(-446px,224px) rotate(17deg)}}
-.kn0{transform-box:fill-box;transform-origin:center;animation:kn0 32s linear infinite}
-@keyframes kn1{0%,93.004%{transform:translate(0,0) rotate(0)}93.704%{transform:translate(-30px,-11px) rotate(-7deg)}95.004%{transform:translate(-336px,173px) rotate(-23deg)}96.000%,100%{transform:translate(-473px,173px) rotate(-23deg)}}
-.kn1{transform-box:fill-box;transform-origin:center;animation:kn1 32s linear infinite}
-@keyframes kn2{0%,93.004%{transform:translate(0,0) rotate(0)}93.704%{transform:translate(-30px,-11px) rotate(9deg)}95.004%{transform:translate(-363px,122px) rotate(31deg)}96.000%,100%{transform:translate(-500px,122px) rotate(31deg)}}
-.kn2{transform-box:fill-box;transform-origin:center;animation:kn2 32s linear infinite}
-@keyframes kn3{0%,93.004%{transform:translate(0,0) rotate(0)}93.704%{transform:translate(-30px,-11px) rotate(-4deg)}95.004%{transform:translate(-390px,71px) rotate(-12deg)}96.000%,100%{transform:translate(-527px,71px) rotate(-12deg)}}
-.kn3{transform-box:fill-box;transform-origin:center;animation:kn3 32s linear infinite}
-@keyframes kn4{0%,93.004%{transform:translate(0,0) rotate(0)}93.704%{transform:translate(-30px,-11px) rotate(7deg)}95.004%{transform:translate(-417px,64px) rotate(24deg)}96.000%,100%{transform:translate(-554px,64px) rotate(24deg)}}
-.kn4{transform-box:fill-box;transform-origin:center;animation:kn4 32s linear infinite}
-@keyframes kn5{0%,92.771%{transform:translate(0,0) rotate(0)}93.471%{transform:translate(-30px,-11px) rotate(-10deg)}94.771%{transform:translate(-309px,189px) rotate(-34deg)}96.000%,100%{transform:translate(-478px,189px) rotate(-34deg)}}
-.kn5{transform-box:fill-box;transform-origin:center;animation:kn5 32s linear infinite}
-@keyframes kn6{0%,90.371%{transform:translate(0,0) rotate(0)}91.071%{transform:translate(-30px,-11px) rotate(5deg)}92.371%{transform:translate(-336px,94px) rotate(17deg)}96.000%,100%{transform:translate(-835px,94px) rotate(17deg)}}
-.kn6{transform-box:fill-box;transform-origin:center;animation:kn6 32s linear infinite}
-@keyframes kn7{0%,91.462%{transform:translate(0,0) rotate(0)}92.162%{transform:translate(-30px,-11px) rotate(-7deg)}93.462%{transform:translate(-363px,47px) rotate(-23deg)}96.000%,100%{transform:translate(-712px,47px) rotate(-23deg)}}
-.kn7{transform-box:fill-box;transform-origin:center;animation:kn7 32s linear infinite}
-@keyframes kn8{0%,92.264%{transform:translate(0,0) rotate(0)}92.964%{transform:translate(-30px,-11px) rotate(9deg)}94.264%{transform:translate(-390px,35px) rotate(31deg)}96.000%,100%{transform:translate(-629px,35px) rotate(31deg)}}
-.kn8{transform-box:fill-box;transform-origin:center;animation:kn8 32s linear infinite}
-@keyframes kn9{0%,91.162%{transform:translate(0,0) rotate(0)}91.862%{transform:translate(-30px,-11px) rotate(-4deg)}93.162%{transform:translate(-417px,24px) rotate(-12deg)}96.000%,100%{transform:translate(-807px,24px) rotate(-12deg)}}
-.kn9{transform-box:fill-box;transform-origin:center;animation:kn9 32s linear infinite}
-@keyframes kn10{0%,89.980%{transform:translate(0,0) rotate(0)}90.680%{transform:translate(-30px,-11px) rotate(7deg)}91.980%{transform:translate(-309px,13px) rotate(24deg)}96.000%,100%{transform:translate(-862px,13px) rotate(24deg)}}
-.kn10{transform-box:fill-box;transform-origin:center;animation:kn10 32s linear infinite}
-@keyframes kn11{0%,88.799%{transform:translate(0,0) rotate(0)}89.499%{transform:translate(-30px,-11px) rotate(-10deg)}90.799%{transform:translate(-336px,2px) rotate(-34deg)}96.000%,100%{transform:translate(-1051px,2px) rotate(-34deg)}}
-.kn11{transform-box:fill-box;transform-origin:center;animation:kn11 32s linear infinite}
-@keyframes kn12{0%,85.600%{transform:translate(0,0) rotate(0)}86.300%{transform:translate(-30px,-11px) rotate(5deg)}87.600%{transform:translate(-363px,182px) rotate(17deg)}96.000%,100%{transform:translate(-1518px,182px) rotate(17deg)}}
-.kn12{transform-box:fill-box;transform-origin:center;animation:kn12 32s linear infinite}
-@keyframes kn13{0%,85.600%{transform:translate(0,0) rotate(0)}86.300%{transform:translate(-30px,-11px) rotate(-7deg)}87.600%{transform:translate(-390px,109px) rotate(-23deg)}96.000%,100%{transform:translate(-1545px,109px) rotate(-23deg)}}
-.kn13{transform-box:fill-box;transform-origin:center;animation:kn13 32s linear infinite}
-@keyframes kn14{0%,85.600%{transform:translate(0,0) rotate(0)}86.300%{transform:translate(-30px,-11px) rotate(9deg)}87.600%{transform:translate(-417px,36px) rotate(31deg)}96.000%,100%{transform:translate(-1572px,36px) rotate(31deg)}}
-.kn14{transform-box:fill-box;transform-origin:center;animation:kn14 32s linear infinite}
-@keyframes kn15{0%,86.327%{transform:translate(0,0) rotate(0)}87.027%{transform:translate(-30px,-11px) rotate(-4deg)}88.327%{transform:translate(-309px,91px) rotate(-12deg)}96.000%,100%{transform:translate(-1364px,91px) rotate(-12deg)}}
-.kn15{transform-box:fill-box;transform-origin:center;animation:kn15 32s linear infinite}
+@keyframes kn0{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(464px,62px) rotate(17deg) scale(.5)}98.00%,100%{transform:translate(464px,-612px) rotate(17deg) scale(.5)}}
+.kn0{transform-box:fill-box;transform-origin:center;animation:kn0 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn1{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(600px,64px) rotate(-23deg) scale(.5)}98.00%,100%{transform:translate(600px,-610px) rotate(-23deg) scale(.5)}}
+.kn1{transform-box:fill-box;transform-origin:center;animation:kn1 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn2{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(516px,46px) rotate(31deg) scale(.5)}98.00%,100%{transform:translate(516px,-628px) rotate(31deg) scale(.5)}}
+.kn2{transform-box:fill-box;transform-origin:center;animation:kn2 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn3{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(642px,-46px) rotate(-12deg) scale(.5)}98.00%,100%{transform:translate(642px,-720px) rotate(-12deg) scale(.5)}}
+.kn3{transform-box:fill-box;transform-origin:center;animation:kn3 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn4{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(436px,-64px) rotate(24deg) scale(.5)}98.00%,100%{transform:translate(436px,-738px) rotate(24deg) scale(.5)}}
+.kn4{transform-box:fill-box;transform-origin:center;animation:kn4 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn5{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(532px,28px) rotate(-34deg) scale(.5)}98.00%,100%{transform:translate(532px,-646px) rotate(-34deg) scale(.5)}}
+.kn5{transform-box:fill-box;transform-origin:center;animation:kn5 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn6{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(254px,6px) rotate(9deg) scale(.5)}98.00%,100%{transform:translate(254px,-668px) rotate(9deg) scale(.5)}}
+.kn6{transform-box:fill-box;transform-origin:center;animation:kn6 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn7{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(274px,-58px) rotate(-28deg) scale(.5)}98.00%,100%{transform:translate(274px,-732px) rotate(-28deg) scale(.5)}}
+.kn7{transform-box:fill-box;transform-origin:center;animation:kn7 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn8{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(362px,-127px) rotate(17deg) scale(.5)}98.00%,100%{transform:translate(362px,-801px) rotate(17deg) scale(.5)}}
+.kn8{transform-box:fill-box;transform-origin:center;animation:kn8 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn9{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(347px,-85px) rotate(-23deg) scale(.5)}98.00%,100%{transform:translate(347px,-759px) rotate(-23deg) scale(.5)}}
+.kn9{transform-box:fill-box;transform-origin:center;animation:kn9 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn10{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(100px,-63px) rotate(31deg) scale(.5)}98.00%,100%{transform:translate(100px,-737px) rotate(31deg) scale(.5)}}
+.kn10{transform-box:fill-box;transform-origin:center;animation:kn10 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn11{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(64px,-115px) rotate(-12deg) scale(.5)}98.00%,100%{transform:translate(64px,-789px) rotate(-12deg) scale(.5)}}
+.kn11{transform-box:fill-box;transform-origin:center;animation:kn11 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn12{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(-582px,54px) rotate(24deg) scale(.5)}98.00%,100%{transform:translate(-582px,-620px) rotate(24deg) scale(.5)}}
+.kn12{transform-box:fill-box;transform-origin:center;animation:kn12 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn13{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(-454px,-52px) rotate(-34deg) scale(.5)}98.00%,100%{transform:translate(-454px,-726px) rotate(-34deg) scale(.5)}}
+.kn13{transform-box:fill-box;transform-origin:center;animation:kn13 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn14{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(-402px,-52px) rotate(9deg) scale(.5)}98.00%,100%{transform:translate(-402px,-726px) rotate(9deg) scale(.5)}}
+.kn14{transform-box:fill-box;transform-origin:center;animation:kn14 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes kn15{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(-432px,-14px) rotate(-28deg) scale(.5)}98.00%,100%{transform:translate(-432px,-688px) rotate(-28deg) scale(.5)}}
+.kn15{transform-box:fill-box;transform-origin:center;animation:kn15 32s cubic-bezier(.5,0,.5,1) infinite}
 .rot{transform-origin:0 0;animation:rot .24s linear infinite}
 @keyframes rot{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.12)}}
 .bob{animation:bob 2.6s ease-in-out infinite}
@@ -87,8 +60,8 @@
 .tv0{animation:tv0 32s steps(1,end) infinite}
 @keyframes ln0{0%,9.890%{opacity:0;transform:translateY(-74px)}9.900%{opacity:1;transform:translateY(-74px)}11.000%,100%{opacity:1;transform:translateY(0)}}
 .ln0{animation:ln0 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn16{0%,92.513%{transform:translate(0,0) rotate(0)}93.213%{transform:translate(-30px,-11px) rotate(7deg)}94.513%{transform:translate(-336px,138px) rotate(24deg)}96.000%,100%{transform:translate(-540px,138px) rotate(24deg)}}
-.kn16{transform-box:fill-box;transform-origin:center;animation:kn16 32s linear infinite}
+@keyframes kn16{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(397px,-24px) rotate(17deg) scale(.5)}98.00%,100%{transform:translate(397px,-698px) rotate(17deg) scale(.5)}}
+.kn16{transform-box:fill-box;transform-origin:center;animation:kn16 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl1{0%,4.200%{transform:translateX(1360px)}11.200%,13.000%{transform:translateX(200.6px)}18.000%,100%{transform:translateX(-190px)}}
 .fl1{animation:fl1 32s ease-in-out infinite}
 @keyframes fv1{0%,4.190%{opacity:0}4.200%,17.600%{opacity:1}18.000%,100%{opacity:0}}
@@ -97,8 +70,8 @@
 .tv1{animation:tv1 32s steps(1,end) infinite}
 @keyframes ln1{0%,12.090%{opacity:0;transform:translateY(-74px)}12.100%{opacity:1;transform:translateY(-74px)}13.200%,100%{opacity:1;transform:translateY(0)}}
 .ln1{animation:ln1 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn17{0%,92.069%{transform:translate(0,0) rotate(0)}92.769%{transform:translate(-30px,-11px) rotate(-10deg)}94.069%{transform:translate(-363px,127px) rotate(-34deg)}96.000%,100%{transform:translate(-629px,127px) rotate(-34deg)}}
-.kn17{transform-box:fill-box;transform-origin:center;animation:kn17 32s linear infinite}
+@keyframes kn17{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(471px,18px) rotate(-23deg) scale(.5)}98.00%,100%{transform:translate(471px,-656px) rotate(-23deg) scale(.5)}}
+.kn17{transform-box:fill-box;transform-origin:center;animation:kn17 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl2{0%,6.400%{transform:translateX(1360px)}13.400%,15.200%{transform:translateX(247.4px)}20.200%,100%{transform:translateX(-190px)}}
 .fl2{animation:fl2 32s ease-in-out infinite}
 @keyframes fv2{0%,6.390%{opacity:0}6.400%,19.800%{opacity:1}20.200%,100%{opacity:0}}
@@ -107,8 +80,8 @@
 .tv2{animation:tv2 32s steps(1,end) infinite}
 @keyframes ln2{0%,14.290%{opacity:0;transform:translateY(-74px)}14.300%{opacity:1;transform:translateY(-74px)}15.400%,100%{opacity:1;transform:translateY(0)}}
 .ln2{animation:ln2 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn18{0%,91.728%{transform:translate(0,0) rotate(0)}92.428%{transform:translate(-30px,-11px) rotate(5deg)}93.728%{transform:translate(-390px,116px) rotate(17deg)}96.000%,100%{transform:translate(-702px,116px) rotate(17deg)}}
-.kn18{transform-box:fill-box;transform-origin:center;animation:kn18 32s linear infinite}
+@keyframes kn18{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(341px,40px) rotate(31deg) scale(.5)}98.00%,100%{transform:translate(341px,-634px) rotate(31deg) scale(.5)}}
+.kn18{transform-box:fill-box;transform-origin:center;animation:kn18 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl3{0%,8.600%{transform:translateX(1360px)}15.600%,17.400%{transform:translateX(298.8px)}22.400%,100%{transform:translateX(-190px)}}
 .fl3{animation:fl3 32s ease-in-out infinite}
 @keyframes fv3{0%,8.590%{opacity:0}8.600%,22.000%{opacity:1}22.400%,100%{opacity:0}}
@@ -117,8 +90,8 @@
 .tv3{animation:tv3 32s steps(1,end) infinite}
 @keyframes ln3{0%,16.490%{opacity:0;transform:translateY(-74px)}16.500%{opacity:1;transform:translateY(-74px)}17.600%,100%{opacity:1;transform:translateY(0)}}
 .ln3{animation:ln3 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn19{0%,91.354%{transform:translate(0,0) rotate(0)}92.054%{transform:translate(-30px,-11px) rotate(-7deg)}93.354%{transform:translate(-417px,105px) rotate(-23deg)}96.000%,100%{transform:translate(-781px,105px) rotate(-23deg)}}
-.kn19{transform-box:fill-box;transform-origin:center;animation:kn19 32s linear infinite}
+@keyframes kn19{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(415px,-12px) rotate(-12deg) scale(.5)}98.00%,100%{transform:translate(415px,-686px) rotate(-12deg) scale(.5)}}
+.kn19{transform-box:fill-box;transform-origin:center;animation:kn19 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl4{0%,10.800%{transform:translateX(1360px)}17.800%,19.600%{transform:translateX(348.5px)}24.600%,100%{transform:translateX(-190px)}}
 .fl4{animation:fl4 32s ease-in-out infinite}
 @keyframes fv4{0%,10.790%{opacity:0}10.800%,24.200%{opacity:1}24.600%,100%{opacity:0}}
@@ -127,8 +100,8 @@
 .tv4{animation:tv4 32s steps(1,end) infinite}
 @keyframes ln4{0%,18.690%{opacity:0;transform:translateY(-74px)}18.700%{opacity:1;transform:translateY(-74px)}19.800%,100%{opacity:1;transform:translateY(0)}}
 .ln4{animation:ln4 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn20{0%,90.993%{transform:translate(0,0) rotate(0)}91.693%{transform:translate(-30px,-11px) rotate(9deg)}92.993%{transform:translate(-309px,138px) rotate(31deg)}96.000%,100%{transform:translate(-722px,138px) rotate(31deg)}}
-.kn20{transform-box:fill-box;transform-origin:center;animation:kn20 32s linear infinite}
+@keyframes kn20{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(160px,10px) rotate(24deg) scale(.5)}98.00%,100%{transform:translate(160px,-664px) rotate(24deg) scale(.5)}}
+.kn20{transform-box:fill-box;transform-origin:center;animation:kn20 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl5{0%,13.000%{transform:translateX(1360px)}20.000%,21.800%{transform:translateX(394.8px)}26.800%,100%{transform:translateX(-190px)}}
 .fl5{animation:fl5 32s ease-in-out infinite}
 @keyframes fv5{0%,12.990%{opacity:0}13.000%,26.400%{opacity:1}26.800%,100%{opacity:0}}
@@ -137,8 +110,8 @@
 .tv5{animation:tv5 32s steps(1,end) infinite}
 @keyframes ln5{0%,20.890%{opacity:0;transform:translateY(-74px)}20.900%{opacity:1;transform:translateY(-74px)}22.000%,100%{opacity:1;transform:translateY(0)}}
 .ln5{animation:ln5 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn21{0%,90.656%{transform:translate(0,0) rotate(0)}91.356%{transform:translate(-30px,-11px) rotate(-4deg)}92.656%{transform:translate(-336px,127px) rotate(-12deg)}96.000%,100%{transform:translate(-796px,127px) rotate(-12deg)}}
-.kn21{transform-box:fill-box;transform-origin:center;animation:kn21 32s linear infinite}
+@keyframes kn21{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(241px,-34px) rotate(-34deg) scale(.5)}98.00%,100%{transform:translate(241px,-708px) rotate(-34deg) scale(.5)}}
+.kn21{transform-box:fill-box;transform-origin:center;animation:kn21 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl6{0%,15.200%{transform:translateX(1360px)}22.200%,24.000%{transform:translateX(468.4px)}29.000%,100%{transform:translateX(-190px)}}
 .fl6{animation:fl6 32s ease-in-out infinite}
 @keyframes fv6{0%,15.190%{opacity:0}15.200%,28.600%{opacity:1}29.000%,100%{opacity:0}}
@@ -147,8 +120,8 @@
 .tv6{animation:tv6 32s steps(1,end) infinite}
 @keyframes ln6{0%,23.090%{opacity:0;transform:translateY(-74px)}23.100%{opacity:1;transform:translateY(-74px)}24.200%,100%{opacity:1;transform:translateY(0)}}
 .ln6{animation:ln6 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn22{0%,90.121%{transform:translate(0,0) rotate(0)}90.821%{transform:translate(-30px,-11px) rotate(7deg)}92.121%{transform:translate(-363px,116px) rotate(24deg)}96.000%,100%{transform:translate(-896px,116px) rotate(24deg)}}
-.kn22{transform-box:fill-box;transform-origin:center;animation:kn22 32s linear infinite}
+@keyframes kn22{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(220px,28px) rotate(9deg) scale(.5)}98.00%,100%{transform:translate(220px,-646px) rotate(9deg) scale(.5)}}
+.kn22{transform-box:fill-box;transform-origin:center;animation:kn22 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl7{0%,17.400%{transform:translateX(1360px)}24.400%,26.200%{transform:translateX(518.1px)}31.200%,100%{transform:translateX(-190px)}}
 .fl7{animation:fl7 32s ease-in-out infinite}
 @keyframes fv7{0%,17.390%{opacity:0}17.400%,30.800%{opacity:1}31.200%,100%{opacity:0}}
@@ -157,8 +130,8 @@
 .tv7{animation:tv7 32s steps(1,end) infinite}
 @keyframes ln7{0%,25.290%{opacity:0;transform:translateY(-74px)}25.300%{opacity:1;transform:translateY(-74px)}26.400%,100%{opacity:1;transform:translateY(0)}}
 .ln7{animation:ln7 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn23{0%,89.759%{transform:translate(0,0) rotate(0)}90.459%{transform:translate(-30px,-11px) rotate(-10deg)}91.759%{transform:translate(-390px,105px) rotate(-34deg)}96.000%,100%{transform:translate(-973px,105px) rotate(-34deg)}}
-.kn23{transform-box:fill-box;transform-origin:center;animation:kn23 32s linear infinite}
+@keyframes kn23{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(40px,0px) rotate(-28deg) scale(.5)}98.00%,100%{transform:translate(40px,-674px) rotate(-28deg) scale(.5)}}
+.kn23{transform-box:fill-box;transform-origin:center;animation:kn23 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl8{0%,19.600%{transform:translateX(1360px)}26.600%,28.400%{transform:translateX(561.0px)}33.400%,100%{transform:translateX(-190px)}}
 .fl8{animation:fl8 32s ease-in-out infinite}
 @keyframes fv8{0%,19.590%{opacity:0}19.600%,33.000%{opacity:1}33.400%,100%{opacity:0}}
@@ -167,8 +140,8 @@
 .tv8{animation:tv8 32s steps(1,end) infinite}
 @keyframes ln8{0%,27.490%{opacity:0;transform:translateY(-74px)}27.500%{opacity:1;transform:translateY(-74px)}28.600%,100%{opacity:1;transform:translateY(0)}}
 .ln8{animation:ln8 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn24{0%,89.447%{transform:translate(0,0) rotate(0)}90.147%{transform:translate(-30px,-11px) rotate(5deg)}91.447%{transform:translate(-417px,138px) rotate(17deg)}96.000%,100%{transform:translate(-1043px,138px) rotate(17deg)}}
-.kn24{transform-box:fill-box;transform-origin:center;animation:kn24 32s linear infinite}
+@keyframes kn24{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(-25px,-24px) rotate(17deg) scale(.5)}98.00%,100%{transform:translate(-25px,-698px) rotate(17deg) scale(.5)}}
+.kn24{transform-box:fill-box;transform-origin:center;animation:kn24 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl9{0%,21.800%{transform:translateX(1360px)}28.800%,30.600%{transform:translateX(593.4px)}35.600%,100%{transform:translateX(-190px)}}
 .fl9{animation:fl9 32s ease-in-out infinite}
 @keyframes fv9{0%,21.790%{opacity:0}21.800%,35.200%{opacity:1}35.600%,100%{opacity:0}}
@@ -177,8 +150,8 @@
 .tv9{animation:tv9 32s steps(1,end) infinite}
 @keyframes ln9{0%,29.690%{opacity:0;transform:translateY(-74px)}29.700%{opacity:1;transform:translateY(-74px)}30.800%,100%{opacity:1;transform:translateY(0)}}
 .ln9{animation:ln9 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn25{0%,89.212%{transform:translate(0,0) rotate(0)}89.912%{transform:translate(-30px,-11px) rotate(-7deg)}91.212%{transform:translate(-309px,127px) rotate(-23deg)}96.000%,100%{transform:translate(-967px,127px) rotate(-23deg)}}
-.kn25{transform-box:fill-box;transform-origin:center;animation:kn25 32s linear infinite}
+@keyframes kn25{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(79px,18px) rotate(-23deg) scale(.5)}98.00%,100%{transform:translate(79px,-656px) rotate(-23deg) scale(.5)}}
+.kn25{transform-box:fill-box;transform-origin:center;animation:kn25 32s cubic-bezier(.5,0,.5,1) infinite}
 @keyframes fl10{0%,24.000%{transform:translateX(1360px)}31.000%,32.800%{transform:translateX(628.5px)}37.800%,100%{transform:translateX(-190px)}}
 .fl10{animation:fl10 32s ease-in-out infinite}
 @keyframes fv10{0%,23.990%{opacity:0}24.000%,37.400%{opacity:1}37.800%,100%{opacity:0}}
@@ -187,14 +160,14 @@
 .tv10{animation:tv10 32s steps(1,end) infinite}
 @keyframes ln10{0%,31.890%{opacity:0;transform:translateY(-74px)}31.900%{opacity:1;transform:translateY(-74px)}33.000%,100%{opacity:1;transform:translateY(0)}}
 .ln10{animation:ln10 32s cubic-bezier(.4,1.5,.6,1) infinite}
-@keyframes kn26{0%,88.957%{transform:translate(0,0) rotate(0)}89.657%{transform:translate(-30px,-11px) rotate(9deg)}90.957%{transform:translate(-336px,116px) rotate(31deg)}96.000%,100%{transform:translate(-1029px,116px) rotate(31deg)}}
-.kn26{transform-box:fill-box;transform-origin:center;animation:kn26 32s linear infinite}
-@keyframes doze{0%,84%{transform:translateX(1500px)}96%,100%{transform:translateX(-150px)}}
-.doze{animation:doze 32s linear infinite}
-@keyframes dozv{0%,84.0%{opacity:0}84.0%,96.8%{opacity:1}97.0%,100%{opacity:0}}
-.dozv{animation:dozv 32s steps(1,end) infinite}
-.trk{animation:trk .5s linear infinite}
-@keyframes trk{to{transform:translateX(-16px)}}
+@keyframes kn26{0%,86.00%{transform:translate(0,0) rotate(0)}92.00%{transform:translate(-40px,40px) rotate(31deg) scale(.5)}98.00%,100%{transform:translate(-40px,-634px) rotate(31deg) scale(.5)}}
+.kn26{transform-box:fill-box;transform-origin:center;animation:kn26 32s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes bigfly{0%,78%{transform:translateY(-300px)}83%,92%{transform:translateY(0)}98%,100%{transform:translateY(-674px)}}
+.bigfly{animation:bigfly 32s cubic-bezier(.4,0,.4,1) infinite}
+@keyframes bigv{0%,77.99%{opacity:0}78.00%,98.00%{opacity:1}99.00%,100%{opacity:0}}
+.bigv{animation:bigv 32s steps(1,end) infinite}
+@keyframes netopen{0%,83%{transform:scale(.16,.30)}86%{transform:scale(1,1)}92%,100%{transform:scale(.44,.70)}}
+.netopen{transform-box:fill-box;transform-origin:center top;animation:netopen 32s cubic-bezier(.4,0,.4,1) infinite}
 </style></defs>
 <rect x="0" y="0" width="1240" height="374" rx="0" fill="#F2EDE6"/>
 <rect x="0" y="0" width="1240" height="374" rx="0" fill="url(#dg)"/>
@@ -322,25 +295,56 @@
 <g class="kn24"><g class="ln8"><text x="543.6800000000001" y="204" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">L</text></g></g>
 <g class="kn25"><g class="ln9"><text x="584.4000000000001" y="204" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">I</text></g></g>
 <g class="kn26"><g class="ln10"><text x="608.32" y="204" font-family="ui-sans-serif,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0">K</text></g></g>
-<g class="dozv"><g class="doze"><g transform="translate(0,356)">
-  <rect x="-186" y="-232" width="23" height="226" rx="3" fill="#4A4A4A"/>
-  <rect x="-206" y="-26" width="50" height="20" rx="4" fill="#4A4A4A"/>
-  <rect x="-182" y="-224" width="7" height="210" rx="2" fill="#5F5F5F"/>
-  <path d="M-168,-46 L-58,-104" stroke="#4A4A4A" stroke-width="14" stroke-linecap="round" fill="none"/>
-  <path d="M-74,-124 L-40,-104 L-52,-82 L-86,-102 Z" fill="#D9A520"/>
-  <rect x="-124" y="-56" width="244" height="56" rx="28" fill="#4A4A4A"/>
-  <circle cx="-88" cy="-28" r="15" fill="#5F5F5F"/>
-  <circle cx="-44" cy="-28" r="15" fill="#5F5F5F"/>
-  <circle cx="0" cy="-28" r="15" fill="#5F5F5F"/>
-  <circle cx="44" cy="-28" r="15" fill="#5F5F5F"/>
-  <circle cx="88" cy="-28" r="15" fill="#5F5F5F"/>
-  <rect x="-108" y="-72" width="214" height="18" rx="5" fill="#4A4A4A"/>
-  <path d="M-62,-70 L-62,-118 L-40,-138 L104,-138 L104,-70 Z" fill="#F5C518"/>
-  <rect x="-56" y="-92" width="152" height="11" rx="4" fill="#D9A520"/>
-  <rect x="26" y="-206" width="92" height="70" rx="5" fill="#F5C518"/>
-  <rect x="18" y="-220" width="108" height="17" rx="4" fill="#D9A520"/>
-  <path d="M40,-196 L112,-196 L112,-150 L40,-150 Z" fill="#2E6B8F"/>
-  <rect x="-6" y="-214" width="14" height="82" rx="2" fill="#4A4A4A"/>
-  <rect x="-11" y="-226" width="24" height="14" rx="3" fill="#4A4A4A"/>
-</g></g></g>
+<g class="bigv"><g class="bigfly">
+  <g transform="translate(620,44)">
+    <rect x="-180" y="-20" width="8" height="16" rx="3" fill="#B9AC97"/>
+    <ellipse cx="-176" cy="-21" rx="38" ry="4" fill="#2E2A24" opacity=".18"/>
+    <g transform="translate(-176,-21)"><g class="rot" style="animation-delay:-0.35s"><rect x="-37.72" y="-2.4" width="75.44" height="4.8" rx="2.4" fill="#2E2A24"/></g></g>
+    <rect x="-96" y="-20" width="8" height="16" rx="3" fill="#B9AC97"/>
+    <ellipse cx="-92" cy="-21" rx="46" ry="5" fill="#2E2A24" opacity=".18"/>
+    <g transform="translate(-92,-21)"><g class="rot" style="animation-delay:-0.18s"><rect x="-46.0" y="-2.4" width="92.0" height="4.8" rx="2.4" fill="#2E2A24"/></g></g>
+    <rect x="88" y="-20" width="8" height="16" rx="3" fill="#B9AC97"/>
+    <ellipse cx="92" cy="-21" rx="46" ry="5" fill="#2E2A24" opacity=".18"/>
+    <g transform="translate(92,-21)"><g class="rot" style="animation-delay:-0.18s"><rect x="-46.0" y="-2.4" width="92.0" height="4.8" rx="2.4" fill="#2E2A24"/></g></g>
+    <rect x="172" y="-20" width="8" height="16" rx="3" fill="#B9AC97"/>
+    <ellipse cx="176" cy="-21" rx="38" ry="4" fill="#2E2A24" opacity=".18"/>
+    <g transform="translate(176,-21)"><g class="rot" style="animation-delay:-0.35s"><rect x="-37.72" y="-2.4" width="75.44" height="4.8" rx="2.4" fill="#2E2A24"/></g></g>
+    <rect x="-190" y="-6" width="380" height="7" rx="3.5" fill="#39332B"/>
+    <rect x="-70" y="-34" width="140" height="42" rx="12" fill="#0077C8" stroke="#39332B" stroke-width="2"/>
+    <rect x="24" y="-27" width="38" height="20" rx="5" fill="#FBF7F0"/>
+    <rect x="-58" y="-27" width="40" height="9" rx="4" fill="#F0C419"/>
+    <circle cx="-62" cy="-12" r="4" fill="#F88379" class="dot"/>
+    <rect x="-24" y="8" width="48" height="10" rx="4" fill="#39332B"/>
+  </g>
+  <g class="netopen"><g transform="translate(620,208)">
+    <path d="M-66,-164 L-570,-96" stroke="#39332B" stroke-width="2.2" fill="none"/>
+    <path d="M-30,-164 L-256,-96" stroke="#39332B" stroke-width="1.8" fill="none"/>
+    <path d="M66,-164 L570,-96" stroke="#39332B" stroke-width="2.2" fill="none"/>
+    <path d="M30,-164 L256,-96" stroke="#39332B" stroke-width="1.8" fill="none"/>
+    <path d="M-570,-96 Q0,240 570,-96" fill="none" stroke="#39332B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-570,-96 H570" stroke="#39332B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-570,-96 Q-342,106 -125,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-507,-96 Q-304,106 -111,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-443,-96 Q-266,106 -98,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-380,-96 Q-228,106 -84,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-317,-96 Q-190,106 -70,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-253,-96 Q-152,106 -56,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-190,-96 Q-114,106 -42,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-127,-96 Q-76,106 -28,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-63,-96 Q-38,106 -14,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M0,-96 Q0,106 0,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M63,-96 Q38,106 14,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M127,-96 Q76,106 28,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M190,-96 Q114,106 42,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M253,-96 Q152,106 56,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M317,-96 Q190,106 70,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M380,-96 Q228,106 84,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M443,-96 Q266,106 98,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M507,-96 Q304,106 111,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M570,-96 Q342,106 125,149" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-489,-47 Q0,138 489,-47" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-398,8 Q0,175 398,8" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+    <path d="M-316,57 Q0,207 316,57" fill="none" stroke="#39332B" stroke-width="1.3" opacity=".65"/>
+  </g></g>
+</g></g>
 </svg>
