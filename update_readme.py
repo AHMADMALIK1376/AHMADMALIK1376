@@ -16,6 +16,7 @@ from urllib.parse import quote
 import worldmap
 import arsenal
 import metrics
+import activity as recorder      # `activity` is taken later in main()
  
 # ─────────────────────────────────────────────
 #  CONFIG
@@ -215,6 +216,7 @@ def main():
 
     days, contributions = fetch_contributions()
     print("  contributions: %d over %d days" % (contributions, len(days)))
+    recorder.build(days)
 
     # Analyse
     print("\n📊 Analysing activity...")
@@ -223,7 +225,11 @@ def main():
     # The dial needs the activity counts, so it is drawn here rather than
     # alongside the language map above.
     own = [r for r in repos if not r.get("fork")]
-    metrics.year_dial(days, contributions, [
+    # The calendar endpoint returns whole weeks, so it can hand back 371 days.
+    # The dial says LAST 12 MONTHS, so give it exactly a year and a total
+    # counted over that same window rather than a wider one.
+    year = days[-365:]
+    metrics.year_dial(year, sum(c for _d, c, _l in year), [
         ("PUBLIC REPOS", len(own), "NOT COUNTING FORKS"),
         ("STARS EARNED", sum(r.get("stargazers_count", 0) for r in own),
          "ACROSS OWN REPOSITORIES"),
