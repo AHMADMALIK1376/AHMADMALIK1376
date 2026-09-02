@@ -1,17 +1,30 @@
 # -*- coding: utf-8 -*-
 """
-Thirty days of activity, drawn the way a chart recorder draws it.
+Every day of activity since the account opened, drawn as a chart recorder draws.
 
-Paper runs left to right under a pen. A day with nothing on it is a flat line,
-and a busy day is a burst of oscillation whose height follows the count. That
-suits this data: most days are silent and a few are not, and a shape that makes
-the silence visible is more honest than one that smooths it away.
+Paper runs left to right under a pen. A day with nothing on it is a flat line
+and a busy day throws the nib off the baseline, alternately up and down, by an
+amount that follows the count. Most days here are silent, and a shape that lets
+the silence stay visible is more honest than one that smooths it away.
 
-The numbers come from the same contributions endpoint the year dial uses, so
+This covers the whole history rather than a window on the end of it, so the
+quiet first months and the run of work after them are both on the same strip.
+
+The numbers come from the same contributions calendar the year dial uses, so
 this and that panel can never disagree with each other.
 
-The pen is not decoration. Its path is generated from the trace's own vertices,
-so the nib sits on the line it is drawing rather than near it.
+Two things that are easy to get wrong and are handled deliberately:
+
+  - The reveal is a mask widening at a constant rate, not stroke-dashoffset.
+    Dashoffset advances along the path's own LENGTH, which is not proportional
+    to x: a stretch of tall spikes is long in path terms and short in x, so it
+    swallows a disproportionate share of the clock while the quiet months flash
+    past. With a mask, halfway through the loop is halfway through the dates,
+    the month axis means something, and the nib — keyed to x on the same clock —
+    sits on the leading edge of the ink by construction.
+  - Runs of empty days collapse to a single straight segment. Four hundred
+    days of separate vertices would be four hundred keyframes for no drawn
+    difference, and the pen rule is emitted once per vertex.
 
 Amplitude is scaled by a root rather than linearly. A day of two against a peak
 of forty-seven would be half a pixel on a straight scale, which reads as nothing
@@ -19,7 +32,6 @@ happened when something did.
 
 House style: solid fills, no gradients, no filters.
 """
-
 AEGEAN, CORAL = "#0077C8", "#F88379"
 BROWN, TEAMIST, CRIMSON = "#D4A373", "#AAC832", "#D41F26"
 SKY = "#F2EDE6"
@@ -34,13 +46,12 @@ STEEL = "#B9AC97"
 MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 
 W, H = 1240, 320
-DUR = 18.0
-DRAW_FROM, DRAW_TO = 4.0, 66.0     # the rest of the loop holds the finished trace
+DUR = 26.0
+DRAW_FROM, DRAW_TO = 3.0, 74.0     # the rest of the loop holds the finished trace
 
 X0, X1 = 72.0, 1168.0
 BASE = 186.0
 AMP = 74.0
-DAYS = 30
 
 MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
           "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
@@ -72,39 +83,54 @@ def _kf(name, body):
     return "@keyframes " + name + "{" + body + "}"
 
 
+def _when(iso, with_year=False):
+    if not iso:
+        return ""
+    s = "%s %s" % (iso[8:10].lstrip("0"), MONTHS[int(iso[5:7]) - 1])
+    return s + " " + iso[2:4] if with_year else s
+
+
 def trace_points(days, peak):
     """Vertices of the pen's path across the whole strip.
 
-    A quiet day is two points at the baseline. A busy one is a burst: the nib
-    thrown up, past the line, up again and back, which is what a recorder does
-    when something actually happens rather than a single tidy peak.
+    One spike per active day, thrown alternately above and below the baseline so
+    a run of busy days reads as oscillation rather than a row of identical
+    teeth. Empty days are not given vertices of their own: a run of them is one
+    straight segment, which draws the same and costs one keyframe instead of
+    hundreds.
     """
-    step = (X1 - X0) / float(DAYS)
+    n = len(days)
+    step = (X1 - X0) / float(n)
     pts = [(X0, BASE)]
+    flip = 1
     for i, (_iso, count, _lvl) in enumerate(days):
-        x = X0 + i * step
         if count <= 0:
-            pts.append((x + step, BASE))
-            continue
+            continue                              # the flat run is closed below
+        x = X0 + i * step
+        if pts[-1][0] < x:                        # close the preceding silence
+            pts.append((x, BASE))
         # a root scale, so a small day is still visibly a day
         a = (count / float(peak)) ** 0.6 * AMP
-        for f, m in ((0.18, -1.0), (0.34, 0.72), (0.50, -0.80),
-                     (0.66, 0.45), (0.82, -0.30), (1.0, 0.0)):
-            pts.append((x + step * f, BASE + a * m))
+        pts.append((x + step * 0.5, BASE - a * flip))
+        pts.append((x + step, BASE))
+        flip = -flip
+    if pts[-1][0] < X1:
+        pts.append((X1, BASE))
     return pts
 
 
 def build(days, path="assets/activity.svg"):
-    """days: [(iso, count, level)] oldest first; the last 30 are used."""
-    days = list(days)[-DAYS:]
-    while len(days) < DAYS:
-        days.insert(0, ("", 0, 0))
+    """days: [(iso, count, level)] oldest first. All of them are drawn."""
+    days = [d for d in days if d[0]]
+    if not days:
+        days = [("2000-01-01", 0, 0)]
+    n = len(days)
     counts = [c for _i, c, _l in days]
     peak = max(1, max(counts))
     total = sum(counts)
     active = sum(1 for c in counts if c)
     peak_i = counts.index(peak)
-    step = (X1 - X0) / float(DAYS)
+    step = (X1 - X0) / float(n)
 
     pts = trace_points(days, peak)
     css = ["@keyframes blip{0%,100%{opacity:1}50%{opacity:.25}}",
@@ -113,14 +139,18 @@ def build(days, path="assets/activity.svg"):
 
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" '
-           'role="img" aria-label="Thirty days of activity drawn as a chart recorder trace: '
-           '%d contributions over %d active days, peaking at %d">'
-           % (W, H, W, H, total, active, peak),
+           'role="img" aria-label="Every day of activity since the account opened, drawn as a '
+           'chart recorder trace: %d contributions over %d active days out of %d, peaking at %d">'
+           % (W, H, W, H, total, active, n, peak),
            "<title>Commit Activity</title>",
            '<defs><pattern id="ag" width="26" height="26" patternUnits="userSpaceOnUse">'
            '<circle cx="1.5" cy="1.5" r="1" fill="%s"/></pattern>'
            '<clipPath id="strip"><rect x="%.0f" y="96" width="%.0f" height="180" rx="4"/></clipPath>'
-           '__STYLE__</defs>' % (GRID, X0 - 12, X1 - X0 + 24),
+           '<mask id="reveal" maskUnits="userSpaceOnUse" x="0" y="0" '
+           'width="%d" height="%d"><rect class="rv" x="%.1f" y="90" '
+           'width="%.1f" height="200" fill="#fff"/></mask>'
+           '__STYLE__</defs>' % (GRID, X0 - 12, X1 - X0 + 24,
+                                 W, H, X0, X1 - X0),
            '<rect width="%d" height="%d" fill="%s"/>' % (W, H, SKY),
            '<rect width="%d" height="%d" fill="url(#ag)"/>' % (W, H)]
 
@@ -128,8 +158,8 @@ def build(days, path="assets/activity.svg"):
     out.append(_txt(W - 66, 44, "LIVE · REBUILT DAILY", 12.5, FAINT, "600", "end", "2.2"))
     out.append('<circle cx="%d" cy="40" r="5" fill="%s" class="blip"/>' % (W - 48, TEAMIST))
     out.append('<path d="M48,58 H%d" stroke="%s" stroke-width="1.4" fill="none"/>' % (W - 48, RULE))
-    out.append(_txt(48, 78, "LAST 30 DAYS · A FLAT LINE IS A DAY WITH NOTHING ON IT",
-                    10.5, MUTED, "600", "start", "1.5"))
+    out.append(_txt(48, 78, "EVERY DAY SINCE %s · A FLAT LINE IS A DAY WITH NOTHING ON IT"
+                    % _when(days[0][0], True).upper(), 10.5, MUTED, "600", "start", "1.5"))
 
     # ── the paper ────────────────────────────────────────────────────────
     out.append('<rect x="%.0f" y="96" width="%.0f" height="180" rx="4" fill="%s" '
@@ -138,10 +168,16 @@ def build(days, path="assets/activity.svg"):
         y = 96 + j * 30
         out.append('<path d="M%.0f,%.0f H%.0f" stroke="%s" stroke-width="1"/>'
                    % (X0 - 12, y, X1 + 12, RULING))
-    for i in range(DAYS + 1):
+    # a vertical ruling on the first of each month, rather than every day: at
+    # four hundred days apart a per-day rule would fill the paper solid
+    month_x = []
+    for i, (iso, _c, _l) in enumerate(days):
+        if iso[8:10] != "01":
+            continue
         x = X0 + i * step
+        month_x.append((x, iso))
         out.append('<path d="M%.1f,100 V272" stroke="%s" stroke-width="%s"/>'
-                   % (x, RULING, "1.4" if i % 5 == 0 else "0.7"))
+                   % (x, RULING, "1.4" if iso[5:7] == "01" else "0.8"))
     out.append('<path d="M%.0f,%.0f H%.0f" stroke="%s" stroke-width="1.2" '
                'stroke-dasharray="3 4"/>' % (X0 - 12, BASE, X1 + 12, _mix(RULING, INK, 0.25)))
     for edge in (100, 268):                     # sprocket perforations
@@ -149,23 +185,33 @@ def build(days, path="assets/activity.svg"):
         out.append('<path d="%s" stroke="%s" stroke-width="3.4" stroke-linecap="round" '
                    'fill="none"/>' % (holes, _mix(RULING, INK, 0.18)))
 
-    # ── the trace, drawn as the paper runs ───────────────────────────────
+    # ── the trace, revealed as the paper runs ────────────────────────────
+    # A mask widening at a constant rate, not stroke-dashoffset. Dashoffset
+    # advances along the path's own LENGTH, so a stretch of tall spikes eats a
+    # disproportionate share of the clock and the pen appears to crawl there
+    # while racing across the quiet months. Paper in a real recorder moves at
+    # one speed, and that is also what makes the month axis mean anything:
+    # halfway through the loop is halfway through the dates.
     d = "M%.1f,%.1f " % pts[0] + " ".join("L%.1f,%.1f" % p for p in pts[1:])
-    css.append(_kf("draw", "0%%,%.0f%%{stroke-dashoffset:1}%.0f%%,100%%{stroke-dashoffset:0}"
+    css.append(_kf("rev", "0%%,%.0f%%{transform:scaleX(0)}%.0f%%,100%%{transform:scaleX(1)}"
                    % (DRAW_FROM, DRAW_TO)))
-    css.append(".draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw "
-               + "%.1f" % DUR + "s linear infinite}")
-    out.append('<g clip-path="url(#strip)"><path class="draw" pathLength="1" d="%s" fill="none" '
-               'stroke="%s" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>'
-               "</g>" % (d, CRIMSON))
+    css.append(".rv{transform-box:fill-box;transform-origin:left center;"
+               "animation:rev " + "%.1f" % DUR + "s linear infinite}")
+    out.append('<g clip-path="url(#strip)" mask="url(#reveal)">'
+               '<path d="%s" fill="none" stroke="%s" stroke-width="1.9" '
+               'stroke-linejoin="round" stroke-linecap="round"/></g>' % (d, CRIMSON))
 
-    # ── the pen, riding the vertices of the line it draws ────────────────
-    total_len = X1 - X0
-    stops = []
+    # ── the pen, on the same clock as the reveal ─────────────────────────
+    # Both are linear in x, so the nib is on the leading edge of the ink by
+    # construction rather than by luck.
+    span_x = X1 - X0
+    stops, last = [], -1.0
     for x, y in pts:
-        f = (x - X0) / total_len
-        stops.append("%.3f%%{transform:translate(%.1fpx,%.1fpx)}"
-                     % (DRAW_FROM + f * (DRAW_TO - DRAW_FROM), x, y))
+        pct = DRAW_FROM + ((x - X0) / span_x) * (DRAW_TO - DRAW_FROM)
+        if pct - last < 0.005:                  # two stops at one percentage is
+            continue                            # a dropped keyframe, not detail
+        last = pct
+        stops.append("%.3f%%{transform:translate(%.1fpx,%.1fpx)}" % (pct, x, y))
     css.append(_kf("pen", "0%%{transform:translate(%.1fpx,%.1fpx)}" % pts[0]
                    + "".join(stops)
                    + "100%%{transform:translate(%.1fpx,%.1fpx)}" % pts[-1]))
@@ -178,40 +224,53 @@ def build(days, path="assets/activity.svg"):
     out.append('  <circle cx="0" cy="0" r="3.4" fill="%s"/>' % CRIMSON)
     out.append("</g>")
 
-    # ── the busiest day, called out ──────────────────────────────────────
-    px = X0 + (peak_i + 0.18) * step
-    py = BASE - AMP
-    lab = days[peak_i][0]
-    when = "%s %s" % (lab[8:10].lstrip("0"), MONTHS[int(lab[5:7]) - 1]) if lab else ""
+    # ── the busiest day, called out when the pen reaches it ──────────────
+    px = X0 + (peak_i + 0.5) * step
+    reach = DRAW_FROM + (peak_i / float(n)) * (DRAW_TO - DRAW_FROM)
     css.append(".pk{animation:fade .6s ease-out both;animation-delay:%.1fs}"
-               % (DUR * (DRAW_FROM + (peak_i / float(DAYS)) * (DRAW_TO - DRAW_FROM)) / 100.0))
+               % (DUR * reach / 100.0))
+    # No leader line: the busiest day is by definition the tallest spike, so a
+    # leader would be drawn straight down the spike it points at. The label sits
+    # directly above it instead, clamped so it cannot hang off the paper.
+    lab = "%d ON %s" % (peak, _when(days[peak_i][0]))
+    half = len(lab) * 3.3
+    px = min(max(px, X0 + half), X1 - half)
     out.append('<g class="pk">')
-    out.append("  " + '<path d="M%.1f,%.1f V%.1f" stroke="%s" stroke-width="1.1" '
-                      'stroke-dasharray="2 3"/>' % (px, py, 118, _mix(RULING, INK, 0.4)))
-    out.append("  " + _txt(px, 112, "%d ON %s" % (peak, when), 9.5, CRIMSON, "800", "middle", "1.2"))
+    # above the paper edge, not on it: inside the strip it would land on the
+    # sprocket row and, at the peak's own x, on the peak itself
+    out.append("  " + _txt(px, 90, lab, 9.5, CRIMSON, "800", "middle", "1.2"))
     out.append("</g>")
 
-    # ── the axis, and what the trace adds up to ──────────────────────────
-    for i in (0, 7, 14, 21, 29):
-        iso = days[i][0]
-        when = "%s %s" % (iso[8:10].lstrip("0"), MONTHS[int(iso[5:7]) - 1]) if iso else ""
-        out.append(_txt(X0 + (i + 0.5) * step, 292,
-                        "TODAY" if i == 29 else when, 9,
-                        CRIMSON if i == 29 else FAINT, "800" if i == 29 else "600",
-                        "middle", "1.1"))
-    for k, (lbl, val) in enumerate((("CONTRIBUTIONS", total), ("ACTIVE DAYS", "%d / 30" % active),
-                                    ("BUSIEST DAY", peak))):
-        x = 48 + k * 190
+    # ── the axis: months, thinned so the labels never collide ────────────
+    shown_x = -999.0
+    for x, iso in month_x:
+        # the right end of the axis belongs to TODAY, and a month label there
+        # would be printed straight through it
+        if x - shown_x < 62 or X1 - x < 58:
+            continue
+        shown_x = x
+        mo = MONTHS[int(iso[5:7]) - 1]
+        out.append(_txt(x, 292, mo if iso[5:7] != "01" else mo + " " + iso[2:4],
+                        9, FAINT, "600", "middle", "1.1"))
+    out.append(_txt(X1, 292, "TODAY", 9, CRIMSON, "800", "end", "1.1"))
+
+    # ── what the trace adds up to ────────────────────────────────────────
+    span = "%s – %s" % (_when(days[0][0], True), _when(days[-1][0], True))
+    for k, (lbl, val) in enumerate((("CONTRIBUTIONS", total),
+                                    ("ACTIVE DAYS", "%d / %d" % (active, n)),
+                                    ("BUSIEST DAY", peak),
+                                    ("SPAN", span))):
+        x = 48 + k * 215
         out.append(_txt(x, H - 12, lbl, 9, FAINT, "700", "start", "1.6"))
-        out.append(_txt(x + 118, H - 12, str(val), 11, INK, "800", "start", "0.6"))
-    out.append(_txt(W - 48, H - 12, "GITHUB.COM/AHMADMALIK1376", 9.5, FAINT, "600", "end", "1.5"))
+        out.append(_txt(x + 112, H - 12, str(val), 11, INK, "800", "start", "0.6"))
     out.append("</svg>")
 
     svg = "\n".join(out).replace("__STYLE__", "<style>\n" + "\n".join(css) + "\n</style>")
     with open(path, "w", encoding="utf-8") as f:
         f.write(svg)
-    print("  wrote %s (%d days, %d contributions, %d active, peak %d, %d KB)"
-          % (path, DAYS, total, active, peak, len(svg) // 1024))
+    print("  wrote %s (%d days, %d contributions, %d active, peak %d, "
+          "%d vertices, %d KB)"
+          % (path, n, total, active, peak, len(pts), len(svg) // 1024))
     return path
 
 

@@ -68,11 +68,11 @@
 
 <div align="center">
 
-<img width="100%" src="assets/h-commit-activity.svg"/>
+<img width="100%" src="assets/h-commit-activity-all.svg"/>
 
 <br/>
 
-<img width="100%" src="assets/activity.svg"/>
+<img width="100%" src="assets/activity-all-time.svg"/>
 
 </div>
 
