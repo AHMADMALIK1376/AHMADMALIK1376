@@ -31,9 +31,9 @@ HEAD_H = 82
 
 # slug, title, caption, accent
 HEADINGS = [
-    ("system-design", "SYSTEM DESIGN",
+    ("system-design", "Core Structural Frameworks",
      "CLIENT → LOAD BALANCER → WEB TIER → FANOUT → QUEUE → WORKERS", AEGEAN),
-    ("llm-training", "HOW AI WORKS",
+    ("llm-training", "Demystifying Artificial Intelligence",
      "WHAT HAPPENS BETWEEN YOUR QUESTION AND THE ANSWER", CORAL),
     ("language-distribution", "LANGUAGE DISTRIBUTION",
      "TERRITORY SIZED BY SHARE · LIVE FROM THE GITHUB API", TEAMIST),
@@ -43,7 +43,7 @@ HEADINGS = [
      "LANGUAGES · FRAMEWORKS · INFRASTRUCTURE", BROWN),
     ("system-metrics", "SYSTEM METRICS",
      "LIVE TELEMETRY", AEGEAN),
-    ("build-deploy", "BUILD &amp; DEPLOY PIPELINE",
+    ("build-deploy", "SOFTWARE DEVELOPMENT &amp; DEPLOYMENT",
      "SOURCE → BUILD → SHIP", TEAMIST),
     ("open-channel", "OPEN CHANNEL",
      "GET IN TOUCH", CORAL),
