@@ -8,6 +8,7 @@
  
 import os
 import re
+import functools
 import json
 import requests
 from datetime import datetime, timedelta, timezone
@@ -61,7 +62,10 @@ def paginate(url: str, max_pages: int = 5, **params) -> list:
 # ─────────────────────────────────────────────
 #  DATA FETCHING
 # ─────────────────────────────────────────────
+@functools.lru_cache(maxsize=1)
 def fetch_user() -> dict:
+    """Cached: main() and the all-time contribution walk both want this,
+    and one profile lookup per run is enough."""
     print("  → Fetching user profile...")
     return gh_get(f"https://api.github.com/users/{USERNAME}")
  
@@ -106,6 +110,52 @@ def fetch_language_bytes(repos: list) -> dict:
 # ─────────────────────────────────────────────
 #  ANALYSIS
 # ─────────────────────────────────────────────
+def _parse_calendar(html: str) -> list:
+    """Days out of one rendered contributions calendar."""
+    cells = re.findall(r'data-date="(\d{4}-\d{2}-\d{2})"[^>]*?data-level="(\d)"', html)
+    counts = {}
+    for cid, text in re.findall(r'<tool-tip[^>]*for="([^"]+)"[^>]*>([^<]+)</tool-tip>', html):
+        m = re.match(r"(No|[\d,]+) contribution", text)
+        if m:
+            counts[cid] = 0 if m.group(1) == "No" else int(m.group(1).replace(",", ""))
+    ordered = [counts[k] for k in sorted(counts, key=_cell_key)]
+    days = [(d, ordered[i] if i < len(ordered) else 0, int(lv))
+            for i, (d, lv) in enumerate(cells)]
+    days.sort(key=lambda t: t[0])
+    return days
+
+
+def fetch_contributions_all() -> tuple:
+    """Every day since the account opened, not just the rolling year.
+
+    The calendar endpoint answers one year at a time, so this walks from the
+    year the account was created to the current one and stitches the days
+    together. Days before the account existed and any the endpoint pads the
+    last week with are dropped, so the span starts and ends on real dates.
+    """
+    import datetime
+    try:
+        created = fetch_user().get("created_at", "")[:10]
+    except Exception:                              # noqa: BLE001
+        created = ""
+    today = datetime.date.today().isoformat()
+    first_year = int(created[:4]) if created else datetime.date.today().year
+    out = []
+    for yr in range(first_year, datetime.date.today().year + 1):
+        url = ("https://github.com/users/%s/contributions?from=%d-01-01&to=%d-12-31"
+               % (USERNAME, yr, yr))
+        try:
+            html = requests.get(url, headers={"User-Agent": "readme-bot"},
+                                timeout=25).text
+        except Exception as exc:                   # noqa: BLE001
+            print("  %d unavailable: %s" % (yr, exc))
+            continue
+        out += _parse_calendar(html)
+    out = [d for d in sorted(set(out)) if (not created or d[0] >= created)
+           and d[0] <= today]
+    return out, sum(c for _d, c, _l in out)
+
+
 def fetch_contributions() -> tuple:
     """A year of contributions, scraped from the profile calendar endpoint.
 
@@ -214,9 +264,17 @@ def main():
     # already declared, so the section keeps up on its own
     arsenal.arsenal(lang_bytes=lang_bytes)
 
-    days, contributions = fetch_contributions()
-    print("  contributions: %d over %d days" % (contributions, len(days)))
-    recorder.build(days)
+    # the whole history, so the recorder strip covers every day rather than a
+    # window on the end of it; the dial still takes the last 365 off the tail
+    days, contributions = fetch_contributions_all()
+    if not days:                                   # every year failed to load
+        days, contributions = fetch_contributions()
+    print("  contributions: %d over %d days (%s .. %s)"
+          % (contributions, len(days), days[0][0] if days else "?",
+             days[-1][0] if days else "?"))
+    # camo caches by URL, so a rebuilt asset needs a name of its own to be
+    # seen at all; the 30-day file this replaces is gone
+    recorder.build(days, "assets/activity-all-time.svg")
 
     # Analyse
     print("\n📊 Analysing activity...")
