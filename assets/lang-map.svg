@@ -935,7 +935,7 @@
 <rect class="t k56" x="649.4" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
 <rect class="t k57" x="656.8" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
 <rect class="t k58" x="664.2" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
-<rect class="t k59" x="671.6" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
+<rect class="t k59" x="671.6" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
 <rect class="t k60" x="679.0" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k61" x="686.4" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k62" x="693.8" y="167.4" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
@@ -1300,7 +1300,7 @@
 <rect class="t k65" x="716.0" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
 <rect class="t k66" x="723.4" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
 <rect class="t k67" x="730.8" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
-<rect class="t k68" x="738.2" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
+<rect class="t k68" x="738.2" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
 <rect class="t k69" x="745.6" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k70" x="753.0" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k71" x="760.4" y="219.2" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
@@ -1458,7 +1458,7 @@
 <rect class="t k82" x="841.8" y="248.8" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k83" x="849.2" y="248.8" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k87" x="878.8" y="248.8" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
-<rect class="t k27" x="434.8" y="256.2" width="6.3" height="6.3" rx="1.7" fill="#F88379"/>
+<rect class="t k27" x="434.8" y="256.2" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k30" x="457.0" y="256.2" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k31" x="464.4" y="256.2" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 <rect class="t k47" x="582.8" y="256.2" width="6.3" height="6.3" rx="1.7" fill="#AAC832"/>
@@ -1903,7 +1903,7 @@
 <rect class="t k32" x="471.8" y="419.0" width="6.3" height="6.3" rx="1.7" fill="#0077C8"/>
 </g>
 <text x="48" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="3.4">LANGUAGE DISTRIBUTION</text>
-<text x="1192" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="2.2">3.65 MB ACROSS 11 REPOS</text>
+<text x="1192" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="2.2">3.66 MB ACROSS 11 REPOS</text>
 <path d="M48,60 H1192" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
 <text x="48" y="76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#7D7266" text-anchor="start" letter-spacing="1.8">TERRITORY IS PROPORTIONAL TO BYTES HELD</text>
 <text x="1192" y="76" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="1.6">1651 CELLS OF LAND</text>
@@ -1911,22 +1911,22 @@
   <rect x="48.0" y="456.4" width="178.7" height="54" rx="8" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.3"/>
   <rect x="60.0" y="468.4" width="4.5" height="30" rx="2.2" fill="#0077C8"/>
   <text x="74.0" y="479.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#2E2A24" text-anchor="start" letter-spacing="0.4">JavaScript</text>
-  <text x="74.0" y="498.4" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="800" fill="#0077C8" letter-spacing="0">56.5%</text>
-  <text x="216.66666666666666" y="498.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="0.6">932</text>
+  <text x="74.0" y="498.4" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="800" fill="#0077C8" letter-spacing="0">56.4%</text>
+  <text x="216.66666666666666" y="498.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="0.6">931</text>
 </g>
 <g class="lg l1">
   <rect x="238.7" y="456.4" width="178.7" height="54" rx="8" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.3"/>
   <rect x="250.7" y="468.4" width="4.5" height="30" rx="2.2" fill="#F88379"/>
   <text x="264.66666666666663" y="479.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#2E2A24" text-anchor="start" letter-spacing="0.4">TypeScript</text>
   <text x="264.7" y="498.4" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="800" fill="#F88379" letter-spacing="0">21.1%</text>
-  <text x="407.3333333333333" y="498.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="0.6">349</text>
+  <text x="407.3333333333333" y="498.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="0.6">348</text>
 </g>
 <g class="lg l2">
   <rect x="429.3" y="456.4" width="178.7" height="54" rx="8" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.3"/>
   <rect x="441.3" y="468.4" width="4.5" height="30" rx="2.2" fill="#AAC832"/>
   <text x="455.3333333333333" y="479.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="700" fill="#2E2A24" text-anchor="start" letter-spacing="0.4">Python</text>
-  <text x="455.3" y="498.4" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="800" fill="#AAC832" letter-spacing="0">20.7%</text>
-  <text x="598.0" y="498.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="0.6">342</text>
+  <text x="455.3" y="498.4" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" font-weight="800" fill="#AAC832" letter-spacing="0">20.8%</text>
+  <text x="598.0" y="498.40000000000003" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9.5" font-weight="600" fill="#A2988A" text-anchor="end" letter-spacing="0.6">344</text>
 </g>
 <g class="lg l3">
   <rect x="620.0" y="456.4" width="178.7" height="54" rx="8" fill="#FBF7F0" stroke="#D9D0C1" stroke-width="1.3"/>

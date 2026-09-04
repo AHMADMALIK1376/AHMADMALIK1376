@@ -94,16 +94,16 @@
 
 ---
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                    SYSTEM METRICS                          -->
+<!--                   COMPUTER VISION                         -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<img width="100%" src="assets/h-system-metrics.svg"/>
+<img width="100%" src="assets/h-computer-vision.svg"/>
 
 <br/>
 
-<img width="100%" src="assets/year-dial.svg"/>
+<img width="100%" src="assets/vision.svg"/>
 
 </div>
 
