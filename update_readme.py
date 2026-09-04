@@ -17,7 +17,7 @@ from urllib.parse import quote
 import worldmap
 import arsenal
 import metrics
-import activity as recorder      # `activity` is taken later in main()
+import constellation as skychart
  
 # ─────────────────────────────────────────────
 #  CONFIG
@@ -272,9 +272,7 @@ def main():
     print("  contributions: %d over %d days (%s .. %s)"
           % (contributions, len(days), days[0][0] if days else "?",
              days[-1][0] if days else "?"))
-    # camo caches by URL, so a rebuilt asset needs a name of its own to be
-    # seen at all; the 30-day file this replaces is gone
-    recorder.build(days, "assets/activity-all-time.svg")
+    skychart.build(days, "assets/constellation.svg")
 
     # Analyse
     print("\n📊 Analysing activity...")
