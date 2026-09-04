@@ -94,16 +94,16 @@
 
 ---
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                    ROUTE FINDING                          -->
+<!--                   SERVER UNDER LOAD                       -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<img width="100%" src="assets/h-route-finding.svg"/>
+<img width="100%" src="assets/h-server-load.svg"/>
 
 <br/>
 
-<img width="100%" src="assets/pathfinder.svg"/>
+<img width="100%" src="assets/overload.svg"/>
 
 </div>
 
