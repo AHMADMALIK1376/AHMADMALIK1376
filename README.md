@@ -94,16 +94,16 @@
 
 ---
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--                   COMPUTER VISION                         -->
+<!--                    ROUTE FINDING                          -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<img width="100%" src="assets/h-computer-vision.svg"/>
+<img width="100%" src="assets/h-route-finding.svg"/>
 
 <br/>
 
-<img width="100%" src="assets/vision.svg"/>
+<img width="100%" src="assets/pathfinder.svg"/>
 
 </div>
 
