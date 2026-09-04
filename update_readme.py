@@ -9,14 +9,11 @@
 import os
 import re
 import functools
-import json
 import requests
-from datetime import datetime, timedelta, timezone
-from urllib.parse import quote
+import datetime
 
 import worldmap
 import arsenal
-import metrics
 import constellation as skychart
  
 # ─────────────────────────────────────────────
@@ -68,14 +65,6 @@ def fetch_user() -> dict:
     and one profile lookup per run is enough."""
     print("  → Fetching user profile...")
     return gh_get(f"https://api.github.com/users/{USERNAME}")
- 
- 
-def fetch_events() -> list:
-    print("  → Fetching recent events...")
-    return paginate(
-        f"https://api.github.com/users/{USERNAME}/events/public",
-        max_pages=3,
-    )
  
  
 def fetch_repos() -> list:
@@ -133,7 +122,6 @@ def fetch_contributions_all() -> tuple:
     together. Days before the account existed and any the endpoint pads the
     last week with are dropped, so the span starts and ends on real dates.
     """
-    import datetime
     try:
         created = fetch_user().get("created_at", "")[:10]
     except Exception:                              # noqa: BLE001
@@ -195,54 +183,6 @@ def _cell_key(cid: str):
     return tuple(nums[-2:]) if len(nums) >= 2 else (0, 0)
 
 
-def analyse_events(events: list) -> dict:
-    cutoff = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
-    commits_by_repo: dict = {}
-    total_commits = pr_count = issue_count = star_count = 0
-    push_count = 0
- 
-    for ev in events:
-        ts = datetime.fromisoformat(ev["created_at"].replace("Z", "+00:00"))
-        if ts < cutoff:
-            continue
-        repo_label = ev["repo"]["name"].split("/")[-1]
-        etype = ev["type"]
- 
-        if etype == "PushEvent":
-            # The public events feed does not carry commit details on every
-            # push, so prefer the counts when they are there and fall back to
-            # counting the push itself rather than silently reporting zero.
-            payload = ev["payload"]
-            n = payload.get("size")
-            if n is None:
-                n = len(payload.get("commits", [])) or 1
-            commits_by_repo[repo_label] = commits_by_repo.get(repo_label, 0) + n
-            total_commits += n
-            push_count += 1
-        elif etype == "PullRequestEvent":
-            # This fires for opened, merged and closed alike; count only the
-            # opens so a single pull request is not tallied several times.
-            if ev["payload"].get("action") == "opened":
-                pr_count += 1
-        elif etype in ("IssuesEvent", "IssueCommentEvent"):
-            issue_count += 1
-        elif etype == "WatchEvent":
-            star_count += 1
- 
-    # sort repos by commit count descending
-    commits_by_repo = dict(
-        sorted(commits_by_repo.items(), key=lambda x: x[1], reverse=True)
-    )
-    return {
-        "commits_by_repo": commits_by_repo,
-        "total_commits": total_commits,
-        "pr_count": pr_count,
-        "issue_count": issue_count,
-        "star_count": star_count,
-        "push_count": push_count,
-    }
- 
- 
 def main():
     print("\n🤖 AHMAD MALIK — README asset builder")
     print("=" * 52)
@@ -251,8 +191,6 @@ def main():
         raise EnvironmentError("GITHUB_TOKEN env var is not set!")
  
     # Fetch
-    user         = fetch_user()
-    events       = fetch_events()
     repos        = fetch_repos()
     lang_bytes   = fetch_language_bytes(repos)
 
@@ -274,26 +212,6 @@ def main():
              days[-1][0] if days else "?"))
     skychart.build(days, "assets/constellation.svg")
 
-    # Analyse
-    print("\n📊 Analysing activity...")
-    activity = analyse_events(events)
-
-    # The dial needs the activity counts, so it is drawn here rather than
-    # alongside the language map above.
-    own = [r for r in repos if not r.get("fork")]
-    # The calendar endpoint returns whole weeks, so it can hand back 371 days.
-    # The dial says LAST 12 MONTHS, so give it exactly a year and a total
-    # counted over that same window rather than a wider one.
-    year = days[-365:]
-    metrics.year_dial(year, sum(c for _d, c, _l in year), [
-        ("PUBLIC REPOS", len(own), "NOT COUNTING FORKS"),
-        ("STARS EARNED", sum(r.get("stargazers_count", 0) for r in own),
-         "ACROSS OWN REPOSITORIES"),
-        ("FOLLOWERS", user.get("followers", 0), "ON GITHUB"),
-        ("PUSHES / 30D", activity.get("push_count", 0), "TO PUBLIC REPOSITORIES"),
-        ("PULL REQUESTS", activity["pr_count"], "OPENED IN THE LAST 30 DAYS"),
-        ("LANGUAGES", len(lang_bytes), "DETECTED BY LINGUIST"),
-    ])
     print("[done] every asset regenerated from live data")
 
 
