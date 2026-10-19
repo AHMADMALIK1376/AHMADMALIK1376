@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 486" width="1240" height="486" role="img" aria-label="Every day of work as a printed star chart: 758 contributions across 108 active days out of 482, each star a day placed by its week and weekday, brightness by commit count, brightest 47">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 486" width="1240" height="486" role="img" aria-label="Every day of work as a printed star chart: 769 contributions across 110 active days out of 483, each star a day placed by its week and weekday, brightness by commit count, brightest 47">
 <title>Commit Activity</title>
 <defs><pattern id="cg" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#E6DBCA"/></pattern><style>
 @keyframes blip{0%,100%{opacity:1}50%{opacity:.25}}
@@ -151,10 +151,10 @@
 .cl145{stroke-dasharray:1;stroke-dashoffset:1;animation:cl145 30.0s linear infinite}
 @keyframes cl147{0%,60.98%{stroke-dashoffset:1}64.98%,100%{stroke-dashoffset:0}}
 .cl147{stroke-dasharray:1;stroke-dashoffset:1;animation:cl147 30.0s linear infinite}
-@keyframes ml149{0%,62.98%{opacity:0}66.98%,100%{opacity:1}}
-.ml149{animation:ml149 30.0s linear infinite}
-@keyframes cl151{0%,70.29%{stroke-dashoffset:1}74.29%,100%{stroke-dashoffset:0}}
-.cl151{stroke-dasharray:1;stroke-dashoffset:1;animation:cl151 30.0s linear infinite}
+@keyframes cl149{0%,60.98%{stroke-dashoffset:1}64.98%,100%{stroke-dashoffset:0}}
+.cl149{stroke-dasharray:1;stroke-dashoffset:1;animation:cl149 30.0s linear infinite}
+@keyframes ml151{0%,62.98%{opacity:0}66.98%,100%{opacity:1}}
+.ml151{animation:ml151 30.0s linear infinite}
 @keyframes cl153{0%,70.29%{stroke-dashoffset:1}74.29%,100%{stroke-dashoffset:0}}
 .cl153{stroke-dasharray:1;stroke-dashoffset:1;animation:cl153 30.0s linear infinite}
 @keyframes cl155{0%,70.29%{stroke-dashoffset:1}74.29%,100%{stroke-dashoffset:0}}
@@ -185,10 +185,10 @@
 .cl179{stroke-dasharray:1;stroke-dashoffset:1;animation:cl179 30.0s linear infinite}
 @keyframes cl181{0%,70.29%{stroke-dashoffset:1}74.29%,100%{stroke-dashoffset:0}}
 .cl181{stroke-dasharray:1;stroke-dashoffset:1;animation:cl181 30.0s linear infinite}
-@keyframes ml183{0%,72.29%{opacity:0}76.29%,100%{opacity:1}}
-.ml183{animation:ml183 30.0s linear infinite}
-@keyframes cl185{0%,76.38%{stroke-dashoffset:1}80.38%,100%{stroke-dashoffset:0}}
-.cl185{stroke-dasharray:1;stroke-dashoffset:1;animation:cl185 30.0s linear infinite}
+@keyframes cl183{0%,70.29%{stroke-dashoffset:1}74.29%,100%{stroke-dashoffset:0}}
+.cl183{stroke-dasharray:1;stroke-dashoffset:1;animation:cl183 30.0s linear infinite}
+@keyframes ml185{0%,72.29%{opacity:0}76.29%,100%{opacity:1}}
+.ml185{animation:ml185 30.0s linear infinite}
 @keyframes cl187{0%,76.38%{stroke-dashoffset:1}80.38%,100%{stroke-dashoffset:0}}
 .cl187{stroke-dasharray:1;stroke-dashoffset:1;animation:cl187 30.0s linear infinite}
 @keyframes cl189{0%,76.38%{stroke-dashoffset:1}80.38%,100%{stroke-dashoffset:0}}
@@ -219,8 +219,12 @@
 .cl213{stroke-dasharray:1;stroke-dashoffset:1;animation:cl213 30.0s linear infinite}
 @keyframes cl215{0%,76.38%{stroke-dashoffset:1}80.38%,100%{stroke-dashoffset:0}}
 .cl215{stroke-dasharray:1;stroke-dashoffset:1;animation:cl215 30.0s linear infinite}
-@keyframes ml217{0%,78.38%{opacity:0}82.38%,100%{opacity:1}}
-.ml217{animation:ml217 30.0s linear infinite}
+@keyframes cl217{0%,76.38%{stroke-dashoffset:1}80.38%,100%{stroke-dashoffset:0}}
+.cl217{stroke-dasharray:1;stroke-dashoffset:1;animation:cl217 30.0s linear infinite}
+@keyframes cl219{0%,76.38%{stroke-dashoffset:1}80.38%,100%{stroke-dashoffset:0}}
+.cl219{stroke-dasharray:1;stroke-dashoffset:1;animation:cl219 30.0s linear infinite}
+@keyframes ml221{0%,78.38%{opacity:0}82.38%,100%{opacity:1}}
+.ml221{animation:ml221 30.0s linear infinite}
 @keyframes s0{0%,4.03%{opacity:0;transform:scale(.3)}6.03%,100%{opacity:1;transform:scale(1)}}
 .s0{animation:s0 30.0s ease-out infinite}
 @keyframes s1{0%,10.65%{opacity:0;transform:scale(.3)}12.65%,100%{opacity:1;transform:scale(1)}}
@@ -345,98 +349,102 @@
 .s60{animation:s60 30.0s ease-out infinite}
 @keyframes s61{0%,50.60%{opacity:0;transform:scale(.3)}52.60%,100%{opacity:1;transform:scale(1)}}
 .s61{animation:s61 30.0s ease-out infinite}
-@keyframes s62{0%,53.51%{opacity:0;transform:scale(.3)}55.51%,100%{opacity:1;transform:scale(1)}}
+@keyframes s62{0%,52.91%{opacity:0;transform:scale(.3)}54.91%,100%{opacity:1;transform:scale(1)}}
 .s62{animation:s62 30.0s ease-out infinite}
-@keyframes s63{0%,55.80%{opacity:0;transform:scale(.3)}57.80%,100%{opacity:1;transform:scale(1)}}
+@keyframes s63{0%,53.51%{opacity:0;transform:scale(.3)}55.51%,100%{opacity:1;transform:scale(1)}}
 .s63{animation:s63 30.0s ease-out infinite}
 @keyframes s64{0%,55.80%{opacity:0;transform:scale(.3)}57.80%,100%{opacity:1;transform:scale(1)}}
 .s64{animation:s64 30.0s ease-out infinite}
-@keyframes s65{0%,55.81%{opacity:0;transform:scale(.3)}57.81%,100%{opacity:1;transform:scale(1)}}
+@keyframes s65{0%,55.80%{opacity:0;transform:scale(.3)}57.80%,100%{opacity:1;transform:scale(1)}}
 .s65{animation:s65 30.0s ease-out infinite}
-@keyframes s66{0%,55.19%{opacity:0;transform:scale(.3)}57.19%,100%{opacity:1;transform:scale(1)}}
+@keyframes s66{0%,55.81%{opacity:0;transform:scale(.3)}57.81%,100%{opacity:1;transform:scale(1)}}
 .s66{animation:s66 30.0s ease-out infinite}
 @keyframes s67{0%,55.19%{opacity:0;transform:scale(.3)}57.19%,100%{opacity:1;transform:scale(1)}}
 .s67{animation:s67 30.0s ease-out infinite}
-@keyframes s68{0%,55.20%{opacity:0;transform:scale(.3)}57.20%,100%{opacity:1;transform:scale(1)}}
+@keyframes s68{0%,55.19%{opacity:0;transform:scale(.3)}57.19%,100%{opacity:1;transform:scale(1)}}
 .s68{animation:s68 30.0s ease-out infinite}
-@keyframes s69{0%,57.49%{opacity:0;transform:scale(.3)}59.49%,100%{opacity:1;transform:scale(1)}}
+@keyframes s69{0%,55.20%{opacity:0;transform:scale(.3)}57.20%,100%{opacity:1;transform:scale(1)}}
 .s69{animation:s69 30.0s ease-out infinite}
-@keyframes s70{0%,57.50%{opacity:0;transform:scale(.3)}59.50%,100%{opacity:1;transform:scale(1)}}
+@keyframes s70{0%,57.49%{opacity:0;transform:scale(.3)}59.49%,100%{opacity:1;transform:scale(1)}}
 .s70{animation:s70 30.0s ease-out infinite}
-@keyframes s71{0%,57.51%{opacity:0;transform:scale(.3)}59.51%,100%{opacity:1;transform:scale(1)}}
+@keyframes s71{0%,57.50%{opacity:0;transform:scale(.3)}59.50%,100%{opacity:1;transform:scale(1)}}
 .s71{animation:s71 30.0s ease-out infinite}
-@keyframes s72{0%,57.52%{opacity:0;transform:scale(.3)}59.52%,100%{opacity:1;transform:scale(1)}}
+@keyframes s72{0%,57.51%{opacity:0;transform:scale(.3)}59.51%,100%{opacity:1;transform:scale(1)}}
 .s72{animation:s72 30.0s ease-out infinite}
-@keyframes s73{0%,60.38%{opacity:0;transform:scale(.3)}62.38%,100%{opacity:1;transform:scale(1)}}
+@keyframes s73{0%,57.52%{opacity:0;transform:scale(.3)}59.52%,100%{opacity:1;transform:scale(1)}}
 .s73{animation:s73 30.0s ease-out infinite}
-@keyframes s74{0%,60.47%{opacity:0;transform:scale(.3)}62.47%,100%{opacity:1;transform:scale(1)}}
+@keyframes s74{0%,60.38%{opacity:0;transform:scale(.3)}62.38%,100%{opacity:1;transform:scale(1)}}
 .s74{animation:s74 30.0s ease-out infinite}
-@keyframes s75{0%,60.48%{opacity:0;transform:scale(.3)}62.48%,100%{opacity:1;transform:scale(1)}}
+@keyframes s75{0%,60.47%{opacity:0;transform:scale(.3)}62.47%,100%{opacity:1;transform:scale(1)}}
 .s75{animation:s75 30.0s ease-out infinite}
 @keyframes s76{0%,60.48%{opacity:0;transform:scale(.3)}62.48%,100%{opacity:1;transform:scale(1)}}
 .s76{animation:s76 30.0s ease-out infinite}
-@keyframes s77{0%,62.18%{opacity:0;transform:scale(.3)}64.18%,100%{opacity:1;transform:scale(1)}}
+@keyframes s77{0%,60.48%{opacity:0;transform:scale(.3)}62.48%,100%{opacity:1;transform:scale(1)}}
 .s77{animation:s77 30.0s ease-out infinite}
-@keyframes s78{0%,64.49%{opacity:0;transform:scale(.3)}66.49%,100%{opacity:1;transform:scale(1)}}
+@keyframes s78{0%,62.18%{opacity:0;transform:scale(.3)}64.18%,100%{opacity:1;transform:scale(1)}}
 .s78{animation:s78 30.0s ease-out infinite}
-@keyframes s79{0%,64.50%{opacity:0;transform:scale(.3)}66.50%,100%{opacity:1;transform:scale(1)}}
+@keyframes s79{0%,64.49%{opacity:0;transform:scale(.3)}66.49%,100%{opacity:1;transform:scale(1)}}
 .s79{animation:s79 30.0s ease-out infinite}
-@keyframes s80{0%,67.36%{opacity:0;transform:scale(.3)}69.36%,100%{opacity:1;transform:scale(1)}}
+@keyframes s80{0%,64.50%{opacity:0;transform:scale(.3)}66.50%,100%{opacity:1;transform:scale(1)}}
 .s80{animation:s80 30.0s ease-out infinite}
 @keyframes s81{0%,67.36%{opacity:0;transform:scale(.3)}69.36%,100%{opacity:1;transform:scale(1)}}
 .s81{animation:s81 30.0s ease-out infinite}
-@keyframes s82{0%,67.37%{opacity:0;transform:scale(.3)}69.37%,100%{opacity:1;transform:scale(1)}}
+@keyframes s82{0%,67.36%{opacity:0;transform:scale(.3)}69.36%,100%{opacity:1;transform:scale(1)}}
 .s82{animation:s82 30.0s ease-out infinite}
 @keyframes s83{0%,67.37%{opacity:0;transform:scale(.3)}69.37%,100%{opacity:1;transform:scale(1)}}
 .s83{animation:s83 30.0s ease-out infinite}
-@keyframes s84{0%,67.38%{opacity:0;transform:scale(.3)}69.38%,100%{opacity:1;transform:scale(1)}}
+@keyframes s84{0%,67.37%{opacity:0;transform:scale(.3)}69.37%,100%{opacity:1;transform:scale(1)}}
 .s84{animation:s84 30.0s ease-out infinite}
 @keyframes s85{0%,67.38%{opacity:0;transform:scale(.3)}69.38%,100%{opacity:1;transform:scale(1)}}
 .s85{animation:s85 30.0s ease-out infinite}
-@keyframes s86{0%,67.39%{opacity:0;transform:scale(.3)}69.39%,100%{opacity:1;transform:scale(1)}}
+@keyframes s86{0%,67.38%{opacity:0;transform:scale(.3)}69.38%,100%{opacity:1;transform:scale(1)}}
 .s86{animation:s86 30.0s ease-out infinite}
-@keyframes s87{0%,69.68%{opacity:0;transform:scale(.3)}71.68%,100%{opacity:1;transform:scale(1)}}
+@keyframes s87{0%,67.39%{opacity:0;transform:scale(.3)}69.39%,100%{opacity:1;transform:scale(1)}}
 .s87{animation:s87 30.0s ease-out infinite}
 @keyframes s88{0%,69.68%{opacity:0;transform:scale(.3)}71.68%,100%{opacity:1;transform:scale(1)}}
 .s88{animation:s88 30.0s ease-out infinite}
-@keyframes s89{0%,69.69%{opacity:0;transform:scale(.3)}71.69%,100%{opacity:1;transform:scale(1)}}
+@keyframes s89{0%,69.68%{opacity:0;transform:scale(.3)}71.68%,100%{opacity:1;transform:scale(1)}}
 .s89{animation:s89 30.0s ease-out infinite}
-@keyframes s90{0%,69.06%{opacity:0;transform:scale(.3)}71.06%,100%{opacity:1;transform:scale(1)}}
+@keyframes s90{0%,69.69%{opacity:0;transform:scale(.3)}71.69%,100%{opacity:1;transform:scale(1)}}
 .s90{animation:s90 30.0s ease-out infinite}
-@keyframes s91{0%,69.46%{opacity:0;transform:scale(.3)}71.46%,100%{opacity:1;transform:scale(1)}}
+@keyframes s91{0%,69.06%{opacity:0;transform:scale(.3)}71.06%,100%{opacity:1;transform:scale(1)}}
 .s91{animation:s91 30.0s ease-out infinite}
-@keyframes s92{0%,69.47%{opacity:0;transform:scale(.3)}71.47%,100%{opacity:1;transform:scale(1)}}
+@keyframes s92{0%,69.46%{opacity:0;transform:scale(.3)}71.46%,100%{opacity:1;transform:scale(1)}}
 .s92{animation:s92 30.0s ease-out infinite}
 @keyframes s93{0%,69.47%{opacity:0;transform:scale(.3)}71.47%,100%{opacity:1;transform:scale(1)}}
 .s93{animation:s93 30.0s ease-out infinite}
-@keyframes s94{0%,71.77%{opacity:0;transform:scale(.3)}73.77%,100%{opacity:1;transform:scale(1)}}
+@keyframes s94{0%,69.47%{opacity:0;transform:scale(.3)}71.47%,100%{opacity:1;transform:scale(1)}}
 .s94{animation:s94 30.0s ease-out infinite}
 @keyframes s95{0%,71.77%{opacity:0;transform:scale(.3)}73.77%,100%{opacity:1;transform:scale(1)}}
 .s95{animation:s95 30.0s ease-out infinite}
-@keyframes s96{0%,71.78%{opacity:0;transform:scale(.3)}73.78%,100%{opacity:1;transform:scale(1)}}
+@keyframes s96{0%,71.77%{opacity:0;transform:scale(.3)}73.77%,100%{opacity:1;transform:scale(1)}}
 .s96{animation:s96 30.0s ease-out infinite}
 @keyframes s97{0%,71.78%{opacity:0;transform:scale(.3)}73.78%,100%{opacity:1;transform:scale(1)}}
 .s97{animation:s97 30.0s ease-out infinite}
-@keyframes s98{0%,71.79%{opacity:0;transform:scale(.3)}73.79%,100%{opacity:1;transform:scale(1)}}
+@keyframes s98{0%,71.78%{opacity:0;transform:scale(.3)}73.78%,100%{opacity:1;transform:scale(1)}}
 .s98{animation:s98 30.0s ease-out infinite}
 @keyframes s99{0%,71.79%{opacity:0;transform:scale(.3)}73.79%,100%{opacity:1;transform:scale(1)}}
 .s99{animation:s99 30.0s ease-out infinite}
-@keyframes s100{0%,73.46%{opacity:0;transform:scale(.3)}75.46%,100%{opacity:1;transform:scale(1)}}
+@keyframes s100{0%,71.79%{opacity:0;transform:scale(.3)}73.79%,100%{opacity:1;transform:scale(1)}}
 .s100{animation:s100 30.0s ease-out infinite}
-@keyframes s101{0%,73.46%{opacity:0;transform:scale(.3)}75.46%,100%{opacity:1;transform:scale(1)}}
+@keyframes s101{0%,71.17%{opacity:0;transform:scale(.3)}73.17%,100%{opacity:1;transform:scale(1)}}
 .s101{animation:s101 30.0s ease-out infinite}
-@keyframes s102{0%,73.47%{opacity:0;transform:scale(.3)}75.47%,100%{opacity:1;transform:scale(1)}}
+@keyframes s102{0%,73.46%{opacity:0;transform:scale(.3)}75.46%,100%{opacity:1;transform:scale(1)}}
 .s102{animation:s102 30.0s ease-out infinite}
-@keyframes s103{0%,73.47%{opacity:0;transform:scale(.3)}75.47%,100%{opacity:1;transform:scale(1)}}
+@keyframes s103{0%,73.46%{opacity:0;transform:scale(.3)}75.46%,100%{opacity:1;transform:scale(1)}}
 .s103{animation:s103 30.0s ease-out infinite}
-@keyframes s104{0%,73.48%{opacity:0;transform:scale(.3)}75.48%,100%{opacity:1;transform:scale(1)}}
+@keyframes s104{0%,73.47%{opacity:0;transform:scale(.3)}75.47%,100%{opacity:1;transform:scale(1)}}
 .s104{animation:s104 30.0s ease-out infinite}
-@keyframes s105{0%,73.48%{opacity:0;transform:scale(.3)}75.48%,100%{opacity:1;transform:scale(1)}}
+@keyframes s105{0%,73.47%{opacity:0;transform:scale(.3)}75.47%,100%{opacity:1;transform:scale(1)}}
 .s105{animation:s105 30.0s ease-out infinite}
-@keyframes s106{0%,73.49%{opacity:0;transform:scale(.3)}75.49%,100%{opacity:1;transform:scale(1)}}
+@keyframes s106{0%,73.48%{opacity:0;transform:scale(.3)}75.48%,100%{opacity:1;transform:scale(1)}}
 .s106{animation:s106 30.0s ease-out infinite}
-@keyframes s107{0%,75.78%{opacity:0;transform:scale(.3)}77.78%,100%{opacity:1;transform:scale(1)}}
+@keyframes s107{0%,73.48%{opacity:0;transform:scale(.3)}75.48%,100%{opacity:1;transform:scale(1)}}
 .s107{animation:s107 30.0s ease-out infinite}
+@keyframes s108{0%,73.49%{opacity:0;transform:scale(.3)}75.49%,100%{opacity:1;transform:scale(1)}}
+.s108{animation:s108 30.0s ease-out infinite}
+@keyframes s109{0%,75.78%{opacity:0;transform:scale(.3)}77.78%,100%{opacity:1;transform:scale(1)}}
+.s109{animation:s109 30.0s ease-out infinite}
 @keyframes bn{0%,56.80%{opacity:0}60.80%,100%{opacity:1}}
 .bn{animation:bn 30.0s linear infinite}
 @keyframes sweep{0%,4%{transform:translateX(0)}78%,100%{transform:translateX(1050.0px)}}
@@ -552,45 +560,47 @@
 <path class="cl135" pathLength="1" d="M861.6,175.8 L885.6,175.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
 <path class="cl137" pathLength="1" d="M861.6,175.8 L861.5,139.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
 <path class="cl139" pathLength="1" d="M861.5,139.5 L885.5,139.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl141" pathLength="1" d="M885.5,139.6 L926.5,139.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl143" pathLength="1" d="M861.5,139.5 L787.6,139.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl141" pathLength="1" d="M861.5,139.5 L820.5,139.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl143" pathLength="1" d="M820.5,139.5 L787.6,139.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
 <path class="cl145" pathLength="1" d="M787.6,139.5 L787.7,175.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl147" pathLength="1" d="M787.7,175.8 L787.8,248.4" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<text x="847.5" y="128.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml149">AUG 26</text>
-<path class="cl151" pathLength="1" d="M927.8,254.3 L927.9,326.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl153" pathLength="1" d="M927.9,326.8 L928.0,363.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl155" pathLength="1" d="M928.0,363.1 L952.0,363.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl157" pathLength="1" d="M952.0,363.2 L984.9,363.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl159" pathLength="1" d="M984.9,363.2 L984.9,326.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl161" pathLength="1" d="M984.9,326.9 L1025.8,326.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl163" pathLength="1" d="M1025.8,326.9 L1025.9,363.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl165" pathLength="1" d="M1025.8,326.9 L1025.8,290.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl167" pathLength="1" d="M1025.8,290.6 L1025.7,254.3" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl169" pathLength="1" d="M1025.7,254.3 L1049.7,254.4" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl171" pathLength="1" d="M1025.7,254.3 L1025.6,218.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl173" pathLength="1" d="M1025.6,218.1 L1058.6,218.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl175" pathLength="1" d="M1025.6,218.1 L1025.6,181.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl177" pathLength="1" d="M1025.6,181.8 L1058.5,181.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl179" pathLength="1" d="M1025.6,181.8 L1025.5,145.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl181" pathLength="1" d="M1025.5,145.5 L1058.5,145.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<text x="1006.5" y="134.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml183">SEP 26</text>
-<path class="cl185" pathLength="1" d="M1055.4,290.2 L1088.3,290.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl187" pathLength="1" d="M1088.3,290.2 L1112.4,290.3" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl189" pathLength="1" d="M1112.4,290.3 L1112.4,326.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl191" pathLength="1" d="M1112.4,326.6 L1088.4,326.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl193" pathLength="1" d="M1088.4,326.5 L1055.5,326.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl195" pathLength="1" d="M1088.3,290.2 L1088.3,254.0" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl197" pathLength="1" d="M1088.3,254.0 L1112.3,254.0" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl199" pathLength="1" d="M1055.5,326.5 L1055.5,362.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl201" pathLength="1" d="M1088.3,254.0 L1088.2,217.7" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl203" pathLength="1" d="M1088.2,217.7 L1112.2,217.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl205" pathLength="1" d="M1088.2,217.7 L1088.2,181.4" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl207" pathLength="1" d="M1088.2,181.4 L1112.2,181.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl209" pathLength="1" d="M1112.2,181.5 L1112.1,145.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl211" pathLength="1" d="M1112.1,145.2 L1088.1,145.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl213" pathLength="1" d="M1112.1,145.2 L1145.0,145.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl215" pathLength="1" d="M1112.4,326.6 L1112.5,362.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<text x="1095.7" y="134.1" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml217">OCT 26</text>
+<path class="cl147" pathLength="1" d="M885.5,139.6 L926.5,139.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl149" pathLength="1" d="M787.7,175.8 L787.8,248.4" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<text x="845.9" y="128.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml151">AUG 26</text>
+<path class="cl153" pathLength="1" d="M927.8,254.3 L927.9,326.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl155" pathLength="1" d="M927.9,326.8 L928.0,363.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl157" pathLength="1" d="M928.0,363.1 L952.0,363.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl159" pathLength="1" d="M952.0,363.2 L984.9,363.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl161" pathLength="1" d="M984.9,363.2 L984.9,326.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl163" pathLength="1" d="M984.9,326.9 L1025.8,326.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl165" pathLength="1" d="M1025.8,326.9 L1025.9,363.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl167" pathLength="1" d="M1025.8,326.9 L1025.8,290.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl169" pathLength="1" d="M1025.8,290.6 L1025.7,254.3" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl171" pathLength="1" d="M1025.7,254.3 L1049.7,254.4" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl173" pathLength="1" d="M1025.7,254.3 L1025.6,218.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl175" pathLength="1" d="M1025.6,218.1 L1058.6,218.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl177" pathLength="1" d="M1025.6,218.1 L1025.6,181.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl179" pathLength="1" d="M1025.6,181.8 L1058.5,181.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl181" pathLength="1" d="M1025.6,181.8 L1025.5,145.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl183" pathLength="1" d="M1025.5,145.5 L1058.5,145.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<text x="1006.5" y="134.5" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml185">SEP 26</text>
+<path class="cl187" pathLength="1" d="M1055.4,290.2 L1088.3,290.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl189" pathLength="1" d="M1088.3,290.2 L1112.4,290.3" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl191" pathLength="1" d="M1112.4,290.3 L1112.4,326.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl193" pathLength="1" d="M1112.4,326.6 L1088.4,326.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl195" pathLength="1" d="M1088.4,326.5 L1055.5,326.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl197" pathLength="1" d="M1088.3,290.2 L1088.3,254.0" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl199" pathLength="1" d="M1088.3,254.0 L1112.3,254.0" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl201" pathLength="1" d="M1055.5,326.5 L1055.5,362.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl203" pathLength="1" d="M1055.5,362.8 L1079.5,362.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl205" pathLength="1" d="M1079.5,362.9 L1112.5,362.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl207" pathLength="1" d="M1088.3,254.0 L1088.2,217.7" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl209" pathLength="1" d="M1088.2,217.7 L1112.2,217.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl211" pathLength="1" d="M1088.2,217.7 L1088.2,181.4" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl213" pathLength="1" d="M1088.2,181.4 L1112.2,181.5" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl215" pathLength="1" d="M1112.2,181.5 L1112.1,145.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl217" pathLength="1" d="M1112.1,145.2 L1088.1,145.1" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl219" pathLength="1" d="M1112.1,145.2 L1145.0,145.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<text x="1094.8" y="134.1" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml221">OCT 26</text>
 <g class="st s0">
   <circle cx="126.9" cy="207.9" r="2.25" fill="#584E45"/>
 </g>
@@ -787,149 +797,156 @@
   <circle cx="787.8" cy="248.4" r="2.25" fill="#584E45"/>
 </g>
 <g class="st s62">
+  <circle cx="820.5" cy="139.5" r="2.25" fill="#584E45"/>
+</g>
+<g class="st s63">
   <path d="M829.0,345.0 v24.4 M816.7,357.2 h24.4" stroke="#958F88" stroke-width="0.9" stroke-linecap="round"/>
   <circle cx="829.0" cy="357.2" r="4.88" fill="#413A33"/>
 </g>
-<g class="st s63">
+<g class="st s64">
   <path d="M861.5,125.3 v28.3 M847.3,139.5 h28.3" stroke="#918C85" stroke-width="0.9" stroke-linecap="round"/>
   <circle cx="861.5" cy="139.5" r="5.66" fill="#3A342D"/>
 </g>
-<g class="st s64">
+<g class="st s65">
   <circle cx="861.6" cy="175.8" r="3.78" fill="#4B423A"/>
 </g>
-<g class="st s65">
+<g class="st s66">
   <circle cx="861.7" cy="248.4" r="3.64" fill="#4C443B"/>
 </g>
-<g class="st s66">
+<g class="st s67">
   <path d="M852.8,271.6 v26.2 M839.7,284.7 h26.2" stroke="#938D86" stroke-width="0.9" stroke-linecap="round"/>
   <circle cx="852.8" cy="284.7" r="5.24" fill="#3E3730"/>
 </g>
-<g class="st s67">
+<g class="st s68">
   <circle cx="852.9" cy="321.0" r="2.99" fill="#52483F"/>
 </g>
-<g class="st s68">
+<g class="st s69">
   <path d="M853.0,339.8 v35.0 M835.5,357.3 h35.0" stroke="#8A8680" stroke-width="0.9" stroke-linecap="round"/>
   <circle cx="853.0" cy="357.3" r="7.00" fill="#2E2A24"/>
 </g>
-<g class="st s69">
+<g class="st s70">
   <path d="M885.5,123.2 v32.7 M869.2,139.6 h32.7" stroke="#8C8881" stroke-width="0.9" stroke-linecap="round"/>
   <circle cx="885.5" cy="139.6" r="6.54" fill="#322D27"/>
 </g>
-<g class="st s70">
+<g class="st s71">
   <circle cx="885.6" cy="175.9" r="3.34" fill="#4F463D"/>
 </g>
-<g class="st s71">
+<g class="st s72">
   <circle cx="885.8" cy="321.0" r="3.34" fill="#4F463D"/>
 </g>
-<g class="st s72">
+<g class="st s73">
   <circle cx="885.9" cy="357.3" r="3.64" fill="#4C443B"/>
 </g>
-<g class="st s73">
+<g class="st s74">
   <circle cx="926.5" cy="139.6" r="4.03" fill="#484138"/>
 </g>
-<g class="st s74">
+<g class="st s75">
   <circle cx="927.8" cy="254.3" r="2.55" fill="#564C42"/>
 </g>
-<g class="st s75">
+<g class="st s76">
   <circle cx="927.9" cy="326.8" r="2.99" fill="#52483F"/>
 </g>
-<g class="st s76">
+<g class="st s77">
   <circle cx="928.0" cy="363.1" r="2.99" fill="#52483F"/>
 </g>
-<g class="st s77">
+<g class="st s78">
   <circle cx="952.0" cy="363.2" r="2.25" fill="#584E45"/>
 </g>
-<g class="st s78">
+<g class="st s79">
   <circle cx="984.9" cy="326.9" r="2.25" fill="#584E45"/>
 </g>
-<g class="st s79">
+<g class="st s80">
   <circle cx="984.9" cy="363.2" r="2.55" fill="#564C42"/>
 </g>
-<g class="st s80">
+<g class="st s81">
   <circle cx="1025.5" cy="145.5" r="2.99" fill="#52483F"/>
 </g>
-<g class="st s81">
+<g class="st s82">
   <circle cx="1025.6" cy="181.8" r="3.91" fill="#4A4139"/>
 </g>
-<g class="st s82">
+<g class="st s83">
   <circle cx="1025.6" cy="218.1" r="2.55" fill="#564C42"/>
 </g>
-<g class="st s83">
+<g class="st s84">
   <circle cx="1025.7" cy="254.3" r="3.17" fill="#50473E"/>
 </g>
-<g class="st s84">
+<g class="st s85">
   <circle cx="1025.8" cy="290.6" r="2.55" fill="#564C42"/>
 </g>
-<g class="st s85">
+<g class="st s86">
   <circle cx="1025.8" cy="326.9" r="2.25" fill="#584E45"/>
 </g>
-<g class="st s86">
+<g class="st s87">
   <circle cx="1025.9" cy="363.2" r="2.25" fill="#584E45"/>
 </g>
-<g class="st s87">
+<g class="st s88">
   <path d="M1058.5,134.0 v22.9 M1047.0,145.5 h22.9" stroke="#969089" stroke-width="0.9" stroke-linecap="round"/>
   <circle cx="1058.5" cy="145.5" r="4.59" fill="#433C35"/>
 </g>
-<g class="st s88">
+<g class="st s89">
   <circle cx="1058.5" cy="181.8" r="2.99" fill="#52483F"/>
 </g>
-<g class="st s89">
+<g class="st s90">
   <circle cx="1058.6" cy="218.1" r="3.34" fill="#4F463D"/>
 </g>
-<g class="st s90">
+<g class="st s91">
   <circle cx="1049.7" cy="254.4" r="3.49" fill="#4D453C"/>
 </g>
-<g class="st s91">
+<g class="st s92">
   <circle cx="1055.4" cy="290.2" r="3.91" fill="#4A4139"/>
 </g>
-<g class="st s92">
+<g class="st s93">
   <circle cx="1055.5" cy="326.5" r="2.25" fill="#584E45"/>
 </g>
-<g class="st s93">
+<g class="st s94">
   <circle cx="1055.5" cy="362.8" r="2.25" fill="#584E45"/>
 </g>
-<g class="st s94">
+<g class="st s95">
   <circle cx="1088.1" cy="145.1" r="2.55" fill="#564C42"/>
 </g>
-<g class="st s95">
+<g class="st s96">
   <circle cx="1088.2" cy="181.4" r="3.49" fill="#4D453C"/>
 </g>
-<g class="st s96">
+<g class="st s97">
   <path d="M1088.2,206.5 v22.4 M1077.0,217.7 h22.4" stroke="#969189" stroke-width="0.9" stroke-linecap="round"/>
   <circle cx="1088.2" cy="217.7" r="4.48" fill="#443D35"/>
 </g>
-<g class="st s97">
+<g class="st s98">
   <circle cx="1088.3" cy="254.0" r="3.91" fill="#4A4139"/>
 </g>
-<g class="st s98">
+<g class="st s99">
   <circle cx="1088.3" cy="290.2" r="3.34" fill="#4F463D"/>
 </g>
-<g class="st s99">
+<g class="st s100">
   <circle cx="1088.4" cy="326.5" r="2.25" fill="#584E45"/>
 </g>
-<g class="st s100">
-  <circle cx="1112.1" cy="145.2" r="2.99" fill="#52483F"/>
-</g>
 <g class="st s101">
-  <circle cx="1112.2" cy="181.5" r="2.99" fill="#52483F"/>
+  <circle cx="1079.5" cy="362.9" r="2.55" fill="#564C42"/>
 </g>
 <g class="st s102">
-  <circle cx="1112.2" cy="217.8" r="2.25" fill="#584E45"/>
+  <circle cx="1112.1" cy="145.2" r="2.99" fill="#52483F"/>
 </g>
 <g class="st s103">
-  <circle cx="1112.3" cy="254.0" r="2.25" fill="#584E45"/>
+  <circle cx="1112.2" cy="181.5" r="2.99" fill="#52483F"/>
 </g>
 <g class="st s104">
-  <circle cx="1112.4" cy="290.3" r="2.25" fill="#584E45"/>
+  <circle cx="1112.2" cy="217.8" r="2.25" fill="#584E45"/>
 </g>
 <g class="st s105">
-  <circle cx="1112.4" cy="326.6" r="2.79" fill="#534A41"/>
+  <circle cx="1112.3" cy="254.0" r="2.25" fill="#584E45"/>
 </g>
 <g class="st s106">
-  <circle cx="1112.5" cy="362.9" r="2.99" fill="#52483F"/>
+  <circle cx="1112.4" cy="290.3" r="2.25" fill="#584E45"/>
 </g>
 <g class="st s107">
-  <circle cx="1145.0" cy="145.2" r="3.78" fill="#4B423A"/>
+  <circle cx="1112.4" cy="326.6" r="2.79" fill="#534A41"/>
+</g>
+<g class="st s108">
+  <circle cx="1112.5" cy="362.9" r="2.99" fill="#52483F"/>
+</g>
+<g class="st s109">
+  <path d="M1145.0,133.5 v23.4 M1133.3,145.2 h23.4" stroke="#969089" stroke-width="0.9" stroke-linecap="round"/>
+  <circle cx="1145.0" cy="145.2" r="4.69" fill="#433C34"/>
 </g>
 <g class="bn">
   <circle cx="853.0" cy="357.3" r="12.0" fill="none" stroke="#D41F26" stroke-width="1.2"/>
@@ -948,13 +965,13 @@
 <text x="1054.3" y="414.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8.5" font-weight="600" fill="#A2988A" text-anchor="middle" letter-spacing="1.1">OCT</text>
 <path d="M48,436 H1192" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
 <text x="48.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">CONTRIBUTIONS</text>
-<text x="160.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">758</text>
+<text x="160.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">769</text>
 <text x="253.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">ACTIVE DAYS</text>
-<text x="365.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">108 / 482</text>
+<text x="365.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">110 / 483</text>
 <text x="458.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">BRIGHTEST</text>
 <text x="570.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">47</text>
 <text x="48.0" y="478.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">CHARTED</text>
-<text x="160.0" y="478.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">24 JUN 25 – 18 OCT 26</text>
+<text x="160.0" y="478.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">24 JUN 25 – 19 OCT 26</text>
 <text x="760.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">MAGNITUDE</text>
 <circle cx="866.0" cy="456.0" r="2.25" fill="#584E45"/>
 <text x="878.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="0.6">1</text>
