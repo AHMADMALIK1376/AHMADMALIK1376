@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 486" width="1240" height="486" role="img" aria-label="Every day of work as a printed star chart: 796 contributions across 117 active days out of 493, each star a day placed by its week and weekday, brightness by commit count, brightest 47">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 486" width="1240" height="486" role="img" aria-label="Every day of work as a printed star chart: 801 contributions across 120 active days out of 494, each star a day placed by its week and weekday, brightness by commit count, brightest 47">
 <title>Commit Activity</title>
 <defs><pattern id="cg" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#E6DBCA"/></pattern><style>
 @keyframes blip{0%,100%{opacity:1}50%{opacity:.25}}
@@ -237,8 +237,14 @@
 .cl231{stroke-dasharray:1;stroke-dashoffset:1;animation:cl231 30.0s linear infinite}
 @keyframes cl233{0%,77.03%{stroke-dashoffset:1}81.03%,100%{stroke-dashoffset:0}}
 .cl233{stroke-dasharray:1;stroke-dashoffset:1;animation:cl233 30.0s linear infinite}
-@keyframes ml235{0%,79.03%{opacity:0}83.03%,100%{opacity:1}}
-.ml235{animation:ml235 30.0s linear infinite}
+@keyframes cl235{0%,77.03%{stroke-dashoffset:1}81.03%,100%{stroke-dashoffset:0}}
+.cl235{stroke-dasharray:1;stroke-dashoffset:1;animation:cl235 30.0s linear infinite}
+@keyframes cl237{0%,77.03%{stroke-dashoffset:1}81.03%,100%{stroke-dashoffset:0}}
+.cl237{stroke-dasharray:1;stroke-dashoffset:1;animation:cl237 30.0s linear infinite}
+@keyframes cl239{0%,77.03%{stroke-dashoffset:1}81.03%,100%{stroke-dashoffset:0}}
+.cl239{stroke-dasharray:1;stroke-dashoffset:1;animation:cl239 30.0s linear infinite}
+@keyframes ml241{0%,79.03%{opacity:0}83.03%,100%{opacity:1}}
+.ml241{animation:ml241 30.0s linear infinite}
 @keyframes s0{0%,4.01%{opacity:0;transform:scale(.3)}6.01%,100%{opacity:1;transform:scale(1)}}
 .s0{animation:s0 30.0s ease-out infinite}
 @keyframes s1{0%,10.53%{opacity:0;transform:scale(.3)}12.53%,100%{opacity:1;transform:scale(1)}}
@@ -471,8 +477,14 @@
 .s114{animation:s114 30.0s ease-out infinite}
 @keyframes s115{0%,76.41%{opacity:0;transform:scale(.3)}78.41%,100%{opacity:1;transform:scale(1)}}
 .s115{animation:s115 30.0s ease-out infinite}
-@keyframes s116{0%,76.43%{opacity:0;transform:scale(.3)}78.43%,100%{opacity:1;transform:scale(1)}}
+@keyframes s116{0%,76.42%{opacity:0;transform:scale(.3)}78.42%,100%{opacity:1;transform:scale(1)}}
 .s116{animation:s116 30.0s ease-out infinite}
+@keyframes s117{0%,76.43%{opacity:0;transform:scale(.3)}78.43%,100%{opacity:1;transform:scale(1)}}
+.s117{animation:s117 30.0s ease-out infinite}
+@keyframes s118{0%,76.43%{opacity:0;transform:scale(.3)}78.43%,100%{opacity:1;transform:scale(1)}}
+.s118{animation:s118 30.0s ease-out infinite}
+@keyframes s119{0%,75.83%{opacity:0;transform:scale(.3)}77.83%,100%{opacity:1;transform:scale(1)}}
+.s119{animation:s119 30.0s ease-out infinite}
 @keyframes bn{0%,55.32%{opacity:0}59.32%,100%{opacity:1}}
 .bn{animation:bn 30.0s linear infinite}
 @keyframes sweep{0%,4%{transform:translateX(0)}78%,100%{transform:translateX(1050.0px)}}
@@ -631,11 +643,14 @@
 <path class="cl221" pathLength="1" d="M1082.7,254.0 L1122.3,254.0" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
 <path class="cl223" pathLength="1" d="M1122.3,254.0 L1154.2,254.0" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
 <path class="cl225" pathLength="1" d="M1122.3,254.0 L1122.3,217.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl227" pathLength="1" d="M1122.3,254.0 L1122.4,290.3" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl229" pathLength="1" d="M1122.4,290.3 L1122.5,326.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl231" pathLength="1" d="M1122.5,326.6 L1122.5,362.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<path class="cl233" pathLength="1" d="M1114.4,145.2 L1154.0,145.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
-<text x="1084.2" y="134.1" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml235">OCT 26</text>
+<path class="cl227" pathLength="1" d="M1122.3,217.8 L1154.1,217.8" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl229" pathLength="1" d="M1122.3,254.0 L1122.4,290.3" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl231" pathLength="1" d="M1122.4,290.3 L1154.3,290.3" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl233" pathLength="1" d="M1122.4,290.3 L1122.5,326.6" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl235" pathLength="1" d="M1122.5,326.6 L1145.7,326.7" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl237" pathLength="1" d="M1122.5,326.6 L1122.5,362.9" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<path class="cl239" pathLength="1" d="M1114.4,145.2 L1154.0,145.2" fill="none" stroke="#999184" stroke-width="1.1" stroke-linecap="round"/>
+<text x="1091.4" y="134.1" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="7.5" font-weight="700" fill="#7F776B" text-anchor="middle" letter-spacing="1.4" class="ml241">OCT 26</text>
 <g class="st s0">
   <circle cx="126.6" cy="207.9" r="2.25" fill="#584E45"/>
 </g>
@@ -1003,7 +1018,16 @@
   <circle cx="1154.0" cy="145.2" r="2.25" fill="#584E45"/>
 </g>
 <g class="st s116">
+  <circle cx="1154.1" cy="217.8" r="2.25" fill="#584E45"/>
+</g>
+<g class="st s117">
   <circle cx="1154.2" cy="254.0" r="2.25" fill="#584E45"/>
+</g>
+<g class="st s118">
+  <circle cx="1154.3" cy="290.3" r="2.55" fill="#564C42"/>
+</g>
+<g class="st s119">
+  <circle cx="1145.7" cy="326.7" r="2.55" fill="#564C42"/>
 </g>
 <g class="bn">
   <circle cx="832.1" cy="357.3" r="12.0" fill="none" stroke="#D41F26" stroke-width="1.2"/>
@@ -1022,13 +1046,13 @@
 <text x="1026.7" y="414.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8.5" font-weight="600" fill="#A2988A" text-anchor="middle" letter-spacing="1.1">OCT</text>
 <path d="M48,436 H1192" stroke="#D9D0C1" stroke-width="1.4" fill="none"/>
 <text x="48.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">CONTRIBUTIONS</text>
-<text x="160.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">796</text>
+<text x="160.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">801</text>
 <text x="253.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">ACTIVE DAYS</text>
-<text x="365.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">117 / 493</text>
+<text x="365.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">120 / 494</text>
 <text x="458.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">BRIGHTEST</text>
 <text x="570.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">47</text>
 <text x="48.0" y="478.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">CHARTED</text>
-<text x="160.0" y="478.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">24 JUN 25 – 29 OCT 26</text>
+<text x="160.0" y="478.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="11" font-weight="800" fill="#2E2A24" text-anchor="start" letter-spacing="0.6">24 JUN 25 – 30 OCT 26</text>
 <text x="760.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="9" font-weight="700" fill="#A2988A" text-anchor="start" letter-spacing="1.6">MAGNITUDE</text>
 <circle cx="866.0" cy="456.0" r="2.25" fill="#584E45"/>
 <text x="878.0" y="460.0" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="10" font-weight="700" fill="#7D7266" text-anchor="start" letter-spacing="0.6">1</text>
